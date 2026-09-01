@@ -68,7 +68,7 @@ read either file with one parser.
 | `asset_type_id` | string | The machine identifier of the same type. Joins to `asset-types.csv.type_id`. Derived, not from the standard document. |
 | `data_type` | enum | One of Text, Choice, Number, Date, Geometry, Checkbox, Image, Unit, or Asset ID. See the note below on Asset ID. |
 | `unit_quantity` | string | For Unit attributes, the physical quantity measured, such as Length or Power. Joins to `units.csv.quantity`. |
-| `si_unit` | string | The SI base unit, where the standard states one on the attribute row. Populated in the sanitation table only. |
+| `si_unit` | string | The SI base unit for `unit_quantity`, looked up from the standard's units table. Populated in the sanitation table only. Water consumers should join to `units.csv` on `quantity` instead. |
 | `description` | string | The definition of the attribute, quoted from the standard. |
 | `applicability` | string | Any condition under which the attribute applies, quoted from the standard. See the note below on group conditions. |
 | `required` | boolean | `TRUE` only where the standard uses "shall". Set on the water standard's Asset ID attribute and nowhere else. |
@@ -124,6 +124,37 @@ Several flow-rate conversion factors in the sanitation standard appear to be
 reciprocals or to be mis-scaled against the rule the same standard states. They are
 published here exactly as the standard gives them, and the discrepancy is listed in
 `sanitation/EXTRACTION-NOTES.md`. A correction belongs in version 1.1.
+
+## Columns that differ between the two standards
+
+Three columns are populated in one standard and empty in the other, because the two
+documents state different things. This is a property of the sources, not an error in
+the tables.
+
+`si_unit` is populated in the sanitation table and empty in the water table. Join to
+`units.csv` on `unit_quantity` to obtain the same information for water.
+
+`asset_class` is populated in the water table and empty in the sanitation table. The
+sanitation standard does not scope attributes by class. To obtain the class of a
+type-specific sanitation attribute, join to `asset-types.csv` on `asset_type_id`.
+
+`required` is set on one attribute in the whole repository, the water standard's
+Asset ID, code `00003`. Neither document has a required column. The flag was set from
+the one place a standard uses "shall" about an attribute value. Treat every other
+attribute as optional.
+
+## A warning about the unit tables
+
+Both standards publish flow-rate conversion factors that contradict the conversion
+rule the same standards state in section 4.2, and both publish acre-ft as 1223.489
+where one acre-foot is 1233.48 cubic metres. The two standards also contradict each
+other: the water standard gives gallons per minute as 6.30902 x 10-5 and gallons per
+day as 4.38126 x 10-8, while the sanitation standard gives the same mantissas with
+positive exponents.
+
+Every factor in `units.csv` is exactly as published. None was corrected. Anyone
+converting flow rates or volumes should verify the factor against SI definitions
+before use, and should expect corrections in the next version of both standards.
 
 ## Generated files
 

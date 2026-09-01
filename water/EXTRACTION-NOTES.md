@@ -63,13 +63,13 @@ Attribute counts by class: general 63; System 7; Facility 2; Vertical 102; Horiz
 
 Document tables 1–24 are numbered in the text as "Table 1" … "Table 24"; python-docx indices are
 0-based and therefore one lower. Figures 1 and 2 are **images** and were not machine-readable;
-Figure 1 ("Asset classes and types") appears to duplicate Table 4 but could not be verified.
+Figure 1 ("Asset classes and types") duplicates Table 4. It was rendered at 220 dpi and read during verification: it shows 28 types and omits "504 Spring". See VERIFICATION-REPORT.md, S1.
 
 ## 4. Ambiguities, gaps and judgement calls
 
 ### A1. The stated total of asset types (28) does not match Table 4 (29 rows)
 The Introduction says "The standard currently recognizes 28 types of assets and 5 classes, as
-shown in Figure 1." Table 4 lists **29** asset types. All 29 are recorded. Figure 1 is a raster
+shown in Figure 1." Table 4 lists **29** asset types. All 29 are recorded. Verification resolved this: Figure 1 shows 28 and omits "504 Spring", so Table 4 is normative and both the Introduction and Figure 1 are stale. Figure 1 is a raster
 image and could not be counted to determine which of the two numbers is authoritative, or whether
 one type was added after the introductory sentence was written.
 
@@ -222,7 +222,7 @@ this is a deliberate gap in the source, not an extraction failure.
 ### A17. `allowed_parent_classes` is empty for every asset type
 The standard states parent-child relationships exist (§5.3) but places **no** constraint on which
 classes or types may parent which. Nothing was inferred; the column is empty throughout. Any
-hierarchy implied by Figure 1 could not be read (raster image).
+hierarchy implied by Figure 1 was read during verification; see VERIFICATION-REPORT.md, S1.
 
 ### A18. `required` is empty for every attribute except `00003 Asset ID`
 No attribute table has a required/optional column. The only mandatory-value statement anywhere is

@@ -117,6 +117,18 @@ affects, with the source text quoted. Corrections belong in version 1.1 of each
 standard, through the process in [GOVERNANCE.md](GOVERNANCE.md), not in an
 undocumented edit to these tables.
 
+The flow-rate and acre-ft conversion factors deserve particular caution. Both
+standards publish factors that contradict their own stated conversion rule, and the
+two standards contradict each other on gallons per minute and gallons per day. The
+tables reproduce what was published. `DATA-DICTIONARY.md` explains the problem in
+full.
+
+Before publication, an independent audit compared every row of all eight tables
+against the source documents, cell by cell rather than by sampling. It found no
+transcription errors and 24 defects in the standards themselves.
+[VERIFICATION-REPORT.md](VERIFICATION-REPORT.md) records the method and every
+finding.
+
 ## License
 
 Both standards and this repository are licensed under the Creative Commons
