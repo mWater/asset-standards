@@ -1,5 +1,10 @@
 # Governance
 
+> **Draft for mWater review.** This document was drafted alongside the machine-readable
+> release of the standards. It is a proposal, not a record of an existing mWater policy,
+> and it commits mWater to things nobody at mWater has yet agreed to. See
+> [REVIEW-NEEDED.md](REVIEW-NEEDED.md) before relying on it or citing it.
+
 A standard that changes without warning is worse than no standard, because
 implementers build against a target that moves under them. This document states who
 decides what goes into the mWater Asset Standards, how a change is proposed and

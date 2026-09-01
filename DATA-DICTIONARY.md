@@ -12,7 +12,7 @@ that data repositories commonly ask for.
 
 | Field | Value |
 |---|---|
-| Creator | mWater Foundation, Inc., Denver, Colorado, United States |
+| Creator | mWater Foundation, Inc., a non-profit corporation in the United States |
 | Identifier | https://github.com/mWater/asset-standards |
 | Subject | Water supply and sanitation asset management; data standards; WASH monitoring |
 | Funders | United States Agency for International Development, for the water standard and for initial development of the sanitation standard under IUWASH Tangguh. mWater Foundation, Inc. funded completion of the sanitation standard. |

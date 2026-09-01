@@ -1,5 +1,10 @@
 # Privacy annex
 
+> **Draft for mWater review.** This document was drafted alongside the machine-readable
+> release of the standards. It is a proposal, not a record of an existing mWater policy,
+> and it commits mWater to things nobody at mWater has yet agreed to. See
+> [REVIEW-NEEDED.md](REVIEW-NEEDED.md) before relying on it or citing it.
+
 The files in this repository contain no personal data. They are definitions of
 fields, not records about people.
 

@@ -49,9 +49,9 @@ Sanitation point, Containment, Connection, Pipe, Channel, Manhole, Vehicle,
 Treatment, Dispersal and Outfall as asset types, so that every stage from the
 household to the receiving environment has a record. The Sanitation system type
 attribute, code `10201`, distinguishes sewered, on-site and mixed systems, which is
-the split the indicator requires. Attributes on the sanitation point record whether
-facilities for women and girls are separate, which speaks to the equity clause in
-the target text.
+the split the indicator requires. The Separate facilities for women and girls attribute, code
+`31509`, applies to shared, communal, public and institutional sanitation points,
+which speaks to the equity clause in the target text.
 
 ## Target 6.3, wastewater and water quality
 
@@ -64,11 +64,15 @@ treatment assets exist, what they are designed to process, and where their outfa
 discharge.
 
 The sanitation standard defines the Treatment, Outfall, Dispersal, Meter and
-Sampling point asset types, together with hydraulic attributes that record design
-flow. The water standard defines Treatment and Sampling point for the supply side.
-Both standards record measurements as a magnitude and a unit drawn from `units.csv`,
-which is what allows flows recorded in litres per second and in megalitres per day
-to be summed correctly.
+Sampling point asset types. It records Total treatment capacity on the sanitation
+system, code `10207`, as a flow rate. The water standard defines Treatment and
+Sampling point for the supply side.
+
+Both standards record a measurement as a magnitude with a unit drawn from
+`units.csv`, which is what allows a flow recorded in litres per second to be summed
+with one recorded in megalitres per day. Note the caution in the README about the
+published flow-rate conversion factors, which need correcting before that summation
+is safe.
 
 ## Target 6.4, water use efficiency
 
@@ -80,10 +84,17 @@ water stress."
 Efficiency in a piped system is mostly a question of where water is lost, and losses
 are located by metering the network at known points.
 
-The water standard defines the Meter asset type, hydraulic attributes on pipes
-including nominal diameter and length, and the hierarchy rules that let an
-implementer trace a meter to the zone it measures. Abstraction is recorded on the
-Source asset type, which supports the withdrawal side of indicator 6.4.2.
+The water standard defines the Meter asset type and the hydraulic attributes
+Nominal diameter, code `00092`, and Pipe length, code `00093`, which apply to pipes
+through a group condition. Its hierarchy rules let an implementer trace a meter to
+the assets below it.
+
+On the withdrawal side, the Source asset type carries Nominal flow, Minimum flow and
+Maximum flow, codes `30107` to `30109`, and records whether a source meter is
+installed, code `30102`. Those are source capacity and instrumentation attributes.
+Neither standard records abstracted volumes over time, which is what indicator 6.4.2
+needs, so the contribution here is the register the volumes would attach to, not the
+measurement itself.
 
 ## Target 6.6, water-related ecosystems
 
@@ -107,14 +118,16 @@ Target 3.9 covers deaths and illnesses from "water and soil pollution and
 contamination," measured for this sector by indicator 3.9.2, the "Mortality rate
 attributed to unsafe water, unsafe sanitation and lack of hygiene." Attributing
 disease to infrastructure requires knowing which population is served by which
-system, which the hierarchy and service area attributes in both standards make
-possible.
+system. Both standards carry a Coverage area geometry, code `00016`, and a Number of
+households in service area, code `10204`, on the system, together with hierarchy
+rules that link an asset to the system it belongs to.
 
 Target 11.1 is "By 2030, ensure access for all to adequate, safe and affordable
 housing and basic services and upgrade slums." Basic services in an informal
-settlement are usually delivered through shared water points and shared sanitation
-facilities, both of which these standards record as first-class asset types with
-usage arrangement attributes.
+settlement are often delivered through shared water points and shared sanitation
+facilities. The water standard defines Water point as an asset type, and the
+sanitation standard defines Sanitation point with a Usage arrangement attribute,
+code `31507`, and a Number of users sharing attribute on containment, code `31607`.
 
 ## What these standards do not do
 
@@ -132,9 +145,13 @@ else collects it.
 
 ## Evidence of use
 
-The mWater platform implements both standards and is free to use. As of 2025 the
-platform served more than 350,000 users in 198 countries and territories, tracking
-more than 6 million water and sanitation sites from more than 35 million surveys.
-The water standard has been the basis of asset registers in national and
-sub-national monitoring systems since 2022. The sanitation standard was issued in
-August 2026 and is at the start of its adoption.
+The mWater platform implements both standards and is free to use. As of August 2026
+it served 384,000 users in 198 countries and territories, holding 7.5 million water
+and sanitation sites and 51 million survey responses.
+
+The figures that speak directly to these standards are the asset counts. The
+platform holds 1.1 million assets recorded against the water standard, across
+110,000 water systems. The water standard has been the basis of asset registers in
+national and sub-national monitoring systems since 2022. The sanitation standard was
+issued in August 2026 and is at the start of its adoption, so its numbers are small
+by comparison and mWater does not claim otherwise.

@@ -1,5 +1,10 @@
 # Code of conduct
 
+> **Draft for mWater review.** This document was drafted alongside the machine-readable
+> release of the standards. It is a proposal, not a record of an existing mWater policy,
+> and it commits mWater to things nobody at mWater has yet agreed to. See
+> [REVIEW-NEEDED.md](REVIEW-NEEDED.md) before relying on it or citing it.
+
 This repository is a working space for people who manage water and sanitation
 infrastructure data. Discussion should stay useful to that work.
 
@@ -29,8 +34,9 @@ or a named utility employee; report the technical problem without the person.
 
 ## Reporting
 
-Report a concern to conduct@mwater.co. Reports go to mWater's Head of Product and
-COO, and stay confidential to those two unless the reporter agrees otherwise.
+Report a concern to info@mwater.co, marking it for the attention of the Head of
+Product. Reports stay confidential to the Head of Product and the COO unless the
+reporter agrees otherwise.
 
 mWater will acknowledge a report within five working days and say what action, if
 any, it is taking. Possible actions are a private warning, removal of the content,

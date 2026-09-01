@@ -91,8 +91,8 @@ and runs referential-integrity checks across the CSV tables.
 
 ## Relationship to the mWater platform
 
-mWater implements both standards in its own platform, and the published data
-dictionaries for the water and sanitation asset tables are open to anyone at
+mWater's platform holds water and sanitation asset tables built on these standards,
+and the published data dictionaries for those tables are open to anyone at
 [portal.mwater.co](https://portal.mwater.co/#/data-dictionary/site-types/water_asset)
 and
 [portal.mwater.co](https://portal.mwater.co/#/data-dictionary/site-types/sanitation_asset).
@@ -102,7 +102,20 @@ specification.
 
 That crosswalk is a convenience, not part of the standard. Where the platform and
 the standard disagree, the standard governs. The crosswalk records how each row was
-matched and leaves unmatched attributes visible rather than hiding them.
+matched and leaves unmatched attributes visible rather than hiding them. The platform
+and the standards do not line up field for field: 13 water attributes and 10
+sanitation attributes have no matching platform column.
+
+## Status of this repository
+
+The data in this repository is verified. Some of the surrounding prose is not.
+
+`GOVERNANCE.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` and `PRIVACY.md` were
+drafted alongside this release. They propose policies rather than describe agreed
+ones, and mWater has not yet reviewed them. Each carries a notice saying so.
+[REVIEW-NEEDED.md](REVIEW-NEEDED.md) lists every claim in the repository that still
+needs mWater's confirmation, including several statements of fact that were written
+without a checked source.
 
 ## Known defects
 

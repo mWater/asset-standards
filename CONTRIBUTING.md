@@ -1,5 +1,10 @@
 # Contributing
 
+> **Draft for mWater review.** This document was drafted alongside the machine-readable
+> release of the standards. It is a proposal, not a record of an existing mWater policy,
+> and it commits mWater to things nobody at mWater has yet agreed to. See
+> [REVIEW-NEEDED.md](REVIEW-NEEDED.md) before relying on it or citing it.
+
 The fastest way to improve these standards is to try to record real asset data with
 them and report what does not fit. mWater welcomes defect reports, change proposals,
 translations, and implementation reports from anyone, with no prior relationship
