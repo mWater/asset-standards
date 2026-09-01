@@ -1,0 +1,212 @@
+code,name,scope,asset_class,asset_type,asset_type_id,data_type,unit_quantity,si_unit,description,applicability,required,attribute_group
+00001,Type,general,,,,Choice,,,Type of asset,,,Basic Info
+00002,Name,general,,,,Text,,,Name used by technical staff to refer to the asset; might be left blank for many lower level assets,,,Basic Info
+00003,Unique ID,general,,,,Text,,,Unique number automatically assigned when creating an asset,,,Basic Info
+00004,Description,general,,,,Text,,,Additional information to help staff locate or identify an asset,,,Basic Info
+00005,Photo,general,,,,Image,,,Photos of the asset,,,Basic Info
+00006,Parent asset,general,,,,Asset ID,,,Asset ID of the asset that is a parent to this asset,,,Basic Info
+00011,Location,general,,,,Geometry,,,"Geographic location of the asset on the surface of the Earth; may be a point, line, or polygon",,,Location
+00012,Location precision,general,,,,Unit,Length,m,"Estimated uncertainty in the geographic coordinates, expressed as a distance",,,Location
+00013,Survey elevation,general,,,,Unit,Length,m,"Height above a reference surface, as measured by surveying or high-precision GNSS equipment; used for hydraulic modeling and engineering design. This value is distinct from the altitude captured automatically with GPS coordinates. For chambered assets such as manholes, the surveyed point is the center of the cover",,,Location
+00024,Survey elevation datum,general,,,,Choice,,,Vertical reference system used for Survey elevation and Invert level values,,,Location
+00014,Elevation precision,general,,,,Unit,Length,m,Estimated uncertainty in the measurement of the elevation,,,Location
+00015,Administrative region,general,,,,Text,,,"Name that describes the administrative geography of the location; multiple levels may be separated by commas starting with the most general area, for example: Region, District, Municipality",,,Location
+00016,Coverage area,general,,,,Geometry,,,Geographical area where the sanitation system or service provides coverage or is legally obligated to serve,"Type: Sanitation system, Facility",,Location
+00017,Sector,general,,,,Text,,,Name for a sub-region of the coverage area that is defined by geography or the physical layout of the collection network,,,Location
+00018,Route,general,,,,Text,,,"Name or number of the service route, such as a scheduled emptying (desludging) route, which defines the assets assigned to a particular staff member or team","Type: Sanitation point, Containment, Connection",,Location
+00019,Address,general,,,,Text,,,"Physical address or postal address where the asset is located; in the case of sewer or property connections, the address of the customer",,,Location
+00020,Urban-rural classification,general,,,,Choice,,,"Degree of urbanization, as defined by national standards or the Degree of Urbanisation method (OECD 2021)","Type: Sanitation system, Sanitation point",,Location
+00021,Community,general,,,,Text,,,"Name of the community, town, or neighborhood where a sanitation system or facility is located","Type: Sanitation system, Facility",,Location
+00022,Accessible by road,general,,,,Checkbox,,,Asset can be accessed by vehicles using a nearby road,,,Location
+00023,Perimeter fence or wall installed,general,,,,Checkbox,,,Fence or wall exists to provide physical security for the asset,,,Location
+00025,Wheelchair accessible,general,,,,Checkbox,,,Asset can be accessed and used by people using wheelchairs or with limited mobility,"Type: Facility, Sanitation point, Structure",,Location
+00026,Distance to nearest water source,general,,,,Unit,Length,m,"Distance from the containment or dispersal structure to the nearest well, borehole, spring, or other groundwater source used for drinking water","Type: Containment, Dispersal",,Location
+00027,Land occupancy,general,,,,Choice,,,Legal status of the land the asset occupies or crosses,"All types except: Sanitation system, subsystem",,Location
+00031,Level 1,general,,,,Text,,,Highest or most general level of categorization to which the asset belongs under the asset hierarchy,,,Hierarchy
+00032,Level 2,general,,,,Text,,,Second highest level of hierarchy,,,Hierarchy
+00033,Level 3,general,,,,Text,,,Third highest level of hierarchy,,,Hierarchy
+00034,Level 4,general,,,,Text,,,Fourth highest level of hierarchy,,,Hierarchy
+00035,Level 5,general,,,,Text,,,Fifth highest level of hierarchy,,,Hierarchy
+00036,Level 6,general,,,,Text,,,Sixth highest level of hierarchy,,,Hierarchy
+00037,Level 7,general,,,,Text,,,Lowest level of hierarchy,,,Hierarchy
+00041,Status,general,,,,Choice,,,How the asset is currently being used or operated,Type is not Sanitation point,,Status and condition
+00042,Condition,general,,,,Choice,,,The physical or structural integrity of the asset,,,Status and condition
+00043,Functional status,general,,,,Choice,,,Most recent observation of whether a sanitation system or sanitation point is working as designed,"Type: Sanitation system, Sanitation point",,Status and condition
+00051,Current replacement cost (USD),general,,,,Number,,,Cost (in US Dollars) that would be incurred to replace the asset at the current time; this value requires regular updating based on depreciation and current market conditions; also known as CRC,,,Financial
+00052,Expected useful life,general,,,,Number,,,Number of years that the asset is estimated to function after installation if it is well maintained; also known as EUL,,,Financial
+00053,Probability of failure,general,,,,Choice,,,"Measure of the likelihood of a failure happening at any point in time, based on an analysis of the potential failure modes of the asset",,,Financial
+00054,Consequence of failure,general,,,,Choice,,,"Measure of the direct and indirect costs of asset failure, which may include financial, environmental, and societal costs",,,Financial
+00055,Asset risk,general,,,,Choice,,,"Business or organizational risk of asset failure, usually calculated from the probability and consequence of failure",,,Financial
+00056,Original cost (USD),general,,,,Number,,,Total price paid (in US Dollars) to initially acquire an asset,,,Financial
+00057,Current rehabilitation cost (USD),general,,,,Number,,,Cost (in US Dollars) that would be incurred to rehabilitate the asset at the current time,,,Financial
+00061,Manufacturer,general,,,,Text,,,Name of the business that produced or sold the asset,"Type: Pump, Tank, Power, Meter, Electrical, Valve, Sensor, Analyzer, Vehicle, Connection, Datalogger, Treatment, Containment, Manhole",,Technical
+00062,Model,general,,,,Text,,,Manufacturer's designation for the particular model of the asset,"Type: Pump, Tank, Power, Meter, Electrical, Valve, Sensor, Analyzer, Vehicle, Connection, Datalogger, Treatment, Containment, Manhole",,Technical
+00063,Serial number,general,,,,Text,,,"Unique identifying number or code assigned to a particular asset by the manufacturer or vendor, usually stamped or printed on the asset","Type: Pump, Tank, Power, Meter, Electrical, Valve, Sensor, Analyzer, Vehicle, Connection, Datalogger, Treatment, Containment, Manhole",,Technical
+00064,Additional technical details,general,,,,Text,,,Any other technical information about the asset that is not captured by the attributes of this standard,,,Technical
+00065,Installation date,general,,,,Date,,,"Calendar date when the asset was installed or purchased, which begins the period of useful life",,,Technical
+00066,Installed by,general,,,,Text,,,Name of the company or organization that originally installed or purchased the asset,,,Technical
+00067,Funded by,general,,,,Text,,,"Name of the funding authority, lender, or donor who funded the purchase of the system or facility","Type: Sanitation system, Facility",,Technical
+00068,Rehabilitation date,general,,,,Date,,,Date of most recent work done to restore the asset to its original level of service and extend its life,,,Technical
+00069,Last service date,general,,,,Date,,,"Date of most recent service or maintenance performed; for containment assets, the date of most recent emptying",,,Technical
+00075,Last calibration date,general,,,,Date,,,Calendar date when the device was last calibrated against a known reference or standard solution,"Type: Meter, Analyzer, Sensor, Datalogger",,Technical
+00070,Rehabilitated by,general,,,,Text,,,Name of the company or organization that performed the most recent rehabilitation of the asset,,,Technical
+00071,Service interval,general,,,,Unit,Time,d,"Recommended interval at which service or routine maintenance should be performed on the asset, such as the scheduled emptying frequency of a containment asset or the calibration of a measuring device","All types except: Sanitation system, Subsystem, Facility, Connection",,Technical
+00072,Date of manufacture,general,,,,Date,,,Calendar date when the asset was manufactured,"Type: Pump, Tank, Power, Meter, Electrical, Valve, Sensor, Analyzer, Vehicle, Connection, Datalogger",,Technical
+00073,Decommissioning date,general,,,,Date,,,Calendar date when the asset was permanently taken out of service,,,Technical
+00074,Owner,general,,,,Text,,,"Name of the individual, organization, or authority that holds legal ownership of the asset, which may differ from the organization that operates or manages it",,,Technical
+00076,Operator,general,,,,Text,,,"Name of the individual, organization, or authority that operates or maintains the asset, if different from the owner; assets without an operator recorded are assumed to be operated by their parent system's operator","Type: Sanitation system, Facility, Sanitation point, Vehicle",,Technical
+00091,Upstream asset,general,,,,Asset ID,,,Asset ID of the upstream asset from which this asset receives flow,"Type: Pump, Tank, Treatment, Meter, Valve, Flow control, Junction, Sampling point, Sanitation point, Containment, Manhole, Dispersal, Outfall, Pipe, Channel, Connection",,Hydraulic
+00097,Downstream asset,general,,,,Asset ID,,,Asset ID of the downstream asset that receives flow from this asset,"Type: Pump, Tank, Treatment, Meter, Valve, Flow control, Junction, Sampling point, Sanitation point, Containment, Manhole, Dispersal, Outfall, Pipe, Channel, Connection",,Hydraulic
+00092,Nominal diameter,general,,,,Unit,Length,m,"An approximate measurement of the internal diameter of a pipe, conduit, pump, or junction, which is used to classify according to standard sizes","Type: Meter, Valve, Junction, Pipe, Connection",,Hydraulic
+00093,Pipe length,general,,,,Unit,Length,m,"Total length of the pipe itself, measured along its slope from the start to the end of the pipe and excluding manhole chambers, for use in hydraulic calculations and modeling",Type: Pipe,,Hydraulic
+00094,Material,general,,,,Choice,,,"Material of construction for pipes, junctions, chambers, and other conduits","Type: Meter, Valve, Junction, Pipe, Manhole, Containment, Channel",,Hydraulic
+00095,Minor loss coefficient,general,,,,Number,,,"Dimensionless coefficient that can be used to account for the head loss associated with turbulence in bends, junctions, meters, and valves; usually applicable to pressurized (rising) mains","Type: Junction, Valve, Meter",,Hydraulic
+00096,Roughness coefficient,general,,,,Number,,,"Dimensionless coefficient used to account for friction losses in flowing conduits, such as Manning's n for gravity sewers and open channels or Hazen-Williams C for pressurized mains","Type: Pipe, Channel",,Hydraulic
+00098,Conveyed content,general,,,,Choice,,,Primary type of flow or material conveyed or handled by the asset,"Type: Pump, Tank, Valve, Flow control, Meter, Junction, Sampling point, Manhole, Outfall, Pipe, Channel",,Hydraulic
+00099,Invert level,general,,,,Unit,Length,m,"Elevation of the lowest point of the internal surface of a channel or chamber, recorded against the same datum as Survey elevation","Type: Manhole, Flow control, Outfall",,Hydraulic
+00171,Primary contact name,general,,,,Text,,,Individual or office responsible for management or administration of the sanitation system or sanitation point,"Type: Sanitation system,Subsystem, Facility, Sanitation point",,Points of contact
+00172,Primary contact position,general,,,,Text,,,Title or role in the organization of the primary contact,"Type: Sanitation system,Subsystem, Facility, Sanitation point",,Points of contact
+00173,Primary contact phone number,general,,,,Text,,,Phone number of the primary contact,"Type: Sanitation system,Subsystem, Facility, Sanitation point",,Points of contact
+00174,Secondary contact name,general,,,,Text,,,Additional individual who may be contacted if the primary contact is not available,"Type: Sanitation system,Subsystem, Facility, Sanitation point",,Points of contact
+00175,Secondary contact position,general,,,,Text,,,Title or role of the secondary contact,"Type: Sanitation system,Subsystem, Facility, Sanitation point",,Points of contact
+00176,Secondary contact phone number,general,,,,Text,,,Phone number of the secondary contact,"Type: Sanitation system,Subsystem, Facility, Sanitation point",,Points of contact
+00181,Date updated,general,,,,Date,,,Calendar date of the most recent update made to any attribute,,,Metadata
+00182,Date inspected,general,,,,Date,,,"Calendar date of the most recent inspection or audit of the asset, as defined by organizational asset management policies",,,Metadata
+00183,Alternate ID,general,,,,Text,,,Optional additional identification code or number that is used by other data systems or organizations to track the asset,,,Metadata
+00184,Import code,general,,,,Text,,,"Identification code for an asset that was assigned by an external database or asset management registry, used to maintain backwards traceability for assets that have been imported",,,Metadata
+00185,Permit or licence number,general,,,,Text,,,"Identification number of the primary permit, licence, or registration issued for the asset by a regulator or government authority","Type: Sanitation system, Facility, Sanitation point, Vehicle, Outfall",,Metadata
+10201,Sanitation system type,type_specific,,Sanitation system,sanitation_system,Choice,,,"Categorization of the system by how excreta and wastewater are contained and conveyed: through a sewer network, in on-site containment, or both",,,Sanitation system info
+10202,Sewer network type,type_specific,,Sanitation system,sanitation_system,Choice,,,"Categorization of the collecting network by what it is designed to carry: wastewater only in separate sewers, wastewater and stormwater together in combined sewers, or both","Sanitation system type: Sewered, Mixed",,Sanitation system info
+10203,Management type,type_specific,,Sanitation system,sanitation_system,Choice,,,"Type of organization that manages the operations, maintenance, and finances of the sanitation system",,,Sanitation system info
+10204,Number of households in service area,type_specific,,Sanitation system,sanitation_system,Number,,,Total number of households within the area that a service provider is legally mandated to offer services to,,,Sanitation system info
+10205,Number of households currently served,type_specific,,Sanitation system,sanitation_system,Number,,,"Number of households currently receiving service, whether through a functional sewer connection or through regular servicing of on-site containment (includes households with inactive, intermittent, or cut off service, if service could be re-established)",,,Sanitation system info
+10206,System or network diagram,type_specific,,Sanitation system,sanitation_system,Image,,,"Photograph of a recent map or diagram showing the location of sanitation infrastructure, such as the collection network and treatment assets",,,Sanitation system info
+10207,Total treatment capacity,type_specific,,Sanitation system,sanitation_system,Unit,Flow rate,m³/s,"Indicative amount of wastewater and faecal sludge that the system's treatment assets are able to receive and treat, within current resource and design constraints",,,Sanitation system info
+10208,Sewer technology,type_specific,,Sanitation system,sanitation_system,Choice,,,Predominant sewer technology used in the collecting network,"Sanitation system type: Sewered, Mixed",,Sanitation system info
+10209,Design capacity (population equivalent),type_specific,,Sanitation system,sanitation_system,Number,,,"Design capacity of the system expressed in population equivalent (p.e.), a standardized load unit where 1 p.e. is an organic biodegradable load with a five-day biochemical oxygen demand (BOD₅) of 60 g of oxygen per day, independent of actual local per-capita loads (Directive (EU) 2024/3019, Art. 2(10))",,,Sanitation system info
+20101,Facility type,type_specific,,Facility,facility,Choice,,,"Type of physical location where a specific function is performed in the collection, transport, treatment, or disposal/reuse of wastewater and faecal sludge",,,Facility info
+20102,Process area type,type_specific,,Facility,facility,Text,,,Optional label used to categorize process areas within a facility,Facility type: Process area,,Facility info
+20103,Equipped to receive faecal sludge,type_specific,,Facility,facility,Checkbox,,,"The treatment facility is equipped to receive faecal sludge or septage delivered by vehicle, in addition to sewered flow, such as through a discharge structure or receiving station",Facility type: Wastewater treatment plant,,Facility info
+31501,Sanitation point type,type_specific,,Sanitation point,sanitation_point,Choice,,,Type of technology used by the sanitation point to collect user excreta across sewered and non-sewered systems,,,Sanitation point info
+31505,Number of cubicles or stances,type_specific,,Sanitation point,sanitation_point,Number,,,"Total number of individual cubicles, stances, or seats available at the sanitation point",,,Sanitation point info
+31507,Usage arrangement,type_specific,,Sanitation point,sanitation_point,Choice,,,Categorization of the sanitation point by who uses it and how access is arranged,,,Sanitation point info
+31509,Separate facilities for women and girls,type_specific,,Sanitation point,sanitation_point,Checkbox,,,"Sanitation point provides separate, private cubicles or blocks designated for use by women and girls","Usage arrangement: Shared (limited number of households), Communal or public, Institutional",,Sanitation point info
+31510,Pan style,type_specific,,Sanitation point,sanitation_point,Choice,,,Style of toilet pan or seat installed,,,Sanitation point info
+32201,Connection type,type_specific,,Connection,connection,Choice,,,Categorization of the connection based on the type of user or customer premises served,,,Connection info
+32202,Customer ID,type_specific,,Connection,connection,Text,,,Identification code used by the billing or commercial system for the customer or property served by this connection,,,Connection info
+32203,Connection status,type_specific,,Connection,connection,Choice,,,Current service status of the connection,,,Connection info
+32204,Interceptor tank installed,type_specific,,Connection,connection,Checkbox,,,"An interceptor tank, such as a septic tank, is installed upstream of this connection to retain settleable solids before discharge to the network (settled or solids-free sewerage)",,,Connection info
+32205,Backflow prevention installed,type_specific,,Connection,connection,Checkbox,,,A non-return valve or other backflow-prevention device is installed on the connection to prevent sewer surcharge from flowing back into the property,,,Connection info
+31601,Containment type,type_specific,,Containment,containment,Choice,,,"Type of technology used to collect, store, and partially treat excreta and wastewater at or near the point of generation",,,Containment info
+31602,Number of compartments,type_specific,,Containment,containment,Number,,,Number of separate chambers within the containment structure,,,Containment info
+31603,Storage volume,type_specific,,Containment,containment,Unit,Volume,m³,Effective storage or holding capacity of the containment structure,,,Containment info
+31609,Containment depth,type_specific,,Containment,containment,Unit,Length,m,"Vertical distance from the ground surface, slab, or access opening to the bottom of the containment structure; for pits, the excavated depth",,,Containment info
+31604,Lined or sealed,type_specific,,Containment,containment,Choice,,,Degree to which the containment structure prevents infiltration of its contents into the surrounding soil,,,Containment info
+31605,Outlet arrangement,type_specific,,Containment,containment,Choice,,,Categorization of where liquid effluent or overflow from the containment structure discharges,,,Containment info
+31606,Emptying access,type_specific,,Containment,containment,Choice,,,Extent to which the containment structure can be physically accessed for emptying (desludging),,,Containment info
+31607,Number of users sharing,type_specific,,Containment,containment,Number,,,Number of individual users that share use of this containment structure,,,Containment info
+31701,Vehicle type,type_specific,,Vehicle,vehicle,Choice,,,"Categorization of the mobile asset used to empty, transport, or transfer faecal sludge, septage, or wastewater, or to maintain the collection network",,,Vehicle info
+31702,Registration number,type_specific,,Vehicle,vehicle,Text,,,Official license plate or registration number issued to the vehicle by a government authority,,,Vehicle info
+31703,Tank or load capacity,type_specific,,Vehicle,vehicle,Unit,Volume,m³,"Maximum volume of faecal sludge, septage, or wastewater that the vehicle's tank or load bed can hold",,,Vehicle info
+31704,Vacuum pump fitted,type_specific,,Vehicle,vehicle,Checkbox,,,"Whether the vehicle is equipped with a vacuum pump used to suction faecal sludge, septage, or wastewater from a containment system",,,Vehicle info
+31801,Manhole type,type_specific,,Manhole,manhole,Choice,,,Categorization of the manhole by its access function,,,Manhole info
+31802,Chamber depth,type_specific,,Manhole,manhole,Unit,Length,m,Vertical distance from the manhole cover to the invert or floor of the chamber,,,Manhole info
+31803,Cover shape,type_specific,,Manhole,manhole,Choice,,,Shape of the manhole cover and frame,,,Manhole info
+31804,Cover diameter,type_specific,,Manhole,manhole,Unit,Length,m,Nominal diameter of a round manhole cover,Cover shape: Round,,Manhole info
+31807,Cover length,type_specific,,Manhole,manhole,Unit,Length,m,"Length of a rectangular manhole cover, measured along its longer side",Cover shape: Rectangular,,Manhole info
+31808,Cover width,type_specific,,Manhole,manhole,Unit,Length,m,"Width of a rectangular manhole cover, measured along its shorter side",Cover shape: Rectangular,,Manhole info
+31805,Cover load class,type_specific,,Manhole,manhole,Choice,,,Load-bearing classification of the manhole cover per EN 124,,,Manhole info
+31806,Access aid type,type_specific,,Manhole,manhole,Choice,,,"Type of fixed steps, ladder, or rungs installed inside the chamber for entry",,,Manhole info
+31001,Junction type,type_specific,,Junction,junction,Choice,,,Type of fitting used where two or more pipes or conduits connect,,,Junction info
+30801,Valve type,type_specific,,Valve,valve,Choice,,,"Purpose or design of a valve used to close off or regulate the flow of wastewater, sludge, or air in a pipe or closed conduit",,,Valve info
+30802,Date of last actuation,type_specific,,Valve,valve,Date,,,Most recent date that the valve was actuated to prevent degradation and verify functionality,,,Valve info
+32101,Flow control element type,type_specific,,Flow control,flow_control,Choice,,,"Physical form of the flow control element, independent of the function it serves (32102)",,,Flow control info
+32102,Flow control function,type_specific,,Flow control,flow_control,Choice,,,"Primary hydraulic function the flow control element serves in the system, independent of its physical form (32101)",,,Flow control info
+31401,Structure type,type_specific,,Structure,structure,Choice,,,Type of ancillary structure present at a sanitation asset site,,,Structure info
+31411,Perimeter type,type_specific,,Structure,structure,Choice,,,Type of perimeter design,Structure type: Perimeter,,Perimeter data
+31412,Perimeter total length,type_specific,,Structure,structure,Unit,Length,m,Total length of the entire perimeter that is being defined as an asset,Structure type: Perimeter,,Perimeter data
+31413,Perimeter height,type_specific,,Structure,structure,Unit,Length,m,Typical or minimum height of the perimeter,Structure type: Perimeter,,Perimeter data
+31414,Perimeter setback distance,type_specific,,Structure,structure,Unit,Length,m,Typical or minimum distance from the perimeter from the structure or equipment it is designed to protect,Structure type: Perimeter,,Perimeter data
+30401,Power type,type_specific,,Power,power,Choice,,,Categorization of the power generating device based on design or principles of operation,,,Power info
+30402,Rated power output,type_specific,,Power,power,Unit,Power,W,Power output that can be sustained for long periods of time; for generators this is the continuous power rating,,,Power info
+30403,Maximum power output,type_specific,,Power,power,Unit,Power,W,"Power output that can be provided for short periods of time in response to surges in demand; for generators, sometimes referred to as the standby or intermittent power rating",,,Power info
+30404,Nominal voltage,type_specific,,Power,power,Unit,Voltage,V,Voltage assigned to a system or circuit of a given voltage class for the purpose of convenient designation; the actual operating voltage may vary above or below this value,,,Power info
+30405,Rated voltage,type_specific,,Power,power,Unit,Voltage,V,Maximum voltage at which the power system can be operated within thermal and safety limits,,,Power info
+30406,Maximum current,type_specific,,Power,power,Unit,Current,A,"Maximum safe current, or starting current, that can be supplied for a short period of time",,,Power info
+30407,Type of current,type_specific,,Power,power,Choice,,,Mode of transmission for electrical current (AC/DC),,,Power info
+30408,Frequency of current,type_specific,,Power,power,Choice,,,"Frequency at which the voltage rises to a peak, reverses, and rises to a peak again",,,Power info
+30421,Generator fuel,type_specific,,Power,power,Choice,,,Type of fuel required by the generator,Power type: Generator,,Generator data
+30422,Generator apparent power,type_specific,,Power,power,Unit,Power,W,"Product of the voltage and current provided in an AC power system, which does not account for the reactive power required by inductive loads in the circuit; sometimes referred to by its most common unit of measurement: kVA",Power type: Generator,,Generator data
+30423,Engine cooling system,type_specific,,Power,power,Choice,,,Type of cooling system used by the generator engine,Power type: Generator,,Generator data
+30424,PV panel type,type_specific,,Power,power,Choice,,,Photovoltaic panel type,Power type: Solar,,Solar power data
+30425,Total number of PV panels,type_specific,,Power,power,Number,,,Total number of photovoltaic panels installed in the power system,Power type: Solar,,Solar power data
+30701,Electrical type,type_specific,,Electrical,electrical,Choice,,,Type of electrical asset,,,Electrical info
+30702,Electrical power device type,type_specific,,Electrical,electrical,Choice,,,Classification of electrical power device based on purpose or mode of operation,Electrical type: Power device,,Electrical info
+30601,Meter ID,type_specific,,Meter,meter,Text,,,Identification number or code used by the service provider to identify the meter,,,Meter info
+30602,Meter type,type_specific,,Meter,meter,Choice,,,"Location or function of the flow being measured within the wastewater, effluent, or sludge stream",,,Meter info
+30603,Meter design,type_specific,,Meter,meter,Choice,,,Design or operating principle of the meter,,,Meter info
+30604,Minimum measurable flow rate,type_specific,,Meter,meter,Unit,Flow rate,m³/s,Lowest flow rate that can be measured by the meter,,,Meter info
+30605,Meter measurement type,type_specific,,Meter,meter,Choice,,,"Type of measurement displayed by the meter (total volume, flow rate, or both)",,,Meter info
+31101,Sampling point type,type_specific,,Sampling point,sampling_point,Choice,,,"Location in the wastewater or faecal sludge stream where a sample is collected for water quality or process testing, including regulatory compliance points",,,Sampling point info
+31102,Regulatory compliance point,type_specific,,Sampling point,sampling_point,Checkbox,,,Sampling point designated for regulatory compliance monitoring under a discharge permit or national monitoring program,,,Sampling point info
+31103,Autosampler installed,type_specific,,Sampling point,sampling_point,Checkbox,,,A fixed automatic sampler is installed at this point to collect composite or sequential samples,,,Sampling point info
+31201,Sensor type,type_specific,,Sensor,sensor,Choice,,,Physical or field parameter measured by the sensor,,,Sensor info
+31202,Gas measured,type_specific,,Sensor,sensor,Choice,,,Gas or gases that the sensor measures,Sensor type: Gas,,Sensor info
+31203,Gases measured,type_specific,,Sensor,sensor,Text,,,"Gases that a multi-gas instrument measures, separated by commas — for example: hydrogen sulfide, methane, oxygen. Use the names given in Gas measured where they apply",Gas measured: Multi-gas,,Sensor info
+31301,Analyzer type,type_specific,,Analyzer,analyzer,Choice,,,Water quality or process parameter measured by the analyzer,,,Analyzer info
+31302,Parameters measured,type_specific,,Analyzer,analyzer,Text,,,"Parameters that a multiparameter analyzer measures, separated by commas",Analyzer type: Multiparameter,,Analyzer info
+32301,Transmission method,type_specific,,Datalogger,datalogger,Choice,,,Method by which recorded data are transmitted from the datalogger to the systems or staff that use them,,,Datalogger info
+30201,Pump type,type_specific,,Pump,pump,Choice,,,"Description of the pump mechanism or operating principle used to empty, convey, or transfer wastewater or faecal sludge",,,Pump info
+30202,Pump diameter,type_specific,,Pump,pump,Unit,Length,m,Maximum outer diameter of a submersible pump,Pump type: Submersible non-clog/vortex,,Pump info
+30203,Pump power rating,type_specific,,Pump,pump,Unit,Power,W,"Power consumed by a pump operating under normal pressure and flow conditions, as defined by the manufacturer",Pump type is not Manual pump,,Pump info
+30204,Pump motor configuration,type_specific,,Pump,pump,Choice,,,"Whether the motor and pump should be tracked as a single asset or as separate assets; in cases where the motor is separate from the pump, this generally means that motors are interchangeable between pumps of a similar design",Pump type is not Manual pump,,Pump info
+30205,Pump motor voltage type,type_specific,,Pump,pump,Choice,,,Type of electrical power required by the pump,Pump motor configuration: Integrated with pump,,Pump motor data
+30206,Pump motor voltage,type_specific,,Pump,pump,Unit,Voltage,V,"Normal operating voltage of the pump, as recommended by the manufacturer",Pump motor configuration: Integrated with pump,,Pump motor data
+30207,Pump motor max current,type_specific,,Pump,pump,Unit,Current,A,Current drawn by the pump when operating at the maximum or full load power rating,Pump motor configuration: Integrated with pump,,Pump motor data
+30208,Pump motor max power,type_specific,,Pump,pump,Unit,Power,W,"Maximum, or full load power rating of the pump, as recommended by the manufacturer",Pump motor configuration: Integrated with pump,,Pump motor data
+30221,Design flow,type_specific,,Pump,pump,Unit,Flow rate,m³/s,Flow rate of the pump required by the system design under normal operating conditions; should be within the acceptable flow range as defined by the pump curve,,,Pump curve
+30222,Design head,type_specific,,Pump,pump,Unit,Pressure,Pa,"Head, or pressure, shown on the pump curve at the design flow rate",,,Pump curve
+30223,Maximum flow (Q-max),type_specific,,Pump,pump,Unit,Flow rate,m³/s,Maximum possible flow rate shown on the pump curve,,,Pump curve
+30224,Head at maximum flow (H-min),type_specific,,Pump,pump,Unit,Pressure,Pa,"Total head, or pressure, that corresponds to the maximum flow rate on the pump curve; also referred to as the minimum head",,,Pump curve
+30225,Minimum flow (Q-min),type_specific,,Pump,pump,Unit,Flow rate,m³/s,Minimum possible flow rate shown on the pump curve,,,Pump curve
+30226,Head at minimum flow (H-max),type_specific,,Pump,pump,Unit,Pressure,Pa,"Total head, or pressure, that corresponds to the minimum flow rate on the pump curve; also referred to as the maximum head",,,Pump curve
+30227,NPSH-R,type_specific,,Pump,pump,Unit,Pressure,Pa,Net positive suction head required (or minimum) by the suction side of the pump in order to prevent cavitation and evaporation (flashing),,,Pump curve
+30301,Tank type,type_specific,,Tank,tank,Choice,,,Function or purpose of the tank within the conveyance network or treatment facility,,,Tank info
+30302,Tank material,type_specific,,Tank,tank,Choice,,,Main material of construction used in the tank,,,Tank info
+30303,Tank volume,type_specific,,Tank,tank,Unit,Volume,m³,Useful volume of the tank which can be supplied between the minimum and maximum operating levels,,,Tank info
+30304,Tank shape,type_specific,,Tank,tank,Choice,,,Basic shape or form factor of the tank,,,Tank info
+30311,Tank diameter,type_specific,,Tank,tank,Unit,Length,m,Diameter of the base of a cylindrical tank,Tank shape: Cylindrical,,Tank dimensions
+30312,Tank height,type_specific,,Tank,tank,Unit,Length,m,"Distance from the bottom to the top of the tank, measured from outside",,,Tank dimensions
+30313,Tank length,type_specific,,Tank,tank,Unit,Length,m,Length of the longest side of the base of a rectangular tank,Tank shape: Rectangular,,Tank dimensions
+30314,Tank width,type_specific,,Tank,tank,Unit,Length,m,Length of the shortest side of the base of a rectangular tank,Tank shape: Rectangular,,Tank dimensions
+30315,Height of tank bottom,type_specific,,Tank,tank,Unit,Length,m,Distance from the ground level to the bottom of the inside of the tank; negative values are used for depths below the ground,,,Tank dimensions
+30316,Minimum operating level,type_specific,,Tank,tank,Unit,Length,m,"Minimum fluid level allowed in the tank, measured from the tank bottom; this may be the height of the outlet or the minimum level allowed by a level control",,,Tank dimensions
+30317,Maximum operating level,type_specific,,Tank,tank,Unit,Length,m,"Maximum fluid level allowed in the tank, measured from the tank bottom; this may be the height of the overflow pipe or the maximum level allowed by a level control",,,Tank dimensions
+30323,Level indicator installed,type_specific,,Tank,tank,Checkbox,,,"Device is installed that provides a visual or electronic measurement of the tank fill level, used to trigger alarms or control pumps",,,Tank details
+30501,Treatment type,type_specific,,Treatment,treatment,Choice,,,"Categorization of treatment process by treatment method or objective, spanning liquid-stream (wastewater) and sludge/faecal sludge treatment technologies",,,Treatment info
+30502,Treatment level,type_specific,,Treatment,treatment,Choice,,,"Stage of treatment achieved by this unit, based on the pollutant-removal mechanism used; choices follow the legal definitions in Directive (EU) 2024/3019, Art. 2(11)-(14)",,,Treatment info
+30503,Design capacity of the unit,type_specific,,Treatment,treatment,Unit,Flow rate,m³/s,Design flow capacity of this specific treatment unit or process,,,Treatment info
+30504,Design organic load capacity of the unit,type_specific,,Treatment,treatment,Unit,Mass flow,kg/d,"Design organic load capacity of this treatment unit, measured as the mass of five-day biochemical oxygen demand (BOD₅) treated per day",,,Treatment info
+30505,Surface area,type_specific,,Treatment,treatment,Unit,Area,m²,"Plan surface area of the treatment unit at the water or bed surface, such as a pond, wetland, drying bed, or basin","Treatment type: Waste stabilization pond, Aerated lagoon or pond, Free-water surface constructed wetland, Horizontal subsurface flow constructed wetland, Vertical flow constructed wetland, Unplanted drying bed, Planted drying bed",,Treatment info
+30506,Depth,type_specific,,Treatment,treatment,Unit,Length,m,"Vertical distance from the water or bed surface to the bottom of the treatment unit; for ponds, the design liquid depth excluding freeboard","Treatment type: Waste stabilization pond, Aerated lagoon or pond, Free-water surface constructed wetland, Horizontal subsurface flow constructed wetland, Vertical flow constructed wetland, Unplanted drying bed, Planted drying bed",,Treatment info
+30507,Liner,type_specific,,Treatment,treatment,Choice,,,Type of liner installed to control seepage from the treatment unit into the surrounding soil,"Treatment type: Waste stabilization pond, Aerated lagoon or pond, Free-water surface constructed wetland, Horizontal subsurface flow constructed wetland, Vertical flow constructed wetland, Unplanted drying bed, Planted drying bed",,Treatment info
+30521,Primary chemical used,type_specific,,Treatment,treatment,Choice,,,Primary chemical stored and used by this treatment unit or process,"Treatment type: Chlorination, Disinfection, Chemical feed, Coagulation or flocculation, Nutrient removal (nitrogen or phosphorus), Lime stabilization",,Chemical data
+31901,Dispersal type,type_specific,,Dispersal,dispersal,Choice,,,Type of technology used to discharge treated or partially treated effluent to the soil for infiltration or evapotranspiration,,,Dispersal info
+32001,Outfall type,type_specific,,Outfall,outfall,Choice,,,Categorization of the outfall by the type of discharge it conveys to the receiving environment,,,Outfall info
+32002,Receiving water name,type_specific,,Outfall,outfall,Text,,,"Name of the water body receiving the effluent or overflow, if one exists",,,Outfall info
+32003,Screen or control installed,type_specific,,Outfall,outfall,Checkbox,,,"A physical screen, grate, tide gate, or flow-control device is installed at the outfall to remove solids or regulate discharge",,,Outfall info
+32004,Receiving environment type,type_specific,,Outfall,outfall,Choice,,,Type of water body or environment receiving the discharge,,,Outfall info
+39901,Other vertical asset type,type_specific,,Other vertical,other_vertical,Text,,,Description or categorization of the other type of vertical asset,,,
+40101,Pipe type,type_specific,,Pipe,pipe,Choice,,,Category of sewer pipe by its position and function in the collection network,,,Pipe info
+40103,Nominal pressure,type_specific,,Pipe,pipe,Unit,Pressure,Pa,Numerical designation of design pressure that is a convenient round number for reference purposes,"Pipe type: Rising main (force main), Inverted siphon",,Pipe info
+40104,Pipe depth below ground,type_specific,,Pipe,pipe,Unit,Length,m,Depth of the pipe below the local ground surface,,,Pipe info
+40105,Upstream invert level,type_specific,,Pipe,pipe,Unit,Length,m,"Elevation of the lowest point of the internal pipe surface at the upstream end, recorded against the same datum as Survey elevation",,,Pipe info
+40106,Downstream invert level,type_specific,,Pipe,pipe,Unit,Length,m,"Elevation of the lowest point of the internal pipe surface at the downstream end, recorded against the same datum as Survey elevation",,,Pipe info
+40107,Cross-section shape,type_specific,,Pipe,pipe,Choice,,,Shape of the pipe's internal cross-section,,,Pipe info
+40108,Gradient,type_specific,,Pipe,pipe,Number,,,"Slope of the pipe between upstream and downstream inverts, expressed as a percentage",,,Pipe info
+40201,Channel cross-section shape,type_specific,,Channel,channel,Choice,,,Shape of the open channel's cross-section,,,Channel info
+40202,Lined,type_specific,,Channel,channel,Checkbox,,,"The channel bed and sides have a constructed lining, such as concrete, masonry, or a synthetic membrane, to control seepage and erosion, as opposed to an unlined earthen channel",,,Channel info
+40203,Covered or open,type_specific,,Channel,channel,Choice,,,Whether the channel is open to the atmosphere or has a fixed cover or slab over it,,,Channel info
+40204,Channel depth,type_specific,,Channel,channel,Unit,Length,m,"Vertical distance from the top of the channel side or lining to the invert (lowest point) of the channel, measured internally",,,Channel info
+40205,Channel top width,type_specific,,Channel,channel,Unit,Length,m,"Internal width of the channel measured at the top, between the inner faces of the channel sides",,,Channel info
+40206,Gradient,type_specific,,Channel,channel,Number,,,"Slope of the channel between its upstream and downstream inverts, expressed as a percentage",,,Channel info

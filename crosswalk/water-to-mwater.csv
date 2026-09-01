@@ -1,0 +1,179 @@
+attribute_code,attribute_name,asset_type,standard_data_type,mwater_table,mwater_column_id,mwater_column_name,mwater_column_type,match_method,candidate_count
+00001,Type,,Choice,entities.water_asset,type,Type,enum,exact_name,1
+00002,Name,,Text,entities.water_asset,name,Name,text,exact_name,1
+00003,Asset ID,,Text,entities.water_asset,,,,unmatched,0
+00004,Description,,Text,entities.water_asset,description,Description,text,exact_name,1
+00005,Photo,,Image,entities.water_asset,photos,Photo,imagelist,exact_name,1
+00006,Parent asset ID,,Asset ID,entities.water_asset,,,,unmatched,0
+00011,Location,,Geometry,entities.water_asset,location,Location,geometry,exact_name,1
+00012,Location precision,,Unit,entities.water_asset,location_accuracy,Location precision,number,exact_name,1
+00013,Elevation,,Unit,entities.water_asset,location_altitude_accuracy,Elevation precision,number,unit_family,1
+00014,Elevation precision,,Unit,entities.water_asset,location_altitude_accuracy,Elevation precision,number,exact_name,1
+00015,Administrative region,,Text,entities.water_asset,admin_region,Administrative region,id,exact_name,1
+00016,Coverage area,,Geometry,entities.water_asset,,,,unmatched,0
+00017,Sector,,Text,entities.water_asset,sector,Sector,text,exact_name,1
+00018,Route,,Text,entities.water_asset,route,Route,text,exact_name,1
+00019,Address,,Text,entities.water_asset,address,Address,text,exact_name,1
+00020,Urban-rural classification,,Choice,entities.water_asset,urban_rural,Urban-rural classification,enum,exact_name,1
+00021,Community,,Text,entities.water_asset,community,Community,id,exact_name,1
+00022,Accessible by road,,Checkbox,entities.water_asset,accessible_by_road,Accessible by road,boolean,exact_name,1
+00023,Perimeter fence or wall installed,,Checkbox,entities.water_asset,perimeter,Perimeter fence or wall installed,boolean,exact_name,1
+00031,Level 1,,Text,entities.water_asset,hierarchy_level_1,Level 1,text,exact_name,1
+00032,Level 2,,Text,entities.water_asset,hierarchy_level_2,Level 2,text,exact_name,1
+00033,Level 3,,Text,entities.water_asset,hierarchy_level_3,Level 3,text,exact_name,1
+00034,Level 4,,Text,entities.water_asset,hierarchy_level_4,Level 4,text,exact_name,1
+00035,Level 5,,Text,entities.water_asset,hierarchy_level_5,Level 5,text,exact_name,1
+00036,Level 6,,Text,entities.water_asset,hierarchy_level_6,Level 6,text,exact_name,1
+00037,Level 7,,Text,entities.water_asset,hierarchy_level_7,Level 7,text,exact_name,1
+00041,Status,,Choice,entities.water_asset,status,Status,enum,exact_name,1
+00042,Condition,,Choice,entities.water_asset,condition,Condition,enum,exact_name,1
+00043,Functional status,,Choice,entities.water_asset,functional_status,Functional status,enum,exact_name,1
+00051,Current replacement cost (USD),,Number,entities.water_asset,,,,unmatched,0
+00052,Expected useful life,,Number,entities.water_asset,eul,Expected useful life,number,exact_name,1
+00053,Probability of failure,,Choice,entities.water_asset,probability_of_failure,Probability of failure,enum,exact_name,1
+00054,Consequence of failure,,Choice,entities.water_asset,consequence_of_failure,Consequence of failure,enum,exact_name,1
+00055,Asset risk,,Choice,entities.water_asset,asset_risk,Asset risk,enum,exact_name,1
+00056,Original cost (USD),,Number,entities.water_asset,original_cost,Original cost (USD),number,exact_name,1
+00057,Current rehabilitation cost (USD),,Number,entities.water_asset,current_rehab_cost,Current rehabilitation cost (USD),number,exact_name,1
+00061,Manufacturer,,Text,entities.water_asset,manufacturer,Manufacturer,text,exact_name,1
+00062,Model,,Text,entities.water_asset,model,Model,text,exact_name,1
+00063,Serial number,,Text,entities.water_asset,serial_number,Serial number,text,exact_name,1
+00064,Additional technical details,,Text,entities.water_asset,additional_technical_details,Additional technical details,text,exact_name,1
+00065,Installation date,,Date,entities.water_asset,installation_date,Installation date,date,exact_name,1
+00066,Installed by,,Text,entities.water_asset,installed_by,Installed by,text,exact_name,1
+00067,Funded by,,Text,entities.water_asset,funded_by,Funded by,text,exact_name,1
+00068,Rehabilitation date,,Date,entities.water_asset,rehabilitation_date,Rehabilitation date,date,exact_name,1
+00069,Last service date,,Date,entities.water_asset,last_service_date,Last service date,date,exact_name,1
+00070,Rehabilitated by,,Text,entities.water_asset,rehab_by,Rehabilitated by,text,exact_name,1
+00071,Service interval,,Unit,entities.water_asset,service_interval_magnitude,Service interval (raw magnitude),number,unit_family,1
+00091,Upstream asset,,Asset ID,entities.water_asset,upstream_asset,Upstream asset,id,exact_name,1
+00092,Nominal diameter,,Unit,entities.water_asset,nominal_diameter_magnitude,Nominal diameter (raw magnitude),number,unit_family,1
+00093,Pipe length,,Unit,entities.water_asset,pipe_length_manual_value_magnitude,Pipe length (manual entry) (raw magnitude),number,unit_family,1
+00094,Material,,Choice,entities.water_asset,material,Material,enum,exact_name,1
+00095,Minor loss coefficient,,Number,entities.water_asset,minor_loss_coef,Minor loss coefficient,number,exact_name,1
+00096,Roughness coefficient,,Number,entities.water_asset,,,,unmatched,0
+00171,Primary contact name,,Text,entities.water_asset,primary_contact_name,Primary contact name,text,exact_name,1
+00172,Primary contact position,,Text,entities.water_asset,primary_contact_position,Primary contact position,text,exact_name,1
+00173,Primary contact phone number,,Text,entities.water_asset,primary_contact_phone,Primary contact phone number,text,exact_name,1
+00174,Secondary contact name,,Text,entities.water_asset,secondary_contact_name,Secondary contact name,text,exact_name,1
+00175,Secondary contact position,,Text,entities.water_asset,secondary_contact_position,Secondary contact position,text,exact_name,1
+00176,Secondary contact phone number,,Text,entities.water_asset,secondary_contact_phone,Secondary contact phone number,text,exact_name,1
+00181,Date updated,,Date,entities.water_asset,,,,unmatched,0
+00182,Date inspected,,Date,entities.water_asset,date_inspected,Date inspected,date,exact_name,1
+00183,Alternate ID,,Text,entities.water_asset,alt_id,Alternate ID,text,exact_name,1
+00184,Import code,,Text,entities.water_asset,import_code,Import code,text,exact_name,1
+10201,Water system type,Water system,Choice,entities.water_asset,,,,unmatched,0
+10202,Network type,Water system,Choice,entities.water_asset,,,,unmatched,0
+10203,Management type,Water system,Choice,entities.water_asset,ht_management_type,Management type,enum,exact_name,1
+10204,Number of households in service area,Water system,Number,entities.water_asset,,,,unmatched,0
+10205,Number of households currently served,Water system,Number,entities.water_asset,,,,unmatched,0
+10206,System or network diagram,Water system,Image,entities.water_asset,,,,unmatched,0
+10207,Total production of system,Water system,Unit,entities.water_asset,total_production_magnitude,Total production of system (raw magnitude),number,unit_family,1
+20101,Water facility type,Water facility,Choice,entities.water_asset,water_facility_type,Water facility type,enum,exact_name,1
+20102,Process area type,Water facility,Text,entities.water_asset,process_area_type,Process area type,text,exact_name,1
+30101,Source type,Source,Choice,entities.water_asset,source_type,Source type,enum,exact_name,1
+30102,Source meter installed,Source,Checkbox,entities.water_asset,source_meter_installed,Source meter installed,boolean,exact_name,1
+30103,Water quality tested,Source,Checkbox,entities.water_asset,water_quality_tested,Water quality tested,boolean,exact_name,1
+30104,Date of most recent sample,Source,Date,entities.water_asset,date_water_quality_tested,Date of most recent sample,date,exact_name,1
+30105,Name of water body,Source,Text,entities.water_asset,name_water_body,Name of water body,text,exact_name,1
+30106,Source pressure,Source,Unit,entities.water_asset,source_pressure_magnitude,Source pressure (raw magnitude),number,unit_family,1
+30107,Nominal flow,Source,Unit,entities.water_asset,nominal_flow_magnitude,Nominal flow (raw magnitude),number,unit_family,1
+30108,Minimum flow,Source,Unit,entities.water_asset,minimum_flow_magnitude,Minimum flow (raw magnitude),number,unit_family_ambiguous,2
+30109,Maximum flow,Source,Unit,entities.water_asset,maximum_flow_magnitude,Maximum flow (raw magnitude),number,unit_family_ambiguous,2
+30121,Well depth,Source,Unit,entities.water_asset,well_depth_magnitude,Well depth (raw magnitude),number,unit_family,1
+30122,Well diameter,Source,Unit,entities.water_asset,well_diameter_magnitude,Well diameter (raw magnitude),number,unit_family,1
+30123,Static water level,Source,Unit,entities.water_asset,static_water_level_magnitude,Static water level (raw magnitude),number,unit_family,1
+30124,Dynamic water level,Source,Unit,entities.water_asset,dynamic_water_level_magnitude,Dynamic water level (raw magnitude),number,unit_family,1
+30125,Groundwater temperature,Source,Unit,entities.water_asset,groundwater_temperature_magnitude,Groundwater temperature (raw magnitude),number,unit_family,1
+30126,Pump or lifting device,Source,Choice,entities.water_asset,pump_or_lifting_device,Pump or lifting device,enum,exact_name,1
+30127,Apron installed,Source,Checkbox,entities.water_asset,apron_installed,Apron installed,boolean,exact_name,1
+30128,Monitoring well,Source,Checkbox,entities.water_asset,monitoring_well,Monitoring well,boolean,exact_name,1
+30141,Spring box present,Source,Checkbox,entities.water_asset,spring_box_present,Spring box present,boolean,exact_name,1
+30142,Spring box length,Source,Unit,entities.water_asset,spring_box_length_magnitude,Spring box length (raw magnitude),number,unit_family,1
+30143,Spring box width,Source,Unit,entities.water_asset,spring_box_width_magnitude,Spring box width (raw magnitude),number,unit_family,1
+30144,Spring box depth,Source,Unit,entities.water_asset,spring_box_depth_magnitude,Spring box depth (raw magnitude),number,unit_family,1
+30145,Overflow pipe present,Source,Checkbox,entities.water_asset,overflow_pipe_present,Overflow pipe present,boolean,exact_name,1
+30146,Drain pipe present,Source,Checkbox,entities.water_asset,drain_pipe_present,Drain pipe present,boolean,exact_name,1
+30151,Casing diameter,Source,Unit,entities.water_asset,casing_diameter_magnitude,Casing diameter (raw magnitude),number,unit_family,1
+30152,Depth of casing,Source,Unit,entities.water_asset,depth_of_casing_magnitude,Depth of casing (raw magnitude),number,unit_family,1
+30153,Casing material,Source,Choice,entities.water_asset,casing_material,Casing material,enum,exact_name,1
+30154,Screen length,Source,Unit,entities.water_asset,screen_length_magnitude,Screen length (raw magnitude),number,unit_family,1
+30155,Pump position,Source,Unit,entities.water_asset,pump_position_magnitude,Pump position (raw magnitude),number,unit_family,1
+30156,Photo of well log,Source,Image,entities.water_asset,photo_of_well_log,Photo of well log,imagelist,exact_name,1
+30201,Pump type,Pump,Choice,entities.water_asset,pump_type,Pump type,enum,exact_name,1
+30202,Pump diameter,Pump,Unit,entities.water_asset,pump_diameter_magnitude,Pump diameter (raw magnitude),number,unit_family,1
+30203,Pump power rating,Pump,Unit,entities.water_asset,pump_power_rating_magnitude,Pump power rating (raw magnitude),number,unit_family,1
+30204,Pump motor configuration,Pump,Choice,entities.water_asset,pump_motor_configuration,Pump motor configuration,enum,exact_name,1
+30205,Pump motor voltage type,Pump,Choice,entities.water_asset,pump_motor_voltage_type,Pump motor voltage type,enum,exact_name,1
+30206,Pump motor voltage,Pump,Unit,entities.water_asset,pump_motor_voltage_magnitude,Pump motor voltage (raw magnitude),number,unit_family,1
+30207,Pump motor max current,Pump,Unit,entities.water_asset,pump_motor_max_current_magnitude,Pump motor max current (raw magnitude),number,unit_family,1
+30208,Pump motor max power,Pump,Unit,entities.water_asset,pump_motor_max_power_magnitude,Pump motor max power (raw magnitude),number,unit_family,1
+30221,Design flow,Pump,Unit,entities.water_asset,design_flow_magnitude,Design flow (raw magnitude),number,unit_family,1
+30222,Design head,Pump,Unit,entities.water_asset,design_head_magnitude,Design head (raw magnitude),number,unit_family,1
+30223,Maximum flow (Q-max),Pump,Unit,entities.water_asset,pump_maximum_flow_magnitude,Maximum flow (Q-max) (raw magnitude),number,unit_family,1
+30224,Head at maximum flow (H-min),Pump,Unit,entities.water_asset,pump_h_min_magnitude,Head at maximum flow (H-min) (raw magnitude),number,unit_family,1
+30225,Minimum flow (Q-min),Pump,Unit,entities.water_asset,pump_q_min_magnitude,Minimum flow (Q-min) (raw magnitude),number,unit_family,1
+30226,Head at minimum flow (H-Max),Pump,Unit,entities.water_asset,pump_h_max_magnitude,Head at minimum flow (H-Max) (raw magnitude),number,unit_family,1
+30227,NPSH-R,Pump,Unit,entities.water_asset,pump_npsh_r_magnitude,NPSH-R (raw magnitude),number,unit_family,1
+30301,Tank type,Tank,Choice,entities.water_asset,tank_type,Tank type,enum,exact_name,1
+30302,Tank material,Tank,Choice,entities.water_asset,tank_material,Tank material,enum,exact_name,1
+30303,Tank volume,Tank,Unit,entities.water_asset,tank_volume_magnitude,Tank volume (raw magnitude),number,unit_family,1
+30304,Tank shape,Tank,Choice,entities.water_asset,tank_shape,Tank shape,enum,exact_name,1
+30311,Tank diameter,Tank,Unit,entities.water_asset,tank_diameter_magnitude,Tank diameter (raw magnitude),number,unit_family,1
+30312,Tank height,Tank,Unit,entities.water_asset,tank_height_magnitude,Tank height (raw magnitude),number,unit_family,1
+30313,Tank length,Tank,Unit,entities.water_asset,tank_length_magnitude,Tank length (raw magnitude),number,unit_family,1
+30314,Tank width,Tank,Unit,entities.water_asset,tank_width_magnitude,Tank width (raw magnitude),number,unit_family,1
+30315,Height of tank bottom,Tank,Unit,entities.water_asset,tank_bottom_height_magnitude,Height of tank bottom (raw magnitude),number,unit_family,1
+30316,Minimum water level,Tank,Unit,entities.water_asset,tank_min_level_magnitude,Minimum water level (raw magnitude),number,unit_family,1
+30317,Maximum water level,Tank,Unit,entities.water_asset,tank_max_level_magnitude,Maximum water level (raw magnitude),number,unit_family,1
+30321,Filling control installed,Tank,Checkbox,entities.water_asset,filling_control_installed,Filling control installed,boolean,exact_name,1
+30322,Type of filling control,Tank,Choice,entities.water_asset,type_filling_control,Type of filling control,enum,exact_name,1
+30323,Fill level indicator installed,Tank,Checkbox,entities.water_asset,fill_level_indicator_installed,Fill level indicator installed,boolean,exact_name,1
+30401,Power type,Power,Choice,entities.water_asset,power_type,Power type,enum,exact_name,1
+30402,Rated power output,Power,Unit,entities.water_asset,,,,unmatched,0
+30403,Maximum power output,Power,Unit,entities.water_asset,,,,unmatched,0
+30404,Nominal voltage,Power,Unit,entities.water_asset,nominal_voltage_magnitude,Nominal voltage (raw magnitude),number,unit_family,1
+30405,Rated voltage,Power,Unit,entities.water_asset,rated_voltage_magnitude,Rated voltage (raw magnitude),number,unit_family,1
+30406,Maximum current,Power,Unit,entities.water_asset,max_current_magnitude,Maximum current (raw magnitude),number,unit_family,1
+30407,Type of current,Power,Choice,entities.water_asset,type_of_current,Type of current,enum,exact_name,1
+30408,Frequency of current,Power,Choice,entities.water_asset,frequency_of_current,Frequency of current,enum,exact_name,1
+30421,Generator fuel,Power,Choice,entities.water_asset,generator_fuel,Generator fuel,enum,exact_name,1
+30422,Generator apparent power,Power,Unit,entities.water_asset,generator_apparent_power_magnitude,Generator apparent power (raw magnitude),number,unit_family,1
+30423,Engine cooling system,Power,Choice,entities.water_asset,engine_cooling_system,Engine cooling system,enum,exact_name,1
+30424,PV panel type,Power,Choice,entities.water_asset,pv_panel_type,PV panel type,enum,exact_name,1
+30425,Total number of PV panels,Power,Number,entities.water_asset,number_pv_panels,Total number of PV panels,number,exact_name,1
+30501,Treatment type,Treatment,Choice,entities.water_asset,treatment_type,Treatment type,enum,exact_name,1
+30521,Chlorine type,Treatment,Choice,entities.water_asset,chlorine_type,Chlorine type,enum,exact_name,1
+30522,Dosing method,Treatment,Choice,entities.water_asset,dosing_method,Dosing method,enum,exact_name,1
+30601,Meter ID,Meter,Text,entities.water_asset,meter_id,Meter ID,text,exact_name,1
+30602,Meter type,Meter,Choice,entities.water_asset,meter_type,Meter type,enum,exact_name,1
+30603,Meter design,Meter,Choice,entities.water_asset,meter_design,Meter design,enum,exact_name,1
+30604,Minimum measurable flow rate,Meter,Unit,entities.water_asset,meter_min_flow_rate_magnitude,Minimum measurable flow rate (raw magnitude),number,unit_family,1
+30605,Meter measurement type,Meter,Choice,entities.water_asset,meter_measurement_type,Meter measurement type,enum,exact_name,1
+30701,Electrical type,Electrical,Choice,entities.water_asset,electrical_type,Electrical type,enum,exact_name,1
+30702,Electrical power device type,Electrical,Choice,entities.water_asset,electrical_power_device_type,Electrical power device type,enum,exact_name,1
+30801,Valve type,Valve,Choice,entities.water_asset,valve_type,Valve type,enum,exact_name,1
+30802,Date of last actuation,Valve,Date,entities.water_asset,date_last_actuation,Date of last actuation,date,exact_name,1
+30901,Hydrant type,Hydrant,Choice,entities.water_asset,hydrant_type,Hydrant type,enum,exact_name,1
+31001,Junction type,Junction,Choice,entities.water_asset,junction_type,Junction type,enum,exact_name,1
+31101,Sampling point type,Sampling point,Choice,entities.water_asset,sampling_point_type,Sampling point type,enum,exact_name,1
+31201,Sensor type,Sensor,Choice,entities.water_asset,sensor_type,Sensor type,enum,exact_name,1
+31301,Analyzer type,Analyzer,Text,entities.water_asset,analyzer_type,Analyzer type,text,exact_name,1
+31401,Structure type,Structure,Choice,entities.water_asset,structure_type,Structure type,enum,exact_name,1
+31411,Perimeter type,Structure,Choice,entities.water_asset,perimeter_type,Perimeter type,enum,exact_name,1
+31412,Perimeter total length,Structure,Unit,entities.water_asset,perimeter_total_length_magnitude,Perimeter total length (raw magnitude),number,unit_family,1
+31413,Perimeter height,Structure,Unit,entities.water_asset,perimeter_height_magnitude,Perimeter height (raw magnitude),number,unit_family,1
+31414,Perimeter setback distance,Structure,Unit,entities.water_asset,perimeter_setback_distance_magnitude,Perimeter setback distance (raw magnitude),number,unit_family,1
+31501,Water point type,Water point,Choice,entities.water_asset,water_point_type,Water point type,enum,exact_name,1
+31502,Agricultural use,Water point,Checkbox,entities.water_asset,agricultural_use,Agricultural use,boolean,exact_name,1
+31503,Livestock use,Water point,Checkbox,entities.water_asset,livestock_use,Livestock use,boolean,exact_name,1
+31504,Meter installed,Water point,Checkbox,entities.water_asset,meter_installed,Meter installed,boolean,exact_name,1
+31505,Number of taps,Water point,Number,entities.water_asset,number_of_taps,Number of taps,number,exact_name,1
+31506,Kiosk tank installed,Water point,Checkbox,entities.water_asset,kiosk_tank_installed,Kiosk tank installed,boolean,exact_name,1
+31507,Connection type,Water point,Choice,entities.water_asset,connection_type,Connection type,enum,exact_name,1
+31508,Connection diameter,Water point,Unit,entities.water_asset,connection_diameter_magnitude,Connection diameter (raw magnitude),number,unit_family,1
+39901,Other vertical asset type,Other vertical,Text,entities.water_asset,other_vertical_type,Other vertical asset type,text,exact_name,1
+40101,Pipe type,Pipe,Choice,entities.water_asset,pipe_type,Pipe type,enum,exact_name,1
+40102,Pipe color,Pipe,Text,entities.water_asset,pipe_color,Pipe color,text,exact_name,1
+40103,Nominal pressure,Pipe,Unit,entities.water_asset,nominal_pressure_magnitude,Nominal pressure (raw magnitude),number,unit_family,1
+40104,Pipe depth below ground,Pipe,Unit,entities.water_asset,pipe_depth_below_ground_magnitude,Pipe depth below ground (raw magnitude),number,unit_family,1

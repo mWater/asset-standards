@@ -1,0 +1,179 @@
+code,name,scope,asset_class,asset_type,asset_type_id,data_type,unit_quantity,si_unit,description,applicability,required,attribute_group
+00001,Type,general,,,,Choice,,,"Type of asset, according to the definitions in Section 5.5",,,Basic info
+00002,Name,general,,,,Text,,,Name used by technical staff to refer to the asset; might be left blank for many lower level assets,,,Basic info
+00003,Asset ID,general,,,,Text,,,Unique code used to identify a particular asset in the asset register (see Section 5.2 for further details),,TRUE,Basic info
+00004,Description,general,,,,Text,,,Additional information to help staff locate or identify an asset,,,Basic info
+00005,Photo,general,,,,Image,,,Photo of the asset,,,Basic info
+00006,Parent asset ID,general,,,,Asset ID,,,Asset ID of the asset that is a parent to this asset (see Section 5.3 for further details),,,Basic info
+00011,Location,general,,,,Geometry,,,"Geographic location of the asset on the surface of the Earth; may be a point, line, or polygon",,,Location
+00012,Location precision,general,,,,Unit,Length,,"Estimated uncertainty in the geographic coordinates, expressed as a distance",,,Location
+00013,Elevation,general,,,,Unit,Length,,"Height above the surface of a defined ellipsoid model of the earth’s surface, such as WGS84, or the local mean sea level; a consistent reference system should be used for all assets within a water system",,,Location
+00014,Elevation precision,general,,,,Unit,Length,,Estimated uncertainty in the measurement of the elevation,,,Location
+00015,Administrative region,general,,,,Text,,,"Name that describes the administrative geography of the location; multiple levels may be separated by commas starting with the most general area, for example: Region, District, Municipality",,,Location
+00016,Coverage area,general,,,,Geometry,,,Geographical area where the water system or service provides coverage or is legally obligated to serve,Type: Water system,,Location
+00017,Sector,general,,,,Text,,,Name for a sub-region of the coverage area that is defined by geography or the physical layout of the distribution network,,,Location
+00018,Route,general,,,,Text,,,"Name or number of the meter reading route, which defines those meters that are assigned to a particular staff member or team","Type: Meter, Water Point",,Location
+00019,Address,general,,,,Text,,,"Physical address or postal address where the asset is located; in the case of piped connections, the address of the customer",,,Location
+00020,Urban-rural classification,general,,,,Choice,,,"Degree of urbanization, as defined by national standards or the Degree of Urbanisation method (OECD 2021)","Type: Water system, Water point",,Location
+00021,Community,general,,,,Text,,,"Name of the community, town, or neighborhood where a water system or facility is located","Type: Water system, water facility",,Location
+00022,Accessible by road,general,,,,Checkbox,,,Asset can be accessed by vehicles using a nearby road,,,Location
+00023,Perimeter fence or wall installed,general,,,,Checkbox,,,Fence or wall exists to provide physical security for the asset,,,Location
+00031,Level 1,general,,,,Text,,,Highest or most general level of categorization to which the asset belongs under the asset hierarchy,,,Hierarchy
+00032,Level 2,general,,,,Text,,,Second highest level of hierarchy,,,Hierarchy
+00033,Level 3,general,,,,Text,,,Third highest level of hierarchy,,,Hierarchy
+00034,Level 4,general,,,,Text,,,Fourth highest level of hierarchy,,,Hierarchy
+00035,Level 5,general,,,,Text,,,Fifth highest level of hierarchy,,,Hierarchy
+00036,Level 6,general,,,,Text,,,Sixth highest level of hierarchy,,,Hierarchy
+00037,Level 7,general,,,,Text,,,Lowest level of hierarchy,,,Hierarchy
+00041,Status,general,,,,Choice,,,How the asset is currently being used or operated,,,Status and condition
+00042,Condition,general,,,,Choice,,,The physical or structural integrity of the asset,,,Status and condition
+00043,Functional status,general,,,,Choice,,,Most recent observation of whether a water system or water point is working as designed,"Type: Water system, Water point",,Status and condition
+00051,Current replacement cost (USD),general,,,,Number,,,Cost (in US Dollars) that would be incurred to replace the asset at the current time; this value requires regular updating based on depreciation and current market conditions; also known as CRC,,,Financial
+00052,Expected useful life,general,,,,Number,,,Number of years that the asset is estimated to function after installation if it is well maintained; also known as EUL,,,Financial
+00053,Probability of failure,general,,,,Choice,,,"Measure of the likelihood of a failure happening at any point in time, based on an analysis of the potential failure modes of the asset",,,Financial
+00054,Consequence of failure,general,,,,Choice,,,"Measure of the direct and indirect costs of asset failure, which may include financial, environmental, and societal costs",,,Financial
+00055,Asset risk,general,,,,Choice,,,"Business or organizational risk of asset failure, usually calculated from the probability and consequence of failure",,,Financial
+00056,Original cost (USD),general,,,,Number,,,Total price paid (in US Dollars) to initially acquire an asset,,,Financial
+00057,Current rehabilitation cost (USD),general,,,,Number,,,Cost (in US Dollars) that would be incurred to rehabilitate the asset at the current time,,,Financial
+00061,Manufacturer,general,,,,Text,,,Name of the business that produced or sold the asset,,,Technical
+00062,Model,general,,,,Text,,,Manufacturer’s designation for the particular model of the asset,,,Technical
+00063,Serial number,general,,,,Text,,,"Unique identifying number or code assigned to a particular asset by the manufacturer or vendor, usually stamped or printed on the asset",,,Technical
+00064,Additional technical details,general,,,,Text,,,Any other technical information about the asset that is not captured by the attributes of this standard,,,Technical
+00065,Installation date,general,,,,Date,,,"Calendar date when the asset was installed or purchased, which begins the period of useful life",,,Technical
+00066,Installed by,general,,,,Text,,,Name of the company or organization that originally installed or purchased the system or facility,"Type: Water system, water facility",,Technical
+00067,Funded by,general,,,,Text,,,"Name of the funding authority, lender, or donor who funded the purchase of the system or facility","Type: Water system, water facility",,Technical
+00068,Rehabilitation date,general,,,,Date,,,Date of most recent work done to restore the asset to its original level of service and extend its life,,,Technical
+00069,Last service date,general,,,,Date,,,Date of most recent service or maintenance performed,,,Technical
+00070,Rehabilitated by,general,,,,Text,,,Name of the company or organization that performed the most recent rehabilitation of the asset,"Type: Water system, water facility",,Technical
+00071,Service interval,general,,,,Unit,Time,,Recommended interval at which service or routine maintenance should be performed on the asset,"Type: Pump, tank, power, valve",,Technical
+00091,Upstream asset,general,,,,Asset ID,,,Asset ID of the upstream asset that supplies water to this asset,"Type: Pump, Tank, Treatment, Meter, Valve, Hydrant, Junction, Sampling point, Water point, Pipe",,Hydraulic
+00092,Nominal diameter,general,,,,Unit,Length,,"An approximate measurement of the internal diameter of a pipe, conduit, pump, or junction, which is used to classify according to standard sizes","Type: Meter, Valve, Junction, Pipe",,Hydraulic
+00093,Pipe length,general,,,,Unit,Length,,Total length of pipe in a given section or run for use in hydraulic calculations and modeling,Type: Pipe,,Hydraulic
+00094,Material,general,,,,Choice,,,"Material of construction for pipes, junctions, valves, meters, and other liquid conduits","Type: Meter, Valve, Hydrant, Junction, Pipe",,Hydraulic
+00095,Minor loss coefficient,general,,,,Number,,,"Dimensionless coefficient that can be used to account for the head loss associated with turbulence in bends, junctions, meters, and valves","Type: Junction, valve, meter",,Hydraulic
+00096,Roughness coefficient,general,,,,Number,,,Dimensionless coefficient used to account for friction losses in flowing pipes in either the Hazen-Williams or Darcy-Weisbach head loss equation,Type: Pipe,,Hydraulic
+00171,Primary contact name,general,,,,Text,,,Individual or office responsible for management or administration of the water system or water point,"Type: Water system, Water point",,Points of contact
+00172,Primary contact position,general,,,,Text,,,Title or role in the organization of the primary contact,"Type: Water system, Water point",,Points of contact
+00173,Primary contact phone number,general,,,,Text,,,Phone number of the primary contact,"Type: Water system, Water point",,Points of contact
+00174,Secondary contact name,general,,,,Text,,,Additional individual who may be contacted if the primary contact is not available,"Type: Water system, Water point",,Points of contact
+00175,Secondary contact position,general,,,,Text,,,Title or role of the secondary contact,"Type: Water system, Water point",,Points of contact
+00176,Secondary contact phone number,general,,,,Text,,,Phone number of the secondary contact,"Type: Water system, Water point",,Points of contact
+00181,Date updated,general,,,,Date,,,Calendar date of the most recent update made to any attribute,,,Metadata
+00182,Date inspected,general,,,,Date,,,"Calendar date of the most recent inspection or audit of the asset, as defined by organizational asset management policies",,,Metadata
+00183,Alternate ID,general,,,,Text,,,Optional additional identification code or number that is used by other data systems or organizations to track the asset,,,Metadata
+00184,Import code,general,,,,Text,,,"Identification code for an asset that was assigned by an external database or asset management registry, used to maintain backwards traceability for assets that have been imported",,,Metadata
+10201,Water system type,type_specific,System,Water system,water_system,Choice,,,Categorization of the system as a distribution network or a point source,Type: Water system,,Water system info
+10202,Network type,type_specific,System,Water system,water_system,Choice,,,Categorization of piped networks as branching or grid style,Type of system: Distribution,,Water system info
+10203,Management type,type_specific,System,Water system,water_system,Choice,,,"Type of organization that manages the operations, maintenance, and finances of the water supply system",Type: Water system,,Water system info
+10204,Number of households in service area,type_specific,System,Water system,water_system,Number,,,Total number of households within the area that a service provider is legally mandated to offer services to,Type: Water system,,Water system info
+10205,Number of households currently served,type_specific,System,Water system,water_system,Number,,,"Number of households with a functional connection or currently able to receive service (includes households with inactive, intermittent, or cut off services, if service could be re-established)",Type: Water system,,Water system info
+10206,System or network diagram,type_specific,System,Water system,water_system,Image,,,Photograph of a recent map or diagram showing the location of water supply and distribution infrastructure,Type: Water system,,Water system info
+10207,Total production of system,type_specific,System,Water system,water_system,Unit,Flow rate,,"Amount of water that the system is able to supply, within current resource and design constraints",Type: Water system,,Water system info
+20101,Water facility type,type_specific,Facility,Water facility,water_facility,Choice,,,,,,Water facility info
+20102,Process area type,type_specific,Facility,Water facility,water_facility,Text,,,Optional label used to categorize process areas,Water facility type: Process area,,Water facility info
+30101,Source type,type_specific,Vertical,Source,source,Choice,,,Characterization of the source based on type of technology,,,Source info
+30102,Source meter installed,type_specific,Vertical,Source,source,Checkbox,,,Meter is installed at the source to measure total flow,,,Source info
+30103,Water quality tested,type_specific,Vertical,Source,source,Checkbox,,,Water quality testing has been performed at this source,,,Source info
+30104,Date of most recent sample,type_specific,Vertical,Source,source,Date,,,Calendar date of most recent water quality sampling at this source,Water quality tested: True,,Source info
+30105,Name of water body,type_specific,Vertical,Source,source,Text,,,"Name of the water body supplying the source, if one exists",Source type: Intake,,Source info
+30106,Source pressure,type_specific,Vertical,Source,source,Unit,Pressure,,"Pressure, or head, of the water leaving the source",Source type: Intake,,Source info
+30107,Nominal flow,type_specific,Vertical,Source,source,Unit,Flow rate,,Typical or rated volumetric water flow rate that the source provides when operating as designed,,,Source info
+30108,Minimum flow,type_specific,Vertical,Source,source,Unit,Flow rate,,Minimum Flow rate rate that the source provides during the driest period of the year,,,Source info
+30109,Maximum flow,type_specific,Vertical,Source,source,Unit,Flow rate,,Maximum Flow rate rate that the source can accommodate during periods of high use or source water availability,,,Source info
+30121,Well depth,type_specific,Vertical,Source,source,Unit,Length,,"Depth below the ground surface to which the well was drilled, driven, or dug; in boreholes, this may differ from the casing depth","Source type: Borehole, Dug well",,Well data
+30122,Well diameter,type_specific,Vertical,Source,source,Unit,Length,,"Inside diameter of the well; in boreholes, this is the drilled diameter, which will differ from the casing diameter","Source type: Borehole, Dug well",,Well data
+30123,Static water level,type_specific,Vertical,Source,source,Unit,Length,,Water level below the ground measured when no water is being taken from the aquifer by pumping,"Source type: Borehole, Dug well",,Well data
+30124,Dynamic water level,type_specific,Vertical,Source,source,Unit,Length,,Water level below the ground measured when a pump is operating,"Source type: Borehole, Dug well",,Well data
+30125,Groundwater temperature,type_specific,Vertical,Source,source,Unit,Temperature,,Temperature of groundwater in the aquifer or discharged by a pump,"Source type: Borehole, Dug well",,Well data
+30126,Pump or lifting device,type_specific,Vertical,Source,source,Choice,,,,"Source type: Borehole, Dug well",,Well data
+30127,Apron installed,type_specific,Vertical,Source,source,Checkbox,,,Apron is installed to protect the well from back-contamination by surface water and to channel drainage away from the well,"Source type: Borehole, Dug well",,Well data
+30128,Monitoring well,type_specific,Vertical,Source,source,Checkbox,,,Well is primarily used for monitoring water levels and/or water quality rather than for water production,"Source type: Borehole, Dug well",,Well data
+30141,Spring box present,type_specific,Vertical,Source,source,Checkbox,,,"Protective brick, masonry, or concrete structure is installed around the spring so that water flows directly out through a pipe",Source type: Spring,,Spring data
+30142,Spring box length,type_specific,Vertical,Source,source,Unit,Length,,"Length of the longest side of the spring box, measured from the outside",Spring box present: True,,Spring data
+30143,Spring box width,type_specific,Vertical,Source,source,Unit,Length,,"Length of the shortest side of the spring box, measured from the outside",Spring box present: True,,Spring data
+30144,Spring box depth,type_specific,Vertical,Source,source,Unit,Length,,"Length of the vertical dimension of the spring box, measured from the outside",Spring box present: True,,Spring data
+30145,Overflow pipe present,type_specific,Vertical,Source,source,Checkbox,,,Pipe is installed near the top of the spring box to allow water to exit when box is full,Source type: Spring,,Spring data
+30146,Drain pipe present,type_specific,Vertical,Source,source,Checkbox,,,Pipe is installed near the bottom of the spring box to direct the flow from the spring,Source type: Spring,,Spring data
+30151,Casing diameter,type_specific,Vertical,Source,source,Unit,Length,,Inside diameter of the well casing,Source type: Borehole,,Borehole data
+30152,Depth of casing,type_specific,Vertical,Source,source,Unit,Length,,Depth below the ground to which the casing is installed; below this depth there would normally be a screen installed,Source type: Borehole,,Borehole data
+30153,Casing material,type_specific,Vertical,Source,source,Choice,,,Well casing material,Source type: Borehole,,Borehole data
+30154,Screen length,type_specific,Vertical,Source,source,Unit,Length,,"Length of the well screen, which is a sleeve with slots, holes, gauze, or wire wrap installed below the casing to allow entry of water and prevent entry of sand or other large particles",Source type: Borehole,,Borehole data
+30155,Pump position,type_specific,Vertical,Source,source,Unit,Length,,Depth below ground to the top of a submersible pump,Pump or lifting device: Submersible,,Borehole data
+30156,Photo of well log,type_specific,Vertical,Source,source,Image,,,"One or more photographs of the well log, or drilling log, which usually contains a record of the soil and rock formations (lithology) encountered during the drilling of the well; may also contain data on the casing and backfill used to reinforce the well",Source type: Borehole,,Borehole data
+30201,Pump type,type_specific,Vertical,Pump,pump,Choice,,,Description of the pump mechanism or operating principle,,,Pump info
+30202,Pump diameter,type_specific,Vertical,Pump,pump,Unit,Length,,Maximum outer diameter of a submersible pump,Pump type: Submersible,,Pump info
+30203,Pump power rating,type_specific,Vertical,Pump,pump,Unit,Power,,"Power consumed by a pump operating under normal pressure and flow conditions, as defined by the manufacturer",Pump type: NOT Hand pump,,Pump info
+30204,Pump motor configuration,type_specific,Vertical,Pump,pump,Choice,,,"Whether the motor and pump should be tracked as a single asset or as separate assets; in cases where the motor is separate from pump, this generally means that motors are interchangeable between pumps of a similar design",Pump type: NOT Hand pump,,Pump info
+30205,Pump motor voltage type,type_specific,Vertical,Pump,pump,Choice,,,Type of electrical power required by the pump,Pump motor configuration: Integrated with pump,,Pump motor data
+30206,Pump motor voltage,type_specific,Vertical,Pump,pump,Unit,Voltage,,"Normal operating voltage of the pump, as recommended by the manufacturer",Pump motor configuration: Integrated with pump,,Pump motor data
+30207,Pump motor max current,type_specific,Vertical,Pump,pump,Unit,Current,,Current drawn by the pump when operating at the maximum or full load power rating,Pump motor configuration: Integrated with pump,,Pump motor data
+30208,Pump motor max power,type_specific,Vertical,Pump,pump,Unit,Power,,"Maximum, or full load power rating of the pump, as recommended by the manufacturer",Pump motor configuration: Integrated with pump,,Pump motor data
+30221,Design flow,type_specific,Vertical,Pump,pump,Unit,Flow rate,,Flow rate of the pump required by the system design under normal operating conditions; should be within the acceptable flow range as defined by the pump curve,,,Pump curve
+30222,Design head,type_specific,Vertical,Pump,pump,Unit,Pressure,,"Head, or pressure, shown on the pump curve at the design flow rate",,,Pump curve
+30223,Maximum flow (Q-max),type_specific,Vertical,Pump,pump,Unit,Flow rate,,Maximum possible flow rate shown on the pump curve,,,Pump curve
+30224,Head at maximum flow (H-min),type_specific,Vertical,Pump,pump,Unit,Pressure,,"Total head, or pressure, that corresponds to the maximum flow rate on the pump curve; also referred to as the minimum head",,,Pump curve
+30225,Minimum flow (Q-min),type_specific,Vertical,Pump,pump,Unit,Flow rate,,Minimum possible flow rate shown on the pump curve,,,Pump curve
+30226,Head at minimum flow (H-Max),type_specific,Vertical,Pump,pump,Unit,Pressure,,"Total head, or pressure, that corresponds to the minimum flow rate on the pump curve; also referred to as the maximum head",,,Pump curve
+30227,NPSH-R,type_specific,Vertical,Pump,pump,Unit,Pressure,,Net positive suction head required (or minimum) by the suction side of the pump in order to prevent cavitation and evaporation (flashing),,,Pump curve
+30301,Tank type,type_specific,Vertical,Tank,tank,Choice,,,Characterization of the tank design,,,Tank info
+30302,Tank material,type_specific,Vertical,Tank,tank,Choice,,,Main material of construction used in the tank,,,Tank info
+30303,Tank volume,type_specific,Vertical,Tank,tank,Unit,Volume,,Useful volume of the tank which can be supplied from the minimum to the maximum water levels.,,,Tank info
+30304,Tank shape,type_specific,Vertical,Tank,tank,Choice,,,Basic shape or form factor of the tank,,,Tank info
+30311,Tank diameter,type_specific,Vertical,Tank,tank,Unit,Length,,Diameter of the base of a cylindrical tank,Tank shape: Cylindrical,,Tank dimensions
+30312,Tank height,type_specific,Vertical,Tank,tank,Unit,Length,,"Distance from the bottom to the top of the tank, measured from outside",,,Tank dimensions
+30313,Tank length,type_specific,Vertical,Tank,tank,Unit,Length,,Length of the longest side of the base of a rectangular tank,Tank shape: Rectangular,,Tank dimensions
+30314,Tank width,type_specific,Vertical,Tank,tank,Unit,Length,,Length of the shortest side of the base of a rectangular tank,Tank shape: Rectangular,,Tank dimensions
+30315,Height of tank bottom,type_specific,Vertical,Tank,tank,Unit,Length,,Distance from the ground level to the bottom of the inside of the tank; negative values are used for depths below the ground,,,Tank dimensions
+30316,Minimum water level,type_specific,Vertical,Tank,tank,Unit,Length,,"Minimum water level allowed in the tank, measured from the tank bottom; this may be the height of the outlet or the minimum height allowed by a filling control",,,Tank dimensions
+30317,Maximum water level,type_specific,Vertical,Tank,tank,Unit,Length,,"Maximum water level allowed in the tank, measured from the tank bottom; this may be the height of the overflow pipe or the maximum height allowed by a filling control",,,Tank dimensions
+30321,Filling control installed,type_specific,Vertical,Tank,tank,Checkbox,,,Control is installed to ensure a desired range of tank fill levels,,,Tank details
+30322,Type of filling control,type_specific,Vertical,Tank,tank,Choice,,,Method or device used to maintain the water level in the tank by controlling the influent or effluent flow rate,Filling control installed: True,,Tank details
+30323,Fill level indicator installed,type_specific,Vertical,Tank,tank,Checkbox,,,Device is installed that provides a visual or electronic measurement of the fill level,,,Tank details
+30401,Power type,type_specific,Vertical,Power,power,Choice,,,Categorization of the power generating device based on design or principles of operation,,,Power info
+30402,Rated power output,type_specific,Vertical,Power,power,Unit,Power,,Power output that can be sustained for long periods of time; for generators this is the continuous power rating,,,Power info
+30403,Maximum power output,type_specific,Vertical,Power,power,Unit,Power,,"Power output that can be provided for short periods of time in response to surges in demand; for generators, sometimes referred to as the standby or intermittent power rating",,,Power info
+30404,Nominal voltage,type_specific,Vertical,Power,power,Unit,Voltage,,Voltage assigned to a system or circuit of a given voltage class for the purpose of convenient designation; the actual operating voltage may vary above or below this value,,,Power info
+30405,Rated voltage,type_specific,Vertical,Power,power,Unit,Voltage,,Maximum voltage at which the power system can be operated within thermal and safety limits,,,Power info
+30406,Maximum current,type_specific,Vertical,Power,power,Unit,Current,,"Maximum safe current, or starting current, that can be supplied for a short period of time",,,Power info
+30407,Type of current,type_specific,Vertical,Power,power,Choice,,,Mode of transmission for electrical current (AC/DC),,,Power info
+30408,Frequency of current,type_specific,Vertical,Power,power,Choice,,,"Frequency at which the voltage rises to a peak, reverses, and rises to a peak again","Type of current: Single phase AC, Three phase AC",,Power info
+30421,Generator fuel,type_specific,Vertical,Power,power,Choice,,,Type of fuel required by the generator,Power type: Generator,,Generator data
+30422,Generator apparent power,type_specific,Vertical,Power,power,Unit,Power,,"Product of the voltage and current provided in an AC power system, which does not account for the reactive power required by inductive loads in the circuit; sometimes referred to by its most common unit of measurement: kVA","Type of current: Single phase AC, Three phase AC",,Generator data
+30423,Engine cooling system,type_specific,Vertical,Power,power,Choice,,,Type of cooling system used by the generator engine,Power type: Generator,,Generator data
+30424,PV panel type,type_specific,Vertical,Power,power,Choice,,,Photovoltaic panel type,Power type: Solar,,Solar power data
+30425,Total number of PV panels,type_specific,Vertical,Power,power,Number,,,Total number of photovoltaic panels installed in the power system,Power type: Solar,,Solar power data
+30501,Treatment type,type_specific,Vertical,Treatment,treatment,Choice,,,Categorization of treatment process by treatment method or objective,,,Treatment info
+30521,Chlorine type,type_specific,Vertical,Treatment,treatment,Choice,,,Chemical form of chlorine used in a treatment process,,,Chlorination data
+30522,Dosing method,type_specific,Vertical,Treatment,treatment,Choice,,,Method used to add chlorine to water to be treated,"Chlorination type: Sodium hypochlorite (bleach), Calcium hypochlorite, Chloramine",,Chlorination data
+30601,Meter ID,type_specific,Vertical,Meter,meter,Text,,,Identification number of code used by the service provider to identify the meter,,,Meter info
+30602,Meter type,type_specific,Vertical,Meter,meter,Choice,,,Type of metering performed: bulk metering of the distribution network versus domestic or commercial metering,,,Meter info
+30603,Meter design,type_specific,Vertical,Meter,meter,Choice,,,Design or operating principle of the meter,,,Meter info
+30604,Minimum measurable flow rate,type_specific,Vertical,Meter,meter,Unit,Flow rate,,Lowest flow rate that can be measured by the meter,,,Meter info
+30605,Meter measurement type,type_specific,Vertical,Meter,meter,Choice,,,"Type of measurement displayed by the meter (total volume, flow rate, or both)",,,Meter info
+30701,Electrical type,type_specific,Vertical,Electrical,electrical,Choice,,,Type of electrical asset,,,Electrical info
+30702,Electrical power device type,type_specific,Vertical,Electrical,electrical,Choice,,,Classification of electrical power device based on purpose or mode of operation,Electrical type: Power device,,Electrical info
+30801,Valve type,type_specific,Vertical,Valve,valve,Choice,,,Purpose or operating principle of a valve,,,Valve info
+30802,Date of last actuation,type_specific,Vertical,Valve,valve,Date,,,Most recent date that the valve was actuated to prevent degradation and verify functionality,,,Valve info
+30901,Hydrant type,type_specific,Vertical,Hydrant,hydrant,Choice,,,Type of hydrant design,,,Hydrant info
+31001,Junction type,type_specific,Vertical,Junction,junction,Choice,,,,,,Junction info
+31101,Sampling point type,type_specific,Vertical,Sampling point,sampling_point,Choice,,,Type of facility that allows for collection of water quality samples,,,Sampling point info
+31201,Sensor type,type_specific,Vertical,Sensor,sensor,Choice,,,,,,Sensor info
+31301,Analyzer type,type_specific,Vertical,Analyzer,analyzer,Text,,,Short description of the type or purpose of the analyzer,,,Analyzer info
+31401,Structure type,type_specific,Vertical,Structure,structure,Choice,,,,,,Structure info
+31411,Perimeter type,type_specific,Vertical,Structure,structure,Choice,,,Type of perimeter design,Structure type: Perimeter,,Perimeter data
+31412,Perimeter total length,type_specific,Vertical,Structure,structure,Unit,Length,,Total length of the entire perimeter that is being defined as an asset,Structure type: Perimeter,,Perimeter data
+31413,Perimeter height,type_specific,Vertical,Structure,structure,Unit,Length,,Typical or minimum height of the perimeter,Structure type: Perimeter,,Perimeter data
+31414,Perimeter setback distance,type_specific,Vertical,Structure,structure,Unit,Length,,Typical or minimum distance from the perimeter from the structure or equipment it is designed to protect,Structure type: Perimeter,,Perimeter data
+31501,Water point type,type_specific,Vertical,Water point,water_point,Choice,,,Type of technology used to access water,,,Water point info
+31502,Agricultural use,type_specific,Vertical,Water point,water_point,Checkbox,,,Water point provides water that is primarily for agricultural use,,,Water point info
+31503,Livestock use,type_specific,Vertical,Water point,water_point,Checkbox,,,Water point provides water that is primarily for use by livestock,,,Water point info
+31504,Meter installed,type_specific,Vertical,Water point,water_point,Checkbox,,,Meter is installed at this water point,,,Water point info
+31505,Number of taps,type_specific,Vertical,Water point,water_point,Number,,,"Total number of taps, such as faucets or spigots, available at a kiosk or public tap","Water point type: Kiosk, Public tap",,Water point info
+31506,Kiosk tank installed,type_specific,Vertical,Water point,water_point,Checkbox,,,Presence of a tank at the kiosk for storing water during planned or unplanned outages,Water point type: Kiosk,,Water point info
+31507,Connection type,type_specific,Vertical,Water point,water_point,Choice,,,Categorization of piped connections based on the type of user or customer,Water point type: Piped connection,,Water point info
+31508,Connection diameter,type_specific,Vertical,Water point,water_point,Unit,Length,,The diameter of pipe used for the customer connection,Water point type: Piped connection,,Water point info
+39901,Other vertical asset type,type_specific,Vertical,Other vertical,other_vertical,Text,,,Description or categorization of the other type of vertical asset,,,Other vertical info
+40101,Pipe type,type_specific,Horizontal,Pipe,pipe,Choice,,,Category of water supply pipe type,,,Pipe info
+40102,Pipe color,type_specific,Horizontal,Pipe,pipe,Text,,,Color or pattern painted on pipe to designate the type of fluid,,,Pipe info
+40103,Nominal pressure,type_specific,Horizontal,Pipe,pipe,Unit,Pressure,,Numerical designation of design pressure that is a convenient round number for reference purposes,,,Pipe info
+40104,Pipe depth below ground,type_specific,Horizontal,Pipe,pipe,Unit,Length,,Depth of the pipe below the local ground surface,,,Pipe info

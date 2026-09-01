@@ -1,0 +1,666 @@
+column_id,enum_id,enum_name
+type,subsystem,Subsystem
+type,facility,Facility
+type,sanitation_point,Sanitation point
+type,connection,Connection
+type,containment,Containment
+type,vehicle,Vehicle
+type,manhole,Manhole
+type,junction,Junction
+type,valve,Valve
+type,flow_control,Flow control
+type,structure,Structure
+type,power,Power
+type,electrical,Electrical
+type,meter,Meter
+type,sampling_point,Sampling point
+type,sensor,Sensor
+type,analyzer,Analyzer
+type,datalogger,Datalogger
+type,pump,Pump
+type,tank,Tank
+type,treatment,Treatment
+type,dispersal,Dispersal
+type,outfall,Outfall
+type,other_vertical,Other vertical
+type,pipe,Pipe
+type,channel,Channel
+survey_elevation_unit,m,meters
+survey_elevation_unit,ft,feet
+survey_elevation_datum,egm2008,EGM2008
+survey_elevation_datum,egm2020,EGM2020
+survey_elevation_datum,egm96,EGM96
+survey_elevation_datum,wgs84_ellipsoid,WGS84 Ellipsoid
+survey_elevation_datum,local_msl,Local mean sea level
+survey_elevation_datum,tidal,Tidal datum
+survey_elevation_datum,arbitrary,Arbitrary local benchmark
+survey_elevation_datum,unknown,Unknown
+survey_elevation_datum,other,Other
+urban_rural,urban,Urban
+urban_rural,peri_urban,Peri urban
+urban_rural,rural,Rural
+distance_to_water_source_unit,m,meters
+distance_to_water_source_unit,ft,feet
+land_occupancy,public_or_utility_land,Public or utility land
+land_occupancy,private_land_with_agreement,"Private land, with agreement"
+land_occupancy,private_land_without_agreement,"Private land, without agreement"
+land_occupancy,unknown,Unknown
+status,active,Active
+status,backup,Backup
+status,not_functional,Not functional
+status,under_construction,Under construction
+status,decommissioned,Decommissioned
+status,disposed,Disposed
+condition,excellent,Excellent
+condition,good,Good
+condition,fair,Fair
+condition,poor,Poor
+condition,very_poor,Very poor
+functional_status,functional,Functional
+functional_status,partially_functional,Partially functional
+functional_status,not_functional,Not functional
+functional_status,decommissioned,Decommissioned
+probability_of_failure,very_low,Very low
+probability_of_failure,low,Low
+probability_of_failure,moderate,Moderate
+probability_of_failure,high,High
+probability_of_failure,very_high,Very high
+consequence_of_failure,very_low,Very low
+consequence_of_failure,low,Low
+consequence_of_failure,moderate,Moderate
+consequence_of_failure,high,High
+consequence_of_failure,very_high,Very high
+asset_risk,very_low,Very low
+asset_risk,low,Low
+asset_risk,moderate,Moderate
+asset_risk,high,High
+asset_risk,very_high,Very high
+service_interval_unit,months,Months
+service_interval_unit,days,Days
+service_interval_unit,years,Years
+nominal_diameter_unit,m,meters
+nominal_diameter_unit,cm,centimeters
+nominal_diameter_unit,mm,millimeters
+nominal_diameter_unit,in,inches
+pipe_length_manual_value_unit,m,meters
+pipe_length_manual_value_unit,km,kilometers
+pipe_length_manual_value_unit,ft,feet
+pipe_length_manual_value_unit,yd,yards
+pipe_length_manual_value_unit,mi,miles
+material,cast_iron,Cast iron
+material,ductile_iron,Ductile iron
+material,steel,Steel
+material,stainless_steel,Stainless steel
+material,galvanized,Galvanized steel
+material,vitrified_clay,Vitrified clay
+material,concrete,Concrete
+material,masonry,Masonry
+material,asbestos_cement,Asbestos cement
+material,fiberglass,Fiberglass (GRP)
+material,pvc,PVC
+material,hdpe,HDPE
+material,plastic,Plastic
+material,other,Other
+conveyed_content,wastewater,Wastewater
+conveyed_content,blackwater,Blackwater
+conveyed_content,greywater,Greywater
+conveyed_content,treated_effluent,Treated effluent
+conveyed_content,sludge_or_septage,Sludge or septage
+conveyed_content,combined_sewage_and_stormwater,Combined sewage and stormwater
+conveyed_content,stormwater,Stormwater
+conveyed_content,biogas,Biogas
+conveyed_content,air,Air
+conveyed_content,other,Other
+invert_level_unit,m,meters
+invert_level_unit,ft,feet
+facility_type,wastewater_treatment_plant,Wastewater treatment plant
+facility_type,faecal_sludge_treatment_plant,Faecal sludge treatment plant
+facility_type,pumping_or_lift_station,Pumping or lift station
+facility_type,transfer_station,Transfer station
+facility_type,storage_facility,Storage facility
+facility_type,process_area,Process area
+facility_type,retention_or_detention_facility,Retention or detention facility
+facility_type,other,Other
+sanitation_point_type,flush_pour_flush_toilet,Flush/pour-flush toilet
+sanitation_point_type,pit_latrine_with_slab,Pit latrine with slab
+sanitation_point_type,pit_latrine_without_slab_or_open_pit,Pit latrine without slab or open pit
+sanitation_point_type,ventilated_improved_pit_latrine,Ventilated improved pit (VIP) latrine
+sanitation_point_type,composting_toilet,Composting toilet
+sanitation_point_type,container_based_toilet,Container-based toilet
+sanitation_point_type,bucket,Bucket
+sanitation_point_type,hanging_toilet_or_latrine,Hanging toilet or latrine
+sanitation_point_type,urinal,Urinal
+sanitation_point_type,urine_diverting_toilet,Urine-diverting toilet
+sanitation_point_type,other,Other
+usage_arrangement,household,Household (private)
+usage_arrangement,shared,Shared (limited number of households)
+usage_arrangement,communal_or_public,Communal or public
+usage_arrangement,institutional,Institutional
+usage_arrangement,other,Other
+pan_style,squat,Squat
+pan_style,seated,Seated
+pan_style,mixed,Mixed
+connection_type,residential,Residential
+connection_type,commercial,Commercial
+connection_type,industrial,Industrial
+connection_type,institutional,Institutional
+connection_type,other,Other
+connection_status,active,Active
+connection_status,inactive,Inactive
+connection_status,disconnected,Disconnected
+connection_status,closed,Closed
+containment_type,septic_tank,Septic tank
+containment_type,holding_tank,Holding tank
+containment_type,pit,Pit
+containment_type,twin_pits_or_alternating_pits,Twin pits or alternating pits
+containment_type,composting_chamber_or_dehydration_vault,Composting chamber or dehydration vault
+containment_type,container_based,Container-based sanitation
+containment_type,biodigester,Biodigester
+containment_type,other,Other
+storage_volume_unit,m3,cubic meters
+storage_volume_unit,l,liters
+storage_volume_unit,ft3,cubic feet
+storage_volume_unit,gal,gallons
+containment_depth_unit,m,meters
+containment_depth_unit,ft,feet
+lined_or_sealed,lined_and_sealed_watertight,"Lined and sealed, watertight"
+lined_or_sealed,lined_open_bottom,"Lined, impermeable walls, open bottom"
+lined_or_sealed,lined_semi_permeable_open_bottom,"Lined, semi-permeable walls, open bottom"
+lined_or_sealed,unlined,Unlined
+lined_or_sealed,unknown,Unknown
+outlet_arrangement,sealed_no_outlet,"Sealed, no outlet"
+outlet_arrangement,to_soak_pit_or_leach_field,To soak pit or leach field
+outlet_arrangement,to_sewer_or_open_drain,To sewer or open drain
+outlet_arrangement,to_open_ground_or_water_body,To open ground or water body
+outlet_arrangement,unknown,Unknown
+outlet_arrangement,other,Other
+emptying_access,accessible_by_vacuum_truck_or_mechanized_equipment,Accessible by vacuum truck or mechanized equipment
+emptying_access,accessible_by_manual_equipment_only,Accessible by manual equipment only
+emptying_access,not_accessible_for_emptying,Not accessible for emptying
+emptying_access,unknown,Unknown
+vehicle_type,vacuum_tanker,Vacuum tanker
+vehicle_type,vacuum_trailer,Vacuum trailer (tractor-towed)
+vehicle_type,flatbed_sludge_truck,Flatbed sludge truck
+vehicle_type,motorized_cart_or_small_vehicle,Motorized cart or small vehicle
+vehicle_type,manual_cart,Manual cart
+vehicle_type,sewer_jetter,Sewer jetter (trailer or truck-mounted)
+vehicle_type,other,Other
+load_capacity_unit,m3,cubic meters
+load_capacity_unit,l,liters
+load_capacity_unit,ft3,cubic feet
+load_capacity_unit,gal,gallons
+manhole_type,standard_manhole,Standard manhole
+manhole_type,inspection_chamber,Inspection chamber
+manhole_type,cleanout,Cleanout
+manhole_type,drop_manhole,Drop manhole
+manhole_type,junction_chamber,Junction chamber
+manhole_type,catch_basin_or_inlet,Catch basin or inlet (combined systems)
+manhole_type,other,Other
+chamber_depth_unit,m,meters
+chamber_depth_unit,ft,feet
+cover_shape,round,Round
+cover_shape,rectangular,Rectangular
+cover_shape,other,Other
+cover_diameter_unit,m,meters
+cover_diameter_unit,cm,centimeters
+cover_diameter_unit,mm,millimeters
+cover_diameter_unit,in,inches
+cover_length_unit,m,meters
+cover_length_unit,cm,centimeters
+cover_length_unit,mm,millimeters
+cover_length_unit,in,inches
+cover_width_unit,m,meters
+cover_width_unit,cm,centimeters
+cover_width_unit,mm,millimeters
+cover_width_unit,in,inches
+cover_load_class,a15,A15
+cover_load_class,b125,B125
+cover_load_class,c250,C250
+cover_load_class,d400,D400
+cover_load_class,e600,E600
+cover_load_class,f900,F900
+cover_load_class,unknown,Unknown
+access_aid_type,none,None
+access_aid_type,steps,Steps
+access_aid_type,ladder,Ladder
+access_aid_type,other,Other
+junction_type,wye,Wye
+junction_type,tee,Tee
+junction_type,bend,Bend
+junction_type,reducer,Reducer
+junction_type,saddle,Saddle
+junction_type,coupling_or_sleeve,Coupling or sleeve
+junction_type,cap_or_plug,Cap or plug
+junction_type,riser,Riser
+junction_type,other,Other
+valve_type,gate,Gate
+valve_type,knife_gate,Knife gate
+valve_type,plug,Plug
+valve_type,check,Check (non-return/flap)
+valve_type,air_release_vacuum,Air release/vacuum
+valve_type,backflow_preventer,Backflow preventer
+valve_type,other,Other
+overflow_type,side_weir,Side weir
+overflow_type,transverse_weir,Transverse weir
+overflow_type,leaping_weir,Leaping weir
+overflow_type,movable_weir,Movable weir
+overflow_type,gate_or_penstock,Gate or penstock
+overflow_type,stop_logs,Stop logs
+overflow_type,orifice_or_fixed_throttle,Orifice or fixed throttle
+overflow_type,vortex_flow_regulator,Vortex flow regulator
+overflow_type,flow_splitter,Flow splitter
+overflow_type,overflow_pipe,Overflow pipe
+overflow_type,flume,Flume
+overflow_type,other,Other
+overflow_function,combined_sewer_overflow,Combined sewer overflow
+overflow_function,storage_or_basin_overflow,Storage or basin overflow
+overflow_function,process_or_clarifier_overflow,Process or clarifier overflow
+overflow_function,emergency_overflow,Emergency overflow
+overflow_function,flow_splitting,Flow splitting
+overflow_function,level_control,Level control
+overflow_function,other,Other
+structure_type,building,Building
+structure_type,perimeter,Perimeter
+structure_type,road,Road
+structure_type,apron,Apron
+structure_type,discharge_structure,Discharge structure
+structure_type,utility_vault,Utility vault
+structure_type,vehicle_washing_bay,Vehicle washing bay
+structure_type,flood_protection_bund,Flood protection bund
+structure_type,other,Other
+perimeter_type,fence,Fence
+perimeter_type,wall,Wall
+perimeter_type,other,Other
+perimeter_total_length_unit,m,meters
+perimeter_total_length_unit,ft,feet
+perimeter_total_length_unit,km,kilometers
+perimeter_total_length_unit,yd,yards
+perimeter_total_length_unit,mi,miles
+perimeter_height_unit,m,meters
+perimeter_height_unit,km,kilometers
+perimeter_height_unit,ft,feet
+perimeter_height_unit,yd,yards
+perimeter_height_unit,mi,miles
+perimeter_setback_distance_unit,m,meters
+perimeter_setback_distance_unit,km,kilometers
+perimeter_setback_distance_unit,ft,feet
+perimeter_setback_distance_unit,yd,yards
+perimeter_setback_distance_unit,mi,miles
+power_type,grid,Grid
+power_type,generator,Generator
+power_type,solar,Solar
+power_type,wind,Wind
+power_type,other,Other
+rated_power_unit,w,watts
+rated_power_unit,kw,kilowatts
+rated_power_unit,hp,horsepower
+max_power_unit,w,watts
+max_power_unit,kw,kilowatts
+max_power_unit,hp,horsepower
+nominal_voltage_unit,v,volts
+nominal_voltage_unit,kv,kilovolts
+rated_voltage_unit,v,volts
+rated_voltage_unit,kv,kilovolts
+max_current_unit,a,amperes
+type_of_current,single_phase_ac,Single phase AC
+type_of_current,three_phase_ac,Three phase AC
+type_of_current,dc,DC
+frequency_of_current,sixty_hz,60 Hz
+frequency_of_current,fifty_hz,50 Hz
+frequency_of_current,other,Other
+generator_fuel,gasoline,Gasoline or petrol
+generator_fuel,diesel,Diesel
+generator_fuel,other,Other
+generator_apparent_power_unit,w,watts
+generator_apparent_power_unit,kw,kilowatts
+generator_apparent_power_unit,kva,kilovolt-amps
+engine_cooling_system,air,Air
+engine_cooling_system,liquid,Liquid
+pv_panel_type,polycrystalline,Polycrystalline
+pv_panel_type,monocrystalline,Monocrystalline
+pv_panel_type,thin_film,Thin film
+pv_panel_type,other,Other
+electrical_type,motor,Motor
+electrical_type,actuator,Actuator
+electrical_type,power_device,Power device
+electrical_type,electronic,Electronic
+electrical_type,heater,Heater
+electrical_type,blower,Blower
+electrical_type,other,Other
+electrical_power_device_type,control_panel,Control panel
+electrical_power_device_type,circuit_breaker,Circuit breaker
+electrical_power_device_type,ups,Uninterruptible power supply (UPS)
+electrical_power_device_type,transformer,Transformer
+electrical_power_device_type,power_conditioner,Power conditioner
+electrical_power_device_type,switch,Switch
+electrical_power_device_type,motor_controller,Motor controller
+electrical_power_device_type,inverter,Inverter
+meter_type,influent,Influent
+meter_type,effluent,Effluent
+meter_type,sludge_or_septage,Sludge or septage
+meter_type,reclaimed_or_reuse_water,Reclaimed or reuse water
+meter_type,process_or_intermediate,Process or intermediate
+meter_type,other,Other
+meter_design,electromagnetic,Electromagnetic
+meter_design,ultrasonic,Ultrasonic
+meter_design,mechanical,Mechanical
+meter_design,flume,Flume
+meter_design,weir_with_level_sensor,Weir with level sensor
+meter_design,other,Other
+meter_min_flow_rate_unit,m3_s,cubic meters per second
+meter_min_flow_rate_unit,m3_d,cubic meters per day
+meter_min_flow_rate_unit,l_s,liters per second
+meter_min_flow_rate_unit,l_d,liters per day
+meter_min_flow_rate_unit,gal_m,gallons per minute
+meter_min_flow_rate_unit,gal_d,gallons per day
+meter_min_flow_rate_unit,m3_h,cubic meters per hour
+meter_min_flow_rate_unit,l_m,liters per minute
+meter_measurement_type,total,Total volume
+meter_measurement_type,flow_rate,Flow rate
+meter_measurement_type,combined,Combined
+sampling_point_type,influent,Influent
+sampling_point_type,effluent,Effluent
+sampling_point_type,process_or_intermediate,Process or intermediate
+sampling_point_type,sludge,Sludge
+sampling_point_type,receiving_water,Receiving water
+sampling_point_type,industrial_discharge,Industrial discharge
+sampling_point_type,other,Other
+sensor_type,level,Level
+sensor_type,pressure,Pressure
+sensor_type,gas,Gas
+sensor_type,rainfall,Rainfall
+sensor_type,temperature,Temperature
+sensor_type,moisture,Moisture
+sensor_type,current,Current
+sensor_type,voltage,Voltage
+sensor_type,other,Other
+gas_measured,hydrogen_sulfide,Hydrogen sulfide (H2S)
+gas_measured,methane,Methane (CH4)
+gas_measured,oxygen,Oxygen (O2)
+gas_measured,ammonia,Ammonia (NH3)
+gas_measured,carbon_monoxide,Carbon monoxide (CO)
+gas_measured,multi_gas,Multi-gas
+gas_measured,other,Other
+analyzer_type,ph,pH
+analyzer_type,dissolved_oxygen,Dissolved oxygen (DO)
+analyzer_type,turbidity,Turbidity
+analyzer_type,ammonia,Ammonia
+analyzer_type,nitrate,Nitrate
+analyzer_type,total_nitrogen_tkn,Total nitrogen or TKN
+analyzer_type,phosphorus,Phosphate or total phosphorus
+analyzer_type,cod_bod,COD or BOD
+analyzer_type,toc,Total organic carbon (TOC)
+analyzer_type,suspended_solids,Suspended solids
+analyzer_type,orp,ORP
+analyzer_type,chlorine,Chlorine
+analyzer_type,conductivity,Conductivity
+analyzer_type,multiparameter,Multiparameter
+analyzer_type,other,Other
+transmission_method,none_manual,None (manual download)
+transmission_method,cellular,Cellular network
+transmission_method,radio,Radio
+transmission_method,satellite,Satellite
+transmission_method,other,Other
+pump_type,submersible_non_clog_vortex,Submersible non-clog/vortex
+pump_type,grinder,Grinder
+pump_type,screw,Screw (Archimedes)
+pump_type,progressive_cavity,Progressive cavity (positive displacement)
+pump_type,diaphragm,Diaphragm
+pump_type,end_suction_centrifugal,End-suction centrifugal
+pump_type,axial_flow,Axial flow
+pump_type,manual_pump,Manual pump
+pump_type,other,Other
+pump_diameter_unit,m,meters
+pump_diameter_unit,cm,centimeters
+pump_diameter_unit,mm,millimeters
+pump_diameter_unit,in,inches
+pump_power_rating_unit,w,watts
+pump_power_rating_unit,kw,kilowatts
+pump_power_rating_unit,hp,horsepower
+pump_motor_configuration,integrated,Integrated with pump
+pump_motor_configuration,separate,Separate from pump
+pump_motor_voltage_type,single_ac,Single phase AC
+pump_motor_voltage_type,three_phase_ac,Three phase AC
+pump_motor_voltage_type,dc,DC
+pump_motor_voltage_unit,v,volts
+pump_motor_voltage_unit,kv,kilovolts
+pump_motor_max_current_unit,a,amperes
+pump_motor_max_power_unit,w,watts
+pump_motor_max_power_unit,kw,kilowatts
+pump_motor_max_power_unit,hp,horsepower
+design_flow_unit,m3_s,cubic meters per second
+design_flow_unit,l_s,liters per second
+design_flow_unit,gal_m,gallons per minute
+design_flow_unit,m3_h,cubic meters per hour
+design_flow_unit,l_m,liters per minute
+design_head_unit,pa,pascals
+design_head_unit,kpa,kilopascals
+design_head_unit,psi,pounds per square inch
+design_head_unit,ft_water,feet of water (39.2 F)
+design_head_unit,m_water,meters of water (4 C)
+design_head_unit,in_water,inches of water (39.2 F)
+design_head_unit,cm_water,centimeters of water (4 C)
+pump_maximum_flow_unit,m3_s,cubic meters per second
+pump_maximum_flow_unit,l_s,liters per second
+pump_maximum_flow_unit,gal_m,gallons per minute
+pump_maximum_flow_unit,m3_h,cubic meters per hour
+pump_maximum_flow_unit,l_m,liters per minute
+pump_h_min_unit,pa,pascals
+pump_h_min_unit,kpa,kilopascals
+pump_h_min_unit,psi,pounds per square inch
+pump_h_min_unit,ft_water,feet of water (39.2 F)
+pump_h_min_unit,in_water,inches of water (39.2 F)
+pump_h_min_unit,cm_water,centimeters of water (4 C)
+pump_h_min_unit,m_water,meters of water (4 C)
+pump_q_min_unit,m3_s,cubic meters per second
+pump_q_min_unit,l_s,liters per second
+pump_q_min_unit,gal_m,gallons per minute
+pump_q_min_unit,m3_h,cubic meters per hour
+pump_q_min_unit,l_m,liters per minute
+pump_h_max_unit,pa,pascals
+pump_h_max_unit,kpa,kilopascals
+pump_h_max_unit,psi,pounds per square inch
+pump_h_max_unit,ft_water,feet of water (39.2 F)
+pump_h_max_unit,in_water,inches of water (39.2 F)
+pump_h_max_unit,cm_water,centimeters of water (4 C)
+pump_h_max_unit,m_water,meters of water (4 C)
+pump_npsh_r_unit,pa,pascals
+pump_npsh_r_unit,kpa,kilopascals
+pump_npsh_r_unit,psi,pounds per square inch
+pump_npsh_r_unit,ft_water,feet of water (39.2 F)
+pump_npsh_r_unit,in_water,inches of water (39.2 F)
+pump_npsh_r_unit,cm_water,centimeters of water (4 C)
+pump_npsh_r_unit,m_water,meters of water (4 C)
+tank_type,equalization_or_balancing_tank,Equalization or balancing tank
+tank_type,sludge_or_septage_holding_tank,Sludge or septage holding tank
+tank_type,chemical_storage_tank,Chemical storage tank
+tank_type,effluent_storage_tank,Effluent storage tank
+tank_type,wet_well,Wet well
+tank_type,portable_tank,Portable tank
+tank_type,combined_sewer_overflow_storage,Combined sewer overflow storage (tank or tunnel)
+tank_type,other,Other
+tank_material,pvc,PVC
+tank_material,plastic,Plastic
+tank_material,concrete,Concrete
+tank_material,aluminum,Aluminum
+tank_material,steel,Steel
+tank_material,stainless_steel,Stainless steel
+tank_material,composite,Composite
+tank_material,fiberglass,Fiberglass
+tank_material,masonry,Masonry
+tank_material,other,Other
+tank_volume_unit,m3,cubic meters
+tank_volume_unit,l,liters
+tank_volume_unit,ft3,cubic feet
+tank_volume_unit,gal,gallons
+tank_volume_unit,mil_m3,million cubic meters
+tank_volume_unit,mgal,million gallons
+tank_volume_unit,acreft,acre-feet
+tank_shape,cylindrical,Cylindrical
+tank_shape,rectangular,Rectangular
+tank_shape,other,Other
+tank_diameter_unit,m,meters
+tank_diameter_unit,ft,feet
+tank_diameter_unit,cm,centimeters
+tank_diameter_unit,in,inches
+tank_height_unit,m,meters
+tank_height_unit,ft,feet
+tank_height_unit,cm,centimeters
+tank_height_unit,in,inches
+tank_length_unit,m,meters
+tank_length_unit,ft,feet
+tank_length_unit,in,inches
+tank_length_unit,cm,centimeters
+tank_width_unit,m,meters
+tank_width_unit,ft,feet
+tank_width_unit,cm,centimeters
+tank_width_unit,in,inches
+tank_bottom_height_unit,m,meters
+tank_bottom_height_unit,ft,feet
+tank_bottom_height_unit,cm,centimeters
+tank_bottom_height_unit,in,inches
+tank_min_level_unit,m,meters
+tank_min_level_unit,ft,feet
+tank_min_level_unit,cm,centimeters
+tank_min_level_unit,in,inches
+tank_max_level_unit,m,meters
+tank_max_level_unit,ft,feet
+tank_max_level_unit,cm,centimeters
+tank_max_level_unit,in,inches
+treatment_type,screen,Screen
+treatment_type,grit_removal,Grit removal
+treatment_type,grease_removal,Grease or FOG removal
+treatment_type,sedimentation_or_settler,Sedimentation or settler
+treatment_type,imhoff_tank,Imhoff tank
+treatment_type,anaerobic_baffled_reactor,Anaerobic baffled reactor (ABR)
+treatment_type,anaerobic_filter,Anaerobic filter
+treatment_type,upflow_anaerobic_sludge_blanket,Upflow anaerobic sludge blanket (UASB)
+treatment_type,waste_stabilization_pond,Waste stabilization pond
+treatment_type,aerated_lagoon_or_pond,Aerated lagoon or pond
+treatment_type,free_water_surface_wetland,Free-water surface constructed wetland
+treatment_type,horizontal_subsurface_flow_wetland,Horizontal subsurface flow constructed wetland
+treatment_type,vertical_flow_wetland,Vertical flow constructed wetland
+treatment_type,trickling_filter,Trickling filter
+treatment_type,rotating_biological_contactor,Rotating biological contactor (RBC)
+treatment_type,aeration_basin,Aeration basin
+treatment_type,sequencing_batch_reactor,Sequencing batch reactor (SBR)
+treatment_type,membrane_bioreactor,Membrane bioreactor (MBR)
+treatment_type,moving_bed_biofilm_reactor,Moving bed biofilm reactor (MBBR)
+treatment_type,coagulation_or_flocculation,Coagulation or flocculation
+treatment_type,filtration,Filtration
+treatment_type,chlorine_contact_tank,Chlorine contact tank
+treatment_type,uv_or_ozone_disinfection_unit,UV or ozone disinfection unit
+treatment_type,chemical_dosing_system,Chemical dosing system
+treatment_type,thickener,Thickener
+treatment_type,anaerobic_digester,Anaerobic digester
+treatment_type,unplanted_drying_bed,Unplanted drying bed
+treatment_type,planted_drying_bed,Planted drying bed
+treatment_type,dewatering_unit,Dewatering unit
+treatment_type,composting_pad_or_windrow,Composting pad or windrow
+treatment_type,lime_stabilization,Lime stabilization
+treatment_type,incineration_or_thermal_treatment,Incineration or thermal treatment
+treatment_type,aerobic_digester,Aerobic digester
+treatment_type,odor_control,Odor control (gas treatment)
+treatment_type,other,Other
+treatment_level,preliminary,Preliminary
+treatment_level,primary,Primary
+treatment_level,secondary,Secondary
+treatment_level,tertiary,Tertiary
+treatment_level,quaternary,Quaternary
+treatment_level,other,Other
+design_capacity_unit,m3_s,cubic meters per second
+design_capacity_unit,l_s,liters per second
+design_capacity_unit,gal_m,gallons per minute
+design_capacity_unit,m3_h,cubic meters per hour
+design_capacity_unit,l_m,liters per minute
+design_organic_load_capacity_unit,kg_day,kilograms per day
+design_organic_load_capacity_unit,lb_day,pounds per day
+surface_area_unit,m2,square meters
+surface_area_unit,ha,hectares
+surface_area_unit,ft2,square feet
+surface_area_unit,acre,acres
+treatment_depth_unit,m,meters
+treatment_depth_unit,ft,feet
+liner_type,geomembrane,Geomembrane
+liner_type,compacted_clay,Compacted clay
+liner_type,concrete_or_masonry,Concrete or masonry
+liner_type,unlined,Unlined
+liner_type,unknown,Unknown
+liner_type,other,Other
+primary_chemical_used,chlorine_gas,Chlorine gas
+primary_chemical_used,sodium_hypo,Sodium hypochlorite (bleach)
+primary_chemical_used,calcium_hypo,Calcium hypochlorite
+primary_chemical_used,chloramine,Chloramine
+primary_chemical_used,chlorine_dioxide,Chlorine dioxide
+primary_chemical_used,sulfur_dioxide,Sulfur dioxide
+primary_chemical_used,ozone_onsite,Ozone (on-site generated)
+primary_chemical_used,methanol,Methanol
+primary_chemical_used,ferric_chloride,Ferric chloride
+primary_chemical_used,alum,Alum
+primary_chemical_used,lime,Lime
+primary_chemical_used,caustic_soda,Caustic soda
+primary_chemical_used,acid,Acid
+primary_chemical_used,polymer,Polymer
+primary_chemical_used,other,Other
+dispersal_type,soak_pit,Soak pit
+dispersal_type,leach_field_or_drainage_field,Leach field or drainage field
+dispersal_type,infiltration_trench,Infiltration trench
+dispersal_type,evapotranspiration_bed,Evapotranspiration bed
+dispersal_type,mound_system,Mound system
+dispersal_type,other,Other
+outfall_type,treatment_plant_outfall,Treatment plant outfall
+outfall_type,combined_sewer_overflow,Combined sewer overflow (CSO)
+outfall_type,emergency_overflow,Emergency overflow
+outfall_type,other,Other
+receiving_water_type,river_or_stream,River or stream
+receiving_water_type,lake_or_reservoir,Lake or reservoir
+receiving_water_type,estuary,Estuary
+receiving_water_type,coastal_water,Coastal water
+receiving_water_type,agricultural_or_reuse_system,Agricultural land or reuse system
+receiving_water_type,other,Other
+pipe_type,lateral,Lateral (property connection)
+pipe_type,condominial_branch,Condominial branch
+pipe_type,main,Main
+pipe_type,trunk,Trunk
+pipe_type,interceptor,Interceptor
+pipe_type,rising_main,Rising main (force main)
+pipe_type,inverted_siphon,Inverted siphon
+pipe_type,other,Other
+nominal_pressure_unit,pa,pascals
+nominal_pressure_unit,kpa,kilopascals
+nominal_pressure_unit,psi,pounds per square inch
+nominal_pressure_unit,ft_water,feet of water (39.2 F)
+nominal_pressure_unit,in_water,inches of water (39.2 F)
+nominal_pressure_unit,cm_water,centimeters of water (4 C)
+nominal_pressure_unit,m_water,meters of water (4 C)
+nominal_pressure_unit,bar,bars
+pipe_depth_below_ground_unit,m,meters
+pipe_depth_below_ground_unit,cm,centimeters
+pipe_depth_below_ground_unit,in,inches
+pipe_depth_below_ground_unit,ft,feet
+upstream_invert_level_unit,m,meters
+upstream_invert_level_unit,ft,feet
+downstream_invert_level_unit,m,meters
+downstream_invert_level_unit,ft,feet
+cross_section_shape,circular,Circular
+cross_section_shape,egg_shaped,Egg-shaped
+cross_section_shape,rectangular,Rectangular
+cross_section_shape,trapezoidal,Trapezoidal
+cross_section_shape,u_shaped,U-shaped
+cross_section_shape,other,Other
+channel_cross_section_shape,rectangular,Rectangular
+channel_cross_section_shape,trapezoidal,Trapezoidal
+channel_cross_section_shape,circular,Circular
+channel_cross_section_shape,u_shaped,U-shaped
+channel_cross_section_shape,irregular_or_natural,Irregular or natural
+channel_cross_section_shape,other,Other
+covered_or_open,open,Open
+covered_or_open,covered,Covered
+channel_depth_unit,m,meters
+channel_depth_unit,cm,centimeters
+channel_depth_unit,in,inches
+channel_depth_unit,ft,feet
+channel_top_width_unit,m,meters
+channel_top_width_unit,cm,centimeters
+channel_top_width_unit,in,inches
+channel_top_width_unit,ft,feet

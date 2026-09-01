@@ -1,0 +1,446 @@
+attribute_code,choice_id,choice_name,description
+00024,ellipsoid_wgs84,Ellipsoid (WGS84),"Height above the WGS84 reference ellipsoid, as reported by GNSS receivers"
+00024,mean_sea_level,Mean sea level,Height above local mean sea level or a national vertical datum
+00024,other,Other,Any other vertical reference system; describe in Additional technical details
+00020,urban,Urban,Cities or densely populated areas
+00020,peri_urban,Peri urban,"Towns and semi-dense areas, suburbs, or peri urban areas surrounding cities"
+00020,rural,Rural,Regions with low population density
+00027,public_or_utility_land,Public or utility land,"Asset lies in public land, a road reserve, or land owned or controlled by the service provider"
+00027,private_land_with_agreement,"Private land, with agreement","Asset crosses land owned by others, with a documented easement, right-of-way, or written agreement"
+00027,private_land_without_agreement,"Private land, without agreement","Asset crosses land owned by others without a documented arrangement, such as informal or customary permission"
+00027,unknown,Unknown,Land status has not been determined
+00041,active,Active,Asset is in use or ready to use
+00041,backup,Backup,Asset is installed or available onsite to be used as a backup to other similar assets in case of maintenance or failure
+00041,not_functional,Not functional,Asset is not currently operational due to a failure or maintenance problem
+00041,under_construction,Under construction,Asset is not operational because it is under construction
+00041,decommissioned,Decommissioned,Asset is no longer in use because it is permanently out of service
+00041,disposed,Disposed,"Asset has been sold, demolished, or relocated to a disposal site"
+00042,excellent,Excellent,"Designed to current standards, operable and well-maintained"
+00042,good,Good,"Showing some signs of minor wear and tear, with minimal impact on performance; or, operable and well-maintained but not designed to current standards"
+00042,fair,Fair,Structurally sound but some deterioration or damage that is beginning to impact performance or require more frequent maintenance
+00042,poor,Poor,Functional but requires a high level of maintenance to continue operating or requires major rehabilitation or replacement
+00042,very_poor,Very poor,Serious problems that impact performance or safety; major rehabilitation or replacement required in the short term
+00043,functional,Functional,In good working condition and regularly providing service according to the specifications in the original design
+00043,partially_functional,Partially functional,Provides service on a regular basis (possibly in a reduced capacity) but repairs are needed due to some maintenance or structural issue
+00043,not_functional,Not functional,"No longer providing service on a regular basis; this could be due to maintenance issues, structural failure, or problems with physical access"
+00043,decommissioned,Decommissioned,"Permanently taken out of service, abandoned, or could not be found"
+00053,very_low,Very low,
+00053,low,Low,
+00053,moderate,Moderate,
+00053,high,High,
+00053,very_high,Very high,
+00054,very_low,Very low,
+00054,low,Low,
+00054,moderate,Moderate,
+00054,high,High,
+00054,very_high,Very high,
+00055,very_low,Very low,
+00055,low,Low,
+00055,moderate,Moderate,
+00055,high,High,
+00055,very_high,Very high,
+00094,cast_iron,Cast iron,"Heavy brittle alloy of iron, carbon, and silicon that can be cast in specific shapes and has the ability to withstand shocks"
+00094,ductile_iron,Ductile iron,"Similar material to cast iron, but with the primary graphite in a nodular or spheroidal form, giving it increased strength and flexibility"
+00094,steel,Steel,Iron-base alloy containing up to 2 percent carbon that is heat treated
+00094,stainless_steel,Stainless steel,Chromium alloy steel that is resistant to rusting and corrosion
+00094,galvanized_steel,Galvanized steel,Steel that has a zinc coating to protect from corrosion and rust
+00094,vitrified_clay,Vitrified clay,"Clay pipe fired at high temperature to form a chemically inert, corrosion-resistant material widely used in gravity sewers"
+00094,concrete,Concrete,"Mixture of cement and aggregate, usually reinforced with steel wire or rebar; includes reinforced concrete pipe and cast-in-place chambers"
+00094,masonry,Masonry,"Brick, stone, or concrete blocks that are bound together with mortar; common in legacy trunk sewers and chambers"
+00094,asbestos_cement,Asbestos cement,"Cement reinforced with asbestos fibers, found in legacy pipelines; subject to handling and disposal safety precautions"
+00094,fiberglass_grp,Fiberglass (GRP),Reinforced plastic material composed of glass fibers embedded within a resin matrix; also known as glass-reinforced plastic
+00094,pvc,PVC,"Polyvinyl chloride, a type of polymer frequently used in pipes and containers"
+00094,hdpe,HDPE,"High-density polyethylene, a type of polymer used in gravity and pressure pipelines"
+00094,plastic,Plastic,"Any high molecular weight polymer material that can be extruded, molded, or drawn into various shapes and sizes; use this category for any plastics that are not PVC or HDPE"
+00094,other,Other,Any material not otherwise defined in this section
+00098,wastewater,Wastewater,"Untreated wastewater, including domestic sewage and blackwater"
+00098,blackwater,Blackwater,"Wastewater from toilets containing excreta, with or without flushwater, conveyed separately from other streams"
+00098,greywater,Greywater,"Wastewater from washing, bathing, laundry, and food preparation that does not contain excreta"
+00098,treated_effluent,Treated effluent,Liquid stream that has undergone treatment prior to discharge or reuse
+00098,sludge_or_septage,Sludge or septage,"Sludge from treatment processes, or sludge and liquid mixtures emptied from on-site containment (faecal sludge)"
+00098,combined_sewage_and_stormwater,Combined sewage and stormwater,Mixture of wastewater and stormwater conveyed in a combined sewer
+00098,stormwater,Stormwater,Rainfall runoff only; assets dedicated solely to stormwater drainage are outside the scope of this standard
+00098,biogas,Biogas,"Gas produced by anaerobic digestion, conveyed for recovery, use, or flaring"
+00098,air,Air,"Air conveyed for aeration, ventilation, or odor control"
+00098,other,Other,Any other conveyed content not defined in this section
+10201,sewered,Sewered,Piped sewer network that removes excreta and wastewater from the premises where they are produced and carries them to treatment or a discharge point
+10201,non_sewered_on_site,Non-sewered (on-site),"Excreta and wastewater are contained at or near the point of generation, with or without subsequent emptying, transport, and off-site treatment"
+10201,mixed,Mixed,System serves users through both sewered and non-sewered services within its coverage area
+10202,separate,Separate,"Collecting network conveying primarily sanitary wastewater, with stormwater excluded or carried separately; also known as sanitary or foul sewers"
+10202,combined,Combined,Network that carries sanitary wastewater and also receives stormwater or snowmelt during wet weather
+10202,both_separate_and_combined,Both separate and combined,Collecting network contains both separate and combined sections
+10203,utility,Utility,Organization created by government through legislative action or a private partnership or corporation with a legal mandate to provide sanitation services to a designated area
+10203,local_government,Local government,Local or municipal government office or staff directly manage the system
+10203,community_based_organization,Community-based organization,"Community-based organization, committee, or cooperative group of users that manages the system (also known as community-based management)"
+10203,sanitation_authority,Sanitation authority,Government agency or regulatory body established for the purpose of managing sanitation service provision
+10203,private,Private,"Individual, partnership, or corporation that owns and operates a sanitation system but does not have a legal mandate to provide services to all users in an area"
+10203,other,Other,Any other management entity not described by the other choices
+10203,no_management,No management,No individual or organization can be identified that manages the system
+10208,conventional_gravity,Conventional gravity,"Gravity sewers laid at self-cleansing gradients and conventional depths, typically in public rights-of-way, with manhole access"
+10208,simplified_or_condominial,Simplified or condominial,"Smaller-diameter gravity sewers laid at shallower depths and reduced gradients, with simplified access chambers, often following shortened routes including through private property"
+10208,settled_small_bore,Settled (small-bore),"Small-diameter sewers conveying settled, solids-free effluent from interceptor or septic tanks"
+10208,pressure,Pressure,"Sewers pressurized by pumps, such as grinder pump or septic tank effluent pump (STEP) systems"
+10208,vacuum,Vacuum,"Network kept under negative pressure by a central vacuum station, with interface valves at connections"
+10208,mixed,Mixed,Network combines more than one sewer technology
+20101,wastewater_treatment_plant,Wastewater treatment plant,Facility containing treatment works and process areas that treat sewered wastewater to an acceptable standard before discharge or reuse
+20101,faecal_sludge_treatment_plant,Faecal sludge treatment plant,Facility designed to receive and treat faecal sludge delivered from on-site containment
+20101,pumping_or_lift_station,Pumping or lift station,Structure containing pumps and related piping used to convey wastewater or faecal sludge
+20101,transfer_station,Transfer station,Facility where faecal sludge from small-scale collection is transferred to larger transport for onward conveyance
+20101,storage_facility,Storage facility,"One or more tanks used to store wastewater, effluent, or faecal sludge"
+20101,process_area,Process area,"Area or building, often within a treatment plant, where a specific treatment process is carried out"
+20101,retention_or_detention_facility,Retention or detention facility,"Basin or structure that temporarily holds flows, such as combined sewer overflow or equalization storage"
+20101,other,Other,Any other type of facility not defined in this section
+31501,flush_pour_flush_toilet,Flush/pour-flush toilet,"Toilet with a water seal, flushed by a cistern or by pouring water by hand, discharging to a sewer, septic tank, or pit"
+31501,pit_latrine_with_slab,Pit latrine with slab,"Dry toilet over a pit, covered by a durable, cleanable slab or platform with a drop hole or seat"
+31501,pit_latrine_without_slab_or_open_pit,Pit latrine without slab or open pit,"Dry toilet over a pit lacking a durable slab, platform, or seat"
+31501,ventilated_improved_pit_vip_latrine,Ventilated improved pit (VIP) latrine,Pit latrine fitted with a vent pipe and screen to reduce odors and insects
+31501,composting_toilet,Composting toilet,"Dry toilet in which carbon-rich material is added to excreta to produce compost, with or without urine separation"
+31501,container_based_toilet,Container-based toilet,"Toilet that collects excreta in a sealable, removable container regularly collected for treatment"
+31501,bucket,Bucket,"Bucket or other unsealed container used to collect excreta, periodically removed for disposal"
+31501,hanging_toilet_or_latrine,Hanging toilet or latrine,"Toilet built over a river, sea, or other water body into which excreta drops directly"
+31501,urinal,Urinal,"User interface that receives urine only, typically operated without a water seal"
+31501,urine_diverting_toilet,Urine-diverting toilet,"Dry or flush toilet with a pan that separates urine from faeces at source for separate storage, treatment, or use"
+31501,other,Other,Any other type of sanitation point not otherwise described in this section
+31507,household_private,Household (private),Used exclusively by members of a single household
+31507,shared_limited_number_of_households,Shared (limited number of households),"Used by a limited, known number of households, not open to the general public"
+31507,communal_or_public,Communal or public,"Open to use by the general public or a community, not restricted to specific households"
+31507,institutional,Institutional,"Dedicated to a public-service institution such as a school, health facility, or market"
+31507,other,Other,Any other usage arrangement not otherwise defined in this section
+31510,squat,Squat,"Pan set into the floor, used in a squatting position"
+31510,seated,Seated,Pedestal or bench seat used in a sitting position
+31510,mixed,Mixed,Facility contains both squat and seated units
+32201,residential,Residential,Connection serving one or more dwellings
+32201,commercial,Commercial,Connection serving a business or commercial premises
+32201,industrial,Industrial,Connection serving an industrial facility
+32201,institutional,Institutional,"Connection serving a public-service institution such as a school, health facility, or government office"
+32201,other,Other,Any other type of connection not described in this section
+32203,active,Active,Connection is in service and discharging to the network
+32203,inactive,Inactive,"Connection exists but is not currently in use, such as at a vacant property"
+32203,disconnected,Disconnected,Connection has been physically or administratively disconnected from the network
+32203,closed,Closed,Customer account has been permanently closed
+31601,septic_tank,Septic tank,Tank with two or more chambers separated by a baffle that settles and partially digests excreta before discharging effluent through an outlet
+31601,holding_tank,Holding tank,"Fixed tank with no outlet, used to collect and store excreta or wastewater until emptied in place"
+31601,pit,Pit,"Excavated chamber, lined or unlined, that collects and stores excreta without the settling-and-discharge design of a septic tank"
+31601,twin_pits_or_alternating_pits,Twin pits or alternating pits,Two pits used alternately so contents in the resting pit can decompose before emptying
+31601,composting_chamber_or_dehydration_vault,Composting chamber or dehydration vault,Sealed above- or below-ground chamber that dries or composts excreta without water
+31601,container_based_sanitation,Container-based sanitation,"Sealable, removable containers regularly collected by a service provider and delivered to treatment"
+31601,biodigester,Biodigester,Sealed anaerobic digestion tank that stabilizes excreta and produces biogas
+31601,other,Other,Any other type of containment not otherwise described in this section
+31604,lined_and_sealed_watertight,"Lined and sealed, watertight",Structure is fully impermeable with no infiltration into surrounding soil
+31604,lined_impermeable_walls_open_bottom,"Lined, impermeable walls, open bottom",Walls are impermeable but the base allows liquid to infiltrate the soil
+31604,lined_semi_permeable_walls_open_bottom,"Lined, semi-permeable walls, open bottom","Walls allow some infiltration, such as honeycomb brick or open-jointed rings, and the base allows liquid to infiltrate the soil"
+31604,unlined,Unlined,"Walls and base are permeable, allowing liquid to infiltrate the surrounding soil"
+31604,unknown,Unknown,Lining or sealing status has not been determined
+31605,sealed_no_outlet,"Sealed, no outlet",Fully enclosed structure with no effluent discharge; contents must be emptied
+31605,to_soak_pit_or_leach_field,To soak pit or leach field,Effluent discharges to a soak pit or leach field for infiltration
+31605,to_sewer_or_open_drain,To sewer or open drain,Effluent discharges to a sewer network or an open/storm drain
+31605,to_open_ground_or_water_body,To open ground or water body,Effluent discharges uncontrolled to the ground surface or a water body
+31605,unknown,Unknown,Effluent destination has not been determined
+31605,other,Other,Any other outlet arrangement not otherwise defined in this section
+31606,accessible_by_vacuum_truck_or_mechanized_equipment,Accessible by vacuum truck or mechanized equipment,Site and compartment openings allow truck-mounted or motorized emptying equipment to reach and access the structure
+31606,accessible_by_manual_equipment_only,Accessible by manual equipment only,No vehicle access; contents can only be removed using handheld pumps or manual tools
+31606,not_accessible_for_emptying,Not accessible for emptying,No opening or access point exists to remove the structure's contents
+31606,unknown,Unknown,Emptying accessibility has not been assessed
+31701,vacuum_tanker,Vacuum tanker,"Self-propelled truck fitted with an integrated vacuum pump and storage tank, used to suck and transport faecal sludge or septage"
+31701,vacuum_trailer_tractor_towed,Vacuum trailer (tractor-towed),Vacuum tank mounted on a towed trailer chassis and propelled by a separate tractor or vehicle rather than a self-contained truck
+31701,flatbed_sludge_truck,Flatbed sludge truck,"Truck with an open or enclosed load bed used to transport drums, containers, or bins of faecal sludge without an integrated vacuum pump"
+31701,motorized_cart_or_small_vehicle,Motorized cart or small vehicle,"Small motorized unit, such as a tank mounted on a motorcycle, three-wheeler, or walking tractor"
+31701,manual_cart,Manual cart,"Human- or animal-powered cart used to transport containers or a tank of faecal sludge, sometimes fitted with a manual pump"
+31701,sewer_jetter_trailer_or_truck_mounted,Sewer jetter (trailer or truck-mounted),High-pressure water jetting unit used to clear and clean sewer lines; trailer- or truck-mounted
+31701,other,Other,Any other vehicle type not described in this section
+31801,standard_manhole,Standard manhole,"Routine access chamber installed at changes in alignment, gradient, diameter, or at junctions"
+31801,inspection_chamber,Inspection chamber,"Small, shallow access chamber used in simplified or condominial sewerage in place of a full manhole"
+31801,cleanout,Cleanout,Pipe fitting extended to the surface allowing rodding or jetting access without a full chamber
+31801,drop_manhole,Drop manhole,Manhole with an internal or external drop connection used where inflow and outflow inverts differ substantially
+31801,junction_chamber,Junction chamber,Special-geometry chamber where multiple large sewers converge
+31801,catch_basin_or_inlet_combined_systems,Catch basin or inlet (combined systems),Street-level inlet structure admitting stormwater to a combined sewer; dedicated stormwater drains are outside scope
+31801,other,Other,Any type of manhole not otherwise defined in this section
+31803,round,Round,Circular cover and frame
+31803,rectangular,Rectangular,Rectangular or square cover and frame
+31803,other,Other,Any other cover shape not otherwise defined
+31805,a15,A15,"Areas usable only by pedestrians and cyclists, e.g. gardens"
+31805,b125,B125,"Footways, pedestrian precincts and comparable areas"
+31805,c250,C250,"Areas alongside kerbs, extending up to 0.5 m into the carriageway"
+31805,d400,D400,"Carriageways of roads, including pedestrian streets and parking areas"
+31805,e600,E600,"Areas subject to heavy wheel loads, e.g. ports and industrial pavements"
+31805,f900,F900,"Areas subject to particularly heavy wheel loads, e.g. airport pavements"
+31805,unknown,Unknown,Load class of the installed cover has not been determined
+31806,none,None,"No fixed steps, ladder, or rungs are installed"
+31806,steps,Steps,Individual fixed step irons or rungs installed in the chamber wall
+31806,ladder,Ladder,Continuous fixed ladder installed in the chamber
+31806,other,Other,Any other type of access aid not otherwise defined
+31001,wye,Wye,Angled Y-shaped fitting joining a branch line to a main at a shallow angle to reduce solids deposition
+31001,tee,Tee,Fitting in the shape of the letter T allowing a perpendicular three-way connection
+31001,bend,Bend,"Fitting that changes the direction of a pipe run, usually at a standard angle"
+31001,reducer,Reducer,Fitting used to join two different sized pieces of pipe
+31001,saddle,Saddle,Fitting clamped or fused onto an existing main to create a branch connection
+31001,coupling_or_sleeve,Coupling or sleeve,"Fitting joining two pipe ends in line, including repair couplings used in sewer rehabilitation"
+31001,cap_or_plug,Cap or plug,"Fitting closing a pipe end or stub, such as a capped connection awaiting future use"
+31001,riser,Riser,Vertical pipe section connecting a deep main upward toward a lateral or the surface
+31001,other,Other,Any type of junction not otherwise described in this section
+30801,gate,Gate,Sliding gate that fully closes off or opens flow in a pipe
+30801,knife_gate,Knife gate,Thin-blade gate valve designed to cut through solids-laden or sludge flow without clogging
+30801,plug,Plug,"Rotating tapered or cylindrical plug used to shut off or throttle flow, tolerant of debris"
+30801,check_non_return_flap,Check (non-return/flap),Allows flow in only one direction and closes automatically when flow tries to reverse
+30801,air_release_vacuum,Air release/vacuum,Placed at a high point to release trapped air or admit air to prevent vacuum buildup in a pipe
+30801,backflow_preventer,Backflow preventer,Device that stops sewage from flowing back into a property or upstream section during surcharge
+30801,other,Other,Any other type of valve not otherwise described in this section
+32101,side_weir,Side weir,"Weir set parallel to the direction of flow along the side of a channel or chamber, spilling excess flow over its crest once the water level rises above the sill"
+32101,transverse_weir,Transverse weir,Weir set across the direction of flow so that all flow above the sill level passes over the crest to the downstream or overflow side
+32101,leaping_weir,Leaping weir,Opening or gap in the channel invert sized so that low dry-weather flow drops through to the intercepting sewer while higher storm flows leap across to the overflow side
+32101,movable_weir,Movable weir,"Weir whose sill or crest can be raised, lowered, or tilted during operation to adjust the overflow level"
+32101,gate_or_penstock,Gate or penstock,"Vertically sliding plate or sluice gate mounted at a channel, chamber, or tank opening, raised or lowered to close off or regulate free-surface flow"
+32101,stop_logs,Stop logs,Removable beams or plates inserted into vertical guides to close off or throttle a channel or chamber opening; modern versions are aluminum stop plates
+32101,orifice_or_fixed_throttle,Orifice or fixed throttle,"Fixed opening or plate, such as an orifice plate or throttle pipe, that limits the discharge passed downstream by restricting the flow area"
+32101,vortex_flow_regulator,Vortex flow regulator,Self-activating device with no moving parts in which rising head develops a swirling air core that sharply limits the discharge passed downstream
+32101,flow_splitter,Flow splitter,"Structure that divides incoming flow between two or more downstream lines or process units in set proportions, typically over fixed weirs sized in proportion to the receiving units' capacity"
+32101,overflow_pipe,Overflow pipe,"Relief pipe set at a fixed level in a tank, chamber, or storage volume that discharges excess flow once the water surface rises above its invert; a relief sewer conveying the overflow onward is registered as a Pipe asset"
+32101,flume,Flume,"Open-channel constriction, such as a Parshall or Venturi flume, installed primarily to control velocity or level in a channel by forcing flow through critical depth; a flume whose primary purpose is flow measurement is registered as a Meter"
+32101,other,Other,Any other flow control element not otherwise described in this section
+32102,combined_sewer_overflow,Combined sewer overflow,Diverts wet-weather flow exceeding the intercepting sewer's capacity from a combined sewer to a receiving water
+32102,storage_or_basin_overflow,Storage or basin overflow,"Relieves a storage or equalization volume, such as a stormwater tank or retention basin, once its capacity is reached"
+32102,process_or_clarifier_overflow,Process or clarifier overflow,Controls the discharge of settled effluent over the outlet weirs of a clarifier or other treatment process unit
+32102,emergency_overflow,Emergency overflow,"Provides a relief path that operates only under failure conditions, such as pump failure or blockage, to prevent uncontrolled flooding"
+32102,flow_splitting,Flow splitting,Divides flow in set proportions between parallel downstream units or lines
+32102,level_control,Level control,"Maintains a set water level or velocity in an upstream channel, tank, or process unit"
+32102,other,Other,Any other function not otherwise described in this section
+31401,building,Building,Any enclosed structure designed to protect from the elements
+31401,perimeter,Perimeter,"Fence, wall, or other protective structure that encloses a land area"
+31401,road,Road,Linear pathway that has been improved to allow for travel by vehicles and pedestrians
+31401,apron,Apron,"Smooth, impermeable surface constructed around a toilet, treatment unit, or vehicle discharge point to prevent spilled wastewater or sludge from pooling or infiltrating the ground"
+31401,discharge_structure,Discharge structure,"Fixed structure, such as a receiving station, where vehicles discharge collected faecal sludge or septage into a treatment plant or transfer station"
+31401,utility_vault,Utility vault,Underground room or vault providing access and protection to equipment
+31401,vehicle_washing_bay,Vehicle washing bay,"Hardstanding area with drainage where emptying and transport vehicles are washed down, typically at a faecal sludge receiving station or treatment plant"
+31401,flood_protection_bund,Flood protection bund,Earthen or constructed barrier protecting a sanitation asset site against flooding
+31401,other,Other,Any type of structure not otherwise defined in this section
+31411,fence,Fence,Barrier constructed of vertical posts connected by horizontal sections of sturdy material
+31411,wall,Wall,Permanent structure with a continuous surface
+31411,other,Other,Any type of perimeter structure not defined elsewhere in this section
+30401,grid,Grid,Connection to an electrical transmission and distribution system
+30401,generator,Generator,"Diesel, gas, or petrol powered engine that converts rotary motion into electrical current"
+30401,solar,Solar,Solar or photovoltaic power system
+30401,wind,Wind,Wind turbine or windmill equipped with an electrical generator
+30401,other,Other,Any other power type not defined in this section
+30407,single_phase_ac,Single phase AC,Alternating current electrical system that uses two wires: one neutral wire and one phase wire in which the voltage rises to a peak in one direction and then reverses
+30407,three_phase_ac,Three phase AC,Alternating current electrical system that uses four wires: one neutral wire and three phase wires in which the voltage rises to a peak and reverses direction at different times
+30407,dc,DC,Direct current system in which current always flows in one direction and the voltage does not change over time
+30408,60_hz,60 Hz,60 cycles per second
+30408,50_hz,50 Hz,50 cycles per second
+30408,other,Other,Any non-standard current frequency
+30421,gasoline_or_petrol,Gasoline or petrol,Fuel made from crude oil and other petroleum liquids that is often used in internal combustion engines
+30421,diesel,Diesel,Distillate fuel oil that is used in compression ignition engines
+30421,other,Other,Any other fuel used in generators that is not described in this section
+30423,air,Air,Engine cooled by air circulation only
+30423,liquid,Liquid,"Engine cooled by a circulating liquid, such as water or other coolant"
+30424,polycrystalline,Polycrystalline,"Multicrystalline or poly panels, made of multiple pieces of silicon melted or joined together"
+30424,monocrystalline,Monocrystalline,"Single crystalline or mono panel, made from a single silicon crystal"
+30424,thin_film,Thin film,"Thin, flexible panel made from amorphous silicon or other materials"
+30424,other,Other,Any other type of photovoltaic panel not described in this section
+30701,motor,Motor,Electromechanical device for converting electrical energy into mechanical energy
+30701,actuator,Actuator,Device that uses electrical or pneumatic power to operate valves
+30701,power_device,Power device,Electrical or electronic device for managing the supply and distribution of electrical power
+30701,electronic,Electronic,Component or device that controls the flow of electrical currents for the purpose of information processing and system control
+30701,heater,Heater,Device that converts electrical energy into heat
+30701,blower,Blower,Device that uses electrical energy to move or pressurize air
+30701,other,Other,Any other type of electrical asset not defined in this section
+30702,control_panel,Control panel,Controls electrical power distribution
+30702,circuit_breaker,Circuit breaker,Automatic device for stopping the flow of current in a circuit in case of a fault
+30702,uninterruptible_power_supply_ups,Uninterruptible power supply (UPS),"Energy storage device that ensures a constant supply of power, even during power outages"
+30702,transformer,Transformer,Increases or decreases the voltage/current or vice versa
+30702,power_conditioner,Power conditioner,Device that improves the quality of power delivered by smoothing out voltage spikes and reducing electrical noise
+30702,switch,Switch,Device to disconnect or connect the conducting path in an electrical circuit
+30702,motor_controller,Motor controller,"Device that controls the operation of an electric motor, such as a starter, soft starter, or variable frequency drive (VFD)"
+30702,inverter,Inverter,Device for converting direct current into alternating current
+30602,influent,Influent,"Measures the flow of untreated wastewater or faecal sludge entering the sanitation system, a treatment plant, or a specific treatment unit"
+30602,effluent,Effluent,"Measures the discharge of treated effluent from a treatment plant or unit to disposal, typically for regulatory compliance"
+30602,sludge_or_septage,Sludge or septage,"Measures flow of sludge, faecal sludge, or septage between treatment units or during transfer"
+30602,reclaimed_or_reuse_water,Reclaimed or reuse water,"Measures treated effluent supplied to a reuse customer or reclamation system, functioning like a customer water meter for billing and delivery"
+30602,process_or_intermediate,Process or intermediate,Measures flow between unit processes within a treatment train
+30602,other,Other,Any other metering function not otherwise described in this section
+30603,electromagnetic,Electromagnetic,"Measures the induced voltage generated by a conductive fluid, such as wastewater or sludge, flowing through a sensor"
+30603,ultrasonic,Ultrasonic,Measures flow velocity by transmitting and receiving sound waves through the flow path; tolerant of solids and grease
+30603,mechanical,Mechanical,"Turbine, displacement, or jet meter that measures flow using moving mechanical components; prone to fouling by solids"
+30603,flume,Flume,"Shaped open channel, such as a Parshall flume, installed primarily to measure flow through a known relationship between depth and flow rate; a flume serving mainly control or relief functions is registered as a Flow control asset"
+30603,weir_with_level_sensor,Weir with level sensor,"Weir paired with a level sensor that calculates flow rate from the measured head over the crest, installed primarily for measurement; a weir serving mainly overflow or control functions is registered as a Flow control asset"
+30603,other,Other,Any other type of meter not otherwise described in this section
+30605,total_volume,Total volume,"Totalizing meter, which displays only the total volume that has flowed through the meter"
+30605,flow_rate,Flow rate,Instantaneous measurement of the current flow rate through the meter
+30605,combined,Combined,Meter displays both the total volume and the instantaneous flow rate
+31101,influent,Influent,Point where a sample of untreated wastewater or faecal sludge entering the system or a treatment plant is collected
+31101,effluent,Effluent,"Point where a sample of treated effluent leaving a treatment plant or unit is collected, often for regulatory compliance"
+31101,process_or_intermediate,Process or intermediate,Point between treatment units where a sample is collected to monitor process performance
+31101,sludge,Sludge,"Point where a sample of sludge, faecal sludge, or septage is collected"
+31101,receiving_water,Receiving water,Point in the water body receiving the discharge where a sample is collected to assess environmental impact
+31101,industrial_discharge,Industrial discharge,Point at an industrial user's connection where a sample is collected to verify pretreatment compliance
+31101,other,Other,Any type of sampling point not otherwise defined in this section
+31201,level,Level,"Height or depth of wastewater or sludge, measured from a known reference point"
+31201,pressure,Pressure,Force pushing on a unit area
+31201,gas,Gas,"Presence or concentration of a hazardous or asphyxiant gas, such as hydrogen sulfide (H2S), methane (CH4), or oxygen (O2), typically for confined-space monitoring in wet wells, manholes, or lift stations"
+31201,rainfall,Rainfall,"Amount or intensity of precipitation, used to correlate infiltration/inflow or combined sewer overflow (CSO) events with rainfall"
+31201,temperature,Temperature,"Temperature of wastewater, sludge, or ambient air, used to monitor process conditions such as digestion"
+31201,moisture,Moisture,Presence or absence of water in contact with the sensor
+31201,current,Current,Rate of flow of electric charge through a unit area
+31201,voltage,Voltage,Electrical pressure available to cause a flow of current
+31201,other,Other,Any other parameter not otherwise defined in this section
+31202,hydrogen_sulfide_h2s,Hydrogen sulfide (H2S),Toxic gas produced by anaerobic decomposition of sewage
+31202,methane_ch4,Methane (CH4),Flammable gas produced by anaerobic digestion of organic matter
+31202,oxygen_o2,Oxygen (O2),"Oxygen concentration, monitored for confined-space entry or aeration"
+31202,ammonia_nh3,Ammonia (NH3),Toxic gas released from sewage and sludge handling
+31202,carbon_monoxide_co,Carbon monoxide (CO),Toxic combustion gas monitored in confined spaces
+31202,multi_gas,Multi-gas,Sensor measures several gases in one instrument
+31202,other,Other,Any other gas not otherwise described in this section
+31301,ph,pH,Measures the acidity or alkalinity of the stream
+31301,dissolved_oxygen_do,Dissolved oxygen (DO),"Measures dissolved oxygen concentration, such as in aeration basins"
+31301,turbidity,Turbidity,Measures suspended particulate cloudiness of the stream
+31301,ammonia,Ammonia,Measures ammonia or ammonium concentration
+31301,nitrate,Nitrate,"Measures nitrate concentration, such as for denitrification control"
+31301,total_nitrogen_or_tkn,Total nitrogen or TKN,"Measures nitrogen in aggregate rather than as a single species: Kjeldahl nitrogen, which combines organic and ammonia nitrogen, or total nitrogen, which also includes nitrite and nitrate; use Ammonia or Nitrate where a single species is monitored"
+31301,phosphate_or_total_phosphorus,Phosphate or total phosphorus,"Measures phosphorus in the stream, either as reactive orthophosphate to control chemical or biological phosphorus removal, or as total phosphorus across all forms present for discharge compliance"
+31301,cod_or_bod,COD or BOD,Measures chemical or biochemical oxygen demand of the stream
+31301,total_organic_carbon_toc,Total organic carbon (TOC),"Measures organically bound carbon in the stream, giving a same-shift indication of organic strength where the delay of a five-day BOD test is impractical"
+31301,suspended_solids,Suspended solids,Measures total suspended solids or mixed liquor solids concentration
+31301,orp,ORP,Measures oxidation-reduction potential of the stream
+31301,chlorine,Chlorine,"Measures free or total chlorine residual, used to set the disinfection dose and to confirm that residual has been removed before effluent is discharged"
+31301,conductivity,Conductivity,Measures electrical conductivity of the stream
+31301,multiparameter,Multiparameter,Analyzer measures several parameters in one instrument
+31301,other,Other,Any other parameter not otherwise described in this section
+32301,none_manual_download,None (manual download),Data are stored on the device and collected manually
+32301,cellular_network,Cellular network,"Data are transmitted over a mobile network, such as GSM, GPRS, or LTE"
+32301,radio,Radio,Data are transmitted by a licensed or unlicensed radio link
+32301,satellite,Satellite,Data are transmitted via a satellite uplink
+32301,other,Other,Any other transmission method not described in this section
+30201,submersible_non_clog_vortex,Submersible non-clog/vortex,"Electrically powered pump with an open, recessed, or vortex impeller designed to pass solids without clogging; used in wet wells and lift stations"
+30201,grinder,Grinder,Submersible pump fitted with a cutting or shredding mechanism that macerates solids before pumping; common in low-pressure sewer systems
+30201,screw_archimedes,Screw (Archimedes),"Inclined rotating screw that lifts wastewater or sludge within an open trough; tolerant of large solids and debris, common at headworks"
+30201,progressive_cavity_positive_displacement,Progressive cavity (positive displacement),Rotor turning within a flexible stator that advances thick or viscous sludge at a constant flow rate regardless of pressure
+30201,diaphragm,Diaphragm,Motorized or manually operated pump that uses a flexible diaphragm to displace faecal sludge or wastewater; widely used for pit and septic tank emptying
+30201,end_suction_centrifugal,End-suction centrifugal,"Fluid enters along the pump axis, is accelerated by an impeller, and exits at a right angle to the shaft through a single suction port"
+30201,axial_flow,Axial flow,"Fluid is accelerated in the direction of the flow axis by an impeller running inside a casing; used for high-flow, low-head applications such as storm or combined sewer pump stations"
+30201,manual_pump,Manual pump,"Human-powered pump, such as the Gulper, MAPET, or manually operated diaphragm pump (MDHP), used to manually lift or convey faecal sludge"
+30201,other,Other,Any other pump type not described in this section
+30204,integrated_with_pump,Integrated with pump,Motor and pump should be treated as the same asset
+30204,separate_from_pump,Separate from pump,Motor should be treated as a separate asset from the pump
+30205,single_phase_ac,Single phase AC,Alternating current electrical system that uses two wires: one neutral wire and one phase wire in which the voltage rises to a peak in one direction and then reverses
+30205,three_phase_ac,Three phase AC,Alternating current electrical system that uses four wires: one neutral wire and three phase wires in which the voltage rises to a peak and reverses direction at different times
+30205,dc,DC,Direct current system in which current always flows in one direction and the voltage does not change over time
+30301,equalization_or_balancing_tank,Equalization or balancing tank,Attenuates variation in flow or organic load to protect downstream treatment units
+30301,sludge_or_septage_holding_tank,Sludge or septage holding tank,"Temporarily stores sludge, septage, or faecal sludge before further treatment, transport, or disposal, within a treatment facility, transfer station, or conveyance network; an on-site tank storing excreta at the point of generation is a Containment asset (Holding tank)"
+30301,chemical_storage_tank,Chemical storage tank,"Stores coagulants, polymers, chlorine, or other treatment chemicals prior to dosing"
+30301,effluent_storage_tank,Effluent storage tank,"Stores treated effluent prior to discharge or reuse, such as for irrigation"
+30301,wet_well,Wet well,Collects wastewater or sludge ahead of a pump to provide pump suction volume and control cycling
+30301,portable_tank,Portable tank,Tank which can be moved from place to place; could be installed above or below ground
+30301,combined_sewer_overflow_storage_tank_or_tunnel,Combined sewer overflow storage (tank or tunnel),Tank or deep tunnel that stores combined sewage during wet weather for later return to treatment
+30301,other,Other,Any other tank function not otherwise described in this section
+30302,pvc,PVC,"Polyvinyl chloride, a type of polymer frequently used in pipes and containers"
+30302,plastic,Plastic,"Any high molecular weight polymer material that can be extruded, molded, or drawn into various shapes and sizes; use this category for any plastics that are not PVC"
+30302,concrete,Concrete,"Mixture of cement and aggregate, usually reinforced with steel wire or rebar"
+30302,aluminum,Aluminum,Lightweight metal composed mainly of elemental aluminum that may be alloyed with other elements
+30302,steel,Steel,Iron-base alloy containing up to 2 percent carbon that is heat treated
+30302,stainless_steel,Stainless steel,Chromium alloy steel that is resistant to rusting and corrosion
+30302,composite,Composite,Structure that combines concrete with a steel support structure
+30302,fiberglass,Fiberglass,Reinforced plastic material composed of glass fibers embedded within a resin matrix
+30302,masonry,Masonry,"Brick, stone, or concrete blocks that are bound together with mortar"
+30302,other,Other,Any other type of tank construction not described in this section
+30304,cylindrical,Cylindrical,Tank with a circular cross section
+30304,rectangular,Rectangular,"Tank with a rectangular cross section, including square"
+30304,other,Other,Any other tank shape not described in this section
+30501,screen,Screen,"Bar rack, mesh, or fine screen at the headworks that intercepts coarse solids, rags, and debris carried in the incoming flow"
+30501,grit_removal,Grit removal,"Channel, vortex unit, or aerated chamber at the headworks in which sand, gravel, and other dense inorganic particles settle out of the flow"
+30501,grease_or_fog_removal,Grease or FOG removal,"Trap, skimming chamber, or flotation unit at the headworks that separates fats, oils, and grease from the flow"
+30501,sedimentation_or_settler,Sedimentation or settler,"Tank or basin in which settleable solids separate from wastewater or faecal sludge under gravity, whether ahead of or following biological treatment"
+30501,imhoff_tank,Imhoff tank,Two-story tank combining primary sedimentation with separate sludge digestion in a lower compartment
+30501,anaerobic_baffled_reactor_abr,Anaerobic baffled reactor (ABR),Series of baffled chambers that direct flow up and down through settled sludge for anaerobic treatment
+30501,anaerobic_filter,Anaerobic filter,Fixed-bed reactor in which wastewater flows through a submerged filter medium supporting anaerobic biofilm
+30501,upflow_anaerobic_sludge_blanket_uasb,Upflow anaerobic sludge blanket (UASB),Reactor in which wastewater flows upward through a blanket of anaerobic sludge granules for high-rate digestion
+30501,waste_stabilization_pond,Waste stabilization pond,"Shallow earthen pond that treats wastewater by sedimentation, digestion, and algal-bacterial processes; typically constructed in series as anaerobic, facultative, and maturation stages. Each pond in a series is registered as a separate Treatment asset, linked using upstream/downstream relationships."
+30501,aerated_lagoon_or_pond,Aerated lagoon or pond,Earthen basin in which mechanical or diffused aeration supplements natural oxygenation to treat wastewater
+30501,free_water_surface_constructed_wetland,Free-water surface constructed wetland,"Engineered wetland in which wastewater flows as a shallow open layer above the soil, through the stems of emergent plants, resembling a natural marsh"
+30501,horizontal_subsurface_flow_constructed_wetland,Horizontal subsurface flow constructed wetland,"Engineered wetland in which wastewater moves sideways through a planted bed of gravel or sand, staying below the surface of the media"
+30501,vertical_flow_constructed_wetland,Vertical flow constructed wetland,Engineered wetland in which wastewater is applied to the surface in intermittent doses and drains downward through a planted media bed to collection pipes at the base
+30501,trickling_filter,Trickling filter,Fixed-film reactor in which wastewater trickles over a bed of rock or plastic media colonized by microorganisms
+30501,rotating_biological_contactor_rbc,Rotating biological contactor (RBC),Series of rotating discs partially submerged in wastewater that support a biofilm for aerobic treatment
+30501,aeration_basin,Aeration basin,Basin in which wastewater is mixed with a suspended microbial culture and aerated to degrade organic matter
+30501,sequencing_batch_reactor_sbr,Sequencing batch reactor (SBR),"Single basin in which aeration, settling, and decanting of a suspended microbial culture occur in timed sequence rather than in separate units"
+30501,membrane_bioreactor_mbr,Membrane bioreactor (MBR),Basin holding a suspended microbial culture combined with membrane filtration in place of a separate settling stage
+30501,moving_bed_biofilm_reactor_mbbr,Moving bed biofilm reactor (MBBR),Aerobic or anaerobic basin using free-floating plastic carriers that hold a biofilm in suspension
+30501,coagulation_or_flocculation,Coagulation or flocculation,Addition of chemicals with gentle mixing to destabilize and aggregate suspended particles for improved settling
+30501,filtration,Filtration,"Granular, cloth, or membrane filter that removes residual particulates from treated effluent"
+30501,chlorine_contact_tank,Chlorine contact tank,"Basin or vessel in which chlorine, in liquid, solid, or gaseous form, is contacted with effluent for disinfection"
+30501,uv_or_ozone_disinfection_unit,UV or ozone disinfection unit,"Reactor or chamber that inactivates pathogens in effluent by non-chlorine means, such as ultraviolet light or ozone"
+30501,chemical_dosing_system,Chemical dosing system,"Storage, pump, and delivery equipment that doses chemicals for a treatment function such as pH control, odor control, or corrosion prevention"
+30501,thickener,Thickener,Gravity or mechanical unit that concentrates sludge or faecal sludge solids before further treatment
+30501,anaerobic_digester,Anaerobic digester,"Enclosed reactor in which microorganisms break down sludge or faecal sludge without oxygen, often producing biogas"
+30501,unplanted_drying_bed,Unplanted drying bed,Shallow bed with a filtration medium that dewaters sludge or faecal sludge by drainage and evaporation
+30501,planted_drying_bed,Planted drying bed,Drying bed planted with wetland vegetation that enhances dewatering and stabilization of sludge or faecal sludge
+30501,dewatering_unit,Dewatering unit,"Centrifuge, belt filter press, or screw press that mechanically separates liquid from sludge or faecal sludge"
+30501,composting_pad_or_windrow,Composting pad or windrow,"Pad, windrow, or vessel in which dewatered sludge or faecal sludge is mixed with organic bulking material and composted aerobically"
+30501,lime_stabilization,Lime stabilization,Addition of lime to raise pH and reduce pathogens in sludge or faecal sludge
+30501,incineration_or_thermal_treatment,Incineration or thermal treatment,Combustion or other thermal process that reduces sludge or faecal sludge volume and destroys pathogens
+30501,aerobic_digester,Aerobic digester,Open or closed tank in which sludge is aerated to stabilize solids without biogas production; common in small and package plants
+30501,odor_control_gas_treatment,Odor control (gas treatment),"Equipment that contains, ventilates and treats odorous gases from collection or treatment assets"
+30501,other,Other,Any other type of treatment process not already described in this section
+30502,preliminary,Preliminary,"Removal of large solids, grit, or debris ahead of primary treatment; standard engineering practice"
+30502,primary,Primary,"Physical or chemical process, such as settlement, removing a substantial portion of settleable solids and some organic load"
+30502,secondary,Secondary,Process generally involving biological treatment that reduces biodegradable organic matter
+30502,tertiary,Tertiary,"Process that reduces nitrogen or phosphorus, or both"
+30502,quaternary,Quaternary,Process that reduces a broad spectrum of micropollutants
+30502,other,Other,Any treatment stage not otherwise described in this section
+30507,geomembrane,Geomembrane,HDPE or other synthetic membrane liner
+30507,compacted_clay,Compacted clay,Compacted clay or bentonite liner
+30507,concrete_or_masonry,Concrete or masonry,"Concrete, masonry, or mortar lining"
+30507,unlined,Unlined,"Earthen, with no constructed liner"
+30507,unknown,Unknown,Liner status has not been determined
+30507,other,Other,Any other liner type not otherwise defined in this section
+30521,chlorine_gas,Chlorine gas,Gaseous molecular chlorine (Cl2) that forms hypochlorous acid and hypochlorite ion when dissolved in water
+30521,sodium_hypochlorite_bleach,Sodium hypochlorite (bleach),Solution in which sodium hypochlorite (NaOCl) is hydrolyzed in water to form hypochlorous acid (HOCl)
+30521,calcium_hypochlorite,Calcium hypochlorite,Dry calcium hypochlorite (Ca(OCl)2) in powder or pellets dissolved in water to form hypochlorous acid
+30521,chloramine,Chloramine,"Disinfectant produced by mixing chlorine and ammonia, forming mainly monochloramine and dichloramine"
+30521,chlorine_dioxide,Chlorine dioxide,"Red-yellow gas that is very reactive and unstable, decomposing in water to form chlorite ion"
+30521,sulfur_dioxide,Sulfur dioxide,Gaseous sulfur dioxide (SO2) used to dechlorinate effluent by neutralizing residual chlorine before discharge
+30521,ozone_on_site_generated,Ozone (on-site generated),Ozone (O3) generated on site from air or oxygen for disinfection or oxidation; cannot be stored or transported in bulk
+30521,methanol,Methanol,Methanol (CH3OH) dosed as a supplemental carbon source for biological denitrification; flammable liquid
+30521,ferric_chloride,Ferric chloride,Ferric chloride (FeCl3) solution used as a coagulant for solids and phosphorus removal; corrosive
+30521,alum,Alum,Aluminum sulfate (Al2(SO4)3) used as a coagulant for solids and phosphorus removal
+30521,lime,Lime,"Quicklime (CaO) or hydrated lime (Ca(OH)2) used for pH adjustment, chemical treatment, or sludge stabilization"
+30521,caustic_soda,Caustic soda,Sodium hydroxide (NaOH) solution used for pH adjustment or gas scrubbing; corrosive
+30521,acid,Acid,"Mineral acid, such as sulfuric or hydrochloric acid, used for pH adjustment; corrosive"
+30521,polymer,Polymer,Organic polymer (polyelectrolyte) used as a flocculant or as a sludge conditioning and dewatering aid
+30521,other,Other,Any other primary chemical not described in this section
+31901,soak_pit,Soak pit,Buried chamber with permeable walls through which pre-settled effluent seeps gradually into the ground
+31901,leach_field_or_drainage_field,Leach field or drainage field,"Buried perforated distribution pipes, bedded in gravel trenches, that spread effluent across an area of soil for infiltration"
+31901,infiltration_trench,Infiltration trench,Narrow gravel- or sand-filled trench that receives effluent for subsurface infiltration
+31901,evapotranspiration_bed,Evapotranspiration bed,Lined bed that disposes of effluent through evaporation and plant uptake rather than soil infiltration
+31901,mound_system,Mound system,Raised soil mound used to disperse effluent where shallow soil or a high water table precludes a standard leach field
+31901,other,Other,Any other type of dispersal structure not otherwise described in this section
+32001,treatment_plant_outfall,Treatment plant outfall,Point where treated effluent leaves a treatment facility to a receiving water body
+32001,combined_sewer_overflow_cso,Combined sewer overflow (CSO),"Engineered relief point on a combined network that diverts wet-weather flow exceeding downstream capacity to a receiving water; the weir, gate, or other element performing the diversion inside the chamber is registered separately as a Flow control asset"
+32001,emergency_overflow,Emergency overflow,Point designed to relieve the system only under abnormal or emergency conditions; the element providing the relief path is registered separately as a Flow control asset
+32001,other,Other,Any type of outfall not otherwise defined in this section
+32004,river_or_stream,River or stream,Flowing inland surface water
+32004,lake_or_reservoir,Lake or reservoir,Standing inland surface water body
+32004,estuary,Estuary,Transitional water where a river meets the sea
+32004,coastal_water,Coastal water,Marine water along the coast
+32004,agricultural_land_or_reuse_system,Agricultural land or reuse system,"Effluent is delivered to agricultural land, an irrigation network, or another planned reuse system rather than discharged to a water body"
+32004,other,Other,Any other receiving environment not defined in this section
+40101,lateral_property_connection,Lateral (property connection),Small-diameter sewer connecting a single building or premises to the public network; the point where wastewater enters the collection system
+40101,condominial_branch,Condominial branch,"Shared small-diameter sewer that collects wastewater from a group of properties, often routed through private lots, sidewalks, or backyards, and conveys it to a main; the defining element of simplified or condominial sewer systems"
+40101,main,Main,Sewer that aggregates flow from laterals and carries it toward a trunk sewer or interceptor
+40101,trunk,Trunk,High-capacity sewer receiving flow from mains and carrying it toward an interceptor or a treatment facility
+40101,interceptor,Interceptor,Highest-order sewer in a network; collects flow from trunk and main sewers and delivers it to a treatment facility
+40101,rising_main_force_main,Rising main (force main),"Pressurized pipe used to convey wastewater, typically downstream of a pump station"
+40101,inverted_siphon,Inverted siphon,Depressed pipe or set of parallel pipes passing under an obstacle while maintaining self-cleansing velocity
+40101,other,Other,Any other type of sewer pipe not defined in this section
+40107,circular,Circular,Round pipe cross-section
+40107,egg_shaped,Egg-shaped,"Ovoid profile, narrower at the invert, used to maintain velocity at low flows"
+40107,rectangular,Rectangular,"Rectangular closed profile, typically for large box sewers"
+40107,trapezoidal,Trapezoidal,"Trapezoidal profile, typically for large culverts or box sewers"
+40107,u_shaped,U-shaped,Profile with a rounded (semi-circular) invert and straight vertical side walls
+40107,other,Other,Any other cross-section shape not otherwise defined
+40201,rectangular,Rectangular,Rectangular open channel profile
+40201,trapezoidal,Trapezoidal,"Trapezoidal open channel profile, common for larger constructed drains"
+40201,circular,Circular,Circular open channel profile
+40201,u_shaped,U-shaped,Profile with a rounded (semi-circular) invert and straight vertical side walls
+40201,irregular_or_natural,Irregular or natural,Unformed earthen or naturally shaped channel cross-section
+40201,other,Other,Any other channel cross-section shape not otherwise defined
+40203,open,Open,Channel is open to the atmosphere along its length
+40203,covered,Covered,Channel has a fixed cover or slab over it

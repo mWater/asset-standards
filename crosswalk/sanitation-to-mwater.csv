@@ -1,0 +1,212 @@
+attribute_code,attribute_name,asset_type,standard_data_type,mwater_table,mwater_column_id,mwater_column_name,mwater_column_type,match_method,candidate_count
+00001,Type,,Choice,entities.sanitation_asset,type,Type,enum,exact_name,1
+00002,Name,,Text,entities.sanitation_asset,name,Name,text,exact_name,1
+00003,Unique ID,,Text,entities.sanitation_asset,code,Unique ID,text,exact_name,1
+00004,Description,,Text,entities.sanitation_asset,description,Description,text,exact_name,1
+00005,Photo,,Image,entities.sanitation_asset,photos,Photo,imagelist,exact_name,1
+00006,Parent asset,,Asset ID,entities.sanitation_asset,parent,Parent asset,id,exact_name,1
+00011,Location,,Geometry,entities.sanitation_asset,location,Location,geometry,exact_name,1
+00012,Location precision,,Unit,entities.sanitation_asset,location_accuracy,Location precision,number,exact_name,1
+00013,Survey elevation,,Unit,entities.sanitation_asset,survey_elevation_magnitude,Survey elevation (raw magnitude),number,unit_family,1
+00024,Survey elevation datum,,Choice,entities.sanitation_asset,survey_elevation_datum,Survey elevation datum,enum,exact_name,1
+00014,Elevation precision,,Unit,entities.sanitation_asset,location_altitude_accuracy,Elevation precision,number,exact_name,1
+00015,Administrative region,,Text,entities.sanitation_asset,admin_region,Administrative region,id,exact_name,1
+00016,Coverage area,,Geometry,entities.sanitation_asset,coverage_area,Coverage area,geometry,exact_name,1
+00017,Sector,,Text,entities.sanitation_asset,sector,Sector,text,exact_name,1
+00018,Route,,Text,entities.sanitation_asset,route,Route,text,exact_name,1
+00019,Address,,Text,entities.sanitation_asset,address,Address,text,exact_name,1
+00020,Urban-rural classification,,Choice,entities.sanitation_asset,urban_rural,Urban-rural classification,enum,exact_name,1
+00021,Community,,Text,entities.sanitation_asset,community,Community,id,exact_name,1
+00022,Accessible by road,,Checkbox,entities.sanitation_asset,accessible_by_road,Accessible by road,boolean,exact_name,1
+00023,Perimeter fence or wall installed,,Checkbox,entities.sanitation_asset,perimeter,Perimeter fence or wall installed,boolean,exact_name,1
+00025,Wheelchair accessible,,Checkbox,entities.sanitation_asset,wheelchair_accessible,Wheelchair accessible,boolean,exact_name,1
+00026,Distance to nearest water source,,Unit,entities.sanitation_asset,distance_to_water_source_magnitude,Distance to nearest water source (raw magnitude),number,unit_family,1
+00027,Land occupancy,,Choice,entities.sanitation_asset,land_occupancy,Land occupancy,enum,exact_name,1
+00031,Level 1,,Text,entities.sanitation_asset,hierarchy_level_1,Level 1,text,exact_name,1
+00032,Level 2,,Text,entities.sanitation_asset,hierarchy_level_2,Level 2,text,exact_name,1
+00033,Level 3,,Text,entities.sanitation_asset,hierarchy_level_3,Level 3,text,exact_name,1
+00034,Level 4,,Text,entities.sanitation_asset,hierarchy_level_4,Level 4,text,exact_name,1
+00035,Level 5,,Text,entities.sanitation_asset,hierarchy_level_5,Level 5,text,exact_name,1
+00036,Level 6,,Text,entities.sanitation_asset,hierarchy_level_6,Level 6,text,exact_name,1
+00037,Level 7,,Text,entities.sanitation_asset,hierarchy_level_7,Level 7,text,exact_name,1
+00041,Status,,Choice,entities.sanitation_asset,status,Status,enum,exact_name,1
+00042,Condition,,Choice,entities.sanitation_asset,condition,Condition,enum,exact_name,1
+00043,Functional status,,Choice,entities.sanitation_asset,functional_status,Functional status,enum,exact_name,1
+00051,Current replacement cost (USD),,Number,entities.sanitation_asset,crc,Current replacement cost (USD),number,exact_name,1
+00052,Expected useful life,,Number,entities.sanitation_asset,eul,Expected useful life,number,exact_name,1
+00053,Probability of failure,,Choice,entities.sanitation_asset,probability_of_failure,Probability of failure,enum,exact_name,1
+00054,Consequence of failure,,Choice,entities.sanitation_asset,consequence_of_failure,Consequence of failure,enum,exact_name,1
+00055,Asset risk,,Choice,entities.sanitation_asset,asset_risk,Asset risk,enum,exact_name,1
+00056,Original cost (USD),,Number,entities.sanitation_asset,original_cost,Original cost (USD),number,exact_name,1
+00057,Current rehabilitation cost (USD),,Number,entities.sanitation_asset,current_rehab_cost,Current rehabilitation cost (USD),number,exact_name,1
+00061,Manufacturer,,Text,entities.sanitation_asset,manufacturer,Manufacturer,text,exact_name,1
+00062,Model,,Text,entities.sanitation_asset,model,Model,text,exact_name,1
+00063,Serial number,,Text,entities.sanitation_asset,serial_number,Serial number,text,exact_name,1
+00064,Additional technical details,,Text,entities.sanitation_asset,additional_technical_details,Additional technical details,text,exact_name,1
+00065,Installation date,,Date,entities.sanitation_asset,installation_date,Installation date,date,exact_name,1
+00066,Installed by,,Text,entities.sanitation_asset,installed_by,Installed by,text,exact_name,1
+00067,Funded by,,Text,entities.sanitation_asset,funded_by,Funded by,text,exact_name,1
+00068,Rehabilitation date,,Date,entities.sanitation_asset,rehabilitation_date,Rehabilitation date,date,exact_name,1
+00069,Last service date,,Date,entities.sanitation_asset,last_service_date,Last service date,date,exact_name,1
+00075,Last calibration date,,Date,entities.sanitation_asset,last_calibration_date,Last calibration date,date,exact_name,1
+00070,Rehabilitated by,,Text,entities.sanitation_asset,rehab_by,Rehabilitated by,text,exact_name,1
+00071,Service interval,,Unit,entities.sanitation_asset,service_interval_magnitude,Service interval (raw magnitude),number,unit_family,1
+00072,Date of manufacture,,Date,entities.sanitation_asset,date_of_manufacture,Date of manufacture,date,exact_name,1
+00073,Decommissioning date,,Date,entities.sanitation_asset,decommissioning_date,Decommissioning date,date,exact_name,1
+00074,Owner,,Text,entities.sanitation_asset,owner,Owner,text,exact_name,1
+00076,Operator,,Text,entities.sanitation_asset,operator,Operator,text,exact_name,1
+00091,Upstream asset,,Asset ID,entities.sanitation_asset,upstream_asset,Upstream asset,id,exact_name,1
+00097,Downstream asset,,Asset ID,entities.sanitation_asset,downstream_asset,Downstream asset,id,exact_name,1
+00092,Nominal diameter,,Unit,entities.sanitation_asset,nominal_diameter_magnitude,Nominal diameter (raw magnitude),number,unit_family,1
+00093,Pipe length,,Unit,entities.sanitation_asset,pipe_length_manual_value_magnitude,Pipe length (manual entry) (raw magnitude),number,unit_family,1
+00094,Material,,Choice,entities.sanitation_asset,material,Material,enum,exact_name,1
+00095,Minor loss coefficient,,Number,entities.sanitation_asset,minor_loss_coef,Minor loss coefficient,number,exact_name,1
+00096,Roughness coefficient,,Number,entities.sanitation_asset,roughness_coefficient,Roughness coefficient,number,exact_name,1
+00098,Conveyed content,,Choice,entities.sanitation_asset,conveyed_content,Conveyed content,enum,exact_name,1
+00099,Invert level,,Unit,entities.sanitation_asset,invert_level_magnitude,Invert level (raw magnitude),number,unit_family,1
+00171,Primary contact name,,Text,entities.sanitation_asset,primary_contact_name,Primary contact name,text,exact_name,1
+00172,Primary contact position,,Text,entities.sanitation_asset,primary_contact_position,Primary contact position,text,exact_name,1
+00173,Primary contact phone number,,Text,entities.sanitation_asset,primary_contact_phone,Primary contact phone number,text,exact_name,1
+00174,Secondary contact name,,Text,entities.sanitation_asset,secondary_contact_name,Secondary contact name,text,exact_name,1
+00175,Secondary contact position,,Text,entities.sanitation_asset,secondary_contact_position,Secondary contact position,text,exact_name,1
+00176,Secondary contact phone number,,Text,entities.sanitation_asset,secondary_contact_phone,Secondary contact phone number,text,exact_name,1
+00181,Date updated,,Date,entities.sanitation_asset,,,,unmatched,0
+00182,Date inspected,,Date,entities.sanitation_asset,date_inspected,Date inspected,date,exact_name,1
+00183,Alternate ID,,Text,entities.sanitation_asset,alt_id,Alternate ID,text,exact_name,1
+00184,Import code,,Text,entities.sanitation_asset,import_code,Import code,text,exact_name,1
+00185,Permit or licence number,,Text,entities.sanitation_asset,permit_number,Permit or licence number,text,exact_name,1
+10201,Sanitation system type,Sanitation system,Choice,entities.sanitation_asset,,,,unmatched,0
+10202,Sewer network type,Sanitation system,Choice,entities.sanitation_asset,,,,unmatched,0
+10203,Management type,Sanitation system,Choice,entities.sanitation_asset,,,,unmatched,0
+10204,Number of households in service area,Sanitation system,Number,entities.sanitation_asset,,,,unmatched,0
+10205,Number of households currently served,Sanitation system,Number,entities.sanitation_asset,,,,unmatched,0
+10206,System or network diagram,Sanitation system,Image,entities.sanitation_asset,,,,unmatched,0
+10207,Total treatment capacity,Sanitation system,Unit,entities.sanitation_asset,,,,unmatched,0
+10208,Sewer technology,Sanitation system,Choice,entities.sanitation_asset,,,,unmatched,0
+10209,Design capacity (population equivalent),Sanitation system,Number,entities.sanitation_asset,,,,unmatched,0
+20101,Facility type,Facility,Choice,entities.sanitation_asset,facility_type,Facility type,enum,exact_name,1
+20102,Process area type,Facility,Text,entities.sanitation_asset,process_area_type,Process area type,text,exact_name,1
+20103,Equipped to receive faecal sludge,Facility,Checkbox,entities.sanitation_asset,receives_faecal_sludge,Equipped to receive faecal sludge,boolean,exact_name,1
+31501,Sanitation point type,Sanitation point,Choice,entities.sanitation_asset,sanitation_point_type,Sanitation point type,enum,exact_name,1
+31505,Number of cubicles or stances,Sanitation point,Number,entities.sanitation_asset,number_of_cubicles,Number of cubicles or stances,number,exact_name,1
+31507,Usage arrangement,Sanitation point,Choice,entities.sanitation_asset,usage_arrangement,Usage arrangement,enum,exact_name,1
+31509,Separate facilities for women and girls,Sanitation point,Checkbox,entities.sanitation_asset,separate_facilities_women_girls,Separate facilities for women and girls,boolean,exact_name,1
+31510,Pan style,Sanitation point,Choice,entities.sanitation_asset,pan_style,Pan style,enum,exact_name,1
+32201,Connection type,Connection,Choice,entities.sanitation_asset,connection_type,Connection type,enum,exact_name,1
+32202,Customer ID,Connection,Text,entities.sanitation_asset,customer_id,Customer ID,text,exact_name,1
+32203,Connection status,Connection,Choice,entities.sanitation_asset,connection_status,Connection status,enum,exact_name,1
+32204,Interceptor tank installed,Connection,Checkbox,entities.sanitation_asset,interceptor_tank_installed,Interceptor tank installed,boolean,exact_name,1
+32205,Backflow prevention installed,Connection,Checkbox,entities.sanitation_asset,backflow_prevention_installed,Backflow prevention installed,boolean,exact_name,1
+31601,Containment type,Containment,Choice,entities.sanitation_asset,containment_type,Containment type,enum,exact_name,1
+31602,Number of compartments,Containment,Number,entities.sanitation_asset,number_of_compartments,Number of compartments,number,exact_name,1
+31603,Storage volume,Containment,Unit,entities.sanitation_asset,storage_volume_magnitude,Storage volume (raw magnitude),number,unit_family,1
+31609,Containment depth,Containment,Unit,entities.sanitation_asset,containment_depth_magnitude,Containment depth (raw magnitude),number,unit_family,1
+31604,Lined or sealed,Containment,Choice,entities.sanitation_asset,lined_or_sealed,Lined or sealed,enum,exact_name,1
+31605,Outlet arrangement,Containment,Choice,entities.sanitation_asset,outlet_arrangement,Outlet arrangement,enum,exact_name,1
+31606,Emptying access,Containment,Choice,entities.sanitation_asset,emptying_access,Emptying access,enum,exact_name,1
+31607,Number of users sharing,Containment,Number,entities.sanitation_asset,number_users_sharing,Number of users sharing,number,exact_name,1
+31701,Vehicle type,Vehicle,Choice,entities.sanitation_asset,vehicle_type,Vehicle type,enum,exact_name,1
+31702,Registration number,Vehicle,Text,entities.sanitation_asset,registration_number,Registration number,text,exact_name,1
+31703,Tank or load capacity,Vehicle,Unit,entities.sanitation_asset,load_capacity_magnitude,Tank or load capacity (raw magnitude),number,unit_family,1
+31704,Vacuum pump fitted,Vehicle,Checkbox,entities.sanitation_asset,vacuum_pump_fitted,Vacuum pump fitted,boolean,exact_name,1
+31801,Manhole type,Manhole,Choice,entities.sanitation_asset,manhole_type,Manhole type,enum,exact_name,1
+31802,Chamber depth,Manhole,Unit,entities.sanitation_asset,chamber_depth_magnitude,Chamber depth (raw magnitude),number,unit_family,1
+31803,Cover shape,Manhole,Choice,entities.sanitation_asset,cover_shape,Cover shape,enum,exact_name,1
+31804,Cover diameter,Manhole,Unit,entities.sanitation_asset,cover_diameter_magnitude,Cover diameter (raw magnitude),number,unit_family,1
+31807,Cover length,Manhole,Unit,entities.sanitation_asset,cover_length_magnitude,Cover length (raw magnitude),number,unit_family,1
+31808,Cover width,Manhole,Unit,entities.sanitation_asset,cover_width_magnitude,Cover width (raw magnitude),number,unit_family,1
+31805,Cover load class,Manhole,Choice,entities.sanitation_asset,cover_load_class,Cover load class,enum,exact_name,1
+31806,Access aid type,Manhole,Choice,entities.sanitation_asset,access_aid_type,Access aid type,enum,exact_name,1
+31001,Junction type,Junction,Choice,entities.sanitation_asset,junction_type,Junction type,enum,exact_name,1
+30801,Valve type,Valve,Choice,entities.sanitation_asset,valve_type,Valve type,enum,exact_name,1
+30802,Date of last actuation,Valve,Date,entities.sanitation_asset,date_last_actuation,Date of last actuation,date,exact_name,1
+32101,Flow control element type,Flow control,Choice,entities.sanitation_asset,overflow_type,Flow control element type,enum,exact_name,1
+32102,Flow control function,Flow control,Choice,entities.sanitation_asset,overflow_function,Flow control function,enum,exact_name,1
+31401,Structure type,Structure,Choice,entities.sanitation_asset,structure_type,Structure type,enum,exact_name,1
+31411,Perimeter type,Structure,Choice,entities.sanitation_asset,perimeter_type,Perimeter type,enum,exact_name,1
+31412,Perimeter total length,Structure,Unit,entities.sanitation_asset,perimeter_total_length_magnitude,Perimeter total length (raw magnitude),number,unit_family,1
+31413,Perimeter height,Structure,Unit,entities.sanitation_asset,perimeter_height_magnitude,Perimeter height (raw magnitude),number,unit_family,1
+31414,Perimeter setback distance,Structure,Unit,entities.sanitation_asset,perimeter_setback_distance_magnitude,Perimeter setback distance (raw magnitude),number,unit_family,1
+30401,Power type,Power,Choice,entities.sanitation_asset,power_type,Power type,enum,exact_name,1
+30402,Rated power output,Power,Unit,entities.sanitation_asset,rated_power_magnitude,Rated power output (raw magnitude),number,unit_family,1
+30403,Maximum power output,Power,Unit,entities.sanitation_asset,max_power_magnitude,Maximum power output (raw magnitude),number,unit_family,1
+30404,Nominal voltage,Power,Unit,entities.sanitation_asset,nominal_voltage_magnitude,Nominal voltage (raw magnitude),number,unit_family,1
+30405,Rated voltage,Power,Unit,entities.sanitation_asset,rated_voltage_magnitude,Rated voltage (raw magnitude),number,unit_family,1
+30406,Maximum current,Power,Unit,entities.sanitation_asset,max_current_magnitude,Maximum current (raw magnitude),number,unit_family,1
+30407,Type of current,Power,Choice,entities.sanitation_asset,type_of_current,Type of current,enum,exact_name,1
+30408,Frequency of current,Power,Choice,entities.sanitation_asset,frequency_of_current,Frequency of current,enum,exact_name,1
+30421,Generator fuel,Power,Choice,entities.sanitation_asset,generator_fuel,Generator fuel,enum,exact_name,1
+30422,Generator apparent power,Power,Unit,entities.sanitation_asset,generator_apparent_power_magnitude,Generator apparent power (raw magnitude),number,unit_family,1
+30423,Engine cooling system,Power,Choice,entities.sanitation_asset,engine_cooling_system,Engine cooling system,enum,exact_name,1
+30424,PV panel type,Power,Choice,entities.sanitation_asset,pv_panel_type,PV panel type,enum,exact_name,1
+30425,Total number of PV panels,Power,Number,entities.sanitation_asset,number_pv_panels,Total number of PV panels,number,exact_name,1
+30701,Electrical type,Electrical,Choice,entities.sanitation_asset,electrical_type,Electrical type,enum,exact_name,1
+30702,Electrical power device type,Electrical,Choice,entities.sanitation_asset,electrical_power_device_type,Electrical power device type,enum,exact_name,1
+30601,Meter ID,Meter,Text,entities.sanitation_asset,meter_id,Meter ID,text,exact_name,1
+30602,Meter type,Meter,Choice,entities.sanitation_asset,meter_type,Meter type,enum,exact_name,1
+30603,Meter design,Meter,Choice,entities.sanitation_asset,meter_design,Meter design,enum,exact_name,1
+30604,Minimum measurable flow rate,Meter,Unit,entities.sanitation_asset,meter_min_flow_rate_magnitude,Minimum measurable flow rate (raw magnitude),number,unit_family,1
+30605,Meter measurement type,Meter,Choice,entities.sanitation_asset,meter_measurement_type,Meter measurement type,enum,exact_name,1
+31101,Sampling point type,Sampling point,Choice,entities.sanitation_asset,sampling_point_type,Sampling point type,enum,exact_name,1
+31102,Regulatory compliance point,Sampling point,Checkbox,entities.sanitation_asset,regulatory_compliance_point,Regulatory compliance point,boolean,exact_name,1
+31103,Autosampler installed,Sampling point,Checkbox,entities.sanitation_asset,autosampler_installed,Autosampler installed,boolean,exact_name,1
+31201,Sensor type,Sensor,Choice,entities.sanitation_asset,sensor_type,Sensor type,enum,exact_name,1
+31202,Gas measured,Sensor,Choice,entities.sanitation_asset,gas_measured,Gas measured,enum,exact_name,1
+31203,Gases measured,Sensor,Text,entities.sanitation_asset,gases_measured,Gases measured,text,exact_name,1
+31301,Analyzer type,Analyzer,Choice,entities.sanitation_asset,analyzer_type,Analyzer type,enum,exact_name,1
+31302,Parameters measured,Analyzer,Text,entities.sanitation_asset,parameters_measured,Parameters measured,text,exact_name,1
+32301,Transmission method,Datalogger,Choice,entities.sanitation_asset,transmission_method,Transmission method,enum,exact_name,1
+30201,Pump type,Pump,Choice,entities.sanitation_asset,pump_type,Pump type,enum,exact_name,1
+30202,Pump diameter,Pump,Unit,entities.sanitation_asset,pump_diameter_magnitude,Pump diameter (raw magnitude),number,unit_family,1
+30203,Pump power rating,Pump,Unit,entities.sanitation_asset,pump_power_rating_magnitude,Pump power rating (raw magnitude),number,unit_family,1
+30204,Pump motor configuration,Pump,Choice,entities.sanitation_asset,pump_motor_configuration,Pump motor configuration,enum,exact_name,1
+30205,Pump motor voltage type,Pump,Choice,entities.sanitation_asset,pump_motor_voltage_type,Pump motor voltage type,enum,exact_name,1
+30206,Pump motor voltage,Pump,Unit,entities.sanitation_asset,pump_motor_voltage_magnitude,Pump motor voltage (raw magnitude),number,unit_family,1
+30207,Pump motor max current,Pump,Unit,entities.sanitation_asset,pump_motor_max_current_magnitude,Pump motor max current (raw magnitude),number,unit_family,1
+30208,Pump motor max power,Pump,Unit,entities.sanitation_asset,pump_motor_max_power_magnitude,Pump motor max power (raw magnitude),number,unit_family,1
+30221,Design flow,Pump,Unit,entities.sanitation_asset,design_flow_magnitude,Design flow (raw magnitude),number,unit_family,1
+30222,Design head,Pump,Unit,entities.sanitation_asset,design_head_magnitude,Design head (raw magnitude),number,unit_family,1
+30223,Maximum flow (Q-max),Pump,Unit,entities.sanitation_asset,pump_maximum_flow_magnitude,Maximum flow (Q-max) (raw magnitude),number,unit_family,1
+30224,Head at maximum flow (H-min),Pump,Unit,entities.sanitation_asset,pump_h_min_magnitude,Head at maximum flow (H-min) (raw magnitude),number,unit_family,1
+30225,Minimum flow (Q-min),Pump,Unit,entities.sanitation_asset,pump_q_min_magnitude,Minimum flow (Q-min) (raw magnitude),number,unit_family,1
+30226,Head at minimum flow (H-max),Pump,Unit,entities.sanitation_asset,pump_h_max_magnitude,Head at minimum flow (H-max) (raw magnitude),number,unit_family,1
+30227,NPSH-R,Pump,Unit,entities.sanitation_asset,pump_npsh_r_magnitude,NPSH-R (raw magnitude),number,unit_family,1
+30301,Tank type,Tank,Choice,entities.sanitation_asset,tank_type,Tank type,enum,exact_name,1
+30302,Tank material,Tank,Choice,entities.sanitation_asset,tank_material,Tank material,enum,exact_name,1
+30303,Tank volume,Tank,Unit,entities.sanitation_asset,tank_volume_magnitude,Tank volume (raw magnitude),number,unit_family,1
+30304,Tank shape,Tank,Choice,entities.sanitation_asset,tank_shape,Tank shape,enum,exact_name,1
+30311,Tank diameter,Tank,Unit,entities.sanitation_asset,tank_diameter_magnitude,Tank diameter (raw magnitude),number,unit_family,1
+30312,Tank height,Tank,Unit,entities.sanitation_asset,tank_height_magnitude,Tank height (raw magnitude),number,unit_family,1
+30313,Tank length,Tank,Unit,entities.sanitation_asset,tank_length_magnitude,Tank length (raw magnitude),number,unit_family,1
+30314,Tank width,Tank,Unit,entities.sanitation_asset,tank_width_magnitude,Tank width (raw magnitude),number,unit_family,1
+30315,Height of tank bottom,Tank,Unit,entities.sanitation_asset,tank_bottom_height_magnitude,Height of tank bottom (raw magnitude),number,unit_family,1
+30316,Minimum operating level,Tank,Unit,entities.sanitation_asset,tank_min_level_magnitude,Minimum operating level (raw magnitude),number,unit_family,1
+30317,Maximum operating level,Tank,Unit,entities.sanitation_asset,tank_max_level_magnitude,Maximum operating level (raw magnitude),number,unit_family,1
+30323,Level indicator installed,Tank,Checkbox,entities.sanitation_asset,fill_level_indicator_installed,Level indicator installed,boolean,exact_name,1
+30501,Treatment type,Treatment,Choice,entities.sanitation_asset,treatment_type,Treatment type,enum,exact_name,1
+30502,Treatment level,Treatment,Choice,entities.sanitation_asset,treatment_level,Treatment level,enum,exact_name,1
+30503,Design capacity of the unit,Treatment,Unit,entities.sanitation_asset,design_capacity_magnitude,Design capacity of the unit (raw magnitude),number,unit_family,1
+30504,Design organic load capacity of the unit,Treatment,Unit,entities.sanitation_asset,design_organic_load_capacity_magnitude,Design organic load capacity of the unit (raw magnitude),number,unit_family,1
+30505,Surface area,Treatment,Unit,entities.sanitation_asset,surface_area_magnitude,Surface area (raw magnitude),number,unit_family,1
+30506,Depth,Treatment,Unit,entities.sanitation_asset,treatment_depth_magnitude,Depth (raw magnitude),number,unit_family,1
+30507,Liner,Treatment,Choice,entities.sanitation_asset,liner_type,Liner,enum,exact_name,1
+30521,Primary chemical used,Treatment,Choice,entities.sanitation_asset,primary_chemical_used,Primary chemical used,enum,exact_name,1
+31901,Dispersal type,Dispersal,Choice,entities.sanitation_asset,dispersal_type,Dispersal type,enum,exact_name,1
+32001,Outfall type,Outfall,Choice,entities.sanitation_asset,outfall_type,Outfall type,enum,exact_name,1
+32002,Receiving water name,Outfall,Text,entities.sanitation_asset,receiving_water_name,Receiving water name,text,exact_name,1
+32003,Screen or control installed,Outfall,Checkbox,entities.sanitation_asset,screen_installed,Screen or control installed,boolean,exact_name,1
+32004,Receiving environment type,Outfall,Choice,entities.sanitation_asset,receiving_water_type,Receiving environment type,enum,exact_name,1
+39901,Other vertical asset type,Other vertical,Text,entities.sanitation_asset,other_vertical_type,Other vertical asset type,text,exact_name,1
+40101,Pipe type,Pipe,Choice,entities.sanitation_asset,pipe_type,Pipe type,enum,exact_name,1
+40103,Nominal pressure,Pipe,Unit,entities.sanitation_asset,nominal_pressure_magnitude,Nominal pressure (raw magnitude),number,unit_family,1
+40104,Pipe depth below ground,Pipe,Unit,entities.sanitation_asset,pipe_depth_below_ground_magnitude,Pipe depth below ground (raw magnitude),number,unit_family,1
+40105,Upstream invert level,Pipe,Unit,entities.sanitation_asset,upstream_invert_level_magnitude,Upstream invert level (raw magnitude),number,unit_family,1
+40106,Downstream invert level,Pipe,Unit,entities.sanitation_asset,downstream_invert_level_magnitude,Downstream invert level (raw magnitude),number,unit_family,1
+40107,Cross-section shape,Pipe,Choice,entities.sanitation_asset,cross_section_shape,Cross-section shape,enum,exact_name,1
+40108,Gradient,Pipe,Number,entities.sanitation_asset,gradient,Gradient,number,exact_name_ambiguous,2
+40201,Channel cross-section shape,Channel,Choice,entities.sanitation_asset,channel_cross_section_shape,Channel cross-section shape,enum,exact_name,1
+40202,Lined,Channel,Checkbox,entities.sanitation_asset,lined,Lined,boolean,exact_name,1
+40203,Covered or open,Channel,Choice,entities.sanitation_asset,covered_or_open,Covered or open,enum,exact_name,1
+40204,Channel depth,Channel,Unit,entities.sanitation_asset,channel_depth_magnitude,Channel depth (raw magnitude),number,unit_family,1
+40205,Channel top width,Channel,Unit,entities.sanitation_asset,channel_top_width_magnitude,Channel top width (raw magnitude),number,unit_family,1
+40206,Gradient,Channel,Number,entities.sanitation_asset,gradient,Gradient,number,exact_name_ambiguous,2

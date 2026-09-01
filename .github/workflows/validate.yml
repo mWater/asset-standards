@@ -1,0 +1,31 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install jsonschema check-jsonschema frictionless
+
+      - name: Check the JSON Schemas are themselves valid
+        run: |
+          check-jsonschema --check-metaschema schema/water-asset.schema.json
+          check-jsonschema --check-metaschema schema/sanitation-asset.schema.json
+
+      - name: Validate the data package
+        run: frictionless validate datapackage.json
+
+      - name: Run the regression suite
+        run: bash tests/run-tests.sh

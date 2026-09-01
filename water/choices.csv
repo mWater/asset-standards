@@ -1,0 +1,270 @@
+attribute_code,choice_id,choice_name,description
+00020,urban,Urban,Cities or densely populated areas
+00020,peri_urban,Peri urban,"Towns and semi-dense areas, suburbs, or peri urban areas surrounding cities"
+00020,rural,Rural,Regions with low population density
+00041,active,Active,Asset is in use or ready to use
+00041,backup,Backup,Asset is installed or available onsite to be used as a backup to other similar assets in case of maintenance or failure
+00041,not_functional,Not functional,Asset is not currently operational due to a failure or maintenance problem
+00041,under_construction,Under construction,Asset is not operational because it is under construction
+00041,decommissioned,Decommissioned,Asset is no longer in use because it is permanently out of service
+00041,disposed,Disposed,"Asset has been sold, demolished, or relocated to a disposal site"
+00042,excellent,Excellent,"Designed to current standards, operable and well-maintained"
+00042,good,Good,"Showing some signs of minor wear and tear, with minimal impact on performance; or, operable and well-maintained but not designed to current standards"
+00042,fair,Fair,Structurally sound but some deterioration or damage that is beginning to impact performance or require more frequent maintenance
+00042,poor,Poor,Functional but requires a high level of maintenance to continue operating or requires major rehabilitation or replacement
+00042,very_poor,Very poor,Serious problems that impact performance or safety; major rehabilitation or replacement required in the short term
+00043,functional,Functional,In good working condition and regularly providing water according to the specifications in the original design
+00043,partially_functional,Partially functional,Provides water on a regular basis (possibly in a reduced capacity) but repairs are needed due to some maintenance issue or change in water quality or availability
+00043,not_functional,Not functional,"No longer providing water on a regular basis; this could be due to maintenance issues, changes in water availability or quality, or problems with physical access"
+00043,decommissioned,Decommissioned,"Permanently taken out of service, abandoned, or could not be found"
+00053,very_low,Very low,
+00053,low,Low,
+00053,moderate,Moderate,
+00053,high,High,
+00053,very_high,Very high,
+00054,very_low,Very low,
+00054,low,Low,
+00054,moderate,Moderate,
+00054,high,High,
+00054,very_high,Very high,
+00055,very_low,Very low,
+00055,low,Low,
+00055,moderate,Moderate,
+00055,high,High,
+00055,very_high,Very high,
+00094,brass,Brass,"Metal alloy of copper, zinc, and usually some lead"
+00094,bronze,Bronze,"Copper-base metal alloy that may or may not include tin, lead, or other metals in small amounts"
+00094,copper,Copper,Reddish metallic element that is ductile and malleable
+00094,cast_iron,Cast iron,"Heavy brittle alloy of iron, carbon, and silicon that can be cast in specific shapes and has the ability to withstand shocks"
+00094,ductile_iron,Ductile iron,"Similar material to cast iron, but with the primary graphite in a nodular or spheroidal form, giving it increased strength and flexibility"
+00094,stainless_steel,Stainless steel,Chromium alloy steel that is resistant to rusting and corrosion
+00094,steel,Steel,Iron-base alloy containing up to 2 percent carbon that is heat treated
+00094,galvanized_steel,Galvanized steel,Steel that has a zinc coating to protect from corrosion and rust
+00094,pvc,PVC,"Polyvinyl chloride, a type of polymer frequently used in pipes and containers"
+00094,hdpe,HDPE,"High-density polyethylene, a type of polymer used in low-pressure applications"
+00094,plastic,Plastic,"Any high molecular weight polymer material that can be extruded, molded, or drawn into various shapes and sizes; use this category for any plastics that are not PVC or HDPE"
+00094,monel,Monel,"Nickel alloy, primarily composed of nickel and copper, with small amounts of iron, manganese, carbon, and silicon, which is corrosion resistant"
+00094,other,Other,Any material not otherwise defined in this section
+10201,distribution_network,Distribution network,Water supply is distributed to multiple users via a network of pipes
+10201,point_source,Point source,Users access water at a single location
+10202,branching,Branching,Pipes begin from a central point and split off into segments that are not interconnected to each other
+10202,grid_or_mesh,Grid or mesh,Pipes split off into segments that are interconnected to each other downstream
+10202,mixed,Mixed,Network has aspects of both branching and grid styles
+10203,utility,Utility,Organization created by government through legislative action or a private partnership or corporation with a legal mandate to provide water services to a designated area
+10203,local_government,Local government,Local or municipal government office or staff directly manage the system
+10203,water_user_association,Water user association,"Community-based organization or cooperative group of water users (also known as water user committee, WASHCO, or community-based management)"
+10203,water_authority,Water authority,Government agency or regulatory body established for the purpose of managing water service provision
+10203,private,Private,"Individual, partnership, or corporation that owns and operates a water supply system but does not have a legal mandate to provide services to all water users"
+10203,other,Other,Any other management entity not described by the other choices
+10203,no_management,No management,No individual or organization can be identified that manages the system
+20101,intake,Intake,Facility located at the head of a conduit into which water is diverted
+20101,well_field,Well field,"Group of wells treated as a single entity for administrative, production, and treatment purposes"
+20101,pumping_station,Pumping station,"Structure containing pumps and related piping, valves, and other equipment for pumping water"
+20101,distribution_system,Distribution system,Network of conduits and related equipment by which water is distributed to consumers
+20101,pipeline,Pipeline,Collection of pipes and related equipment that are jointed to provide a conduit through which fluids flow
+20101,storage_facility,Storage facility,One or more tanks or storage reservoirs and related equipment used to maintain pressure and store water to accommodate intermittent periods of higher usage
+20101,treatment_plant,Treatment plant,"Facility or area that contains various treatment works, process areas, and other equipment necessary to improve the quality of water"
+20101,process_area,Process area,"Area or building, often contained within a treatment plant, where a specific water treatment process is carried out"
+20101,other,Other,Any other type of water facility not defined in this section
+30101,intake,Intake,Works or structures at the head of a conduit into which water is diverted
+30101,spring,Spring,Concentrated discharge of groundwater appearing at the ground surface as a current of flowing water
+30101,borehole,Borehole,"Deep hole with a small diameter that has been driven, bored, or drilled, in order to reach groundwater and constructed with casing or pipes to prevent collapse and contamination"
+30101,dug_well,Dug well,Shallow hole with a large diameter that is dug into the ground to reach groundwater
+30101,rainwater_catchment,Rainwater catchment,"System that collects rainwater from large surfaces, such as a roof or impermeable ground surface, so that it can be stored"
+30101,other,Other,Any other type of source not otherwise defined in this section
+30126,submersible_pump,Submersible pump,Electrically powered pump designed to fit inside the well casing and to operate below the water level
+30126,hand_pump,Hand pump,Human-powered mechanical pump that uses suction or positive displacement to manually lift groundwater to the surface
+30126,rope_and_bucket,Rope and bucket,Rope attached to a bucket on one end and a structure or winch on the surface to manually lift groundwater
+30126,other,Other,"Any other type of pump not otherwise defined in this section, including centrifugal or positive displacement surface pumps, wind, and animal powered pumps"
+30126,none,None,No pump is currently installed on the well
+30153,steel,Steel,Iron-base alloy containing up to 2 percent carbon that is heat treated
+30153,stainless_steel,Stainless steel,Chromium alloy steel that is resistant to rusting and corrosion
+30153,pvc,PVC,"Polyvinyl chloride, a type of polymer frequently used in pipes and containers"
+30153,plastic,Plastic,"Any high molecular weight polymer material that can be extruded, molded, or drawn into various shapes and sizes; use this category for any plastics that are not PVC"
+30153,concrete,Concrete,"Mixture of cement and aggregate, usually reinforced with steel wire or rebar"
+30153,fiberglass,Fiberglass,Reinforced plastic material composed of glass fibers embedded within a resin matrix
+30153,galvanized_steel,Galvanized steel,Steel that has a zinc coating to protect from corrosion and rust
+30153,other,Other,Any other type of casing material not described in this section
+30201,submersible,Submersible,Electrically powered pump designed to fit inside the well casing and to operate below the water level
+30201,axial_flow,Axial flow,Fluid is accelerated in the direction of the flow axis by an impeller running inside a casing
+30201,centrifugal,Centrifugal,"Fluid enters along the pump axis, is accelerated by an impeller, and exits at right angles to the shaft; also known as a radial flow pump"
+30201,reciprocating,Reciprocating,Fluid is moved by one or more oscillating pistons or plungers
+30201,positive_displacement,Positive displacement,"Fluid is trapped and forced to move to the discharge side by a piston, gear, or rotary vane"
+30201,hand_pump,Hand pump,"Human-powered mechanical device that uses a suction or positive displacement pump, often connected to a lever via a rod or chain, to manually lift water"
+30201,hydraulic_ram,Hydraulic ram,Device that uses the water hammer effect to use some of the energy of inflowing water to lift a smaller volume of water
+30201,other,Other,Any other pump type not described in this section
+30204,integrated_with_pump,Integrated with pump,Motor and pump should be treated as the same asset
+30204,separate_from_pump,Separate from pump,Motor should be treated as a separate asset from the pump
+30205,single_phase_ac,Single phase AC,Alternating current electrical system that uses two wires: one neutral wire and one phase wire in which the voltage rises to a peak in one direction and then reverses to a peak in the opposite direction
+30205,three_phase_ac,Three phase AC,Alternating current electrical system that uses four wires: one neutral wire and three phase wires in which the voltage rises to a peak and reverses direction at different times
+30205,dc,DC,Direct current system in which current always flows in one direction and the voltage does not change over time
+30301,elevated,Elevated,Located on and supported by a tower; also referred to as an overhead tank
+30301,above_ground,Above ground,Constructed or permanently installed on top of the ground surface
+30301,underground,Underground,Constructed or permanently installed partially or completely underground; also referred to as an in-ground tank
+30301,break_pressure,Break pressure,Tank used for hydraulic isolation and surge protection installed in a pressurized system where the water surface is exposed to atmospheric pressure
+30301,portable,Portable,Tank which can be moved from place to place; could be installed above or below ground
+30301,other,Other,Any other tank design not otherwise described in this section
+30302,pvc,PVC,"Polyvinyl chloride, a type of polymer frequently used in pipes and containers"
+30302,plastic,Plastic,"Any high molecular weight polymer material that can be extruded, molded, or drawn into various shapes and sizes; use this category for any plastics that are not PVC"
+30302,concrete,Concrete,"Mixture of cement and aggregate, usually reinforced with steel wire or rebar"
+30302,aluminum,Aluminum,Lightweight metal composed mainly of elemental aluminum that may be alloyed with other elements
+30302,steel,Steel,Iron-base alloy containing up to 2 percent carbon that is heat treated
+30302,composite,Composite,Structure that combines concrete with a steel support structure
+30302,fiberglass,Fiberglass,Reinforced plastic material composed of glass fibers embedded within a resin matrix
+30302,masonry,Masonry,"Brick, stone, or concrete blocks that are bound together with mortar"
+30302,other,Other,Any other type of tank construction not described in this section
+30304,cylindrical,Cylindrical,Circular base with vertical sides
+30304,rectangular,Rectangular,Square or rectangular base with vertical sides
+30304,other,Other,Any other shape not otherwise described in the section
+30322,float_valve,Float valve,Flow into the tank is controlled by a gate or plug that is actuated by a float when the water level falls below a certain set point
+30322,altitude_valve,Altitude valve,Automatically shuts off flow into an elevated tank when the water level reaches a predetermined level and automatically opens when the pressure in the distribution systems drops below the pressure in the tank
+30322,other,Other,Any other fill control method not described in this section
+30401,grid,Grid,Connection to an electrical transmission and distribution system
+30401,generator,Generator,"Diesel, gas, or petrol powered engine that converts rotary motion into electrical current"
+30401,solar,Solar,Solar or photovoltaic power system
+30401,wind,Wind,Wind turbine or windmill equipped with an electrical generator
+30401,other,Other,Any other power type not defined in this section
+30407,single_phase_ac,Single phase AC,Alternating current electrical system that uses two wires: one neutral wire and one phase wire in which the voltage rises to a peak in one direction and then reverses to a peak in the opposite direction
+30407,three_phase_ac,Three phase AC,Alternating current electrical system that uses four wires: one neutral wire and three phase wires in which the voltage rises to a peak and reverses direction at different times
+30407,dc,DC,Direct current system in which current always flows in one direction and the voltage does not change over time
+30408,60_hz,60 Hz,60 cycles per second
+30408,50_hz,50 Hz,50 cycles per second
+30408,other,Other,Any non-standard current frequency
+30421,gasoline_or_petrol,Gasoline or petrol,Fuel made from crude oil and other petroleum liquids that is often used in internal combustion engines
+30421,diesel,Diesel,Distillate fuel oil that is used in compression ignition engines
+30421,other,Other,Any other fuel used in generators that is not described in this section
+30423,air,Air,Engine cooled by air circulation only
+30423,liquid,Liquid,"Engine cooled by a circulating liquid, such as water or other coolant"
+30424,polycrystalline,Polycrystalline,"Multicrystalline or poly panels, made of multiple pieces of silicon melted or joined together"
+30424,monocrystalline,Monocrystalline,"Single crystalline or mono panel, made from a single silicon crystal"
+30424,thin_film,Thin film,"Thin, flexible panel made from amorphous silicon or other materials"
+30424,other,Other,Any other type of photovoltaic panel type not otherwise described in this section
+30501,screen_or_bar_grate,Screen or bar grate,Coarse screen or grate that removes large debris from water to prevent clogging of pipes and pumps
+30501,filtration,Filtration,"Small diameter granular medium, such as sand, removes particulate matter from a liquid stream"
+30501,membrane_filtration,Membrane filtration,Pressurized liquid is forced through a membrane to remove particulate matter
+30501,reverse_osmosis,Reverse osmosis,"Pressure-driven membrane removes ions, salts, and other dissolved solids and nonvolatile organics"
+30501,mixer,Mixer,Agitation or blending process that creates a homogeneous mixture out of two or more components
+30501,coagulator,Coagulator,"Basin in which chemicals (coagulants) are added to destabilize the negative surface charges present in natural particles, allowing them to accumulate"
+30501,flocculator,Flocculator,"Device that uses gentle stirring to bring suspended particles together so they will form larger, more separable clumps called floc"
+30501,clarifier_or_sedimentation_basin,Clarifier or sedimentation basin,"Tank or basin in which water is retained to allow settleable matter, such as floc, settle by gravity"
+30501,chlorination,Chlorination,"Device or basin that introduces chlorine, in liquid, solid, or gaseous form, for oxidation of organic matter or disinfection"
+30501,disinfection,Disinfection,Process that destroys or inactivates pathogenic organisms by physical or chemical means (use this category for any non-chlorine disinfection methods such as UV or ozone)
+30501,aeration,Aeration,"Gas transfer process that causes a liquid stream to absorb a gas, such as air or oxygen"
+30501,air_stripping,Air stripping,Passing air through liquid to remove volatile compounds
+30501,desalinization,Desalinization,"Process that uses distillation, reverse osmosis, or electrodialysis to remove dissolved mineral salts from seawater or brackish water"
+30501,solids_disposal,Solids disposal,"Process to concentrate, dewater, thicken, or otherwise treat residual solids for safe disposal"
+30501,chemical_feed,Chemical feed,"Addition of chemicals to process water to perform some treatment function, such as pH control or corrosion prevention"
+30501,other,Other,Any other type of treatment process not already described in this section
+30521,sodium_hypochlorite_bleach,Sodium hypochlorite (bleach),Solution in which sodium hypochlorite (NaOCl) is hydrolyzed in water to form hypochlorous acid (HOCl); also known as liquid bleach
+30521,calcium_hypochlorite,Calcium hypochlorite,"Dry calcium hypochlorite (Ca(OCl)2) in powder or pellets that can be dissolved in water, where it reacts to form hypochlorous acid (HOCl)"
+30521,chlorine_gas,Chlorine gas,Gaseous molecular chlorine (Cl2) that forms hypochlorous acid (HOCl) and hypochlorite ion (OCl-) when dissolved in water
+30521,chloramine,Chloramine,"Disinfectant produced by mixing chlorine and ammonia (NH3); when added to water, forms mainly monochloramine (NH2Cl) and dichloramine (NHCl2)"
+30521,chlorine_dioxide,Chlorine dioxide,Red-yellow gas that is very reactive and unstable; decomposes in water to form chlorite ion (ClO2-)
+30522,dosing_pump,Dosing pump,Small pump draws concentrated chlorine solution from a tank and adds it to the water stream or tank
+30522,drip_feed,Drip feed,"Constant head device, such as a float or bowl, located inside a tank feeds the concentrated chlorine solution at a flow rate that is independent of tank level"
+30522,constant_head_aspirator,Constant head aspirator,Sealed container with a small outlet tube at the bottom and an air inlet tube at the top that provides a constant pressure and steady flow rate of chlorine solution
+30522,gravity_feed,Gravity feed,Tank or bucket that uses gravity to feed a concentrated chlorine solution through a metering orifice or valve that controls the flow rate
+30522,batch_mixing,Batch mixing,Chlorine bleach or powder is added to a large tank in batches
+30522,tablet_or_cartridge,Tablet or cartridge,Water flows through a chamber or cartridge in which chlorine is slowly released from a solid material
+30522,other,Other,Any other chlorine dosing method not described in this section
+30602,bulk,Bulk,Used to measure flows throughout the distribution network to monitor performance and detect leaks
+30602,domestic,Domestic,Measures flow to a household or private connection
+30602,commercial_or_industrial,Commercial or industrial,Measures flow to a commercial or industrial user
+30602,production,Production,Measures flow from a source or treatment plant
+30603,turbine,Turbine,Measures flow velocity based on the speed of a rotating turbine
+30603,displacement,Displacement,Captures definite volumes of water in a chamber with a piston or disk that discharges the water
+30603,ultrasonic,Ultrasonic,Measures flow velocity by transmitting and receiving sound waves that pass diagonally through the flow path
+30603,electromagnetic,Electromagnetic,Measures the induced voltage in a sensor that is generated by a fluid as it flows through a pipe
+30603,jet,Jet,One or more jets of water impact on a turbine that measures flow rate
+30603,other,Other,Any other type of meter not otherwise described in this section
+30605,total_volume,Total volume,"Totalizing meter, which displays only the total amount of volume that has flowed through the meter, often using a combination of a counter and a sweep hand"
+30605,flow_rate,Flow rate,Instantaneous measurement of the current flow rate through the meter
+30605,combined,Combined,Meter display includes both the instantaneous flow rate and the total volume that has flowed through the meter
+30701,motor,Motor,Electromechanical device for converting electrical energy into mechanical energy
+30701,actuator,Actuator,Device that uses electrical or pneumatic power to operate valves
+30701,power_device,Power device,Electrical or electronic device for managing the supply and distribution of electrical power
+30701,electronic,Electronic,Component or device that controls the flow of electrical currents for the purpose of information processing and system control
+30701,heater,Heater,Device that converts electrical energy into heat
+30701,blower,Blower,Device that uses electrical energy to move or pressurize air
+30701,other,Other,Any other type of electrical asset not defined in this section
+30702,control_panel,Control panel,Controls electrical power distribution
+30702,circuit_breaker,Circuit breaker,Automatic device for stopping the flow of current in a circuit in case of a fault
+30702,uninterruptible_power_supply_ups,Uninterruptible power supply (UPS),"Energy storage device that ensures a constant supply of power, even during power outages"
+30702,transformer,Transformer,Increases/decreases the voltage/current or visa versa.
+30702,power_conditioner,Power conditioner,Device that improves the quality of power delivered by smoothing out voltage spikes and reducing electrical noise
+30702,switch,Switch,Device to disconnect or connect the conducting path in an electrical circuit
+30702,motor_controller,Motor controller,"Device for starting, stopping, and regulating the performance and speed of an electric motor"
+30702,inverter,Inverter,Device for converting direct current into alternating current
+30801,shutoff,Shutoff,Closes off the source of water or a section of a distribution system
+30801,check,Check,Allows flow in only one direction and closes when the flow tries to reverse
+30801,backflow_preventer,Backflow preventer,"Device for preventing backflow of water into a supply system using a double gate, double check, or air gap assembly"
+30801,washout,Washout,Valve installed in a low point or depression in a pipeline to allow for drainage of the line; also referred to as a blowoff valve
+30801,flow_control,Flow control,Pressure-compensating valve installed to regulate the flow of water
+30801,pressure_reducing,Pressure reducing,Flow valve used to allow water to flow from higher-pressure side to lower-pressure side so as not to exceed a set maximum pressure on the low-pressure side
+30801,pressure_sustaining,Pressure sustaining,Valve that opens only as much as necessary to maintain a certain pressure on the inlet side; also referred to as a back pressure regulator
+30801,throttle_control,Throttle control,Valve installed to reduce the flow through a pipeline
+30801,air_relief,Air relief,"Air valve placed at the summit of a pipeline to release air automatically to prevent air binding and pressure buildup, or to allow air to enter a line if the internal pressure becomes less than atmospheric pressure"
+30801,other,Other,Any type of valve not otherwise defined in this section
+30901,wet_barrel,Wet barrel,"Shut-off valves are located above ground, so there is water in the barrel even when not in use"
+30901,dry_barrel,Dry barrel,Shut-off valve is located underground and the barrel is drained or pumped dry when not in use to protect from freezing
+30901,standpipe,Standpipe,Connections for fire hoses within a building
+31001,union,Union,Device used to connect two pipes
+31001,elbow,Elbow,"Fitting that connects two pipes at an angle, usually 90 degrees"
+31001,tee,Tee,"Fitting in the shape of the letter T that has an opening perpendicular to the main flow pathway, allowing a three-way connection"
+31001,sleeve,Sleeve,Fitting for uniting two pipes of the same nominal diameter in a straight line
+31001,cap,Cap,Fitting to make the end of a pipe watertight
+31001,reducer,Reducer,Fitting used to join two different sized pieces of pipe
+31001,cross,Cross,Fitting with four branches arranged at right angles to each other
+31001,outside_threaded_adapter,Outside threaded adapter,Fitting with threads on the outside of the pipe; previously referred to by the outdated term “male adapter”
+31001,inside_threaded_adapter,Inside threaded adapter,Fitting with threads on the inside of the pipe; previously referred to by the outdated term “female adapter”
+31001,other,Other,Any type of junction not otherwise described in this section
+31101,faucet,Faucet,Single device to shut off or control the flow from a pipe
+31101,sampling_station,Sampling station,Enclosed box or structure with a faucet or valve and spigot inside
+31101,sampling_port,Sampling port,Fitting or valve attached to a pipe
+31101,other,Other,Any type of sampling point not otherwise defined in this section
+31201,pressure,Pressure,Force pushing on a unit area
+31201,level,Level,"Height or depth of fluid, measured from a known reference point"
+31201,moisture,Moisture,Presence or absence of water in contact with the sensor
+31201,current,Current,Rate of flow of electric charge through a unit area
+31201,voltage,Voltage,Electrical pressure available to cause a flow of current
+31201,position,Position,Distance or angular position from a known reference point along a line or circle
+31201,ph,pH,Measure of the acidity or alkalinity of a solution
+31201,orp,ORP,"Oxidation-reduction potential, a measure of the state of oxidation in a solution"
+31201,do,DO,"Dissolved oxygen, the concentration of oxygen in aqueous solution"
+31201,turbidity,Turbidity,"Measurement of the scattering or absorption of light in a solution, which is related to the amount of suspended matter"
+31201,ec,EC,"Electrical conductivity, a measure of a fluid’s capability to pass an electrical current"
+31201,free_chlorine,Free chlorine,Concentration of free available chlorine that is not combined with ammonia or other compounds
+31201,total_chlorine,Total chlorine,"Total concentration of chlorine present, regardless of the type of chlorine"
+31201,nitrate,Nitrate,Oxidized form of nitrogen (NO3-)
+31201,multiparameter,Multiparameter,More than one parameter is detected by the sensor
+31201,other,Other,Any other parameter not otherwise defined in this section
+31401,building,Building,Any enclosed structure designed to protect from the elements
+31401,perimeter,Perimeter,"Fence, wall, or other protective structure that encloses a land area"
+31401,road,Road,Linear pathway that has been improved to allow for travel by vehicles and pedestrians
+31401,apron,Apron,Smooth impermeable surface constructed around a water point to prevent spilt water from pooling or soaking into the ground
+31401,utility_vault,Utility vault,Underground room or vault providing access and protection to equipment
+31401,other,Other,Any type of structure not otherwise defined in this section
+31411,fence,Fence,Barrier constructed of vertical posts connected by horizontal sections of sturdy material
+31411,wall,Wall,Permanent structure with a continuous surface
+31411,other,Other,Any type of perimeter structure not defined elsewhere in this section
+31501,piped_connection,Piped connection,"Piped water supply connected to a dwelling, building, yard, or plot"
+31501,kiosk,Kiosk,Water point from which water is sold in small quantities to nearby households
+31501,public_tap,Public tap,Public water point from which people can collect water; also known as a standpipe or fountain
+31501,dug_well,Dug well,Large-diameter structure for accessing groundwater that is usually dug by hand and lined to prevent collapse; sometimes referred to as a shallow well
+31501,spring,Spring,Concentrated discharge of groundwater at a location on the surface that is usually protected by a spring box to allow water to flow through a pipe or outlet
+31501,borehole,Borehole,"Small-diameter deep hole that has been driven, bored, or drilled in order to reach groundwater"
+31501,tubewell,Tubewell,Small-diameter hole that is usually hand-driven into a shallow groundwater aquifer; the more general category “borehole” should be used except in areas where tubewells are common
+31501,rainwater_catchment,Rainwater catchment,System that captures and stores rainwater
+31501,watering_trough,Watering trough,Receptacle that provides drinking water to animals
+31501,other,Other,Any other type of water point not otherwise described in this section
+31507,residential,Residential,Water provided to households for domestic use in the home and on the premises
+31507,commercial,Commercial,Water provided to a business for commercial use or resale
+31507,industrial,Industrial,"Water used by industry for fabrication, processing, washing, and cooling"
+31507,institutional,Institutional,"Water provided to facilities dedicated to public service, including schools, healthcare facilities, courthouses, markets, and government facilities"
+31507,other,Other,Any other type of water connection not otherwise defined in this section
+40101,transmission_main,Transmission main,Used for transporting water from the source of supply or treatment to storage reservoirs or centralized points of distribution
+40101,primary_main,Primary main,Large main that transports water from storage reservoirs or centralized points of distribution to various points of connection with the distribution grid
+40101,secondary_main,Secondary main,Smaller feeder main that connects from primary main to distribution mains that provide water to consumers
+40101,distribution_main,Distribution main,Water main that is located near water users and provides water to consumers either directly or through connections with service lines; sometimes referred to as a tertiary main
+40101,service_line,Service line,"Small diameter pipe that connects directly to water consumers, often through a service valve and meter"
+40101,other,Other,Any other type of water main not defined in this section

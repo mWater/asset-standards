@@ -1,0 +1,9 @@
+{
+  "00001": "containment",
+  "00002": "Household septic tank, plot 44",
+  "00003": "SAN-002-CONT-0044",
+  "00011": { "type": "Point", "coordinates": [106.8456, -6.2088] },
+  "31601": "septic_tank",
+  "31602": 2,
+  "31604": "lined_and_sealed_watertight"
+}

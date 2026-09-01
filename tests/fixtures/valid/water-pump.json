@@ -1,0 +1,14 @@
+{
+  "00001": "pump",
+  "00002": "Borehole pump BH-03",
+  "00003": "WSS-014-PUMP-003",
+  "00004": "Submersible pump serving the eastern distribution zone.",
+  "00006": "WSS-014-SRC-001",
+  "00011": { "type": "Point", "coordinates": [36.8219, -1.2921] },
+  "00012": { "magnitude": 4.5, "unit": "m" },
+  "00013": { "magnitude": 1795, "unit": "m" },
+  "30201": "submersible",
+  "30202": { "magnitude": 150, "unit": "mm" },
+  "30203": { "magnitude": 7.5, "unit": "kW" },
+  "30206": { "magnitude": 415, "unit": "V" }
+}

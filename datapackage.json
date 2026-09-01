@@ -1,0 +1,457 @@
+{
+  "profile": "data-package",
+  "name": "mwater-asset-standards",
+  "title": "mWater Asset Standards",
+  "description": "Open data standards for water and sanitation asset management.",
+  "version": "1.0.0",
+  "created": "2026-09-01",
+  "homepage": "https://github.com/mWater/asset-standards",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "title": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "mWater Foundation, Inc.",
+      "role": "author",
+      "path": "https://www.mwater.co"
+    }
+  ],
+  "keywords": [
+    "water",
+    "sanitation",
+    "WASH",
+    "asset management",
+    "data standard",
+    "SDG 6"
+  ],
+  "resources": [
+    {
+      "name": "water-asset-types",
+      "path": "water/asset-types.csv",
+      "title": "Water System Management Standard, Part 1: Asset Management: asset classes and asset types",
+      "description": "Asset classes and asset types",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "type_code",
+            "type": "string",
+            "description": "Two-digit type number within the asset class"
+          },
+          {
+            "name": "asset_class",
+            "type": "string",
+            "description": "System, Facility, Vertical, Horizontal or Natural"
+          },
+          {
+            "name": "type_id",
+            "type": "string",
+            "description": "Machine identifier of the asset type"
+          },
+          {
+            "name": "type_name",
+            "type": "string",
+            "description": "Asset type name as given by the standard"
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "Definition of the asset type, quoted from the standard"
+          },
+          {
+            "name": "allowed_parent_classes",
+            "type": "string",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "water-attributes",
+      "path": "water/attributes.csv",
+      "title": "Water System Management Standard, Part 1: Asset Management: every attribute defined by the standard",
+      "description": "Every attribute defined by the standard",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "code",
+            "type": "string",
+            "description": "Five-digit attribute code, unique within the standard"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Standardized attribute name"
+          },
+          {
+            "name": "scope",
+            "type": "string",
+            "description": "general or type_specific"
+          },
+          {
+            "name": "asset_class",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "asset_type",
+            "type": "string",
+            "description": "Asset type name for type-specific attributes"
+          },
+          {
+            "name": "asset_type_id",
+            "type": "string",
+            "description": "Machine identifier of the asset type"
+          },
+          {
+            "name": "data_type",
+            "type": "string",
+            "description": "Text, Choice, Number, Date, Geometry, Checkbox, Image, Unit or Asset ID"
+          },
+          {
+            "name": "unit_quantity",
+            "type": "string",
+            "description": "Physical quantity for Unit attributes"
+          },
+          {
+            "name": "si_unit",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "Definition of the attribute, quoted from the standard"
+          },
+          {
+            "name": "applicability",
+            "type": "string",
+            "description": "Condition under which the attribute applies"
+          },
+          {
+            "name": "required",
+            "type": "string",
+            "description": "TRUE where the standard uses shall"
+          },
+          {
+            "name": "attribute_group",
+            "type": "string",
+            "description": "Heading the attribute sits under"
+          }
+        ]
+      }
+    },
+    {
+      "name": "water-choices",
+      "path": "water/choices.csv",
+      "title": "Water System Management Standard, Part 1: Asset Management: permitted values of every choice attribute",
+      "description": "Permitted values of every choice attribute",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "attribute_code",
+            "type": "string",
+            "description": "Attribute the choice belongs to"
+          },
+          {
+            "name": "choice_id",
+            "type": "string",
+            "description": "Machine identifier, unique within the attribute"
+          },
+          {
+            "name": "choice_name",
+            "type": "string",
+            "description": "Choice name as given by the standard"
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "Definition of the choice"
+          }
+        ]
+      }
+    },
+    {
+      "name": "water-units",
+      "path": "water/units.csv",
+      "title": "Water System Management Standard, Part 1: Asset Management: physical quantities, si base units and conversion factors",
+      "description": "Physical quantities, SI base units and conversion factors",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "quantity",
+            "type": "string",
+            "description": "Physical quantity"
+          },
+          {
+            "name": "si_base_unit",
+            "type": "string",
+            "description": "SI base unit for the quantity"
+          },
+          {
+            "name": "alternate_unit",
+            "type": "string",
+            "description": "Unit this row describes"
+          },
+          {
+            "name": "conversion_factor_to_si",
+            "type": "string",
+            "description": "Multiply by this to reach the SI base unit"
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "description": "Full unit name and measurement system"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sanitation-asset-types",
+      "path": "sanitation/asset-types.csv",
+      "title": "Sanitation System Management Standard, Part 1: Asset Management: asset classes and asset types",
+      "description": "Asset classes and asset types",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "type_code",
+            "type": "string",
+            "description": "Two-digit type number within the asset class"
+          },
+          {
+            "name": "asset_class",
+            "type": "string",
+            "description": "System, Facility, Vertical, Horizontal or Natural"
+          },
+          {
+            "name": "type_id",
+            "type": "string",
+            "description": "Machine identifier of the asset type"
+          },
+          {
+            "name": "type_name",
+            "type": "string",
+            "description": "Asset type name as given by the standard"
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "Definition of the asset type, quoted from the standard"
+          },
+          {
+            "name": "allowed_parent_classes",
+            "type": "string",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "sanitation-attributes",
+      "path": "sanitation/attributes.csv",
+      "title": "Sanitation System Management Standard, Part 1: Asset Management: every attribute defined by the standard",
+      "description": "Every attribute defined by the standard",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "code",
+            "type": "string",
+            "description": "Five-digit attribute code, unique within the standard"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Standardized attribute name"
+          },
+          {
+            "name": "scope",
+            "type": "string",
+            "description": "general or type_specific"
+          },
+          {
+            "name": "asset_class",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "asset_type",
+            "type": "string",
+            "description": "Asset type name for type-specific attributes"
+          },
+          {
+            "name": "asset_type_id",
+            "type": "string",
+            "description": "Machine identifier of the asset type"
+          },
+          {
+            "name": "data_type",
+            "type": "string",
+            "description": "Text, Choice, Number, Date, Geometry, Checkbox, Image, Unit or Asset ID"
+          },
+          {
+            "name": "unit_quantity",
+            "type": "string",
+            "description": "Physical quantity for Unit attributes"
+          },
+          {
+            "name": "si_unit",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "Definition of the attribute, quoted from the standard"
+          },
+          {
+            "name": "applicability",
+            "type": "string",
+            "description": "Condition under which the attribute applies"
+          },
+          {
+            "name": "required",
+            "type": "string",
+            "description": "TRUE where the standard uses shall"
+          },
+          {
+            "name": "attribute_group",
+            "type": "string",
+            "description": "Heading the attribute sits under"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sanitation-choices",
+      "path": "sanitation/choices.csv",
+      "title": "Sanitation System Management Standard, Part 1: Asset Management: permitted values of every choice attribute",
+      "description": "Permitted values of every choice attribute",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "attribute_code",
+            "type": "string",
+            "description": "Attribute the choice belongs to"
+          },
+          {
+            "name": "choice_id",
+            "type": "string",
+            "description": "Machine identifier, unique within the attribute"
+          },
+          {
+            "name": "choice_name",
+            "type": "string",
+            "description": "Choice name as given by the standard"
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "Definition of the choice"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sanitation-units",
+      "path": "sanitation/units.csv",
+      "title": "Sanitation System Management Standard, Part 1: Asset Management: physical quantities, si base units and conversion factors",
+      "description": "Physical quantities, SI base units and conversion factors",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "quantity",
+            "type": "string",
+            "description": "Physical quantity"
+          },
+          {
+            "name": "si_base_unit",
+            "type": "string",
+            "description": "SI base unit for the quantity"
+          },
+          {
+            "name": "alternate_unit",
+            "type": "string",
+            "description": "Unit this row describes"
+          },
+          {
+            "name": "conversion_factor_to_si",
+            "type": "string",
+            "description": "Multiply by this to reach the SI base unit"
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "description": "Full unit name and measurement system"
+          }
+        ]
+      }
+    }
+  ]
+}

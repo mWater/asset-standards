@@ -1,0 +1,4157 @@
+{
+  "$schema": "https://github.com/mWater/asset-standards/schema/standard.schema.json",
+  "standard": {
+    "name": "The Water System Management Standard, Part 1 - Asset Management",
+    "shortName": "mWater Global Water Asset Standard",
+    "version": "1.0",
+    "issued": "2022-04-07",
+    "publisher": "mWater Foundation, Inc.",
+    "license": "CC-BY-SA-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "repository": "https://github.com/mWater/asset-standards"
+  },
+  "assetClasses": [
+    "Facility",
+    "Horizontal",
+    "Natural",
+    "System",
+    "Vertical"
+  ],
+  "assetTypes": [
+    {
+      "typeCode": "01",
+      "assetClass": "System",
+      "id": "water_system",
+      "name": "Water system",
+      "description": "Collection of assets that work together as a system to collect, treat, store, and deliver water to users"
+    },
+    {
+      "typeCode": "01",
+      "assetClass": "Facility",
+      "id": "water_facility",
+      "name": "Water facility",
+      "description": "Physical location where specific functions are performed in the production, treatment, and delivery of water; the use of water facilities is optional and can be used to organize or locate the assets contained in large and complex treatment and distribution systems"
+    },
+    {
+      "typeCode": "01",
+      "assetClass": "Vertical",
+      "id": "source",
+      "name": "Source",
+      "description": "Location where a supply of water, such as a lake, river, spring, or groundwater aquifer, is abstracted for use in a distribution system"
+    },
+    {
+      "typeCode": "02",
+      "assetClass": "Vertical",
+      "id": "pump",
+      "name": "Pump",
+      "description": "Mechanical or electromechanical device that increases the hydraulic head (pressure) of a fluid flowing through it"
+    },
+    {
+      "typeCode": "03",
+      "assetClass": "Vertical",
+      "id": "tank",
+      "name": "Tank",
+      "description": "Structure or container used to hold water or other fluids"
+    },
+    {
+      "typeCode": "04",
+      "assetClass": "Vertical",
+      "id": "power",
+      "name": "Power",
+      "description": "Device that supplies electrical power for use by electrical equipment, such as a generator, solar power system, wind turbine, or connection to a power grid"
+    },
+    {
+      "typeCode": "05",
+      "assetClass": "Vertical",
+      "id": "treatment",
+      "name": "Treatment",
+      "description": "Equipment or process that improves the physical, chemical, biological, or aesthetic quality of water"
+    },
+    {
+      "typeCode": "06",
+      "assetClass": "Vertical",
+      "id": "meter",
+      "name": "Meter",
+      "description": "Device for measuring the Flow rate of water through a pipe"
+    },
+    {
+      "typeCode": "07",
+      "assetClass": "Vertical",
+      "id": "electrical",
+      "name": "Electrical",
+      "description": "Any electrical or electronic device"
+    },
+    {
+      "typeCode": "08",
+      "assetClass": "Vertical",
+      "id": "valve",
+      "name": "Valve",
+      "description": "Mechanical device designed to close off or regulate the flow of water"
+    },
+    {
+      "typeCode": "09",
+      "assetClass": "Vertical",
+      "id": "hydrant",
+      "name": "Hydrant",
+      "description": "Device that provides the equipment needed to attach a fire hose to a water distribution network for use in extinguishing fires"
+    },
+    {
+      "typeCode": "10",
+      "assetClass": "Vertical",
+      "id": "junction",
+      "name": "Junction",
+      "description": "Section of a piped network that joins two or more pipes or conduits"
+    },
+    {
+      "typeCode": "11",
+      "assetClass": "Vertical",
+      "id": "sampling_point",
+      "name": "Sampling point",
+      "description": "Location or access point in a water distribution network that allows for a water sample to be collected for testing"
+    },
+    {
+      "typeCode": "12",
+      "assetClass": "Vertical",
+      "id": "sensor",
+      "name": "Sensor",
+      "description": "Device that measures a physical condition or parameter of interest"
+    },
+    {
+      "typeCode": "13",
+      "assetClass": "Vertical",
+      "id": "analyzer",
+      "name": "Analyzer",
+      "description": "Device that conducts periodic or continuous measurements of a water quality parameter"
+    },
+    {
+      "typeCode": "14",
+      "assetClass": "Vertical",
+      "id": "structure",
+      "name": "Structure",
+      "description": "Anything that is constructed or built with a fixed location on the ground"
+    },
+    {
+      "typeCode": "15",
+      "assetClass": "Vertical",
+      "id": "water_point",
+      "name": "Water point",
+      "description": "Location or facility where users can access water"
+    },
+    {
+      "typeCode": "99",
+      "assetClass": "Vertical",
+      "id": "other_vertical",
+      "name": "Other vertical",
+      "description": "Any other type of vertical asset not defined elsewhere in this standard"
+    },
+    {
+      "typeCode": "01",
+      "assetClass": "Horizontal",
+      "id": "pipe",
+      "name": "Pipe",
+      "description": "Conduit that carries water or other fluids from one location to another"
+    },
+    {
+      "typeCode": "02",
+      "assetClass": "Horizontal",
+      "id": "canal",
+      "name": "Canal",
+      "description": "Artificial open channel or waterway constructed for transporting water, connecting two or more bodies of water, or serving as a waterway"
+    },
+    {
+      "typeCode": "01",
+      "assetClass": "Natural",
+      "id": "reservoir",
+      "name": "Reservoir",
+      "description": "Impounded body of water or controlled lake in which water can be collected and stored"
+    },
+    {
+      "typeCode": "02",
+      "assetClass": "Natural",
+      "id": "river_stream",
+      "name": "River/stream",
+      "description": "Large stream of water that serves as the natural drainage"
+    },
+    {
+      "typeCode": "03",
+      "assetClass": "Natural",
+      "id": "aquifer",
+      "name": "Aquifer",
+      "description": "Geologic formation that is saturated and sufficiently permeable to transmit useful quantities of water to wells and springs"
+    },
+    {
+      "typeCode": "04",
+      "assetClass": "Natural",
+      "id": "spring",
+      "name": "Spring",
+      "description": "Concentrated discharge of groundwater appearing at the ground surface"
+    },
+    {
+      "typeCode": "05",
+      "assetClass": "Natural",
+      "id": "riparian_zone",
+      "name": "Riparian zone",
+      "description": "Banks or immediate border of a stream or river"
+    },
+    {
+      "typeCode": "06",
+      "assetClass": "Natural",
+      "id": "infiltration_basin",
+      "name": "Infiltration basin",
+      "description": "Shallow pond or depression used to infiltrate stormwater or runoff through permeable soils into a groundwater aquifer"
+    },
+    {
+      "typeCode": "07",
+      "assetClass": "Natural",
+      "id": "forest",
+      "name": "Forest",
+      "description": "Land area characterized by woody vegetation greater than about 5 meters in height"
+    },
+    {
+      "typeCode": "08",
+      "assetClass": "Natural",
+      "id": "wetland",
+      "name": "Wetland",
+      "description": "Area that is inundated or saturated by surface water or groundwater at a frequency and duration sufficient to support a vegetation adapted for life in saturated soil conditions; includes swamps, marshes, and bogs"
+    },
+    {
+      "typeCode": "09",
+      "assetClass": "Natural",
+      "id": "watershed",
+      "name": "Watershed",
+      "description": "Area from which water drains and contributes to a particular stream or river"
+    }
+  ],
+  "units": {
+    "Length": {
+      "siBaseUnit": "m",
+      "units": [
+        {
+          "unit": "m",
+          "conversionFactorToSi": "1",
+          "notes": "Name: meters; System: SI"
+        },
+        {
+          "unit": "cm",
+          "conversionFactorToSi": "0.01",
+          "notes": "Name: centimeters; System: SI"
+        },
+        {
+          "unit": "mm",
+          "conversionFactorToSi": "0.001",
+          "notes": "Name: millimeters; System: SI"
+        },
+        {
+          "unit": "μm",
+          "conversionFactorToSi": "1 X 10⁻⁶",
+          "notes": "Name: micrometers; System: SI"
+        },
+        {
+          "unit": "nm",
+          "conversionFactorToSi": "1 X 10⁻⁹",
+          "notes": "Name: nanometers; System: SI"
+        },
+        {
+          "unit": "km",
+          "conversionFactorToSi": "1000",
+          "notes": "Name: kilometers; System: SI"
+        },
+        {
+          "unit": "in",
+          "conversionFactorToSi": "0.0254",
+          "notes": "Name: inches; System: US"
+        },
+        {
+          "unit": "ft",
+          "conversionFactorToSi": "0.3048",
+          "notes": "Name: feet; System: US"
+        },
+        {
+          "unit": "yd",
+          "conversionFactorToSi": "0.9144",
+          "notes": "Name: yards; System: US"
+        },
+        {
+          "unit": "mi",
+          "conversionFactorToSi": "1609.344",
+          "notes": "Name: miles; System: US"
+        }
+      ]
+    },
+    "Pressure": {
+      "siBaseUnit": "Pa",
+      "units": [
+        {
+          "unit": "Pa",
+          "conversionFactorToSi": "1",
+          "notes": "Name: pascals; System: SI"
+        },
+        {
+          "unit": "kPa",
+          "conversionFactorToSi": "1000",
+          "notes": "Name: kilopascals; System: SI"
+        },
+        {
+          "unit": "psi",
+          "conversionFactorToSi": "6894.757",
+          "notes": "Name: pounds per square inch; System: US"
+        },
+        {
+          "unit": "ft H₂O",
+          "conversionFactorToSi": "2988.98",
+          "notes": "Name: feet of water (39.2 °F); System: US"
+        },
+        {
+          "unit": "in H₂O",
+          "conversionFactorToSi": "249.082",
+          "notes": "Name: inches of water (39.2 °F); System: US"
+        },
+        {
+          "unit": "m H₂O",
+          "conversionFactorToSi": "9806.65",
+          "notes": "Name: meters of water (4 °C); System: SI"
+        },
+        {
+          "unit": "cm H₂O",
+          "conversionFactorToSi": "98.0665",
+          "notes": "Name: centimeters of water (4 °C); System: SI"
+        },
+        {
+          "unit": "mm Hg",
+          "conversionFactorToSi": "133.3224",
+          "notes": "Name: millimeters of mercury (32 °F); System: SI"
+        },
+        {
+          "unit": "in Hg",
+          "conversionFactorToSi": "3386.38",
+          "notes": "Name: inches of mercury (32 °F); System: US"
+        },
+        {
+          "unit": "atm",
+          "conversionFactorToSi": "101325",
+          "notes": "Name: atmospheres; System: SI"
+        }
+      ]
+    },
+    "Flow rate": {
+      "siBaseUnit": "m³/s",
+      "units": [
+        {
+          "unit": "m³/s",
+          "conversionFactorToSi": "1",
+          "notes": "Name: cubic meters per second; System: SI"
+        },
+        {
+          "unit": "m³/d",
+          "conversionFactorToSi": "8.64 X 10⁴",
+          "notes": "Name: cubic meters per day; System: SI"
+        },
+        {
+          "unit": "L/s",
+          "conversionFactorToSi": "0.001",
+          "notes": "Name: liters per second; System: SI"
+        },
+        {
+          "unit": "L/d",
+          "conversionFactorToSi": "86.4",
+          "notes": "Name: liters per day; System: SI"
+        },
+        {
+          "unit": "ML/d",
+          "conversionFactorToSi": "8.64 X 10⁷",
+          "notes": "Name: million liters per day; System: SI"
+        },
+        {
+          "unit": "gal/min (gpm)",
+          "conversionFactorToSi": "6.30902 X 10⁻⁵",
+          "notes": "Name: gallons per minute; System: US"
+        },
+        {
+          "unit": "gal/d",
+          "conversionFactorToSi": "4.38126 X 10⁻⁸",
+          "notes": "Name: gallons per day; System: US"
+        },
+        {
+          "unit": "Mgal/d (mgd)",
+          "conversionFactorToSi": "0.0438126",
+          "notes": "Name: million gallons per day; System: US"
+        }
+      ]
+    },
+    "Voltage": {
+      "siBaseUnit": "V",
+      "units": [
+        {
+          "unit": "V",
+          "conversionFactorToSi": "1",
+          "notes": "Name: volts; System: SI"
+        },
+        {
+          "unit": "kV",
+          "conversionFactorToSi": "1000",
+          "notes": "Name: kilovolts; System: SI"
+        },
+        {
+          "unit": "MV",
+          "conversionFactorToSi": "1 X 10⁶",
+          "notes": "Name: megavolts; System: SI"
+        }
+      ]
+    },
+    "Power": {
+      "siBaseUnit": "W",
+      "units": [
+        {
+          "unit": "W",
+          "conversionFactorToSi": "1",
+          "notes": "Name: watts; System: SI"
+        },
+        {
+          "unit": "kW",
+          "conversionFactorToSi": "1000",
+          "notes": "Name: kilowatts; System: SI"
+        },
+        {
+          "unit": "MW",
+          "conversionFactorToSi": "1 X 10⁶",
+          "notes": "Name: megawatts; System: SI"
+        },
+        {
+          "unit": "hp",
+          "conversionFactorToSi": "746",
+          "notes": "Name: horsepower; System: US"
+        },
+        {
+          "unit": "kVA",
+          "conversionFactorToSi": "1000",
+          "notes": "Name: kilovolt-amps; System: SI"
+        }
+      ]
+    },
+    "Current": {
+      "siBaseUnit": "A",
+      "units": [
+        {
+          "unit": "A",
+          "conversionFactorToSi": "1",
+          "notes": "Name: amperes; System: SI"
+        }
+      ]
+    },
+    "Volume": {
+      "siBaseUnit": "m³",
+      "units": [
+        {
+          "unit": "m³",
+          "conversionFactorToSi": "1",
+          "notes": "Name: cubic meters; System: SI"
+        },
+        {
+          "unit": "L",
+          "conversionFactorToSi": "0.001",
+          "notes": "Name: liters; System: SI"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactorToSi": "0.02831685",
+          "notes": "Name: cubic feet; System: US"
+        },
+        {
+          "unit": "gal",
+          "conversionFactorToSi": "0.003785412",
+          "notes": "Name: gallon; System: US"
+        },
+        {
+          "unit": "Mm³",
+          "conversionFactorToSi": "1 X 10⁶",
+          "notes": "Name: million cubic meters; System: SI"
+        },
+        {
+          "unit": "Mgal",
+          "conversionFactorToSi": "3785",
+          "notes": "Name: million gallons; System: US"
+        },
+        {
+          "unit": "acre-ft",
+          "conversionFactorToSi": "1223.489",
+          "notes": "Name: acre-feet; System: US"
+        }
+      ]
+    },
+    "Time": {
+      "siBaseUnit": "d",
+      "units": [
+        {
+          "unit": "d",
+          "conversionFactorToSi": "1",
+          "notes": "Name: days; System: SI; footnote * applies (see EXTRACTION-NOTES.md)"
+        },
+        {
+          "unit": "mo",
+          "conversionFactorToSi": "30.436875",
+          "notes": "Name: months; System: SI; footnote * applies (see EXTRACTION-NOTES.md)"
+        },
+        {
+          "unit": "yr",
+          "conversionFactorToSi": "365.2425",
+          "notes": "Name: years; System: SI; footnote * applies (see EXTRACTION-NOTES.md)"
+        }
+      ]
+    },
+    "Temperature": {
+      "siBaseUnit": "°C",
+      "units": [
+        {
+          "unit": "°C",
+          "conversionFactorToSi": "tF = tC x 1.8 + 32",
+          "notes": "Name: degrees celsius; System: SI; footnote ** applies (see EXTRACTION-NOTES.md); value in conversion_factor_to_si is a conversion FORMULA, not a factor"
+        },
+        {
+          "unit": "°F",
+          "conversionFactorToSi": "tC = (tF - 32) / 1.8",
+          "notes": "Name: degrees fahrenheit; System: US; footnote ** applies (see EXTRACTION-NOTES.md); value in conversion_factor_to_si is a conversion FORMULA, not a factor"
+        }
+      ]
+    }
+  },
+  "attributes": [
+    {
+      "code": "00001",
+      "name": "Type",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Basic info",
+      "description": "Type of asset, according to the definitions in Section 5.5",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00002",
+      "name": "Name",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Basic info",
+      "description": "Name used by technical staff to refer to the asset; might be left blank for many lower level assets",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00003",
+      "name": "Asset ID",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Basic info",
+      "description": "Unique code used to identify a particular asset in the asset register (see Section 5.2 for further details)",
+      "applicability": null,
+      "required": true
+    },
+    {
+      "code": "00004",
+      "name": "Description",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Basic info",
+      "description": "Additional information to help staff locate or identify an asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00005",
+      "name": "Photo",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Image",
+      "attributeGroup": "Basic info",
+      "description": "Photo of the asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00006",
+      "name": "Parent asset ID",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Asset ID",
+      "attributeGroup": "Basic info",
+      "description": "Asset ID of the asset that is a parent to this asset (see Section 5.3 for further details)",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00011",
+      "name": "Location",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Geometry",
+      "attributeGroup": "Location",
+      "description": "Geographic location of the asset on the surface of the Earth; may be a point, line, or polygon",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00012",
+      "name": "Location precision",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Unit",
+      "attributeGroup": "Location",
+      "description": "Estimated uncertainty in the geographic coordinates, expressed as a distance",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "00013",
+      "name": "Elevation",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Unit",
+      "attributeGroup": "Location",
+      "description": "Height above the surface of a defined ellipsoid model of the earth’s surface, such as WGS84, or the local mean sea level; a consistent reference system should be used for all assets within a water system",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "00014",
+      "name": "Elevation precision",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Unit",
+      "attributeGroup": "Location",
+      "description": "Estimated uncertainty in the measurement of the elevation",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "00015",
+      "name": "Administrative region",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Location",
+      "description": "Name that describes the administrative geography of the location; multiple levels may be separated by commas starting with the most general area, for example: Region, District, Municipality",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00016",
+      "name": "Coverage area",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Geometry",
+      "attributeGroup": "Location",
+      "description": "Geographical area where the water system or service provides coverage or is legally obligated to serve",
+      "applicability": "Type: Water system",
+      "required": false
+    },
+    {
+      "code": "00017",
+      "name": "Sector",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Location",
+      "description": "Name for a sub-region of the coverage area that is defined by geography or the physical layout of the distribution network",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00018",
+      "name": "Route",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Location",
+      "description": "Name or number of the meter reading route, which defines those meters that are assigned to a particular staff member or team",
+      "applicability": "Type: Meter, Water Point",
+      "required": false
+    },
+    {
+      "code": "00019",
+      "name": "Address",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Location",
+      "description": "Physical address or postal address where the asset is located; in the case of piped connections, the address of the customer",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00020",
+      "name": "Urban-rural classification",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Location",
+      "description": "Degree of urbanization, as defined by national standards or the Degree of Urbanisation method (OECD 2021)",
+      "applicability": "Type: Water system, Water point",
+      "required": false,
+      "choices": [
+        {
+          "id": "urban",
+          "name": "Urban",
+          "description": "Cities or densely populated areas"
+        },
+        {
+          "id": "peri_urban",
+          "name": "Peri urban",
+          "description": "Towns and semi-dense areas, suburbs, or peri urban areas surrounding cities"
+        },
+        {
+          "id": "rural",
+          "name": "Rural",
+          "description": "Regions with low population density"
+        }
+      ]
+    },
+    {
+      "code": "00021",
+      "name": "Community",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Location",
+      "description": "Name of the community, town, or neighborhood where a water system or facility is located",
+      "applicability": "Type: Water system, water facility",
+      "required": false
+    },
+    {
+      "code": "00022",
+      "name": "Accessible by road",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Checkbox",
+      "attributeGroup": "Location",
+      "description": "Asset can be accessed by vehicles using a nearby road",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00023",
+      "name": "Perimeter fence or wall installed",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Checkbox",
+      "attributeGroup": "Location",
+      "description": "Fence or wall exists to provide physical security for the asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00031",
+      "name": "Level 1",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Hierarchy",
+      "description": "Highest or most general level of categorization to which the asset belongs under the asset hierarchy",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00032",
+      "name": "Level 2",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Hierarchy",
+      "description": "Second highest level of hierarchy",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00033",
+      "name": "Level 3",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Hierarchy",
+      "description": "Third highest level of hierarchy",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00034",
+      "name": "Level 4",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Hierarchy",
+      "description": "Fourth highest level of hierarchy",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00035",
+      "name": "Level 5",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Hierarchy",
+      "description": "Fifth highest level of hierarchy",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00036",
+      "name": "Level 6",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Hierarchy",
+      "description": "Sixth highest level of hierarchy",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00037",
+      "name": "Level 7",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Hierarchy",
+      "description": "Lowest level of hierarchy",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00041",
+      "name": "Status",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Status and condition",
+      "description": "How the asset is currently being used or operated",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "active",
+          "name": "Active",
+          "description": "Asset is in use or ready to use"
+        },
+        {
+          "id": "backup",
+          "name": "Backup",
+          "description": "Asset is installed or available onsite to be used as a backup to other similar assets in case of maintenance or failure"
+        },
+        {
+          "id": "not_functional",
+          "name": "Not functional",
+          "description": "Asset is not currently operational due to a failure or maintenance problem"
+        },
+        {
+          "id": "under_construction",
+          "name": "Under construction",
+          "description": "Asset is not operational because it is under construction"
+        },
+        {
+          "id": "decommissioned",
+          "name": "Decommissioned",
+          "description": "Asset is no longer in use because it is permanently out of service"
+        },
+        {
+          "id": "disposed",
+          "name": "Disposed",
+          "description": "Asset has been sold, demolished, or relocated to a disposal site"
+        }
+      ]
+    },
+    {
+      "code": "00042",
+      "name": "Condition",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Status and condition",
+      "description": "The physical or structural integrity of the asset",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "excellent",
+          "name": "Excellent",
+          "description": "Designed to current standards, operable and well-maintained"
+        },
+        {
+          "id": "good",
+          "name": "Good",
+          "description": "Showing some signs of minor wear and tear, with minimal impact on performance; or, operable and well-maintained but not designed to current standards"
+        },
+        {
+          "id": "fair",
+          "name": "Fair",
+          "description": "Structurally sound but some deterioration or damage that is beginning to impact performance or require more frequent maintenance"
+        },
+        {
+          "id": "poor",
+          "name": "Poor",
+          "description": "Functional but requires a high level of maintenance to continue operating or requires major rehabilitation or replacement"
+        },
+        {
+          "id": "very_poor",
+          "name": "Very poor",
+          "description": "Serious problems that impact performance or safety; major rehabilitation or replacement required in the short term"
+        }
+      ]
+    },
+    {
+      "code": "00043",
+      "name": "Functional status",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Status and condition",
+      "description": "Most recent observation of whether a water system or water point is working as designed",
+      "applicability": "Type: Water system, Water point",
+      "required": false,
+      "choices": [
+        {
+          "id": "functional",
+          "name": "Functional",
+          "description": "In good working condition and regularly providing water according to the specifications in the original design"
+        },
+        {
+          "id": "partially_functional",
+          "name": "Partially functional",
+          "description": "Provides water on a regular basis (possibly in a reduced capacity) but repairs are needed due to some maintenance issue or change in water quality or availability"
+        },
+        {
+          "id": "not_functional",
+          "name": "Not functional",
+          "description": "No longer providing water on a regular basis; this could be due to maintenance issues, changes in water availability or quality, or problems with physical access"
+        },
+        {
+          "id": "decommissioned",
+          "name": "Decommissioned",
+          "description": "Permanently taken out of service, abandoned, or could not be found"
+        }
+      ]
+    },
+    {
+      "code": "00051",
+      "name": "Current replacement cost (USD)",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Number",
+      "attributeGroup": "Financial",
+      "description": "Cost (in US Dollars) that would be incurred to replace the asset at the current time; this value requires regular updating based on depreciation and current market conditions; also known as CRC",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00052",
+      "name": "Expected useful life",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Number",
+      "attributeGroup": "Financial",
+      "description": "Number of years that the asset is estimated to function after installation if it is well maintained; also known as EUL",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00053",
+      "name": "Probability of failure",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Financial",
+      "description": "Measure of the likelihood of a failure happening at any point in time, based on an analysis of the potential failure modes of the asset",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "very_low",
+          "name": "Very low",
+          "description": null
+        },
+        {
+          "id": "low",
+          "name": "Low",
+          "description": null
+        },
+        {
+          "id": "moderate",
+          "name": "Moderate",
+          "description": null
+        },
+        {
+          "id": "high",
+          "name": "High",
+          "description": null
+        },
+        {
+          "id": "very_high",
+          "name": "Very high",
+          "description": null
+        }
+      ]
+    },
+    {
+      "code": "00054",
+      "name": "Consequence of failure",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Financial",
+      "description": "Measure of the direct and indirect costs of asset failure, which may include financial, environmental, and societal costs",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "very_low",
+          "name": "Very low",
+          "description": null
+        },
+        {
+          "id": "low",
+          "name": "Low",
+          "description": null
+        },
+        {
+          "id": "moderate",
+          "name": "Moderate",
+          "description": null
+        },
+        {
+          "id": "high",
+          "name": "High",
+          "description": null
+        },
+        {
+          "id": "very_high",
+          "name": "Very high",
+          "description": null
+        }
+      ]
+    },
+    {
+      "code": "00055",
+      "name": "Asset risk",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Financial",
+      "description": "Business or organizational risk of asset failure, usually calculated from the probability and consequence of failure",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "very_low",
+          "name": "Very low",
+          "description": null
+        },
+        {
+          "id": "low",
+          "name": "Low",
+          "description": null
+        },
+        {
+          "id": "moderate",
+          "name": "Moderate",
+          "description": null
+        },
+        {
+          "id": "high",
+          "name": "High",
+          "description": null
+        },
+        {
+          "id": "very_high",
+          "name": "Very high",
+          "description": null
+        }
+      ]
+    },
+    {
+      "code": "00056",
+      "name": "Original cost (USD)",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Number",
+      "attributeGroup": "Financial",
+      "description": "Total price paid (in US Dollars) to initially acquire an asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00057",
+      "name": "Current rehabilitation cost (USD)",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Number",
+      "attributeGroup": "Financial",
+      "description": "Cost (in US Dollars) that would be incurred to rehabilitate the asset at the current time",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00061",
+      "name": "Manufacturer",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Technical",
+      "description": "Name of the business that produced or sold the asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00062",
+      "name": "Model",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Technical",
+      "description": "Manufacturer’s designation for the particular model of the asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00063",
+      "name": "Serial number",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Technical",
+      "description": "Unique identifying number or code assigned to a particular asset by the manufacturer or vendor, usually stamped or printed on the asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00064",
+      "name": "Additional technical details",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Technical",
+      "description": "Any other technical information about the asset that is not captured by the attributes of this standard",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00065",
+      "name": "Installation date",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Date",
+      "attributeGroup": "Technical",
+      "description": "Calendar date when the asset was installed or purchased, which begins the period of useful life",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00066",
+      "name": "Installed by",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Technical",
+      "description": "Name of the company or organization that originally installed or purchased the system or facility",
+      "applicability": "Type: Water system, water facility",
+      "required": false
+    },
+    {
+      "code": "00067",
+      "name": "Funded by",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Technical",
+      "description": "Name of the funding authority, lender, or donor who funded the purchase of the system or facility",
+      "applicability": "Type: Water system, water facility",
+      "required": false
+    },
+    {
+      "code": "00068",
+      "name": "Rehabilitation date",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Date",
+      "attributeGroup": "Technical",
+      "description": "Date of most recent work done to restore the asset to its original level of service and extend its life",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00069",
+      "name": "Last service date",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Date",
+      "attributeGroup": "Technical",
+      "description": "Date of most recent service or maintenance performed",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00070",
+      "name": "Rehabilitated by",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Technical",
+      "description": "Name of the company or organization that performed the most recent rehabilitation of the asset",
+      "applicability": "Type: Water system, water facility",
+      "required": false
+    },
+    {
+      "code": "00071",
+      "name": "Service interval",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Unit",
+      "attributeGroup": "Technical",
+      "description": "Recommended interval at which service or routine maintenance should be performed on the asset",
+      "applicability": "Type: Pump, tank, power, valve",
+      "required": false,
+      "unitQuantity": "Time"
+    },
+    {
+      "code": "00091",
+      "name": "Upstream asset",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Asset ID",
+      "attributeGroup": "Hydraulic",
+      "description": "Asset ID of the upstream asset that supplies water to this asset",
+      "applicability": "Type: Pump, Tank, Treatment, Meter, Valve, Hydrant, Junction, Sampling point, Water point, Pipe",
+      "required": false
+    },
+    {
+      "code": "00092",
+      "name": "Nominal diameter",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Unit",
+      "attributeGroup": "Hydraulic",
+      "description": "An approximate measurement of the internal diameter of a pipe, conduit, pump, or junction, which is used to classify according to standard sizes",
+      "applicability": "Type: Meter, Valve, Junction, Pipe",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "00093",
+      "name": "Pipe length",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Unit",
+      "attributeGroup": "Hydraulic",
+      "description": "Total length of pipe in a given section or run for use in hydraulic calculations and modeling",
+      "applicability": "Type: Pipe",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "00094",
+      "name": "Material",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Choice",
+      "attributeGroup": "Hydraulic",
+      "description": "Material of construction for pipes, junctions, valves, meters, and other liquid conduits",
+      "applicability": "Type: Meter, Valve, Hydrant, Junction, Pipe",
+      "required": false,
+      "choices": [
+        {
+          "id": "brass",
+          "name": "Brass",
+          "description": "Metal alloy of copper, zinc, and usually some lead"
+        },
+        {
+          "id": "bronze",
+          "name": "Bronze",
+          "description": "Copper-base metal alloy that may or may not include tin, lead, or other metals in small amounts"
+        },
+        {
+          "id": "copper",
+          "name": "Copper",
+          "description": "Reddish metallic element that is ductile and malleable"
+        },
+        {
+          "id": "cast_iron",
+          "name": "Cast iron",
+          "description": "Heavy brittle alloy of iron, carbon, and silicon that can be cast in specific shapes and has the ability to withstand shocks"
+        },
+        {
+          "id": "ductile_iron",
+          "name": "Ductile iron",
+          "description": "Similar material to cast iron, but with the primary graphite in a nodular or spheroidal form, giving it increased strength and flexibility"
+        },
+        {
+          "id": "stainless_steel",
+          "name": "Stainless steel",
+          "description": "Chromium alloy steel that is resistant to rusting and corrosion"
+        },
+        {
+          "id": "steel",
+          "name": "Steel",
+          "description": "Iron-base alloy containing up to 2 percent carbon that is heat treated"
+        },
+        {
+          "id": "galvanized_steel",
+          "name": "Galvanized steel",
+          "description": "Steel that has a zinc coating to protect from corrosion and rust"
+        },
+        {
+          "id": "pvc",
+          "name": "PVC",
+          "description": "Polyvinyl chloride, a type of polymer frequently used in pipes and containers"
+        },
+        {
+          "id": "hdpe",
+          "name": "HDPE",
+          "description": "High-density polyethylene, a type of polymer used in low-pressure applications"
+        },
+        {
+          "id": "plastic",
+          "name": "Plastic",
+          "description": "Any high molecular weight polymer material that can be extruded, molded, or drawn into various shapes and sizes; use this category for any plastics that are not PVC or HDPE"
+        },
+        {
+          "id": "monel",
+          "name": "Monel",
+          "description": "Nickel alloy, primarily composed of nickel and copper, with small amounts of iron, manganese, carbon, and silicon, which is corrosion resistant"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any material not otherwise defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "00095",
+      "name": "Minor loss coefficient",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Number",
+      "attributeGroup": "Hydraulic",
+      "description": "Dimensionless coefficient that can be used to account for the head loss associated with turbulence in bends, junctions, meters, and valves",
+      "applicability": "Type: Junction, valve, meter",
+      "required": false
+    },
+    {
+      "code": "00096",
+      "name": "Roughness coefficient",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Number",
+      "attributeGroup": "Hydraulic",
+      "description": "Dimensionless coefficient used to account for friction losses in flowing pipes in either the Hazen-Williams or Darcy-Weisbach head loss equation",
+      "applicability": "Type: Pipe",
+      "required": false
+    },
+    {
+      "code": "00171",
+      "name": "Primary contact name",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Points of contact",
+      "description": "Individual or office responsible for management or administration of the water system or water point",
+      "applicability": "Type: Water system, Water point",
+      "required": false
+    },
+    {
+      "code": "00172",
+      "name": "Primary contact position",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Points of contact",
+      "description": "Title or role in the organization of the primary contact",
+      "applicability": "Type: Water system, Water point",
+      "required": false
+    },
+    {
+      "code": "00173",
+      "name": "Primary contact phone number",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Points of contact",
+      "description": "Phone number of the primary contact",
+      "applicability": "Type: Water system, Water point",
+      "required": false
+    },
+    {
+      "code": "00174",
+      "name": "Secondary contact name",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Points of contact",
+      "description": "Additional individual who may be contacted if the primary contact is not available",
+      "applicability": "Type: Water system, Water point",
+      "required": false
+    },
+    {
+      "code": "00175",
+      "name": "Secondary contact position",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Points of contact",
+      "description": "Title or role of the secondary contact",
+      "applicability": "Type: Water system, Water point",
+      "required": false
+    },
+    {
+      "code": "00176",
+      "name": "Secondary contact phone number",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Points of contact",
+      "description": "Phone number of the secondary contact",
+      "applicability": "Type: Water system, Water point",
+      "required": false
+    },
+    {
+      "code": "00181",
+      "name": "Date updated",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Date",
+      "attributeGroup": "Metadata",
+      "description": "Calendar date of the most recent update made to any attribute",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00182",
+      "name": "Date inspected",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Date",
+      "attributeGroup": "Metadata",
+      "description": "Calendar date of the most recent inspection or audit of the asset, as defined by organizational asset management policies",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00183",
+      "name": "Alternate ID",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Metadata",
+      "description": "Optional additional identification code or number that is used by other data systems or organizations to track the asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "00184",
+      "name": "Import code",
+      "scope": "general",
+      "assetType": null,
+      "assetTypeId": null,
+      "dataType": "Text",
+      "attributeGroup": "Metadata",
+      "description": "Identification code for an asset that was assigned by an external database or asset management registry, used to maintain backwards traceability for assets that have been imported",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "10201",
+      "name": "Water system type",
+      "scope": "type_specific",
+      "assetType": "Water system",
+      "assetTypeId": "water_system",
+      "dataType": "Choice",
+      "attributeGroup": "Water system info",
+      "description": "Categorization of the system as a distribution network or a point source",
+      "applicability": "Type: Water system",
+      "required": false,
+      "choices": [
+        {
+          "id": "distribution_network",
+          "name": "Distribution network",
+          "description": "Water supply is distributed to multiple users via a network of pipes"
+        },
+        {
+          "id": "point_source",
+          "name": "Point source",
+          "description": "Users access water at a single location"
+        }
+      ]
+    },
+    {
+      "code": "10202",
+      "name": "Network type",
+      "scope": "type_specific",
+      "assetType": "Water system",
+      "assetTypeId": "water_system",
+      "dataType": "Choice",
+      "attributeGroup": "Water system info",
+      "description": "Categorization of piped networks as branching or grid style",
+      "applicability": "Type of system: Distribution",
+      "required": false,
+      "choices": [
+        {
+          "id": "branching",
+          "name": "Branching",
+          "description": "Pipes begin from a central point and split off into segments that are not interconnected to each other"
+        },
+        {
+          "id": "grid_or_mesh",
+          "name": "Grid or mesh",
+          "description": "Pipes split off into segments that are interconnected to each other downstream"
+        },
+        {
+          "id": "mixed",
+          "name": "Mixed",
+          "description": "Network has aspects of both branching and grid styles"
+        }
+      ]
+    },
+    {
+      "code": "10203",
+      "name": "Management type",
+      "scope": "type_specific",
+      "assetType": "Water system",
+      "assetTypeId": "water_system",
+      "dataType": "Choice",
+      "attributeGroup": "Water system info",
+      "description": "Type of organization that manages the operations, maintenance, and finances of the water supply system",
+      "applicability": "Type: Water system",
+      "required": false,
+      "choices": [
+        {
+          "id": "utility",
+          "name": "Utility",
+          "description": "Organization created by government through legislative action or a private partnership or corporation with a legal mandate to provide water services to a designated area"
+        },
+        {
+          "id": "local_government",
+          "name": "Local government",
+          "description": "Local or municipal government office or staff directly manage the system"
+        },
+        {
+          "id": "water_user_association",
+          "name": "Water user association",
+          "description": "Community-based organization or cooperative group of water users (also known as water user committee, WASHCO, or community-based management)"
+        },
+        {
+          "id": "water_authority",
+          "name": "Water authority",
+          "description": "Government agency or regulatory body established for the purpose of managing water service provision"
+        },
+        {
+          "id": "private",
+          "name": "Private",
+          "description": "Individual, partnership, or corporation that owns and operates a water supply system but does not have a legal mandate to provide services to all water users"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other management entity not described by the other choices"
+        },
+        {
+          "id": "no_management",
+          "name": "No management",
+          "description": "No individual or organization can be identified that manages the system"
+        }
+      ]
+    },
+    {
+      "code": "10204",
+      "name": "Number of households in service area",
+      "scope": "type_specific",
+      "assetType": "Water system",
+      "assetTypeId": "water_system",
+      "dataType": "Number",
+      "attributeGroup": "Water system info",
+      "description": "Total number of households within the area that a service provider is legally mandated to offer services to",
+      "applicability": "Type: Water system",
+      "required": false
+    },
+    {
+      "code": "10205",
+      "name": "Number of households currently served",
+      "scope": "type_specific",
+      "assetType": "Water system",
+      "assetTypeId": "water_system",
+      "dataType": "Number",
+      "attributeGroup": "Water system info",
+      "description": "Number of households with a functional connection or currently able to receive service (includes households with inactive, intermittent, or cut off services, if service could be re-established)",
+      "applicability": "Type: Water system",
+      "required": false
+    },
+    {
+      "code": "10206",
+      "name": "System or network diagram",
+      "scope": "type_specific",
+      "assetType": "Water system",
+      "assetTypeId": "water_system",
+      "dataType": "Image",
+      "attributeGroup": "Water system info",
+      "description": "Photograph of a recent map or diagram showing the location of water supply and distribution infrastructure",
+      "applicability": "Type: Water system",
+      "required": false
+    },
+    {
+      "code": "10207",
+      "name": "Total production of system",
+      "scope": "type_specific",
+      "assetType": "Water system",
+      "assetTypeId": "water_system",
+      "dataType": "Unit",
+      "attributeGroup": "Water system info",
+      "description": "Amount of water that the system is able to supply, within current resource and design constraints",
+      "applicability": "Type: Water system",
+      "required": false,
+      "unitQuantity": "Flow rate"
+    },
+    {
+      "code": "20101",
+      "name": "Water facility type",
+      "scope": "type_specific",
+      "assetType": "Water facility",
+      "assetTypeId": "water_facility",
+      "dataType": "Choice",
+      "attributeGroup": "Water facility info",
+      "description": null,
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "intake",
+          "name": "Intake",
+          "description": "Facility located at the head of a conduit into which water is diverted"
+        },
+        {
+          "id": "well_field",
+          "name": "Well field",
+          "description": "Group of wells treated as a single entity for administrative, production, and treatment purposes"
+        },
+        {
+          "id": "pumping_station",
+          "name": "Pumping station",
+          "description": "Structure containing pumps and related piping, valves, and other equipment for pumping water"
+        },
+        {
+          "id": "distribution_system",
+          "name": "Distribution system",
+          "description": "Network of conduits and related equipment by which water is distributed to consumers"
+        },
+        {
+          "id": "pipeline",
+          "name": "Pipeline",
+          "description": "Collection of pipes and related equipment that are jointed to provide a conduit through which fluids flow"
+        },
+        {
+          "id": "storage_facility",
+          "name": "Storage facility",
+          "description": "One or more tanks or storage reservoirs and related equipment used to maintain pressure and store water to accommodate intermittent periods of higher usage"
+        },
+        {
+          "id": "treatment_plant",
+          "name": "Treatment plant",
+          "description": "Facility or area that contains various treatment works, process areas, and other equipment necessary to improve the quality of water"
+        },
+        {
+          "id": "process_area",
+          "name": "Process area",
+          "description": "Area or building, often contained within a treatment plant, where a specific water treatment process is carried out"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of water facility not defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "20102",
+      "name": "Process area type",
+      "scope": "type_specific",
+      "assetType": "Water facility",
+      "assetTypeId": "water_facility",
+      "dataType": "Text",
+      "attributeGroup": "Water facility info",
+      "description": "Optional label used to categorize process areas",
+      "applicability": "Water facility type: Process area",
+      "required": false
+    },
+    {
+      "code": "30101",
+      "name": "Source type",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Choice",
+      "attributeGroup": "Source info",
+      "description": "Characterization of the source based on type of technology",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "intake",
+          "name": "Intake",
+          "description": "Works or structures at the head of a conduit into which water is diverted"
+        },
+        {
+          "id": "spring",
+          "name": "Spring",
+          "description": "Concentrated discharge of groundwater appearing at the ground surface as a current of flowing water"
+        },
+        {
+          "id": "borehole",
+          "name": "Borehole",
+          "description": "Deep hole with a small diameter that has been driven, bored, or drilled, in order to reach groundwater and constructed with casing or pipes to prevent collapse and contamination"
+        },
+        {
+          "id": "dug_well",
+          "name": "Dug well",
+          "description": "Shallow hole with a large diameter that is dug into the ground to reach groundwater"
+        },
+        {
+          "id": "rainwater_catchment",
+          "name": "Rainwater catchment",
+          "description": "System that collects rainwater from large surfaces, such as a roof or impermeable ground surface, so that it can be stored"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of source not otherwise defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "30102",
+      "name": "Source meter installed",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Checkbox",
+      "attributeGroup": "Source info",
+      "description": "Meter is installed at the source to measure total flow",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "30103",
+      "name": "Water quality tested",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Checkbox",
+      "attributeGroup": "Source info",
+      "description": "Water quality testing has been performed at this source",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "30104",
+      "name": "Date of most recent sample",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Date",
+      "attributeGroup": "Source info",
+      "description": "Calendar date of most recent water quality sampling at this source",
+      "applicability": "Water quality tested: True",
+      "required": false
+    },
+    {
+      "code": "30105",
+      "name": "Name of water body",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Text",
+      "attributeGroup": "Source info",
+      "description": "Name of the water body supplying the source, if one exists",
+      "applicability": "Source type: Intake",
+      "required": false
+    },
+    {
+      "code": "30106",
+      "name": "Source pressure",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Source info",
+      "description": "Pressure, or head, of the water leaving the source",
+      "applicability": "Source type: Intake",
+      "required": false,
+      "unitQuantity": "Pressure"
+    },
+    {
+      "code": "30107",
+      "name": "Nominal flow",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Source info",
+      "description": "Typical or rated volumetric water flow rate that the source provides when operating as designed",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Flow rate"
+    },
+    {
+      "code": "30108",
+      "name": "Minimum flow",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Source info",
+      "description": "Minimum Flow rate rate that the source provides during the driest period of the year",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Flow rate"
+    },
+    {
+      "code": "30109",
+      "name": "Maximum flow",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Source info",
+      "description": "Maximum Flow rate rate that the source can accommodate during periods of high use or source water availability",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Flow rate"
+    },
+    {
+      "code": "30121",
+      "name": "Well depth",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Well data",
+      "description": "Depth below the ground surface to which the well was drilled, driven, or dug; in boreholes, this may differ from the casing depth",
+      "applicability": "Source type: Borehole, Dug well",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30122",
+      "name": "Well diameter",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Well data",
+      "description": "Inside diameter of the well; in boreholes, this is the drilled diameter, which will differ from the casing diameter",
+      "applicability": "Source type: Borehole, Dug well",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30123",
+      "name": "Static water level",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Well data",
+      "description": "Water level below the ground measured when no water is being taken from the aquifer by pumping",
+      "applicability": "Source type: Borehole, Dug well",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30124",
+      "name": "Dynamic water level",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Well data",
+      "description": "Water level below the ground measured when a pump is operating",
+      "applicability": "Source type: Borehole, Dug well",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30125",
+      "name": "Groundwater temperature",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Well data",
+      "description": "Temperature of groundwater in the aquifer or discharged by a pump",
+      "applicability": "Source type: Borehole, Dug well",
+      "required": false,
+      "unitQuantity": "Temperature"
+    },
+    {
+      "code": "30126",
+      "name": "Pump or lifting device",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Choice",
+      "attributeGroup": "Well data",
+      "description": null,
+      "applicability": "Source type: Borehole, Dug well",
+      "required": false,
+      "choices": [
+        {
+          "id": "submersible_pump",
+          "name": "Submersible pump",
+          "description": "Electrically powered pump designed to fit inside the well casing and to operate below the water level"
+        },
+        {
+          "id": "hand_pump",
+          "name": "Hand pump",
+          "description": "Human-powered mechanical pump that uses suction or positive displacement to manually lift groundwater to the surface"
+        },
+        {
+          "id": "rope_and_bucket",
+          "name": "Rope and bucket",
+          "description": "Rope attached to a bucket on one end and a structure or winch on the surface to manually lift groundwater"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of pump not otherwise defined in this section, including centrifugal or positive displacement surface pumps, wind, and animal powered pumps"
+        },
+        {
+          "id": "none",
+          "name": "None",
+          "description": "No pump is currently installed on the well"
+        }
+      ]
+    },
+    {
+      "code": "30127",
+      "name": "Apron installed",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Checkbox",
+      "attributeGroup": "Well data",
+      "description": "Apron is installed to protect the well from back-contamination by surface water and to channel drainage away from the well",
+      "applicability": "Source type: Borehole, Dug well",
+      "required": false
+    },
+    {
+      "code": "30128",
+      "name": "Monitoring well",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Checkbox",
+      "attributeGroup": "Well data",
+      "description": "Well is primarily used for monitoring water levels and/or water quality rather than for water production",
+      "applicability": "Source type: Borehole, Dug well",
+      "required": false
+    },
+    {
+      "code": "30141",
+      "name": "Spring box present",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Checkbox",
+      "attributeGroup": "Spring data",
+      "description": "Protective brick, masonry, or concrete structure is installed around the spring so that water flows directly out through a pipe",
+      "applicability": "Source type: Spring",
+      "required": false
+    },
+    {
+      "code": "30142",
+      "name": "Spring box length",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Spring data",
+      "description": "Length of the longest side of the spring box, measured from the outside",
+      "applicability": "Spring box present: True",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30143",
+      "name": "Spring box width",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Spring data",
+      "description": "Length of the shortest side of the spring box, measured from the outside",
+      "applicability": "Spring box present: True",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30144",
+      "name": "Spring box depth",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Spring data",
+      "description": "Length of the vertical dimension of the spring box, measured from the outside",
+      "applicability": "Spring box present: True",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30145",
+      "name": "Overflow pipe present",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Checkbox",
+      "attributeGroup": "Spring data",
+      "description": "Pipe is installed near the top of the spring box to allow water to exit when box is full",
+      "applicability": "Source type: Spring",
+      "required": false
+    },
+    {
+      "code": "30146",
+      "name": "Drain pipe present",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Checkbox",
+      "attributeGroup": "Spring data",
+      "description": "Pipe is installed near the bottom of the spring box to direct the flow from the spring",
+      "applicability": "Source type: Spring",
+      "required": false
+    },
+    {
+      "code": "30151",
+      "name": "Casing diameter",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Borehole data",
+      "description": "Inside diameter of the well casing",
+      "applicability": "Source type: Borehole",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30152",
+      "name": "Depth of casing",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Borehole data",
+      "description": "Depth below the ground to which the casing is installed; below this depth there would normally be a screen installed",
+      "applicability": "Source type: Borehole",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30153",
+      "name": "Casing material",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Choice",
+      "attributeGroup": "Borehole data",
+      "description": "Well casing material",
+      "applicability": "Source type: Borehole",
+      "required": false,
+      "choices": [
+        {
+          "id": "steel",
+          "name": "Steel",
+          "description": "Iron-base alloy containing up to 2 percent carbon that is heat treated"
+        },
+        {
+          "id": "stainless_steel",
+          "name": "Stainless steel",
+          "description": "Chromium alloy steel that is resistant to rusting and corrosion"
+        },
+        {
+          "id": "pvc",
+          "name": "PVC",
+          "description": "Polyvinyl chloride, a type of polymer frequently used in pipes and containers"
+        },
+        {
+          "id": "plastic",
+          "name": "Plastic",
+          "description": "Any high molecular weight polymer material that can be extruded, molded, or drawn into various shapes and sizes; use this category for any plastics that are not PVC"
+        },
+        {
+          "id": "concrete",
+          "name": "Concrete",
+          "description": "Mixture of cement and aggregate, usually reinforced with steel wire or rebar"
+        },
+        {
+          "id": "fiberglass",
+          "name": "Fiberglass",
+          "description": "Reinforced plastic material composed of glass fibers embedded within a resin matrix"
+        },
+        {
+          "id": "galvanized_steel",
+          "name": "Galvanized steel",
+          "description": "Steel that has a zinc coating to protect from corrosion and rust"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of casing material not described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30154",
+      "name": "Screen length",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Borehole data",
+      "description": "Length of the well screen, which is a sleeve with slots, holes, gauze, or wire wrap installed below the casing to allow entry of water and prevent entry of sand or other large particles",
+      "applicability": "Source type: Borehole",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30155",
+      "name": "Pump position",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Unit",
+      "attributeGroup": "Borehole data",
+      "description": "Depth below ground to the top of a submersible pump",
+      "applicability": "Pump or lifting device: Submersible",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30156",
+      "name": "Photo of well log",
+      "scope": "type_specific",
+      "assetType": "Source",
+      "assetTypeId": "source",
+      "dataType": "Image",
+      "attributeGroup": "Borehole data",
+      "description": "One or more photographs of the well log, or drilling log, which usually contains a record of the soil and rock formations (lithology) encountered during the drilling of the well; may also contain data on the casing and backfill used to reinforce the well",
+      "applicability": "Source type: Borehole",
+      "required": false
+    },
+    {
+      "code": "30201",
+      "name": "Pump type",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Choice",
+      "attributeGroup": "Pump info",
+      "description": "Description of the pump mechanism or operating principle",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "submersible",
+          "name": "Submersible",
+          "description": "Electrically powered pump designed to fit inside the well casing and to operate below the water level"
+        },
+        {
+          "id": "axial_flow",
+          "name": "Axial flow",
+          "description": "Fluid is accelerated in the direction of the flow axis by an impeller running inside a casing"
+        },
+        {
+          "id": "centrifugal",
+          "name": "Centrifugal",
+          "description": "Fluid enters along the pump axis, is accelerated by an impeller, and exits at right angles to the shaft; also known as a radial flow pump"
+        },
+        {
+          "id": "reciprocating",
+          "name": "Reciprocating",
+          "description": "Fluid is moved by one or more oscillating pistons or plungers"
+        },
+        {
+          "id": "positive_displacement",
+          "name": "Positive displacement",
+          "description": "Fluid is trapped and forced to move to the discharge side by a piston, gear, or rotary vane"
+        },
+        {
+          "id": "hand_pump",
+          "name": "Hand pump",
+          "description": "Human-powered mechanical device that uses a suction or positive displacement pump, often connected to a lever via a rod or chain, to manually lift water"
+        },
+        {
+          "id": "hydraulic_ram",
+          "name": "Hydraulic ram",
+          "description": "Device that uses the water hammer effect to use some of the energy of inflowing water to lift a smaller volume of water"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other pump type not described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30202",
+      "name": "Pump diameter",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump info",
+      "description": "Maximum outer diameter of a submersible pump",
+      "applicability": "Pump type: Submersible",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30203",
+      "name": "Pump power rating",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump info",
+      "description": "Power consumed by a pump operating under normal pressure and flow conditions, as defined by the manufacturer",
+      "applicability": "Pump type: NOT Hand pump",
+      "required": false,
+      "unitQuantity": "Power"
+    },
+    {
+      "code": "30204",
+      "name": "Pump motor configuration",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Choice",
+      "attributeGroup": "Pump info",
+      "description": "Whether the motor and pump should be tracked as a single asset or as separate assets; in cases where the motor is separate from pump, this generally means that motors are interchangeable between pumps of a similar design",
+      "applicability": "Pump type: NOT Hand pump",
+      "required": false,
+      "choices": [
+        {
+          "id": "integrated_with_pump",
+          "name": "Integrated with pump",
+          "description": "Motor and pump should be treated as the same asset"
+        },
+        {
+          "id": "separate_from_pump",
+          "name": "Separate from pump",
+          "description": "Motor should be treated as a separate asset from the pump"
+        }
+      ]
+    },
+    {
+      "code": "30205",
+      "name": "Pump motor voltage type",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Choice",
+      "attributeGroup": "Pump motor data",
+      "description": "Type of electrical power required by the pump",
+      "applicability": "Pump motor configuration: Integrated with pump",
+      "required": false,
+      "choices": [
+        {
+          "id": "single_phase_ac",
+          "name": "Single phase AC",
+          "description": "Alternating current electrical system that uses two wires: one neutral wire and one phase wire in which the voltage rises to a peak in one direction and then reverses to a peak in the opposite direction"
+        },
+        {
+          "id": "three_phase_ac",
+          "name": "Three phase AC",
+          "description": "Alternating current electrical system that uses four wires: one neutral wire and three phase wires in which the voltage rises to a peak and reverses direction at different times"
+        },
+        {
+          "id": "dc",
+          "name": "DC",
+          "description": "Direct current system in which current always flows in one direction and the voltage does not change over time"
+        }
+      ]
+    },
+    {
+      "code": "30206",
+      "name": "Pump motor voltage",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump motor data",
+      "description": "Normal operating voltage of the pump, as recommended by the manufacturer",
+      "applicability": "Pump motor configuration: Integrated with pump",
+      "required": false,
+      "unitQuantity": "Voltage"
+    },
+    {
+      "code": "30207",
+      "name": "Pump motor max current",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump motor data",
+      "description": "Current drawn by the pump when operating at the maximum or full load power rating",
+      "applicability": "Pump motor configuration: Integrated with pump",
+      "required": false,
+      "unitQuantity": "Current"
+    },
+    {
+      "code": "30208",
+      "name": "Pump motor max power",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump motor data",
+      "description": "Maximum, or full load power rating of the pump, as recommended by the manufacturer",
+      "applicability": "Pump motor configuration: Integrated with pump",
+      "required": false,
+      "unitQuantity": "Power"
+    },
+    {
+      "code": "30221",
+      "name": "Design flow",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump curve",
+      "description": "Flow rate of the pump required by the system design under normal operating conditions; should be within the acceptable flow range as defined by the pump curve",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Flow rate"
+    },
+    {
+      "code": "30222",
+      "name": "Design head",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump curve",
+      "description": "Head, or pressure, shown on the pump curve at the design flow rate",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Pressure"
+    },
+    {
+      "code": "30223",
+      "name": "Maximum flow (Q-max)",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump curve",
+      "description": "Maximum possible flow rate shown on the pump curve",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Flow rate"
+    },
+    {
+      "code": "30224",
+      "name": "Head at maximum flow (H-min)",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump curve",
+      "description": "Total head, or pressure, that corresponds to the maximum flow rate on the pump curve; also referred to as the minimum head",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Pressure"
+    },
+    {
+      "code": "30225",
+      "name": "Minimum flow (Q-min)",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump curve",
+      "description": "Minimum possible flow rate shown on the pump curve",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Flow rate"
+    },
+    {
+      "code": "30226",
+      "name": "Head at minimum flow (H-Max)",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump curve",
+      "description": "Total head, or pressure, that corresponds to the minimum flow rate on the pump curve; also referred to as the maximum head",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Pressure"
+    },
+    {
+      "code": "30227",
+      "name": "NPSH-R",
+      "scope": "type_specific",
+      "assetType": "Pump",
+      "assetTypeId": "pump",
+      "dataType": "Unit",
+      "attributeGroup": "Pump curve",
+      "description": "Net positive suction head required (or minimum) by the suction side of the pump in order to prevent cavitation and evaporation (flashing)",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Pressure"
+    },
+    {
+      "code": "30301",
+      "name": "Tank type",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Choice",
+      "attributeGroup": "Tank info",
+      "description": "Characterization of the tank design",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "elevated",
+          "name": "Elevated",
+          "description": "Located on and supported by a tower; also referred to as an overhead tank"
+        },
+        {
+          "id": "above_ground",
+          "name": "Above ground",
+          "description": "Constructed or permanently installed on top of the ground surface"
+        },
+        {
+          "id": "underground",
+          "name": "Underground",
+          "description": "Constructed or permanently installed partially or completely underground; also referred to as an in-ground tank"
+        },
+        {
+          "id": "break_pressure",
+          "name": "Break pressure",
+          "description": "Tank used for hydraulic isolation and surge protection installed in a pressurized system where the water surface is exposed to atmospheric pressure"
+        },
+        {
+          "id": "portable",
+          "name": "Portable",
+          "description": "Tank which can be moved from place to place; could be installed above or below ground"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other tank design not otherwise described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30302",
+      "name": "Tank material",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Choice",
+      "attributeGroup": "Tank info",
+      "description": "Main material of construction used in the tank",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "pvc",
+          "name": "PVC",
+          "description": "Polyvinyl chloride, a type of polymer frequently used in pipes and containers"
+        },
+        {
+          "id": "plastic",
+          "name": "Plastic",
+          "description": "Any high molecular weight polymer material that can be extruded, molded, or drawn into various shapes and sizes; use this category for any plastics that are not PVC"
+        },
+        {
+          "id": "concrete",
+          "name": "Concrete",
+          "description": "Mixture of cement and aggregate, usually reinforced with steel wire or rebar"
+        },
+        {
+          "id": "aluminum",
+          "name": "Aluminum",
+          "description": "Lightweight metal composed mainly of elemental aluminum that may be alloyed with other elements"
+        },
+        {
+          "id": "steel",
+          "name": "Steel",
+          "description": "Iron-base alloy containing up to 2 percent carbon that is heat treated"
+        },
+        {
+          "id": "composite",
+          "name": "Composite",
+          "description": "Structure that combines concrete with a steel support structure"
+        },
+        {
+          "id": "fiberglass",
+          "name": "Fiberglass",
+          "description": "Reinforced plastic material composed of glass fibers embedded within a resin matrix"
+        },
+        {
+          "id": "masonry",
+          "name": "Masonry",
+          "description": "Brick, stone, or concrete blocks that are bound together with mortar"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of tank construction not described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30303",
+      "name": "Tank volume",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Unit",
+      "attributeGroup": "Tank info",
+      "description": "Useful volume of the tank which can be supplied from the minimum to the maximum water levels.",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Volume"
+    },
+    {
+      "code": "30304",
+      "name": "Tank shape",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Choice",
+      "attributeGroup": "Tank info",
+      "description": "Basic shape or form factor of the tank",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "cylindrical",
+          "name": "Cylindrical",
+          "description": "Circular base with vertical sides"
+        },
+        {
+          "id": "rectangular",
+          "name": "Rectangular",
+          "description": "Square or rectangular base with vertical sides"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other shape not otherwise described in the section"
+        }
+      ]
+    },
+    {
+      "code": "30311",
+      "name": "Tank diameter",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Unit",
+      "attributeGroup": "Tank dimensions",
+      "description": "Diameter of the base of a cylindrical tank",
+      "applicability": "Tank shape: Cylindrical",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30312",
+      "name": "Tank height",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Unit",
+      "attributeGroup": "Tank dimensions",
+      "description": "Distance from the bottom to the top of the tank, measured from outside",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30313",
+      "name": "Tank length",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Unit",
+      "attributeGroup": "Tank dimensions",
+      "description": "Length of the longest side of the base of a rectangular tank",
+      "applicability": "Tank shape: Rectangular",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30314",
+      "name": "Tank width",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Unit",
+      "attributeGroup": "Tank dimensions",
+      "description": "Length of the shortest side of the base of a rectangular tank",
+      "applicability": "Tank shape: Rectangular",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30315",
+      "name": "Height of tank bottom",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Unit",
+      "attributeGroup": "Tank dimensions",
+      "description": "Distance from the ground level to the bottom of the inside of the tank; negative values are used for depths below the ground",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30316",
+      "name": "Minimum water level",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Unit",
+      "attributeGroup": "Tank dimensions",
+      "description": "Minimum water level allowed in the tank, measured from the tank bottom; this may be the height of the outlet or the minimum height allowed by a filling control",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30317",
+      "name": "Maximum water level",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Unit",
+      "attributeGroup": "Tank dimensions",
+      "description": "Maximum water level allowed in the tank, measured from the tank bottom; this may be the height of the overflow pipe or the maximum height allowed by a filling control",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "30321",
+      "name": "Filling control installed",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Checkbox",
+      "attributeGroup": "Tank details",
+      "description": "Control is installed to ensure a desired range of tank fill levels",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "30322",
+      "name": "Type of filling control",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Choice",
+      "attributeGroup": "Tank details",
+      "description": "Method or device used to maintain the water level in the tank by controlling the influent or effluent flow rate",
+      "applicability": "Filling control installed: True",
+      "required": false,
+      "choices": [
+        {
+          "id": "float_valve",
+          "name": "Float valve",
+          "description": "Flow into the tank is controlled by a gate or plug that is actuated by a float when the water level falls below a certain set point"
+        },
+        {
+          "id": "altitude_valve",
+          "name": "Altitude valve",
+          "description": "Automatically shuts off flow into an elevated tank when the water level reaches a predetermined level and automatically opens when the pressure in the distribution systems drops below the pressure in the tank"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other fill control method not described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30323",
+      "name": "Fill level indicator installed",
+      "scope": "type_specific",
+      "assetType": "Tank",
+      "assetTypeId": "tank",
+      "dataType": "Checkbox",
+      "attributeGroup": "Tank details",
+      "description": "Device is installed that provides a visual or electronic measurement of the fill level",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "30401",
+      "name": "Power type",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Choice",
+      "attributeGroup": "Power info",
+      "description": "Categorization of the power generating device based on design or principles of operation",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "grid",
+          "name": "Grid",
+          "description": "Connection to an electrical transmission and distribution system"
+        },
+        {
+          "id": "generator",
+          "name": "Generator",
+          "description": "Diesel, gas, or petrol powered engine that converts rotary motion into electrical current"
+        },
+        {
+          "id": "solar",
+          "name": "Solar",
+          "description": "Solar or photovoltaic power system"
+        },
+        {
+          "id": "wind",
+          "name": "Wind",
+          "description": "Wind turbine or windmill equipped with an electrical generator"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other power type not defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "30402",
+      "name": "Rated power output",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Unit",
+      "attributeGroup": "Power info",
+      "description": "Power output that can be sustained for long periods of time; for generators this is the continuous power rating",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Power"
+    },
+    {
+      "code": "30403",
+      "name": "Maximum power output",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Unit",
+      "attributeGroup": "Power info",
+      "description": "Power output that can be provided for short periods of time in response to surges in demand; for generators, sometimes referred to as the standby or intermittent power rating",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Power"
+    },
+    {
+      "code": "30404",
+      "name": "Nominal voltage",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Unit",
+      "attributeGroup": "Power info",
+      "description": "Voltage assigned to a system or circuit of a given voltage class for the purpose of convenient designation; the actual operating voltage may vary above or below this value",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Voltage"
+    },
+    {
+      "code": "30405",
+      "name": "Rated voltage",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Unit",
+      "attributeGroup": "Power info",
+      "description": "Maximum voltage at which the power system can be operated within thermal and safety limits",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Voltage"
+    },
+    {
+      "code": "30406",
+      "name": "Maximum current",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Unit",
+      "attributeGroup": "Power info",
+      "description": "Maximum safe current, or starting current, that can be supplied for a short period of time",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Current"
+    },
+    {
+      "code": "30407",
+      "name": "Type of current",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Choice",
+      "attributeGroup": "Power info",
+      "description": "Mode of transmission for electrical current (AC/DC)",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "single_phase_ac",
+          "name": "Single phase AC",
+          "description": "Alternating current electrical system that uses two wires: one neutral wire and one phase wire in which the voltage rises to a peak in one direction and then reverses to a peak in the opposite direction"
+        },
+        {
+          "id": "three_phase_ac",
+          "name": "Three phase AC",
+          "description": "Alternating current electrical system that uses four wires: one neutral wire and three phase wires in which the voltage rises to a peak and reverses direction at different times"
+        },
+        {
+          "id": "dc",
+          "name": "DC",
+          "description": "Direct current system in which current always flows in one direction and the voltage does not change over time"
+        }
+      ]
+    },
+    {
+      "code": "30408",
+      "name": "Frequency of current",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Choice",
+      "attributeGroup": "Power info",
+      "description": "Frequency at which the voltage rises to a peak, reverses, and rises to a peak again",
+      "applicability": "Type of current: Single phase AC, Three phase AC",
+      "required": false,
+      "choices": [
+        {
+          "id": "60_hz",
+          "name": "60 Hz",
+          "description": "60 cycles per second"
+        },
+        {
+          "id": "50_hz",
+          "name": "50 Hz",
+          "description": "50 cycles per second"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any non-standard current frequency"
+        }
+      ]
+    },
+    {
+      "code": "30421",
+      "name": "Generator fuel",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Choice",
+      "attributeGroup": "Generator data",
+      "description": "Type of fuel required by the generator",
+      "applicability": "Power type: Generator",
+      "required": false,
+      "choices": [
+        {
+          "id": "gasoline_or_petrol",
+          "name": "Gasoline or petrol",
+          "description": "Fuel made from crude oil and other petroleum liquids that is often used in internal combustion engines"
+        },
+        {
+          "id": "diesel",
+          "name": "Diesel",
+          "description": "Distillate fuel oil that is used in compression ignition engines"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other fuel used in generators that is not described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30422",
+      "name": "Generator apparent power",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Unit",
+      "attributeGroup": "Generator data",
+      "description": "Product of the voltage and current provided in an AC power system, which does not account for the reactive power required by inductive loads in the circuit; sometimes referred to by its most common unit of measurement: kVA",
+      "applicability": "Type of current: Single phase AC, Three phase AC",
+      "required": false,
+      "unitQuantity": "Power"
+    },
+    {
+      "code": "30423",
+      "name": "Engine cooling system",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Choice",
+      "attributeGroup": "Generator data",
+      "description": "Type of cooling system used by the generator engine",
+      "applicability": "Power type: Generator",
+      "required": false,
+      "choices": [
+        {
+          "id": "air",
+          "name": "Air",
+          "description": "Engine cooled by air circulation only"
+        },
+        {
+          "id": "liquid",
+          "name": "Liquid",
+          "description": "Engine cooled by a circulating liquid, such as water or other coolant"
+        }
+      ]
+    },
+    {
+      "code": "30424",
+      "name": "PV panel type",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Choice",
+      "attributeGroup": "Solar power data",
+      "description": "Photovoltaic panel type",
+      "applicability": "Power type: Solar",
+      "required": false,
+      "choices": [
+        {
+          "id": "polycrystalline",
+          "name": "Polycrystalline",
+          "description": "Multicrystalline or poly panels, made of multiple pieces of silicon melted or joined together"
+        },
+        {
+          "id": "monocrystalline",
+          "name": "Monocrystalline",
+          "description": "Single crystalline or mono panel, made from a single silicon crystal"
+        },
+        {
+          "id": "thin_film",
+          "name": "Thin film",
+          "description": "Thin, flexible panel made from amorphous silicon or other materials"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of photovoltaic panel type not otherwise described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30425",
+      "name": "Total number of PV panels",
+      "scope": "type_specific",
+      "assetType": "Power",
+      "assetTypeId": "power",
+      "dataType": "Number",
+      "attributeGroup": "Solar power data",
+      "description": "Total number of photovoltaic panels installed in the power system",
+      "applicability": "Power type: Solar",
+      "required": false
+    },
+    {
+      "code": "30501",
+      "name": "Treatment type",
+      "scope": "type_specific",
+      "assetType": "Treatment",
+      "assetTypeId": "treatment",
+      "dataType": "Choice",
+      "attributeGroup": "Treatment info",
+      "description": "Categorization of treatment process by treatment method or objective",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "screen_or_bar_grate",
+          "name": "Screen or bar grate",
+          "description": "Coarse screen or grate that removes large debris from water to prevent clogging of pipes and pumps"
+        },
+        {
+          "id": "filtration",
+          "name": "Filtration",
+          "description": "Small diameter granular medium, such as sand, removes particulate matter from a liquid stream"
+        },
+        {
+          "id": "membrane_filtration",
+          "name": "Membrane filtration",
+          "description": "Pressurized liquid is forced through a membrane to remove particulate matter"
+        },
+        {
+          "id": "reverse_osmosis",
+          "name": "Reverse osmosis",
+          "description": "Pressure-driven membrane removes ions, salts, and other dissolved solids and nonvolatile organics"
+        },
+        {
+          "id": "mixer",
+          "name": "Mixer",
+          "description": "Agitation or blending process that creates a homogeneous mixture out of two or more components"
+        },
+        {
+          "id": "coagulator",
+          "name": "Coagulator",
+          "description": "Basin in which chemicals (coagulants) are added to destabilize the negative surface charges present in natural particles, allowing them to accumulate"
+        },
+        {
+          "id": "flocculator",
+          "name": "Flocculator",
+          "description": "Device that uses gentle stirring to bring suspended particles together so they will form larger, more separable clumps called floc"
+        },
+        {
+          "id": "clarifier_or_sedimentation_basin",
+          "name": "Clarifier or sedimentation basin",
+          "description": "Tank or basin in which water is retained to allow settleable matter, such as floc, settle by gravity"
+        },
+        {
+          "id": "chlorination",
+          "name": "Chlorination",
+          "description": "Device or basin that introduces chlorine, in liquid, solid, or gaseous form, for oxidation of organic matter or disinfection"
+        },
+        {
+          "id": "disinfection",
+          "name": "Disinfection",
+          "description": "Process that destroys or inactivates pathogenic organisms by physical or chemical means (use this category for any non-chlorine disinfection methods such as UV or ozone)"
+        },
+        {
+          "id": "aeration",
+          "name": "Aeration",
+          "description": "Gas transfer process that causes a liquid stream to absorb a gas, such as air or oxygen"
+        },
+        {
+          "id": "air_stripping",
+          "name": "Air stripping",
+          "description": "Passing air through liquid to remove volatile compounds"
+        },
+        {
+          "id": "desalinization",
+          "name": "Desalinization",
+          "description": "Process that uses distillation, reverse osmosis, or electrodialysis to remove dissolved mineral salts from seawater or brackish water"
+        },
+        {
+          "id": "solids_disposal",
+          "name": "Solids disposal",
+          "description": "Process to concentrate, dewater, thicken, or otherwise treat residual solids for safe disposal"
+        },
+        {
+          "id": "chemical_feed",
+          "name": "Chemical feed",
+          "description": "Addition of chemicals to process water to perform some treatment function, such as pH control or corrosion prevention"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of treatment process not already described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30521",
+      "name": "Chlorine type",
+      "scope": "type_specific",
+      "assetType": "Treatment",
+      "assetTypeId": "treatment",
+      "dataType": "Choice",
+      "attributeGroup": "Chlorination data",
+      "description": "Chemical form of chlorine used in a treatment process",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "sodium_hypochlorite_bleach",
+          "name": "Sodium hypochlorite (bleach)",
+          "description": "Solution in which sodium hypochlorite (NaOCl) is hydrolyzed in water to form hypochlorous acid (HOCl); also known as liquid bleach"
+        },
+        {
+          "id": "calcium_hypochlorite",
+          "name": "Calcium hypochlorite",
+          "description": "Dry calcium hypochlorite (Ca(OCl)2) in powder or pellets that can be dissolved in water, where it reacts to form hypochlorous acid (HOCl)"
+        },
+        {
+          "id": "chlorine_gas",
+          "name": "Chlorine gas",
+          "description": "Gaseous molecular chlorine (Cl2) that forms hypochlorous acid (HOCl) and hypochlorite ion (OCl-) when dissolved in water"
+        },
+        {
+          "id": "chloramine",
+          "name": "Chloramine",
+          "description": "Disinfectant produced by mixing chlorine and ammonia (NH3); when added to water, forms mainly monochloramine (NH2Cl) and dichloramine (NHCl2)"
+        },
+        {
+          "id": "chlorine_dioxide",
+          "name": "Chlorine dioxide",
+          "description": "Red-yellow gas that is very reactive and unstable; decomposes in water to form chlorite ion (ClO2-)"
+        }
+      ]
+    },
+    {
+      "code": "30522",
+      "name": "Dosing method",
+      "scope": "type_specific",
+      "assetType": "Treatment",
+      "assetTypeId": "treatment",
+      "dataType": "Choice",
+      "attributeGroup": "Chlorination data",
+      "description": "Method used to add chlorine to water to be treated",
+      "applicability": "Chlorination type: Sodium hypochlorite (bleach), Calcium hypochlorite, Chloramine",
+      "required": false,
+      "choices": [
+        {
+          "id": "dosing_pump",
+          "name": "Dosing pump",
+          "description": "Small pump draws concentrated chlorine solution from a tank and adds it to the water stream or tank"
+        },
+        {
+          "id": "drip_feed",
+          "name": "Drip feed",
+          "description": "Constant head device, such as a float or bowl, located inside a tank feeds the concentrated chlorine solution at a flow rate that is independent of tank level"
+        },
+        {
+          "id": "constant_head_aspirator",
+          "name": "Constant head aspirator",
+          "description": "Sealed container with a small outlet tube at the bottom and an air inlet tube at the top that provides a constant pressure and steady flow rate of chlorine solution"
+        },
+        {
+          "id": "gravity_feed",
+          "name": "Gravity feed",
+          "description": "Tank or bucket that uses gravity to feed a concentrated chlorine solution through a metering orifice or valve that controls the flow rate"
+        },
+        {
+          "id": "batch_mixing",
+          "name": "Batch mixing",
+          "description": "Chlorine bleach or powder is added to a large tank in batches"
+        },
+        {
+          "id": "tablet_or_cartridge",
+          "name": "Tablet or cartridge",
+          "description": "Water flows through a chamber or cartridge in which chlorine is slowly released from a solid material"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other chlorine dosing method not described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30601",
+      "name": "Meter ID",
+      "scope": "type_specific",
+      "assetType": "Meter",
+      "assetTypeId": "meter",
+      "dataType": "Text",
+      "attributeGroup": "Meter info",
+      "description": "Identification number of code used by the service provider to identify the meter",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "30602",
+      "name": "Meter type",
+      "scope": "type_specific",
+      "assetType": "Meter",
+      "assetTypeId": "meter",
+      "dataType": "Choice",
+      "attributeGroup": "Meter info",
+      "description": "Type of metering performed: bulk metering of the distribution network versus domestic or commercial metering",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "bulk",
+          "name": "Bulk",
+          "description": "Used to measure flows throughout the distribution network to monitor performance and detect leaks"
+        },
+        {
+          "id": "domestic",
+          "name": "Domestic",
+          "description": "Measures flow to a household or private connection"
+        },
+        {
+          "id": "commercial_or_industrial",
+          "name": "Commercial or industrial",
+          "description": "Measures flow to a commercial or industrial user"
+        },
+        {
+          "id": "production",
+          "name": "Production",
+          "description": "Measures flow from a source or treatment plant"
+        }
+      ]
+    },
+    {
+      "code": "30603",
+      "name": "Meter design",
+      "scope": "type_specific",
+      "assetType": "Meter",
+      "assetTypeId": "meter",
+      "dataType": "Choice",
+      "attributeGroup": "Meter info",
+      "description": "Design or operating principle of the meter",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "turbine",
+          "name": "Turbine",
+          "description": "Measures flow velocity based on the speed of a rotating turbine"
+        },
+        {
+          "id": "displacement",
+          "name": "Displacement",
+          "description": "Captures definite volumes of water in a chamber with a piston or disk that discharges the water"
+        },
+        {
+          "id": "ultrasonic",
+          "name": "Ultrasonic",
+          "description": "Measures flow velocity by transmitting and receiving sound waves that pass diagonally through the flow path"
+        },
+        {
+          "id": "electromagnetic",
+          "name": "Electromagnetic",
+          "description": "Measures the induced voltage in a sensor that is generated by a fluid as it flows through a pipe"
+        },
+        {
+          "id": "jet",
+          "name": "Jet",
+          "description": "One or more jets of water impact on a turbine that measures flow rate"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of meter not otherwise described in this section"
+        }
+      ]
+    },
+    {
+      "code": "30604",
+      "name": "Minimum measurable flow rate",
+      "scope": "type_specific",
+      "assetType": "Meter",
+      "assetTypeId": "meter",
+      "dataType": "Unit",
+      "attributeGroup": "Meter info",
+      "description": "Lowest flow rate that can be measured by the meter",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Flow rate"
+    },
+    {
+      "code": "30605",
+      "name": "Meter measurement type",
+      "scope": "type_specific",
+      "assetType": "Meter",
+      "assetTypeId": "meter",
+      "dataType": "Choice",
+      "attributeGroup": "Meter info",
+      "description": "Type of measurement displayed by the meter (total volume, flow rate, or both)",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "total_volume",
+          "name": "Total volume",
+          "description": "Totalizing meter, which displays only the total amount of volume that has flowed through the meter, often using a combination of a counter and a sweep hand"
+        },
+        {
+          "id": "flow_rate",
+          "name": "Flow rate",
+          "description": "Instantaneous measurement of the current flow rate through the meter"
+        },
+        {
+          "id": "combined",
+          "name": "Combined",
+          "description": "Meter display includes both the instantaneous flow rate and the total volume that has flowed through the meter"
+        }
+      ]
+    },
+    {
+      "code": "30701",
+      "name": "Electrical type",
+      "scope": "type_specific",
+      "assetType": "Electrical",
+      "assetTypeId": "electrical",
+      "dataType": "Choice",
+      "attributeGroup": "Electrical info",
+      "description": "Type of electrical asset",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "motor",
+          "name": "Motor",
+          "description": "Electromechanical device for converting electrical energy into mechanical energy"
+        },
+        {
+          "id": "actuator",
+          "name": "Actuator",
+          "description": "Device that uses electrical or pneumatic power to operate valves"
+        },
+        {
+          "id": "power_device",
+          "name": "Power device",
+          "description": "Electrical or electronic device for managing the supply and distribution of electrical power"
+        },
+        {
+          "id": "electronic",
+          "name": "Electronic",
+          "description": "Component or device that controls the flow of electrical currents for the purpose of information processing and system control"
+        },
+        {
+          "id": "heater",
+          "name": "Heater",
+          "description": "Device that converts electrical energy into heat"
+        },
+        {
+          "id": "blower",
+          "name": "Blower",
+          "description": "Device that uses electrical energy to move or pressurize air"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of electrical asset not defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "30702",
+      "name": "Electrical power device type",
+      "scope": "type_specific",
+      "assetType": "Electrical",
+      "assetTypeId": "electrical",
+      "dataType": "Choice",
+      "attributeGroup": "Electrical info",
+      "description": "Classification of electrical power device based on purpose or mode of operation",
+      "applicability": "Electrical type: Power device",
+      "required": false,
+      "choices": [
+        {
+          "id": "control_panel",
+          "name": "Control panel",
+          "description": "Controls electrical power distribution"
+        },
+        {
+          "id": "circuit_breaker",
+          "name": "Circuit breaker",
+          "description": "Automatic device for stopping the flow of current in a circuit in case of a fault"
+        },
+        {
+          "id": "uninterruptible_power_supply_ups",
+          "name": "Uninterruptible power supply (UPS)",
+          "description": "Energy storage device that ensures a constant supply of power, even during power outages"
+        },
+        {
+          "id": "transformer",
+          "name": "Transformer",
+          "description": "Increases/decreases the voltage/current or visa versa."
+        },
+        {
+          "id": "power_conditioner",
+          "name": "Power conditioner",
+          "description": "Device that improves the quality of power delivered by smoothing out voltage spikes and reducing electrical noise"
+        },
+        {
+          "id": "switch",
+          "name": "Switch",
+          "description": "Device to disconnect or connect the conducting path in an electrical circuit"
+        },
+        {
+          "id": "motor_controller",
+          "name": "Motor controller",
+          "description": "Device for starting, stopping, and regulating the performance and speed of an electric motor"
+        },
+        {
+          "id": "inverter",
+          "name": "Inverter",
+          "description": "Device for converting direct current into alternating current"
+        }
+      ]
+    },
+    {
+      "code": "30801",
+      "name": "Valve type",
+      "scope": "type_specific",
+      "assetType": "Valve",
+      "assetTypeId": "valve",
+      "dataType": "Choice",
+      "attributeGroup": "Valve info",
+      "description": "Purpose or operating principle of a valve",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "shutoff",
+          "name": "Shutoff",
+          "description": "Closes off the source of water or a section of a distribution system"
+        },
+        {
+          "id": "check",
+          "name": "Check",
+          "description": "Allows flow in only one direction and closes when the flow tries to reverse"
+        },
+        {
+          "id": "backflow_preventer",
+          "name": "Backflow preventer",
+          "description": "Device for preventing backflow of water into a supply system using a double gate, double check, or air gap assembly"
+        },
+        {
+          "id": "washout",
+          "name": "Washout",
+          "description": "Valve installed in a low point or depression in a pipeline to allow for drainage of the line; also referred to as a blowoff valve"
+        },
+        {
+          "id": "flow_control",
+          "name": "Flow control",
+          "description": "Pressure-compensating valve installed to regulate the flow of water"
+        },
+        {
+          "id": "pressure_reducing",
+          "name": "Pressure reducing",
+          "description": "Flow valve used to allow water to flow from higher-pressure side to lower-pressure side so as not to exceed a set maximum pressure on the low-pressure side"
+        },
+        {
+          "id": "pressure_sustaining",
+          "name": "Pressure sustaining",
+          "description": "Valve that opens only as much as necessary to maintain a certain pressure on the inlet side; also referred to as a back pressure regulator"
+        },
+        {
+          "id": "throttle_control",
+          "name": "Throttle control",
+          "description": "Valve installed to reduce the flow through a pipeline"
+        },
+        {
+          "id": "air_relief",
+          "name": "Air relief",
+          "description": "Air valve placed at the summit of a pipeline to release air automatically to prevent air binding and pressure buildup, or to allow air to enter a line if the internal pressure becomes less than atmospheric pressure"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any type of valve not otherwise defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "30802",
+      "name": "Date of last actuation",
+      "scope": "type_specific",
+      "assetType": "Valve",
+      "assetTypeId": "valve",
+      "dataType": "Date",
+      "attributeGroup": "Valve info",
+      "description": "Most recent date that the valve was actuated to prevent degradation and verify functionality",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "30901",
+      "name": "Hydrant type",
+      "scope": "type_specific",
+      "assetType": "Hydrant",
+      "assetTypeId": "hydrant",
+      "dataType": "Choice",
+      "attributeGroup": "Hydrant info",
+      "description": "Type of hydrant design",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "wet_barrel",
+          "name": "Wet barrel",
+          "description": "Shut-off valves are located above ground, so there is water in the barrel even when not in use"
+        },
+        {
+          "id": "dry_barrel",
+          "name": "Dry barrel",
+          "description": "Shut-off valve is located underground and the barrel is drained or pumped dry when not in use to protect from freezing"
+        },
+        {
+          "id": "standpipe",
+          "name": "Standpipe",
+          "description": "Connections for fire hoses within a building"
+        }
+      ]
+    },
+    {
+      "code": "31001",
+      "name": "Junction type",
+      "scope": "type_specific",
+      "assetType": "Junction",
+      "assetTypeId": "junction",
+      "dataType": "Choice",
+      "attributeGroup": "Junction info",
+      "description": null,
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "union",
+          "name": "Union",
+          "description": "Device used to connect two pipes"
+        },
+        {
+          "id": "elbow",
+          "name": "Elbow",
+          "description": "Fitting that connects two pipes at an angle, usually 90 degrees"
+        },
+        {
+          "id": "tee",
+          "name": "Tee",
+          "description": "Fitting in the shape of the letter T that has an opening perpendicular to the main flow pathway, allowing a three-way connection"
+        },
+        {
+          "id": "sleeve",
+          "name": "Sleeve",
+          "description": "Fitting for uniting two pipes of the same nominal diameter in a straight line"
+        },
+        {
+          "id": "cap",
+          "name": "Cap",
+          "description": "Fitting to make the end of a pipe watertight"
+        },
+        {
+          "id": "reducer",
+          "name": "Reducer",
+          "description": "Fitting used to join two different sized pieces of pipe"
+        },
+        {
+          "id": "cross",
+          "name": "Cross",
+          "description": "Fitting with four branches arranged at right angles to each other"
+        },
+        {
+          "id": "outside_threaded_adapter",
+          "name": "Outside threaded adapter",
+          "description": "Fitting with threads on the outside of the pipe; previously referred to by the outdated term “male adapter”"
+        },
+        {
+          "id": "inside_threaded_adapter",
+          "name": "Inside threaded adapter",
+          "description": "Fitting with threads on the inside of the pipe; previously referred to by the outdated term “female adapter”"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any type of junction not otherwise described in this section"
+        }
+      ]
+    },
+    {
+      "code": "31101",
+      "name": "Sampling point type",
+      "scope": "type_specific",
+      "assetType": "Sampling point",
+      "assetTypeId": "sampling_point",
+      "dataType": "Choice",
+      "attributeGroup": "Sampling point info",
+      "description": "Type of facility that allows for collection of water quality samples",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "faucet",
+          "name": "Faucet",
+          "description": "Single device to shut off or control the flow from a pipe"
+        },
+        {
+          "id": "sampling_station",
+          "name": "Sampling station",
+          "description": "Enclosed box or structure with a faucet or valve and spigot inside"
+        },
+        {
+          "id": "sampling_port",
+          "name": "Sampling port",
+          "description": "Fitting or valve attached to a pipe"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any type of sampling point not otherwise defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "31201",
+      "name": "Sensor type",
+      "scope": "type_specific",
+      "assetType": "Sensor",
+      "assetTypeId": "sensor",
+      "dataType": "Choice",
+      "attributeGroup": "Sensor info",
+      "description": null,
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "pressure",
+          "name": "Pressure",
+          "description": "Force pushing on a unit area"
+        },
+        {
+          "id": "level",
+          "name": "Level",
+          "description": "Height or depth of fluid, measured from a known reference point"
+        },
+        {
+          "id": "moisture",
+          "name": "Moisture",
+          "description": "Presence or absence of water in contact with the sensor"
+        },
+        {
+          "id": "current",
+          "name": "Current",
+          "description": "Rate of flow of electric charge through a unit area"
+        },
+        {
+          "id": "voltage",
+          "name": "Voltage",
+          "description": "Electrical pressure available to cause a flow of current"
+        },
+        {
+          "id": "position",
+          "name": "Position",
+          "description": "Distance or angular position from a known reference point along a line or circle"
+        },
+        {
+          "id": "ph",
+          "name": "pH",
+          "description": "Measure of the acidity or alkalinity of a solution"
+        },
+        {
+          "id": "orp",
+          "name": "ORP",
+          "description": "Oxidation-reduction potential, a measure of the state of oxidation in a solution"
+        },
+        {
+          "id": "do",
+          "name": "DO",
+          "description": "Dissolved oxygen, the concentration of oxygen in aqueous solution"
+        },
+        {
+          "id": "turbidity",
+          "name": "Turbidity",
+          "description": "Measurement of the scattering or absorption of light in a solution, which is related to the amount of suspended matter"
+        },
+        {
+          "id": "ec",
+          "name": "EC",
+          "description": "Electrical conductivity, a measure of a fluid’s capability to pass an electrical current"
+        },
+        {
+          "id": "free_chlorine",
+          "name": "Free chlorine",
+          "description": "Concentration of free available chlorine that is not combined with ammonia or other compounds"
+        },
+        {
+          "id": "total_chlorine",
+          "name": "Total chlorine",
+          "description": "Total concentration of chlorine present, regardless of the type of chlorine"
+        },
+        {
+          "id": "nitrate",
+          "name": "Nitrate",
+          "description": "Oxidized form of nitrogen (NO3-)"
+        },
+        {
+          "id": "multiparameter",
+          "name": "Multiparameter",
+          "description": "More than one parameter is detected by the sensor"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other parameter not otherwise defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "31301",
+      "name": "Analyzer type",
+      "scope": "type_specific",
+      "assetType": "Analyzer",
+      "assetTypeId": "analyzer",
+      "dataType": "Text",
+      "attributeGroup": "Analyzer info",
+      "description": "Short description of the type or purpose of the analyzer",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "31401",
+      "name": "Structure type",
+      "scope": "type_specific",
+      "assetType": "Structure",
+      "assetTypeId": "structure",
+      "dataType": "Choice",
+      "attributeGroup": "Structure info",
+      "description": null,
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "building",
+          "name": "Building",
+          "description": "Any enclosed structure designed to protect from the elements"
+        },
+        {
+          "id": "perimeter",
+          "name": "Perimeter",
+          "description": "Fence, wall, or other protective structure that encloses a land area"
+        },
+        {
+          "id": "road",
+          "name": "Road",
+          "description": "Linear pathway that has been improved to allow for travel by vehicles and pedestrians"
+        },
+        {
+          "id": "apron",
+          "name": "Apron",
+          "description": "Smooth impermeable surface constructed around a water point to prevent spilt water from pooling or soaking into the ground"
+        },
+        {
+          "id": "utility_vault",
+          "name": "Utility vault",
+          "description": "Underground room or vault providing access and protection to equipment"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any type of structure not otherwise defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "31411",
+      "name": "Perimeter type",
+      "scope": "type_specific",
+      "assetType": "Structure",
+      "assetTypeId": "structure",
+      "dataType": "Choice",
+      "attributeGroup": "Perimeter data",
+      "description": "Type of perimeter design",
+      "applicability": "Structure type: Perimeter",
+      "required": false,
+      "choices": [
+        {
+          "id": "fence",
+          "name": "Fence",
+          "description": "Barrier constructed of vertical posts connected by horizontal sections of sturdy material"
+        },
+        {
+          "id": "wall",
+          "name": "Wall",
+          "description": "Permanent structure with a continuous surface"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any type of perimeter structure not defined elsewhere in this section"
+        }
+      ]
+    },
+    {
+      "code": "31412",
+      "name": "Perimeter total length",
+      "scope": "type_specific",
+      "assetType": "Structure",
+      "assetTypeId": "structure",
+      "dataType": "Unit",
+      "attributeGroup": "Perimeter data",
+      "description": "Total length of the entire perimeter that is being defined as an asset",
+      "applicability": "Structure type: Perimeter",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "31413",
+      "name": "Perimeter height",
+      "scope": "type_specific",
+      "assetType": "Structure",
+      "assetTypeId": "structure",
+      "dataType": "Unit",
+      "attributeGroup": "Perimeter data",
+      "description": "Typical or minimum height of the perimeter",
+      "applicability": "Structure type: Perimeter",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "31414",
+      "name": "Perimeter setback distance",
+      "scope": "type_specific",
+      "assetType": "Structure",
+      "assetTypeId": "structure",
+      "dataType": "Unit",
+      "attributeGroup": "Perimeter data",
+      "description": "Typical or minimum distance from the perimeter from the structure or equipment it is designed to protect",
+      "applicability": "Structure type: Perimeter",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "31501",
+      "name": "Water point type",
+      "scope": "type_specific",
+      "assetType": "Water point",
+      "assetTypeId": "water_point",
+      "dataType": "Choice",
+      "attributeGroup": "Water point info",
+      "description": "Type of technology used to access water",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "piped_connection",
+          "name": "Piped connection",
+          "description": "Piped water supply connected to a dwelling, building, yard, or plot"
+        },
+        {
+          "id": "kiosk",
+          "name": "Kiosk",
+          "description": "Water point from which water is sold in small quantities to nearby households"
+        },
+        {
+          "id": "public_tap",
+          "name": "Public tap",
+          "description": "Public water point from which people can collect water; also known as a standpipe or fountain"
+        },
+        {
+          "id": "dug_well",
+          "name": "Dug well",
+          "description": "Large-diameter structure for accessing groundwater that is usually dug by hand and lined to prevent collapse; sometimes referred to as a shallow well"
+        },
+        {
+          "id": "spring",
+          "name": "Spring",
+          "description": "Concentrated discharge of groundwater at a location on the surface that is usually protected by a spring box to allow water to flow through a pipe or outlet"
+        },
+        {
+          "id": "borehole",
+          "name": "Borehole",
+          "description": "Small-diameter deep hole that has been driven, bored, or drilled in order to reach groundwater"
+        },
+        {
+          "id": "tubewell",
+          "name": "Tubewell",
+          "description": "Small-diameter hole that is usually hand-driven into a shallow groundwater aquifer; the more general category “borehole” should be used except in areas where tubewells are common"
+        },
+        {
+          "id": "rainwater_catchment",
+          "name": "Rainwater catchment",
+          "description": "System that captures and stores rainwater"
+        },
+        {
+          "id": "watering_trough",
+          "name": "Watering trough",
+          "description": "Receptacle that provides drinking water to animals"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of water point not otherwise described in this section"
+        }
+      ]
+    },
+    {
+      "code": "31502",
+      "name": "Agricultural use",
+      "scope": "type_specific",
+      "assetType": "Water point",
+      "assetTypeId": "water_point",
+      "dataType": "Checkbox",
+      "attributeGroup": "Water point info",
+      "description": "Water point provides water that is primarily for agricultural use",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "31503",
+      "name": "Livestock use",
+      "scope": "type_specific",
+      "assetType": "Water point",
+      "assetTypeId": "water_point",
+      "dataType": "Checkbox",
+      "attributeGroup": "Water point info",
+      "description": "Water point provides water that is primarily for use by livestock",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "31504",
+      "name": "Meter installed",
+      "scope": "type_specific",
+      "assetType": "Water point",
+      "assetTypeId": "water_point",
+      "dataType": "Checkbox",
+      "attributeGroup": "Water point info",
+      "description": "Meter is installed at this water point",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "31505",
+      "name": "Number of taps",
+      "scope": "type_specific",
+      "assetType": "Water point",
+      "assetTypeId": "water_point",
+      "dataType": "Number",
+      "attributeGroup": "Water point info",
+      "description": "Total number of taps, such as faucets or spigots, available at a kiosk or public tap",
+      "applicability": "Water point type: Kiosk, Public tap",
+      "required": false
+    },
+    {
+      "code": "31506",
+      "name": "Kiosk tank installed",
+      "scope": "type_specific",
+      "assetType": "Water point",
+      "assetTypeId": "water_point",
+      "dataType": "Checkbox",
+      "attributeGroup": "Water point info",
+      "description": "Presence of a tank at the kiosk for storing water during planned or unplanned outages",
+      "applicability": "Water point type: Kiosk",
+      "required": false
+    },
+    {
+      "code": "31507",
+      "name": "Connection type",
+      "scope": "type_specific",
+      "assetType": "Water point",
+      "assetTypeId": "water_point",
+      "dataType": "Choice",
+      "attributeGroup": "Water point info",
+      "description": "Categorization of piped connections based on the type of user or customer",
+      "applicability": "Water point type: Piped connection",
+      "required": false,
+      "choices": [
+        {
+          "id": "residential",
+          "name": "Residential",
+          "description": "Water provided to households for domestic use in the home and on the premises"
+        },
+        {
+          "id": "commercial",
+          "name": "Commercial",
+          "description": "Water provided to a business for commercial use or resale"
+        },
+        {
+          "id": "industrial",
+          "name": "Industrial",
+          "description": "Water used by industry for fabrication, processing, washing, and cooling"
+        },
+        {
+          "id": "institutional",
+          "name": "Institutional",
+          "description": "Water provided to facilities dedicated to public service, including schools, healthcare facilities, courthouses, markets, and government facilities"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of water connection not otherwise defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "31508",
+      "name": "Connection diameter",
+      "scope": "type_specific",
+      "assetType": "Water point",
+      "assetTypeId": "water_point",
+      "dataType": "Unit",
+      "attributeGroup": "Water point info",
+      "description": "The diameter of pipe used for the customer connection",
+      "applicability": "Water point type: Piped connection",
+      "required": false,
+      "unitQuantity": "Length"
+    },
+    {
+      "code": "39901",
+      "name": "Other vertical asset type",
+      "scope": "type_specific",
+      "assetType": "Other vertical",
+      "assetTypeId": "other_vertical",
+      "dataType": "Text",
+      "attributeGroup": "Other vertical info",
+      "description": "Description or categorization of the other type of vertical asset",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "40101",
+      "name": "Pipe type",
+      "scope": "type_specific",
+      "assetType": "Pipe",
+      "assetTypeId": "pipe",
+      "dataType": "Choice",
+      "attributeGroup": "Pipe info",
+      "description": "Category of water supply pipe type",
+      "applicability": null,
+      "required": false,
+      "choices": [
+        {
+          "id": "transmission_main",
+          "name": "Transmission main",
+          "description": "Used for transporting water from the source of supply or treatment to storage reservoirs or centralized points of distribution"
+        },
+        {
+          "id": "primary_main",
+          "name": "Primary main",
+          "description": "Large main that transports water from storage reservoirs or centralized points of distribution to various points of connection with the distribution grid"
+        },
+        {
+          "id": "secondary_main",
+          "name": "Secondary main",
+          "description": "Smaller feeder main that connects from primary main to distribution mains that provide water to consumers"
+        },
+        {
+          "id": "distribution_main",
+          "name": "Distribution main",
+          "description": "Water main that is located near water users and provides water to consumers either directly or through connections with service lines; sometimes referred to as a tertiary main"
+        },
+        {
+          "id": "service_line",
+          "name": "Service line",
+          "description": "Small diameter pipe that connects directly to water consumers, often through a service valve and meter"
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "description": "Any other type of water main not defined in this section"
+        }
+      ]
+    },
+    {
+      "code": "40102",
+      "name": "Pipe color",
+      "scope": "type_specific",
+      "assetType": "Pipe",
+      "assetTypeId": "pipe",
+      "dataType": "Text",
+      "attributeGroup": "Pipe info",
+      "description": "Color or pattern painted on pipe to designate the type of fluid",
+      "applicability": null,
+      "required": false
+    },
+    {
+      "code": "40103",
+      "name": "Nominal pressure",
+      "scope": "type_specific",
+      "assetType": "Pipe",
+      "assetTypeId": "pipe",
+      "dataType": "Unit",
+      "attributeGroup": "Pipe info",
+      "description": "Numerical designation of design pressure that is a convenient round number for reference purposes",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Pressure"
+    },
+    {
+      "code": "40104",
+      "name": "Pipe depth below ground",
+      "scope": "type_specific",
+      "assetType": "Pipe",
+      "assetTypeId": "pipe",
+      "dataType": "Unit",
+      "attributeGroup": "Pipe info",
+      "description": "Depth of the pipe below the local ground surface",
+      "applicability": null,
+      "required": false,
+      "unitQuantity": "Length"
+    }
+  ],
+  "counts": {
+    "assetClasses": 5,
+    "assetTypes": 29,
+    "attributes": 178,
+    "generalAttributes": 63,
+    "typeSpecificAttributes": 115,
+    "choiceOptions": 269,
+    "unitQuantities": 9
+  }
+}

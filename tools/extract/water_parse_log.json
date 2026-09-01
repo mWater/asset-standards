@@ -1,0 +1,605 @@
+{
+ "groups": [
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Basic info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Location",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Hierarchy",
+   "group_description": "Hierarchy refers to a tiered set of names that help to locate or organize assets; the use of an asset hierarchy is optional and an organization may choose to use fewer levels than the 7 that are available in this standard",
+   "group_condition": ""
+  },
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Status and condition",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Financial",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Technical",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Hydraulic",
+   "group_description": "",
+   "group_condition": "Type: Pump, Tank, Treatment, Meter, Valve, Hydrant, Junction, Sampling point, Water point, Pipe"
+  },
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Points of contact",
+   "group_description": "",
+   "group_condition": "Type: Water system, Water point"
+  },
+  {
+   "table": 4,
+   "asset_type": "(general)",
+   "group_name": "Metadata",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 5,
+   "asset_type": "Water system",
+   "group_name": "Water system info",
+   "group_description": "",
+   "group_condition": "Type: Water system"
+  },
+  {
+   "table": 6,
+   "asset_type": "Water facility",
+   "group_name": "Water facility info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 7,
+   "asset_type": "Source",
+   "group_name": "Source info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 7,
+   "asset_type": "Source",
+   "group_name": "Well data",
+   "group_description": "",
+   "group_condition": "Source type: Borehole, Dug well"
+  },
+  {
+   "table": 7,
+   "asset_type": "Source",
+   "group_name": "Spring data",
+   "group_description": "",
+   "group_condition": "Source type: Spring"
+  },
+  {
+   "table": 7,
+   "asset_type": "Source",
+   "group_name": "Borehole data",
+   "group_description": "",
+   "group_condition": "Source type: Borehole"
+  },
+  {
+   "table": 8,
+   "asset_type": "Pump",
+   "group_name": "Pump info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 8,
+   "asset_type": "Pump",
+   "group_name": "Pump motor data",
+   "group_description": "",
+   "group_condition": "Pump motor configuration: Integrated with pump"
+  },
+  {
+   "table": 8,
+   "asset_type": "Pump",
+   "group_name": "Pump curve",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 9,
+   "asset_type": "Tank",
+   "group_name": "Tank info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 9,
+   "asset_type": "Tank",
+   "group_name": "Tank dimensions",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 9,
+   "asset_type": "Tank",
+   "group_name": "Tank details",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 10,
+   "asset_type": "Power",
+   "group_name": "Power info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 10,
+   "asset_type": "Power",
+   "group_name": "Generator data",
+   "group_description": "",
+   "group_condition": "Power type: Generator"
+  },
+  {
+   "table": 10,
+   "asset_type": "Power",
+   "group_name": "Solar power data",
+   "group_description": "",
+   "group_condition": "Power type: Solar"
+  },
+  {
+   "table": 11,
+   "asset_type": "Treatment",
+   "group_name": "Treatment info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 11,
+   "asset_type": "Treatment",
+   "group_name": "Chlorination data",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 12,
+   "asset_type": "Meter",
+   "group_name": "Meter info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 13,
+   "asset_type": "Electrical",
+   "group_name": "Electrical info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 14,
+   "asset_type": "Valve",
+   "group_name": "Valve info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 15,
+   "asset_type": "Hydrant",
+   "group_name": "Hydrant info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 16,
+   "asset_type": "Junction",
+   "group_name": "Junction info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 17,
+   "asset_type": "Sampling point",
+   "group_name": "Sampling point info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 18,
+   "asset_type": "Sensor",
+   "group_name": "Sensor info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 19,
+   "asset_type": "Analyzer",
+   "group_name": "Analyzer info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 20,
+   "asset_type": "Structure",
+   "group_name": "Structure info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 20,
+   "asset_type": "Structure",
+   "group_name": "Perimeter data",
+   "group_description": "",
+   "group_condition": "Structure type: Perimeter"
+  },
+  {
+   "table": 21,
+   "asset_type": "Water point",
+   "group_name": "Water point info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 22,
+   "asset_type": "Other vertical",
+   "group_name": "Other vertical info",
+   "group_description": "",
+   "group_condition": ""
+  },
+  {
+   "table": 23,
+   "asset_type": "Pipe",
+   "group_name": "Pipe info",
+   "group_description": "",
+   "group_condition": ""
+  }
+ ],
+ "inherited": [
+  [
+   "00091",
+   "Upstream asset",
+   "Hydraulic",
+   "Type: Pump, Tank, Treatment, Meter, Valve, Hydrant, Junction, Sampling point, Water point, Pipe"
+  ],
+  [
+   "00171",
+   "Primary contact name",
+   "Points of contact",
+   "Type: Water system, Water point"
+  ],
+  [
+   "00172",
+   "Primary contact position",
+   "Points of contact",
+   "Type: Water system, Water point"
+  ],
+  [
+   "00173",
+   "Primary contact phone number",
+   "Points of contact",
+   "Type: Water system, Water point"
+  ],
+  [
+   "00174",
+   "Secondary contact name",
+   "Points of contact",
+   "Type: Water system, Water point"
+  ],
+  [
+   "00175",
+   "Secondary contact position",
+   "Points of contact",
+   "Type: Water system, Water point"
+  ],
+  [
+   "00176",
+   "Secondary contact phone number",
+   "Points of contact",
+   "Type: Water system, Water point"
+  ],
+  [
+   "10201",
+   "Water system type",
+   "Water system info",
+   "Type: Water system"
+  ],
+  [
+   "10203",
+   "Management type",
+   "Water system info",
+   "Type: Water system"
+  ],
+  [
+   "10204",
+   "Number of households in service area",
+   "Water system info",
+   "Type: Water system"
+  ],
+  [
+   "10205",
+   "Number of households currently served",
+   "Water system info",
+   "Type: Water system"
+  ],
+  [
+   "10206",
+   "System or network diagram",
+   "Water system info",
+   "Type: Water system"
+  ],
+  [
+   "10207",
+   "Total production of system",
+   "Water system info",
+   "Type: Water system"
+  ],
+  [
+   "30121",
+   "Well depth",
+   "Well data",
+   "Source type: Borehole, Dug well"
+  ],
+  [
+   "30122",
+   "Well diameter",
+   "Well data",
+   "Source type: Borehole, Dug well"
+  ],
+  [
+   "30123",
+   "Static water level",
+   "Well data",
+   "Source type: Borehole, Dug well"
+  ],
+  [
+   "30124",
+   "Dynamic water level",
+   "Well data",
+   "Source type: Borehole, Dug well"
+  ],
+  [
+   "30125",
+   "Groundwater temperature",
+   "Well data",
+   "Source type: Borehole, Dug well"
+  ],
+  [
+   "30126",
+   "Pump or lifting device",
+   "Well data",
+   "Source type: Borehole, Dug well"
+  ],
+  [
+   "30127",
+   "Apron installed",
+   "Well data",
+   "Source type: Borehole, Dug well"
+  ],
+  [
+   "30128",
+   "Monitoring well",
+   "Well data",
+   "Source type: Borehole, Dug well"
+  ],
+  [
+   "30141",
+   "Spring box present",
+   "Spring data",
+   "Source type: Spring"
+  ],
+  [
+   "30145",
+   "Overflow pipe present",
+   "Spring data",
+   "Source type: Spring"
+  ],
+  [
+   "30146",
+   "Drain pipe present",
+   "Spring data",
+   "Source type: Spring"
+  ],
+  [
+   "30151",
+   "Casing diameter",
+   "Borehole data",
+   "Source type: Borehole"
+  ],
+  [
+   "30152",
+   "Depth of casing",
+   "Borehole data",
+   "Source type: Borehole"
+  ],
+  [
+   "30153",
+   "Casing material",
+   "Borehole data",
+   "Source type: Borehole"
+  ],
+  [
+   "30154",
+   "Screen length",
+   "Borehole data",
+   "Source type: Borehole"
+  ],
+  [
+   "30156",
+   "Photo of well log",
+   "Borehole data",
+   "Source type: Borehole"
+  ],
+  [
+   "30205",
+   "Pump motor voltage type",
+   "Pump motor data",
+   "Pump motor configuration: Integrated with pump"
+  ],
+  [
+   "30206",
+   "Pump motor voltage",
+   "Pump motor data",
+   "Pump motor configuration: Integrated with pump"
+  ],
+  [
+   "30207",
+   "Pump motor max current",
+   "Pump motor data",
+   "Pump motor configuration: Integrated with pump"
+  ],
+  [
+   "30208",
+   "Pump motor max power",
+   "Pump motor data",
+   "Pump motor configuration: Integrated with pump"
+  ],
+  [
+   "30421",
+   "Generator fuel",
+   "Generator data",
+   "Power type: Generator"
+  ],
+  [
+   "30423",
+   "Engine cooling system",
+   "Generator data",
+   "Power type: Generator"
+  ],
+  [
+   "30424",
+   "PV panel type",
+   "Solar power data",
+   "Power type: Solar"
+  ],
+  [
+   "30425",
+   "Total number of PV panels",
+   "Solar power data",
+   "Power type: Solar"
+  ],
+  [
+   "31411",
+   "Perimeter type",
+   "Perimeter data",
+   "Structure type: Perimeter"
+  ],
+  [
+   "31412",
+   "Perimeter total length",
+   "Perimeter data",
+   "Structure type: Perimeter"
+  ],
+  [
+   "31413",
+   "Perimeter height",
+   "Perimeter data",
+   "Structure type: Perimeter"
+  ],
+  [
+   "31414",
+   "Perimeter setback distance",
+   "Perimeter data",
+   "Structure type: Perimeter"
+  ]
+ ],
+ "log": [
+  "TABLE 4 row 56: choice 'Very low' under 00053 has an empty description",
+  "TABLE 4 row 57: choice 'Low' under 00053 has an empty description",
+  "TABLE 4 row 58: choice 'Moderate' under 00053 has an empty description",
+  "TABLE 4 row 59: choice 'High' under 00053 has an empty description",
+  "TABLE 4 row 60: choice 'Very high' under 00053 has an empty description",
+  "TABLE 4 row 62: choice 'Very low' under 00054 has an empty description",
+  "TABLE 4 row 63: choice 'Low' under 00054 has an empty description",
+  "TABLE 4 row 64: choice 'Moderate' under 00054 has an empty description",
+  "TABLE 4 row 65: choice 'High' under 00054 has an empty description",
+  "TABLE 4 row 66: choice 'Very high' under 00054 has an empty description",
+  "TABLE 4 row 68: choice 'Very low' under 00055 has an empty description",
+  "TABLE 4 row 69: choice 'Low' under 00055 has an empty description",
+  "TABLE 4 row 70: choice 'Moderate' under 00055 has an empty description",
+  "TABLE 4 row 71: choice 'High' under 00055 has an empty description",
+  "TABLE 4 row 72: choice 'Very high' under 00055 has an empty description",
+  "TABLE 6 row 3: choice 'Intake' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 6 row 4: choice 'Well field' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 6 row 5: choice 'Pumping station' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 6 row 6: choice 'Distribution system' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 6 row 7: choice 'Pipeline' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 6 row 8: choice 'Storage facility' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 6 row 9: choice 'Treatment plant' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 6 row 10: choice 'Process area' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 6 row 11: choice 'Other' under 20101 is NOT italicised (formatting inconsistency)",
+  "TABLE 7 row 22 code 30125: unit quantity 'Temp- erature' de-hyphenated to 'Temperature' (line-break artifact)",
+  "TABLE 10 row 28: choice 'Air' under 30423 is NOT italicised (formatting inconsistency)",
+  "TABLE 10 row 29: choice 'Liquid' under 30423 is NOT italicised (formatting inconsistency)"
+ ],
+ "dup": [],
+ "dup_detail": {},
+ "classes": [
+  {
+   "asset_class": "System",
+   "description": "Collection of assets that are managed in a similar manner to provide a service.",
+   "geometry": "Point or polygon"
+  },
+  {
+   "asset_class": "Facility",
+   "description": "Physical location where specific functions are performed.",
+   "geometry": "Point or polygon"
+  },
+  {
+   "asset_class": "Vertical",
+   "description": "Asset within a building or facility, or free-standing, often composed of multiple components; also known as an above ground asset (AWWA 2018).",
+   "geometry": "Point"
+  },
+  {
+   "asset_class": "Horizontal",
+   "description": "Asset which may be configured or networked for the purpose of moving materials or services from one place to another, such as pipes or conduits (AWWA 2018); also known as below ground assets, but may exist above or below ground.",
+   "geometry": "Line"
+  },
+  {
+   "asset_class": "Natural",
+   "description": "Strategically planned and managed natural lands, such as forests and wetlands, working landscapes, and other open places that provide associated benefits to human populations (Benedict and McMahon, 2006); also known as natural infrastructure.",
+   "geometry": "Line or Polygon"
+  }
+ ],
+ "dtypes": [
+  "Asset ID",
+  "Checkbox",
+  "Choice",
+  "Date",
+  "Geometry",
+  "Image",
+  "Number",
+  "Text",
+  "Unit"
+ ],
+ "uqs": [
+  "Current",
+  "Flow rate",
+  "Length",
+  "Power",
+  "Pressure",
+  "Temperature",
+  "Time",
+  "Voltage",
+  "Volume"
+ ]
+}

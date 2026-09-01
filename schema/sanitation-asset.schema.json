@@ -1,0 +1,7181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/mWater/asset-standards/main/schema/sanitation-asset.schema.json",
+  "title": "Sanitation asset record",
+  "description": "One asset conforming to the mWater Global Sanitation Asset Standard v1.0. Keys are the standard's five-digit attribute codes. Licensed CC BY-SA 4.0 by mWater Foundation, Inc.",
+  "type": "object",
+  "required": [
+    "00001"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "00001": {
+      "title": "Type",
+      "description": "Type of asset",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "sanitation_system",
+            "subsystem",
+            "facility",
+            "sanitation_point",
+            "connection",
+            "containment",
+            "vehicle",
+            "manhole",
+            "junction",
+            "valve",
+            "flow_control",
+            "structure",
+            "power",
+            "electrical",
+            "meter",
+            "sampling_point",
+            "sensor",
+            "analyzer",
+            "datalogger",
+            "pump",
+            "tank",
+            "treatment",
+            "dispersal",
+            "outfall",
+            "other_vertical",
+            "pipe",
+            "channel"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00002": {
+      "title": "Name",
+      "description": "Name used by technical staff to refer to the asset; might be left blank for many lower level assets",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00003": {
+      "title": "Unique ID",
+      "description": "Unique number automatically assigned when creating an asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00004": {
+      "title": "Description",
+      "description": "Additional information to help staff locate or identify an asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00005": {
+      "title": "Photo",
+      "description": "Photos of the asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00006": {
+      "title": "Parent asset",
+      "description": "Asset ID of the asset that is a parent to this asset",
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "Reference to the Asset ID of another asset."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00011": {
+      "title": "Location",
+      "description": "Geographic location of the asset on the surface of the Earth; may be a point, line, or polygon",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/geometry"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00012": {
+      "title": "Location precision",
+      "description": "Estimated uncertainty in the geographic coordinates, expressed as a distance",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00013": {
+      "title": "Survey elevation",
+      "description": "Height above a reference surface, as measured by surveying or high-precision GNSS equipment; used for hydraulic modeling and engineering design. This value is distinct from the altitude captured automatically with GPS coordinates. For chambered assets such as manholes, the surveyed point is the center of the cover",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00024": {
+      "title": "Survey elevation datum",
+      "description": "Vertical reference system used for Survey elevation and Invert level values",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "ellipsoid_wgs84",
+            "mean_sea_level",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00014": {
+      "title": "Elevation precision",
+      "description": "Estimated uncertainty in the measurement of the elevation",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00015": {
+      "title": "Administrative region",
+      "description": "Name that describes the administrative geography of the location; multiple levels may be separated by commas starting with the most general area, for example: Region, District, Municipality",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00016": {
+      "title": "Coverage area",
+      "description": "Geographical area where the sanitation system or service provides coverage or is legally obligated to serve",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/geometry"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system, Facility"
+    },
+    "00017": {
+      "title": "Sector",
+      "description": "Name for a sub-region of the coverage area that is defined by geography or the physical layout of the collection network",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00018": {
+      "title": "Route",
+      "description": "Name or number of the service route, such as a scheduled emptying (desludging) route, which defines the assets assigned to a particular staff member or team",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation point, Containment, Connection"
+    },
+    "00019": {
+      "title": "Address",
+      "description": "Physical address or postal address where the asset is located; in the case of sewer or property connections, the address of the customer",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00020": {
+      "title": "Urban-rural classification",
+      "description": "Degree of urbanization, as defined by national standards or the Degree of Urbanisation method (OECD 2021)",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "urban",
+            "peri_urban",
+            "rural"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system, Sanitation point"
+    },
+    "00021": {
+      "title": "Community",
+      "description": "Name of the community, town, or neighborhood where a sanitation system or facility is located",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system, Facility"
+    },
+    "00022": {
+      "title": "Accessible by road",
+      "description": "Asset can be accessed by vehicles using a nearby road",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00023": {
+      "title": "Perimeter fence or wall installed",
+      "description": "Fence or wall exists to provide physical security for the asset",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00025": {
+      "title": "Wheelchair accessible",
+      "description": "Asset can be accessed and used by people using wheelchairs or with limited mobility",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Facility, Sanitation point, Structure"
+    },
+    "00026": {
+      "title": "Distance to nearest water source",
+      "description": "Distance from the containment or dispersal structure to the nearest well, borehole, spring, or other groundwater source used for drinking water",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Containment, Dispersal"
+    },
+    "00027": {
+      "title": "Land occupancy",
+      "description": "Legal status of the land the asset occupies or crosses",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "public_or_utility_land",
+            "private_land_with_agreement",
+            "private_land_without_agreement",
+            "unknown"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: All types except: Sanitation system, subsystem"
+    },
+    "00031": {
+      "title": "Level 1",
+      "description": "Highest or most general level of categorization to which the asset belongs under the asset hierarchy",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00032": {
+      "title": "Level 2",
+      "description": "Second highest level of hierarchy",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00033": {
+      "title": "Level 3",
+      "description": "Third highest level of hierarchy",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00034": {
+      "title": "Level 4",
+      "description": "Fourth highest level of hierarchy",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00035": {
+      "title": "Level 5",
+      "description": "Fifth highest level of hierarchy",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00036": {
+      "title": "Level 6",
+      "description": "Sixth highest level of hierarchy",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00037": {
+      "title": "Level 7",
+      "description": "Lowest level of hierarchy",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00041": {
+      "title": "Status",
+      "description": "How the asset is currently being used or operated",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "active",
+            "backup",
+            "not_functional",
+            "under_construction",
+            "decommissioned",
+            "disposed"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type is not Sanitation point"
+    },
+    "00042": {
+      "title": "Condition",
+      "description": "The physical or structural integrity of the asset",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "excellent",
+            "good",
+            "fair",
+            "poor",
+            "very_poor"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00043": {
+      "title": "Functional status",
+      "description": "Most recent observation of whether a sanitation system or sanitation point is working as designed",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "functional",
+            "partially_functional",
+            "not_functional",
+            "decommissioned"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system, Sanitation point"
+    },
+    "00051": {
+      "title": "Current replacement cost (USD)",
+      "description": "Cost (in US Dollars) that would be incurred to replace the asset at the current time; this value requires regular updating based on depreciation and current market conditions; also known as CRC",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00052": {
+      "title": "Expected useful life",
+      "description": "Number of years that the asset is estimated to function after installation if it is well maintained; also known as EUL",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00053": {
+      "title": "Probability of failure",
+      "description": "Measure of the likelihood of a failure happening at any point in time, based on an analysis of the potential failure modes of the asset",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "very_low",
+            "low",
+            "moderate",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00054": {
+      "title": "Consequence of failure",
+      "description": "Measure of the direct and indirect costs of asset failure, which may include financial, environmental, and societal costs",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "very_low",
+            "low",
+            "moderate",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00055": {
+      "title": "Asset risk",
+      "description": "Business or organizational risk of asset failure, usually calculated from the probability and consequence of failure",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "very_low",
+            "low",
+            "moderate",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00056": {
+      "title": "Original cost (USD)",
+      "description": "Total price paid (in US Dollars) to initially acquire an asset",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00057": {
+      "title": "Current rehabilitation cost (USD)",
+      "description": "Cost (in US Dollars) that would be incurred to rehabilitate the asset at the current time",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00061": {
+      "title": "Manufacturer",
+      "description": "Name of the business that produced or sold the asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pump, Tank, Power, Meter, Electrical, Valve, Sensor, Analyzer, Vehicle, Connection, Datalogger, Treatment, Containment, Manhole"
+    },
+    "00062": {
+      "title": "Model",
+      "description": "Manufacturer's designation for the particular model of the asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pump, Tank, Power, Meter, Electrical, Valve, Sensor, Analyzer, Vehicle, Connection, Datalogger, Treatment, Containment, Manhole"
+    },
+    "00063": {
+      "title": "Serial number",
+      "description": "Unique identifying number or code assigned to a particular asset by the manufacturer or vendor, usually stamped or printed on the asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pump, Tank, Power, Meter, Electrical, Valve, Sensor, Analyzer, Vehicle, Connection, Datalogger, Treatment, Containment, Manhole"
+    },
+    "00064": {
+      "title": "Additional technical details",
+      "description": "Any other technical information about the asset that is not captured by the attributes of this standard",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00065": {
+      "title": "Installation date",
+      "description": "Calendar date when the asset was installed or purchased, which begins the period of useful life",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00066": {
+      "title": "Installed by",
+      "description": "Name of the company or organization that originally installed or purchased the asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00067": {
+      "title": "Funded by",
+      "description": "Name of the funding authority, lender, or donor who funded the purchase of the system or facility",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system, Facility"
+    },
+    "00068": {
+      "title": "Rehabilitation date",
+      "description": "Date of most recent work done to restore the asset to its original level of service and extend its life",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00069": {
+      "title": "Last service date",
+      "description": "Date of most recent service or maintenance performed; for containment assets, the date of most recent emptying",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00075": {
+      "title": "Last calibration date",
+      "description": "Calendar date when the device was last calibrated against a known reference or standard solution",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Meter, Analyzer, Sensor, Datalogger"
+    },
+    "00070": {
+      "title": "Rehabilitated by",
+      "description": "Name of the company or organization that performed the most recent rehabilitation of the asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00071": {
+      "title": "Service interval",
+      "description": "Recommended interval at which service or routine maintenance should be performed on the asset, such as the scheduled emptying frequency of a containment asset or the calibration of a measuring device",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "d",
+                    "mo",
+                    "yr"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Time."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: All types except: Sanitation system, Subsystem, Facility, Connection"
+    },
+    "00072": {
+      "title": "Date of manufacture",
+      "description": "Calendar date when the asset was manufactured",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pump, Tank, Power, Meter, Electrical, Valve, Sensor, Analyzer, Vehicle, Connection, Datalogger"
+    },
+    "00073": {
+      "title": "Decommissioning date",
+      "description": "Calendar date when the asset was permanently taken out of service",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00074": {
+      "title": "Owner",
+      "description": "Name of the individual, organization, or authority that holds legal ownership of the asset, which may differ from the organization that operates or manages it",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00076": {
+      "title": "Operator",
+      "description": "Name of the individual, organization, or authority that operates or maintains the asset, if different from the owner; assets without an operator recorded are assumed to be operated by their parent system's operator",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system, Facility, Sanitation point, Vehicle"
+    },
+    "00091": {
+      "title": "Upstream asset",
+      "description": "Asset ID of the upstream asset from which this asset receives flow",
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "Reference to the Asset ID of another asset."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pump, Tank, Treatment, Meter, Valve, Flow control, Junction, Sampling point, Sanitation point, Containment, Manhole, Dispersal, Outfall, Pipe, Channel, Connection"
+    },
+    "00097": {
+      "title": "Downstream asset",
+      "description": "Asset ID of the downstream asset that receives flow from this asset",
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "Reference to the Asset ID of another asset."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pump, Tank, Treatment, Meter, Valve, Flow control, Junction, Sampling point, Sanitation point, Containment, Manhole, Dispersal, Outfall, Pipe, Channel, Connection"
+    },
+    "00092": {
+      "title": "Nominal diameter",
+      "description": "An approximate measurement of the internal diameter of a pipe, conduit, pump, or junction, which is used to classify according to standard sizes",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Meter, Valve, Junction, Pipe, Connection"
+    },
+    "00093": {
+      "title": "Pipe length",
+      "description": "Total length of the pipe itself, measured along its slope from the start to the end of the pipe and excluding manhole chambers, for use in hydraulic calculations and modeling",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pipe"
+    },
+    "00094": {
+      "title": "Material",
+      "description": "Material of construction for pipes, junctions, chambers, and other conduits",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "cast_iron",
+            "ductile_iron",
+            "steel",
+            "stainless_steel",
+            "galvanized_steel",
+            "vitrified_clay",
+            "concrete",
+            "masonry",
+            "asbestos_cement",
+            "fiberglass_grp",
+            "pvc",
+            "hdpe",
+            "plastic",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Meter, Valve, Junction, Pipe, Manhole, Containment, Channel"
+    },
+    "00095": {
+      "title": "Minor loss coefficient",
+      "description": "Dimensionless coefficient that can be used to account for the head loss associated with turbulence in bends, junctions, meters, and valves; usually applicable to pressurized (rising) mains",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Junction, Valve, Meter"
+    },
+    "00096": {
+      "title": "Roughness coefficient",
+      "description": "Dimensionless coefficient used to account for friction losses in flowing conduits, such as Manning's n for gravity sewers and open channels or Hazen-Williams C for pressurized mains",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pipe, Channel"
+    },
+    "00098": {
+      "title": "Conveyed content",
+      "description": "Primary type of flow or material conveyed or handled by the asset",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "wastewater",
+            "blackwater",
+            "greywater",
+            "treated_effluent",
+            "sludge_or_septage",
+            "combined_sewage_and_stormwater",
+            "stormwater",
+            "biogas",
+            "air",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Pump, Tank, Valve, Flow control, Meter, Junction, Sampling point, Manhole, Outfall, Pipe, Channel"
+    },
+    "00099": {
+      "title": "Invert level",
+      "description": "Elevation of the lowest point of the internal surface of a channel or chamber, recorded against the same datum as Survey elevation",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Manhole, Flow control, Outfall"
+    },
+    "00171": {
+      "title": "Primary contact name",
+      "description": "Individual or office responsible for management or administration of the sanitation system or sanitation point",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system,Subsystem, Facility, Sanitation point"
+    },
+    "00172": {
+      "title": "Primary contact position",
+      "description": "Title or role in the organization of the primary contact",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system,Subsystem, Facility, Sanitation point"
+    },
+    "00173": {
+      "title": "Primary contact phone number",
+      "description": "Phone number of the primary contact",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system,Subsystem, Facility, Sanitation point"
+    },
+    "00174": {
+      "title": "Secondary contact name",
+      "description": "Additional individual who may be contacted if the primary contact is not available",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system,Subsystem, Facility, Sanitation point"
+    },
+    "00175": {
+      "title": "Secondary contact position",
+      "description": "Title or role of the secondary contact",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system,Subsystem, Facility, Sanitation point"
+    },
+    "00176": {
+      "title": "Secondary contact phone number",
+      "description": "Phone number of the secondary contact",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system,Subsystem, Facility, Sanitation point"
+    },
+    "00181": {
+      "title": "Date updated",
+      "description": "Calendar date of the most recent update made to any attribute",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00182": {
+      "title": "Date inspected",
+      "description": "Calendar date of the most recent inspection or audit of the asset, as defined by organizational asset management policies",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00183": {
+      "title": "Alternate ID",
+      "description": "Optional additional identification code or number that is used by other data systems or organizations to track the asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00184": {
+      "title": "Import code",
+      "description": "Identification code for an asset that was assigned by an external database or asset management registry, used to maintain backwards traceability for assets that have been imported",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "00185": {
+      "title": "Permit or licence number",
+      "description": "Identification number of the primary permit, licence, or registration issued for the asset by a regulator or government authority",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Type: Sanitation system, Facility, Sanitation point, Vehicle, Outfall"
+    },
+    "10201": {
+      "title": "Sanitation system type",
+      "description": "Categorization of the system by how excreta and wastewater are contained and conveyed: through a sewer network, in on-site containment, or both",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "sewered",
+            "non_sewered_on_site",
+            "mixed"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "10202": {
+      "title": "Sewer network type",
+      "description": "Categorization of the collecting network by what it is designed to carry: wastewater only in separate sewers, wastewater and stormwater together in combined sewers, or both",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "separate",
+            "combined",
+            "both_separate_and_combined"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Sanitation system type: Sewered, Mixed"
+    },
+    "10203": {
+      "title": "Management type",
+      "description": "Type of organization that manages the operations, maintenance, and finances of the sanitation system",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "utility",
+            "local_government",
+            "community_based_organization",
+            "sanitation_authority",
+            "private",
+            "other",
+            "no_management"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "10204": {
+      "title": "Number of households in service area",
+      "description": "Total number of households within the area that a service provider is legally mandated to offer services to",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "10205": {
+      "title": "Number of households currently served",
+      "description": "Number of households currently receiving service, whether through a functional sewer connection or through regular servicing of on-site containment (includes households with inactive, intermittent, or cut off service, if service could be re-established)",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "10206": {
+      "title": "System or network diagram",
+      "description": "Photograph of a recent map or diagram showing the location of sanitation infrastructure, such as the collection network and treatment assets",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "10207": {
+      "title": "Total treatment capacity",
+      "description": "Indicative amount of wastewater and faecal sludge that the system's treatment assets are able to receive and treat, within current resource and design constraints",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³/s",
+                    "m³/d",
+                    "m³/hr",
+                    "L/s",
+                    "L/min",
+                    "L/d",
+                    "ML/d",
+                    "gal/min (gpm)",
+                    "gal/d",
+                    "Mgal/d (mgd)"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Flow rate."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "10208": {
+      "title": "Sewer technology",
+      "description": "Predominant sewer technology used in the collecting network",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "conventional_gravity",
+            "simplified_or_condominial",
+            "settled_small_bore",
+            "pressure",
+            "vacuum",
+            "mixed"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Sanitation system type: Sewered, Mixed"
+    },
+    "10209": {
+      "title": "Design capacity (population equivalent)",
+      "description": "Design capacity of the system expressed in population equivalent (p.e.), a standardized load unit where 1 p.e. is an organic biodegradable load with a five-day biochemical oxygen demand (BOD₅) of 60 g of oxygen per day, independent of actual local per-capita loads (Directive (EU) 2024/3019, Art. 2(10))",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "20101": {
+      "title": "Facility type",
+      "description": "Type of physical location where a specific function is performed in the collection, transport, treatment, or disposal/reuse of wastewater and faecal sludge",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "wastewater_treatment_plant",
+            "faecal_sludge_treatment_plant",
+            "pumping_or_lift_station",
+            "transfer_station",
+            "storage_facility",
+            "process_area",
+            "retention_or_detention_facility",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "20102": {
+      "title": "Process area type",
+      "description": "Optional label used to categorize process areas within a facility",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Facility type: Process area"
+    },
+    "20103": {
+      "title": "Equipped to receive faecal sludge",
+      "description": "The treatment facility is equipped to receive faecal sludge or septage delivered by vehicle, in addition to sewered flow, such as through a discharge structure or receiving station",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Facility type: Wastewater treatment plant"
+    },
+    "31501": {
+      "title": "Sanitation point type",
+      "description": "Type of technology used by the sanitation point to collect user excreta across sewered and non-sewered systems",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "flush_pour_flush_toilet",
+            "pit_latrine_with_slab",
+            "pit_latrine_without_slab_or_open_pit",
+            "ventilated_improved_pit_vip_latrine",
+            "composting_toilet",
+            "container_based_toilet",
+            "bucket",
+            "hanging_toilet_or_latrine",
+            "urinal",
+            "urine_diverting_toilet",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31505": {
+      "title": "Number of cubicles or stances",
+      "description": "Total number of individual cubicles, stances, or seats available at the sanitation point",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31507": {
+      "title": "Usage arrangement",
+      "description": "Categorization of the sanitation point by who uses it and how access is arranged",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "household_private",
+            "shared_limited_number_of_households",
+            "communal_or_public",
+            "institutional",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31509": {
+      "title": "Separate facilities for women and girls",
+      "description": "Sanitation point provides separate, private cubicles or blocks designated for use by women and girls",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Usage arrangement: Shared (limited number of households), Communal or public, Institutional"
+    },
+    "31510": {
+      "title": "Pan style",
+      "description": "Style of toilet pan or seat installed",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "squat",
+            "seated",
+            "mixed"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32201": {
+      "title": "Connection type",
+      "description": "Categorization of the connection based on the type of user or customer premises served",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "residential",
+            "commercial",
+            "industrial",
+            "institutional",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32202": {
+      "title": "Customer ID",
+      "description": "Identification code used by the billing or commercial system for the customer or property served by this connection",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32203": {
+      "title": "Connection status",
+      "description": "Current service status of the connection",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "active",
+            "inactive",
+            "disconnected",
+            "closed"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32204": {
+      "title": "Interceptor tank installed",
+      "description": "An interceptor tank, such as a septic tank, is installed upstream of this connection to retain settleable solids before discharge to the network (settled or solids-free sewerage)",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32205": {
+      "title": "Backflow prevention installed",
+      "description": "A non-return valve or other backflow-prevention device is installed on the connection to prevent sewer surcharge from flowing back into the property",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31601": {
+      "title": "Containment type",
+      "description": "Type of technology used to collect, store, and partially treat excreta and wastewater at or near the point of generation",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "septic_tank",
+            "holding_tank",
+            "pit",
+            "twin_pits_or_alternating_pits",
+            "composting_chamber_or_dehydration_vault",
+            "container_based_sanitation",
+            "biodigester",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31602": {
+      "title": "Number of compartments",
+      "description": "Number of separate chambers within the containment structure",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31603": {
+      "title": "Storage volume",
+      "description": "Effective storage or holding capacity of the containment structure",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³",
+                    "L",
+                    "ft³",
+                    "gal",
+                    "Mm³",
+                    "Mgal",
+                    "acre-ft"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Volume."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31609": {
+      "title": "Containment depth",
+      "description": "Vertical distance from the ground surface, slab, or access opening to the bottom of the containment structure; for pits, the excavated depth",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31604": {
+      "title": "Lined or sealed",
+      "description": "Degree to which the containment structure prevents infiltration of its contents into the surrounding soil",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "lined_and_sealed_watertight",
+            "lined_impermeable_walls_open_bottom",
+            "lined_semi_permeable_walls_open_bottom",
+            "unlined",
+            "unknown"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31605": {
+      "title": "Outlet arrangement",
+      "description": "Categorization of where liquid effluent or overflow from the containment structure discharges",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "sealed_no_outlet",
+            "to_soak_pit_or_leach_field",
+            "to_sewer_or_open_drain",
+            "to_open_ground_or_water_body",
+            "unknown",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31606": {
+      "title": "Emptying access",
+      "description": "Extent to which the containment structure can be physically accessed for emptying (desludging)",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "accessible_by_vacuum_truck_or_mechanized_equipment",
+            "accessible_by_manual_equipment_only",
+            "not_accessible_for_emptying",
+            "unknown"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31607": {
+      "title": "Number of users sharing",
+      "description": "Number of individual users that share use of this containment structure",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31701": {
+      "title": "Vehicle type",
+      "description": "Categorization of the mobile asset used to empty, transport, or transfer faecal sludge, septage, or wastewater, or to maintain the collection network",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "vacuum_tanker",
+            "vacuum_trailer_tractor_towed",
+            "flatbed_sludge_truck",
+            "motorized_cart_or_small_vehicle",
+            "manual_cart",
+            "sewer_jetter_trailer_or_truck_mounted",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31702": {
+      "title": "Registration number",
+      "description": "Official license plate or registration number issued to the vehicle by a government authority",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31703": {
+      "title": "Tank or load capacity",
+      "description": "Maximum volume of faecal sludge, septage, or wastewater that the vehicle's tank or load bed can hold",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³",
+                    "L",
+                    "ft³",
+                    "gal",
+                    "Mm³",
+                    "Mgal",
+                    "acre-ft"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Volume."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31704": {
+      "title": "Vacuum pump fitted",
+      "description": "Whether the vehicle is equipped with a vacuum pump used to suction faecal sludge, septage, or wastewater from a containment system",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31801": {
+      "title": "Manhole type",
+      "description": "Categorization of the manhole by its access function",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "standard_manhole",
+            "inspection_chamber",
+            "cleanout",
+            "drop_manhole",
+            "junction_chamber",
+            "catch_basin_or_inlet_combined_systems",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31802": {
+      "title": "Chamber depth",
+      "description": "Vertical distance from the manhole cover to the invert or floor of the chamber",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31803": {
+      "title": "Cover shape",
+      "description": "Shape of the manhole cover and frame",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "round",
+            "rectangular",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31804": {
+      "title": "Cover diameter",
+      "description": "Nominal diameter of a round manhole cover",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Cover shape: Round"
+    },
+    "31807": {
+      "title": "Cover length",
+      "description": "Length of a rectangular manhole cover, measured along its longer side",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Cover shape: Rectangular"
+    },
+    "31808": {
+      "title": "Cover width",
+      "description": "Width of a rectangular manhole cover, measured along its shorter side",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Cover shape: Rectangular"
+    },
+    "31805": {
+      "title": "Cover load class",
+      "description": "Load-bearing classification of the manhole cover per EN 124",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "a15",
+            "b125",
+            "c250",
+            "d400",
+            "e600",
+            "f900",
+            "unknown"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31806": {
+      "title": "Access aid type",
+      "description": "Type of fixed steps, ladder, or rungs installed inside the chamber for entry",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "none",
+            "steps",
+            "ladder",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31001": {
+      "title": "Junction type",
+      "description": "Type of fitting used where two or more pipes or conduits connect",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "wye",
+            "tee",
+            "bend",
+            "reducer",
+            "saddle",
+            "coupling_or_sleeve",
+            "cap_or_plug",
+            "riser",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30801": {
+      "title": "Valve type",
+      "description": "Purpose or design of a valve used to close off or regulate the flow of wastewater, sludge, or air in a pipe or closed conduit",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "gate",
+            "knife_gate",
+            "plug",
+            "check_non_return_flap",
+            "air_release_vacuum",
+            "backflow_preventer",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30802": {
+      "title": "Date of last actuation",
+      "description": "Most recent date that the valve was actuated to prevent degradation and verify functionality",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32101": {
+      "title": "Flow control element type",
+      "description": "Physical form of the flow control element, independent of the function it serves (32102)",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "side_weir",
+            "transverse_weir",
+            "leaping_weir",
+            "movable_weir",
+            "gate_or_penstock",
+            "stop_logs",
+            "orifice_or_fixed_throttle",
+            "vortex_flow_regulator",
+            "flow_splitter",
+            "overflow_pipe",
+            "flume",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32102": {
+      "title": "Flow control function",
+      "description": "Primary hydraulic function the flow control element serves in the system, independent of its physical form (32101)",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "combined_sewer_overflow",
+            "storage_or_basin_overflow",
+            "process_or_clarifier_overflow",
+            "emergency_overflow",
+            "flow_splitting",
+            "level_control",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31401": {
+      "title": "Structure type",
+      "description": "Type of ancillary structure present at a sanitation asset site",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "building",
+            "perimeter",
+            "road",
+            "apron",
+            "discharge_structure",
+            "utility_vault",
+            "vehicle_washing_bay",
+            "flood_protection_bund",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31411": {
+      "title": "Perimeter type",
+      "description": "Type of perimeter design",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "fence",
+            "wall",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Structure type: Perimeter"
+    },
+    "31412": {
+      "title": "Perimeter total length",
+      "description": "Total length of the entire perimeter that is being defined as an asset",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Structure type: Perimeter"
+    },
+    "31413": {
+      "title": "Perimeter height",
+      "description": "Typical or minimum height of the perimeter",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Structure type: Perimeter"
+    },
+    "31414": {
+      "title": "Perimeter setback distance",
+      "description": "Typical or minimum distance from the perimeter from the structure or equipment it is designed to protect",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Structure type: Perimeter"
+    },
+    "30401": {
+      "title": "Power type",
+      "description": "Categorization of the power generating device based on design or principles of operation",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "grid",
+            "generator",
+            "solar",
+            "wind",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30402": {
+      "title": "Rated power output",
+      "description": "Power output that can be sustained for long periods of time; for generators this is the continuous power rating",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "W",
+                    "kW",
+                    "MW",
+                    "hp",
+                    "kVA"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Power."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30403": {
+      "title": "Maximum power output",
+      "description": "Power output that can be provided for short periods of time in response to surges in demand; for generators, sometimes referred to as the standby or intermittent power rating",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "W",
+                    "kW",
+                    "MW",
+                    "hp",
+                    "kVA"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Power."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30404": {
+      "title": "Nominal voltage",
+      "description": "Voltage assigned to a system or circuit of a given voltage class for the purpose of convenient designation; the actual operating voltage may vary above or below this value",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "V",
+                    "kV",
+                    "MV"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Voltage."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30405": {
+      "title": "Rated voltage",
+      "description": "Maximum voltage at which the power system can be operated within thermal and safety limits",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "V",
+                    "kV",
+                    "MV"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Voltage."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30406": {
+      "title": "Maximum current",
+      "description": "Maximum safe current, or starting current, that can be supplied for a short period of time",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "A"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Current."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30407": {
+      "title": "Type of current",
+      "description": "Mode of transmission for electrical current (AC/DC)",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "single_phase_ac",
+            "three_phase_ac",
+            "dc"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30408": {
+      "title": "Frequency of current",
+      "description": "Frequency at which the voltage rises to a peak, reverses, and rises to a peak again",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "60_hz",
+            "50_hz",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30421": {
+      "title": "Generator fuel",
+      "description": "Type of fuel required by the generator",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "gasoline_or_petrol",
+            "diesel",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Power type: Generator"
+    },
+    "30422": {
+      "title": "Generator apparent power",
+      "description": "Product of the voltage and current provided in an AC power system, which does not account for the reactive power required by inductive loads in the circuit; sometimes referred to by its most common unit of measurement: kVA",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "W",
+                    "kW",
+                    "MW",
+                    "hp",
+                    "kVA"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Power."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Power type: Generator"
+    },
+    "30423": {
+      "title": "Engine cooling system",
+      "description": "Type of cooling system used by the generator engine",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "air",
+            "liquid"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Power type: Generator"
+    },
+    "30424": {
+      "title": "PV panel type",
+      "description": "Photovoltaic panel type",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "polycrystalline",
+            "monocrystalline",
+            "thin_film",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Power type: Solar"
+    },
+    "30425": {
+      "title": "Total number of PV panels",
+      "description": "Total number of photovoltaic panels installed in the power system",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Power type: Solar"
+    },
+    "30701": {
+      "title": "Electrical type",
+      "description": "Type of electrical asset",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "motor",
+            "actuator",
+            "power_device",
+            "electronic",
+            "heater",
+            "blower",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30702": {
+      "title": "Electrical power device type",
+      "description": "Classification of electrical power device based on purpose or mode of operation",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "control_panel",
+            "circuit_breaker",
+            "uninterruptible_power_supply_ups",
+            "transformer",
+            "power_conditioner",
+            "switch",
+            "motor_controller",
+            "inverter"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Electrical type: Power device"
+    },
+    "30601": {
+      "title": "Meter ID",
+      "description": "Identification number or code used by the service provider to identify the meter",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30602": {
+      "title": "Meter type",
+      "description": "Location or function of the flow being measured within the wastewater, effluent, or sludge stream",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "influent",
+            "effluent",
+            "sludge_or_septage",
+            "reclaimed_or_reuse_water",
+            "process_or_intermediate",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30603": {
+      "title": "Meter design",
+      "description": "Design or operating principle of the meter",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "electromagnetic",
+            "ultrasonic",
+            "mechanical",
+            "flume",
+            "weir_with_level_sensor",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30604": {
+      "title": "Minimum measurable flow rate",
+      "description": "Lowest flow rate that can be measured by the meter",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³/s",
+                    "m³/d",
+                    "m³/hr",
+                    "L/s",
+                    "L/min",
+                    "L/d",
+                    "ML/d",
+                    "gal/min (gpm)",
+                    "gal/d",
+                    "Mgal/d (mgd)"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Flow rate."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30605": {
+      "title": "Meter measurement type",
+      "description": "Type of measurement displayed by the meter (total volume, flow rate, or both)",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "total_volume",
+            "flow_rate",
+            "combined"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31101": {
+      "title": "Sampling point type",
+      "description": "Location in the wastewater or faecal sludge stream where a sample is collected for water quality or process testing, including regulatory compliance points",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "influent",
+            "effluent",
+            "process_or_intermediate",
+            "sludge",
+            "receiving_water",
+            "industrial_discharge",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31102": {
+      "title": "Regulatory compliance point",
+      "description": "Sampling point designated for regulatory compliance monitoring under a discharge permit or national monitoring program",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31103": {
+      "title": "Autosampler installed",
+      "description": "A fixed automatic sampler is installed at this point to collect composite or sequential samples",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31201": {
+      "title": "Sensor type",
+      "description": "Physical or field parameter measured by the sensor",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "level",
+            "pressure",
+            "gas",
+            "rainfall",
+            "temperature",
+            "moisture",
+            "current",
+            "voltage",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31202": {
+      "title": "Gas measured",
+      "description": "Gas or gases that the sensor measures",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "hydrogen_sulfide_h2s",
+            "methane_ch4",
+            "oxygen_o2",
+            "ammonia_nh3",
+            "carbon_monoxide_co",
+            "multi_gas",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Sensor type: Gas"
+    },
+    "31203": {
+      "title": "Gases measured",
+      "description": "Gases that a multi-gas instrument measures, separated by commas — for example: hydrogen sulfide, methane, oxygen. Use the names given in Gas measured where they apply",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Gas measured: Multi-gas"
+    },
+    "31301": {
+      "title": "Analyzer type",
+      "description": "Water quality or process parameter measured by the analyzer",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "ph",
+            "dissolved_oxygen_do",
+            "turbidity",
+            "ammonia",
+            "nitrate",
+            "total_nitrogen_or_tkn",
+            "phosphate_or_total_phosphorus",
+            "cod_or_bod",
+            "total_organic_carbon_toc",
+            "suspended_solids",
+            "orp",
+            "chlorine",
+            "conductivity",
+            "multiparameter",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "31302": {
+      "title": "Parameters measured",
+      "description": "Parameters that a multiparameter analyzer measures, separated by commas",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Analyzer type: Multiparameter"
+    },
+    "32301": {
+      "title": "Transmission method",
+      "description": "Method by which recorded data are transmitted from the datalogger to the systems or staff that use them",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "none_manual_download",
+            "cellular_network",
+            "radio",
+            "satellite",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30201": {
+      "title": "Pump type",
+      "description": "Description of the pump mechanism or operating principle used to empty, convey, or transfer wastewater or faecal sludge",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "submersible_non_clog_vortex",
+            "grinder",
+            "screw_archimedes",
+            "progressive_cavity_positive_displacement",
+            "diaphragm",
+            "end_suction_centrifugal",
+            "axial_flow",
+            "manual_pump",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30202": {
+      "title": "Pump diameter",
+      "description": "Maximum outer diameter of a submersible pump",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Pump type: Submersible non-clog/vortex"
+    },
+    "30203": {
+      "title": "Pump power rating",
+      "description": "Power consumed by a pump operating under normal pressure and flow conditions, as defined by the manufacturer",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "W",
+                    "kW",
+                    "MW",
+                    "hp",
+                    "kVA"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Power."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Pump type is not Manual pump"
+    },
+    "30204": {
+      "title": "Pump motor configuration",
+      "description": "Whether the motor and pump should be tracked as a single asset or as separate assets; in cases where the motor is separate from the pump, this generally means that motors are interchangeable between pumps of a similar design",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "integrated_with_pump",
+            "separate_from_pump"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Pump type is not Manual pump"
+    },
+    "30205": {
+      "title": "Pump motor voltage type",
+      "description": "Type of electrical power required by the pump",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "single_phase_ac",
+            "three_phase_ac",
+            "dc"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Pump motor configuration: Integrated with pump"
+    },
+    "30206": {
+      "title": "Pump motor voltage",
+      "description": "Normal operating voltage of the pump, as recommended by the manufacturer",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "V",
+                    "kV",
+                    "MV"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Voltage."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Pump motor configuration: Integrated with pump"
+    },
+    "30207": {
+      "title": "Pump motor max current",
+      "description": "Current drawn by the pump when operating at the maximum or full load power rating",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "A"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Current."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Pump motor configuration: Integrated with pump"
+    },
+    "30208": {
+      "title": "Pump motor max power",
+      "description": "Maximum, or full load power rating of the pump, as recommended by the manufacturer",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "W",
+                    "kW",
+                    "MW",
+                    "hp",
+                    "kVA"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Power."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Pump motor configuration: Integrated with pump"
+    },
+    "30221": {
+      "title": "Design flow",
+      "description": "Flow rate of the pump required by the system design under normal operating conditions; should be within the acceptable flow range as defined by the pump curve",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³/s",
+                    "m³/d",
+                    "m³/hr",
+                    "L/s",
+                    "L/min",
+                    "L/d",
+                    "ML/d",
+                    "gal/min (gpm)",
+                    "gal/d",
+                    "Mgal/d (mgd)"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Flow rate."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30222": {
+      "title": "Design head",
+      "description": "Head, or pressure, shown on the pump curve at the design flow rate",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "Pa",
+                    "kPa",
+                    "psi",
+                    "ft H₂O",
+                    "in H₂O",
+                    "m H₂O",
+                    "cm H₂O",
+                    "mm Hg",
+                    "in Hg",
+                    "atm",
+                    "bar"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Pressure."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30223": {
+      "title": "Maximum flow (Q-max)",
+      "description": "Maximum possible flow rate shown on the pump curve",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³/s",
+                    "m³/d",
+                    "m³/hr",
+                    "L/s",
+                    "L/min",
+                    "L/d",
+                    "ML/d",
+                    "gal/min (gpm)",
+                    "gal/d",
+                    "Mgal/d (mgd)"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Flow rate."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30224": {
+      "title": "Head at maximum flow (H-min)",
+      "description": "Total head, or pressure, that corresponds to the maximum flow rate on the pump curve; also referred to as the minimum head",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "Pa",
+                    "kPa",
+                    "psi",
+                    "ft H₂O",
+                    "in H₂O",
+                    "m H₂O",
+                    "cm H₂O",
+                    "mm Hg",
+                    "in Hg",
+                    "atm",
+                    "bar"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Pressure."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30225": {
+      "title": "Minimum flow (Q-min)",
+      "description": "Minimum possible flow rate shown on the pump curve",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³/s",
+                    "m³/d",
+                    "m³/hr",
+                    "L/s",
+                    "L/min",
+                    "L/d",
+                    "ML/d",
+                    "gal/min (gpm)",
+                    "gal/d",
+                    "Mgal/d (mgd)"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Flow rate."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30226": {
+      "title": "Head at minimum flow (H-max)",
+      "description": "Total head, or pressure, that corresponds to the minimum flow rate on the pump curve; also referred to as the maximum head",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "Pa",
+                    "kPa",
+                    "psi",
+                    "ft H₂O",
+                    "in H₂O",
+                    "m H₂O",
+                    "cm H₂O",
+                    "mm Hg",
+                    "in Hg",
+                    "atm",
+                    "bar"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Pressure."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30227": {
+      "title": "NPSH-R",
+      "description": "Net positive suction head required (or minimum) by the suction side of the pump in order to prevent cavitation and evaporation (flashing)",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "Pa",
+                    "kPa",
+                    "psi",
+                    "ft H₂O",
+                    "in H₂O",
+                    "m H₂O",
+                    "cm H₂O",
+                    "mm Hg",
+                    "in Hg",
+                    "atm",
+                    "bar"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Pressure."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30301": {
+      "title": "Tank type",
+      "description": "Function or purpose of the tank within the conveyance network or treatment facility",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "equalization_or_balancing_tank",
+            "sludge_or_septage_holding_tank",
+            "chemical_storage_tank",
+            "effluent_storage_tank",
+            "wet_well",
+            "portable_tank",
+            "combined_sewer_overflow_storage_tank_or_tunnel",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30302": {
+      "title": "Tank material",
+      "description": "Main material of construction used in the tank",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "pvc",
+            "plastic",
+            "concrete",
+            "aluminum",
+            "steel",
+            "stainless_steel",
+            "composite",
+            "fiberglass",
+            "masonry",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30303": {
+      "title": "Tank volume",
+      "description": "Useful volume of the tank which can be supplied between the minimum and maximum operating levels",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³",
+                    "L",
+                    "ft³",
+                    "gal",
+                    "Mm³",
+                    "Mgal",
+                    "acre-ft"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Volume."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30304": {
+      "title": "Tank shape",
+      "description": "Basic shape or form factor of the tank",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "cylindrical",
+            "rectangular",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30311": {
+      "title": "Tank diameter",
+      "description": "Diameter of the base of a cylindrical tank",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Tank shape: Cylindrical"
+    },
+    "30312": {
+      "title": "Tank height",
+      "description": "Distance from the bottom to the top of the tank, measured from outside",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30313": {
+      "title": "Tank length",
+      "description": "Length of the longest side of the base of a rectangular tank",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Tank shape: Rectangular"
+    },
+    "30314": {
+      "title": "Tank width",
+      "description": "Length of the shortest side of the base of a rectangular tank",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Tank shape: Rectangular"
+    },
+    "30315": {
+      "title": "Height of tank bottom",
+      "description": "Distance from the ground level to the bottom of the inside of the tank; negative values are used for depths below the ground",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30316": {
+      "title": "Minimum operating level",
+      "description": "Minimum fluid level allowed in the tank, measured from the tank bottom; this may be the height of the outlet or the minimum level allowed by a level control",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30317": {
+      "title": "Maximum operating level",
+      "description": "Maximum fluid level allowed in the tank, measured from the tank bottom; this may be the height of the overflow pipe or the maximum level allowed by a level control",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30323": {
+      "title": "Level indicator installed",
+      "description": "Device is installed that provides a visual or electronic measurement of the tank fill level, used to trigger alarms or control pumps",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30501": {
+      "title": "Treatment type",
+      "description": "Categorization of treatment process by treatment method or objective, spanning liquid-stream (wastewater) and sludge/faecal sludge treatment technologies",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "screen",
+            "grit_removal",
+            "grease_or_fog_removal",
+            "sedimentation_or_settler",
+            "imhoff_tank",
+            "anaerobic_baffled_reactor_abr",
+            "anaerobic_filter",
+            "upflow_anaerobic_sludge_blanket_uasb",
+            "waste_stabilization_pond",
+            "aerated_lagoon_or_pond",
+            "free_water_surface_constructed_wetland",
+            "horizontal_subsurface_flow_constructed_wetland",
+            "vertical_flow_constructed_wetland",
+            "trickling_filter",
+            "rotating_biological_contactor_rbc",
+            "aeration_basin",
+            "sequencing_batch_reactor_sbr",
+            "membrane_bioreactor_mbr",
+            "moving_bed_biofilm_reactor_mbbr",
+            "coagulation_or_flocculation",
+            "filtration",
+            "chlorine_contact_tank",
+            "uv_or_ozone_disinfection_unit",
+            "chemical_dosing_system",
+            "thickener",
+            "anaerobic_digester",
+            "unplanted_drying_bed",
+            "planted_drying_bed",
+            "dewatering_unit",
+            "composting_pad_or_windrow",
+            "lime_stabilization",
+            "incineration_or_thermal_treatment",
+            "aerobic_digester",
+            "odor_control_gas_treatment",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30502": {
+      "title": "Treatment level",
+      "description": "Stage of treatment achieved by this unit, based on the pollutant-removal mechanism used; choices follow the legal definitions in Directive (EU) 2024/3019, Art. 2(11)-(14)",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "preliminary",
+            "primary",
+            "secondary",
+            "tertiary",
+            "quaternary",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30503": {
+      "title": "Design capacity of the unit",
+      "description": "Design flow capacity of this specific treatment unit or process",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m³/s",
+                    "m³/d",
+                    "m³/hr",
+                    "L/s",
+                    "L/min",
+                    "L/d",
+                    "ML/d",
+                    "gal/min (gpm)",
+                    "gal/d",
+                    "Mgal/d (mgd)"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Flow rate."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30504": {
+      "title": "Design organic load capacity of the unit",
+      "description": "Design organic load capacity of this treatment unit, measured as the mass of five-day biochemical oxygen demand (BOD₅) treated per day",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "kg/d",
+                    "lb/d"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Mass flow."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "30505": {
+      "title": "Surface area",
+      "description": "Plan surface area of the treatment unit at the water or bed surface, such as a pond, wetland, drying bed, or basin",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m²",
+                    "ha",
+                    "ft²",
+                    "acre"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Area."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Treatment type: Waste stabilization pond, Aerated lagoon or pond, Free-water surface constructed wetland, Horizontal subsurface flow constructed wetland, Vertical flow constructed wetland, Unplanted drying bed, Planted drying bed"
+    },
+    "30506": {
+      "title": "Depth",
+      "description": "Vertical distance from the water or bed surface to the bottom of the treatment unit; for ponds, the design liquid depth excluding freeboard",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Treatment type: Waste stabilization pond, Aerated lagoon or pond, Free-water surface constructed wetland, Horizontal subsurface flow constructed wetland, Vertical flow constructed wetland, Unplanted drying bed, Planted drying bed"
+    },
+    "30507": {
+      "title": "Liner",
+      "description": "Type of liner installed to control seepage from the treatment unit into the surrounding soil",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "geomembrane",
+            "compacted_clay",
+            "concrete_or_masonry",
+            "unlined",
+            "unknown",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Treatment type: Waste stabilization pond, Aerated lagoon or pond, Free-water surface constructed wetland, Horizontal subsurface flow constructed wetland, Vertical flow constructed wetland, Unplanted drying bed, Planted drying bed"
+    },
+    "30521": {
+      "title": "Primary chemical used",
+      "description": "Primary chemical stored and used by this treatment unit or process",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "chlorine_gas",
+            "sodium_hypochlorite_bleach",
+            "calcium_hypochlorite",
+            "chloramine",
+            "chlorine_dioxide",
+            "sulfur_dioxide",
+            "ozone_on_site_generated",
+            "methanol",
+            "ferric_chloride",
+            "alum",
+            "lime",
+            "caustic_soda",
+            "acid",
+            "polymer",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Treatment type: Chlorination, Disinfection, Chemical feed, Coagulation or flocculation, Nutrient removal (nitrogen or phosphorus), Lime stabilization"
+    },
+    "31901": {
+      "title": "Dispersal type",
+      "description": "Type of technology used to discharge treated or partially treated effluent to the soil for infiltration or evapotranspiration",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "soak_pit",
+            "leach_field_or_drainage_field",
+            "infiltration_trench",
+            "evapotranspiration_bed",
+            "mound_system",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32001": {
+      "title": "Outfall type",
+      "description": "Categorization of the outfall by the type of discharge it conveys to the receiving environment",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "treatment_plant_outfall",
+            "combined_sewer_overflow_cso",
+            "emergency_overflow",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32002": {
+      "title": "Receiving water name",
+      "description": "Name of the water body receiving the effluent or overflow, if one exists",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32003": {
+      "title": "Screen or control installed",
+      "description": "A physical screen, grate, tide gate, or flow-control device is installed at the outfall to remove solids or regulate discharge",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "32004": {
+      "title": "Receiving environment type",
+      "description": "Type of water body or environment receiving the discharge",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "river_or_stream",
+            "lake_or_reservoir",
+            "estuary",
+            "coastal_water",
+            "agricultural_land_or_reuse_system",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "39901": {
+      "title": "Other vertical asset type",
+      "description": "Description or categorization of the other type of vertical asset",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40101": {
+      "title": "Pipe type",
+      "description": "Category of sewer pipe by its position and function in the collection network",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "lateral_property_connection",
+            "condominial_branch",
+            "main",
+            "trunk",
+            "interceptor",
+            "rising_main_force_main",
+            "inverted_siphon",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40103": {
+      "title": "Nominal pressure",
+      "description": "Numerical designation of design pressure that is a convenient round number for reference purposes",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "Pa",
+                    "kPa",
+                    "psi",
+                    "ft H₂O",
+                    "in H₂O",
+                    "m H₂O",
+                    "cm H₂O",
+                    "mm Hg",
+                    "in Hg",
+                    "atm",
+                    "bar"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Pressure."
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "$comment": "Applicability: Pipe type: Rising main (force main), Inverted siphon"
+    },
+    "40104": {
+      "title": "Pipe depth below ground",
+      "description": "Depth of the pipe below the local ground surface",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40105": {
+      "title": "Upstream invert level",
+      "description": "Elevation of the lowest point of the internal pipe surface at the upstream end, recorded against the same datum as Survey elevation",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40106": {
+      "title": "Downstream invert level",
+      "description": "Elevation of the lowest point of the internal pipe surface at the downstream end, recorded against the same datum as Survey elevation",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40107": {
+      "title": "Cross-section shape",
+      "description": "Shape of the pipe's internal cross-section",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "circular",
+            "egg_shaped",
+            "rectangular",
+            "trapezoidal",
+            "u_shaped",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40108": {
+      "title": "Gradient",
+      "description": "Slope of the pipe between upstream and downstream inverts, expressed as a percentage",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40201": {
+      "title": "Channel cross-section shape",
+      "description": "Shape of the open channel's cross-section",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "rectangular",
+            "trapezoidal",
+            "circular",
+            "u_shaped",
+            "irregular_or_natural",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40202": {
+      "title": "Lined",
+      "description": "The channel bed and sides have a constructed lining, such as concrete, masonry, or a synthetic membrane, to control seepage and erosion, as opposed to an unlined earthen channel",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40203": {
+      "title": "Covered or open",
+      "description": "Whether the channel is open to the atmosphere or has a fixed cover or slab over it",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "open",
+            "covered"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40204": {
+      "title": "Channel depth",
+      "description": "Vertical distance from the top of the channel side or lining to the invert (lowest point) of the channel, measured internally",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40205": {
+      "title": "Channel top width",
+      "description": "Internal width of the channel measured at the top, between the inner faces of the channel sides",
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/measurement"
+            },
+            {
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "µm",
+                    "nm",
+                    "km",
+                    "in",
+                    "ft",
+                    "yd",
+                    "mi"
+                  ]
+                }
+              }
+            }
+          ],
+          "description": "Quantity: Length."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "40206": {
+      "title": "Gradient",
+      "description": "Slope of the channel between its upstream and downstream inverts, expressed as a percentage",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "Sanitation system (System)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "sanitation_system"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "10201",
+            "10202",
+            "10203",
+            "10204",
+            "10205",
+            "10206",
+            "10207",
+            "10208",
+            "10209"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Subsystem (System)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "subsystem"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Facility (Facility)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "facility"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "20101",
+            "20102",
+            "20103"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Sanitation point (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "sanitation_point"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31501",
+            "31505",
+            "31507",
+            "31509",
+            "31510"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Connection (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "connection"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "32201",
+            "32202",
+            "32203",
+            "32204",
+            "32205"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Containment (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "containment"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31601",
+            "31602",
+            "31603",
+            "31604",
+            "31605",
+            "31606",
+            "31607",
+            "31609"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Vehicle (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "vehicle"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31701",
+            "31702",
+            "31703",
+            "31704"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Manhole (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "manhole"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31801",
+            "31802",
+            "31803",
+            "31804",
+            "31805",
+            "31806",
+            "31807",
+            "31808"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Junction (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "junction"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31001"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Valve (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "valve"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "30801",
+            "30802"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Flow control (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "flow_control"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "32101",
+            "32102"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Structure (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "structure"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31401",
+            "31411",
+            "31412",
+            "31413",
+            "31414"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Power (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "power"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "30401",
+            "30402",
+            "30403",
+            "30404",
+            "30405",
+            "30406",
+            "30407",
+            "30408",
+            "30421",
+            "30422",
+            "30423",
+            "30424",
+            "30425"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Electrical (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "electrical"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "30701",
+            "30702"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Meter (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "meter"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "30601",
+            "30602",
+            "30603",
+            "30604",
+            "30605"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Sampling point (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "sampling_point"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31101",
+            "31102",
+            "31103"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Sensor (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "sensor"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31201",
+            "31202",
+            "31203"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Analyzer (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "analyzer"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31301",
+            "31302"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Datalogger (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "datalogger"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "32301"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Pump (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "pump"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "30201",
+            "30202",
+            "30203",
+            "30204",
+            "30205",
+            "30206",
+            "30207",
+            "30208",
+            "30221",
+            "30222",
+            "30223",
+            "30224",
+            "30225",
+            "30226",
+            "30227"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Tank (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "tank"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "30301",
+            "30302",
+            "30303",
+            "30304",
+            "30311",
+            "30312",
+            "30313",
+            "30314",
+            "30315",
+            "30316",
+            "30317",
+            "30323"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Treatment (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "treatment"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "30501",
+            "30502",
+            "30503",
+            "30504",
+            "30505",
+            "30506",
+            "30507",
+            "30521"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Dispersal (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "dispersal"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "31901"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Outfall (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "outfall"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "32001",
+            "32002",
+            "32003",
+            "32004"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Other vertical (Vertical)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "other_vertical"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "39901"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Pipe (Horizontal)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "pipe"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "40101",
+            "40103",
+            "40104",
+            "40105",
+            "40106",
+            "40107",
+            "40108"
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "Channel (Horizontal)",
+      "if": {
+        "required": [
+          "00001"
+        ],
+        "properties": {
+          "00001": {
+            "const": "channel"
+          }
+        }
+      },
+      "then": {
+        "propertyNames": {
+          "enum": [
+            "00001",
+            "00002",
+            "00003",
+            "00004",
+            "00005",
+            "00006",
+            "00011",
+            "00012",
+            "00013",
+            "00014",
+            "00015",
+            "00016",
+            "00017",
+            "00018",
+            "00019",
+            "00020",
+            "00021",
+            "00022",
+            "00023",
+            "00024",
+            "00025",
+            "00026",
+            "00027",
+            "00031",
+            "00032",
+            "00033",
+            "00034",
+            "00035",
+            "00036",
+            "00037",
+            "00041",
+            "00042",
+            "00043",
+            "00051",
+            "00052",
+            "00053",
+            "00054",
+            "00055",
+            "00056",
+            "00057",
+            "00061",
+            "00062",
+            "00063",
+            "00064",
+            "00065",
+            "00066",
+            "00067",
+            "00068",
+            "00069",
+            "00070",
+            "00071",
+            "00072",
+            "00073",
+            "00074",
+            "00075",
+            "00076",
+            "00091",
+            "00092",
+            "00093",
+            "00094",
+            "00095",
+            "00096",
+            "00097",
+            "00098",
+            "00099",
+            "00171",
+            "00172",
+            "00173",
+            "00174",
+            "00175",
+            "00176",
+            "00181",
+            "00182",
+            "00183",
+            "00184",
+            "00185",
+            "40201",
+            "40202",
+            "40203",
+            "40204",
+            "40205",
+            "40206"
+          ]
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "geometry": {
+      "type": "object",
+      "description": "GeoJSON geometry (RFC 7946).",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "Point",
+            "LineString",
+            "Polygon",
+            "MultiPoint",
+            "MultiLineString",
+            "MultiPolygon"
+          ]
+        },
+        "coordinates": {
+          "type": "array"
+        }
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "description": "A magnitude paired with one of the units the standard defines for that physical quantity (section 4.2).",
+      "required": [
+        "magnitude",
+        "unit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "magnitude": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: mWater Asset Standards
+message: Please cite the specific standard and version used, as shown below.
+type: dataset
+abstract: >-
+  Open data standards for water and sanitation asset management, defining asset
+  classes, asset types, and coded attributes with data types, units and permitted
+  values. Published as machine-readable CSV and JSON with a JSON Schema validator.
+authors:
+  - name: mWater Foundation, Inc.
+    city: Denver
+    region: Colorado
+    country: US
+    website: https://www.mwater.co
+license: CC-BY-SA-4.0
+repository-code: https://github.com/mWater/asset-standards
+url: https://github.com/mWater/asset-standards
+keywords:
+  - water supply
+  - sanitation
+  - asset management
+  - data standard
+  - WASH
+  - SDG 6
+references:
+  - type: standard
+    title: "The Water System Management Standard, Part 1: Asset Management"
+    version: "1.0"
+    date-released: "2022-04-07"
+    authors:
+      - name: mWater Foundation, Inc.
+    license: CC-BY-SA-4.0
+  - type: standard
+    title: "The Sanitation System Management Standard, Part 1: Asset Management"
+    version: "1.0"
+    date-released: "2026-08-21"
+    authors:
+      - name: mWater Foundation, Inc.
+    license: CC-BY-SA-4.0

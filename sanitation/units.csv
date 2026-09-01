@@ -1,0 +1,59 @@
+quantity,si_base_unit,alternate_unit,conversion_factor_to_si,notes
+Length,m,m,1,Name: meters; System: SI; base unit
+Length,m,cm,0.01,Name: centimeters; System: SI
+Length,m,mm,0.001,Name: millimeters; System: SI
+Length,m,µm,1 X 10⁻⁶,Name: micrometers; System: SI
+Length,m,nm,1 X 10⁻⁹,Name: nanometers; System: SI
+Length,m,km,1000,Name: kilometers; System: SI
+Length,m,in,0.0254,Name: inches; System: US
+Length,m,ft,0.3048,Name: feet; System: US
+Length,m,yd,0.9144,Name: yards; System: US
+Length,m,mi,1609.344,Name: miles; System: US
+Pressure,Pa,Pa,1,Name: pascals; System: SI; base unit
+Pressure,Pa,kPa,1000,Name: kilopascals; System: SI
+Pressure,Pa,psi,6894.757,Name: pounds per square inch; System: US
+Pressure,Pa,ft H₂O,2988.98,Name: feet of water (39.2 °F); System: US
+Pressure,Pa,in H₂O,249.082,Name: inches of water (39.2 °F); System: US
+Pressure,Pa,m H₂O,9806.65,Name: meters of water (4 °C); System: SI
+Pressure,Pa,cm H₂O,98.0665,Name: centimeters of water (4 °C); System: SI
+Pressure,Pa,mm Hg,133.3224,Name: millimeters of mercury (32 °F); System: SI
+Pressure,Pa,in Hg,3386.38,Name: inches of mercury (32 °F); System: US
+Pressure,Pa,atm,101325,Name: atmospheres; System: SI
+Pressure,Pa,bar,100000,Name: bar; System: SI
+Flow rate,m³/s,m³/s,1,Name: cubic meters per second; System: SI; base unit
+Flow rate,m³/s,m³/d,8.64 X 10⁴,Name: cubic meters per day; System: SI
+Flow rate,m³/s,m³/hr,3600,Name: cubic meters per hour; System: SI
+Flow rate,m³/s,L/s,0.001,Name: liters per second; System: SI
+Flow rate,m³/s,L/min,60,Name: liters per minute; System: SI
+Flow rate,m³/s,L/d,86.4,Name: liters per day; System: SI
+Flow rate,m³/s,ML/d,8.64 X 10⁷,Name: million liters per day; System: SI
+Flow rate,m³/s,gal/min (gpm),6.30902 X 10⁵,Name: gallons per minute; System: US
+Flow rate,m³/s,gal/d,4.38126 X 10⁸,Name: gallons per day; System: US
+Flow rate,m³/s,Mgal/d (mgd),0.0438126,Name: million gallons per day; System: US
+Mass flow,kg/d,kg/d,1,Name: kilograms per day; System: SI; base unit
+Mass flow,kg/d,lb/d,0.453592,Name: pounds per day; System: US
+Area,m²,m²,1,Name: square meters; System: SI; base unit
+Area,m²,ha,10000,Name: hectares; System: SI
+Area,m²,ft²,0.09290304,Name: square feet; System: US
+Area,m²,acre,4046.8564,Name: acres; System: US
+Voltage,V,V,1,Name: volts; System: SI; base unit
+Voltage,V,kV,1000,Name: kilovolts; System: SI
+Voltage,V,MV,1 X 10⁶,Name: megavolts; System: SI
+Power,W,W,1,Name: watts; System: SI; base unit
+Power,W,kW,1000,Name: kilowatts; System: SI
+Power,W,MW,1 X 10⁶,Name: megawatts; System: SI
+Power,W,hp,746,Name: horsepower; System: US
+Power,W,kVA,1000,Name: kilovolt-amps; System: SI
+Current,A,A,1,Name: amperes; System: SI; base unit
+Volume,m³,m³,1,Name: cubic meters; System: SI; base unit
+Volume,m³,L,0.001,Name: liters; System: SI
+Volume,m³,ft³,0.02831685,Name: cubic feet; System: US
+Volume,m³,gal,0.003785412,Name: gallon; System: US
+Volume,m³,Mm³,1 X 10⁶,Name: million cubic meters; System: SI
+Volume,m³,Mgal,3785,Name: million gallons; System: US
+Volume,m³,acre-ft,1223.489,Name: acre-feet; System: US
+Time,d,d,1,Name: days; System: SI; base unit
+Time,d,mo,30.436875,Name: months; System: SI
+Time,d,yr,365.2425,Name: years; System: SI
+Temperature,°C,°C,t_F = t_C x 1.8 + 32,"Name: degrees celsius; System: SI; conversion is a formula, not a factor (Table 2 footnote: ""* Temperature is a special case. Use the formula provided, where t_F = temperature in degrees Fahrenheit and t_C = temperature in degrees Celsius.""); base unit"
+Temperature,°C,°F,t_C = (t_F - 32) / 1.8,"Name: degrees fahrenheit; System: US; conversion is a formula, not a factor (Table 2 footnote: ""* Temperature is a special case. Use the formula provided, where t_F = temperature in degrees Fahrenheit and t_C = temperature in degrees Celsius."")"
