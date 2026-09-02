@@ -38,9 +38,11 @@ is content to publish.
 mWater wants software to key on them, they belong in the next version of the
 standards.
 
-**Water standard landing page.** The canonical page for the water standard is still at
-the placeholder address `mwater.co/new-page-2`. It should move to a permanent address
-and link to this repository.
+**Landing pages.** Both landing pages are live, at
+https://www.mwater.co/water-asset-standard and
+https://www.mwater.co/sanitation-standard. Neither links to this repository yet, and
+the water page repeats the introduction's count of 28 asset types where Table 4 lists
+29.
 
 ## Settled
 
@@ -49,5 +51,4 @@ he and Susan Lamb maintain the tables. Conduct reports go to Petri Autio. USAID 
 of both standards is acknowledged in `NOTICE`. mWater holds no registered trademarks,
 and `NOTICE` says nothing about trademarks. There is no Zenodo archiving and no
 promised review period, because mWater does not have the capacity to hold to either.
-The sanitation standard's landing page at https://www.mwater.co/sanitation-standard is
-live.
+Both landing pages are live.
