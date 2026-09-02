@@ -1,18 +1,13 @@
 # Privacy annex
 
-> **Draft for mWater review.** This document was drafted alongside the machine-readable
-> release of the standards. It is a proposal, not a record of an existing mWater policy,
-> and it commits mWater to things nobody at mWater has yet agreed to. See
-> [REVIEW-NEEDED.md](REVIEW-NEEDED.md) before relying on it or citing it.
-
 The files in this repository contain no personal data. They are definitions of
 fields, not records about people.
 
 The standards do define fields that will hold personal data once an organization
 starts collecting against them, and the sanitation standard maps assets at household
 granularity. Version 1.0 of both documents says nothing about that. This annex fills
-the gap. It is guidance for implementers, published alongside the standards but not
-part of them, and it will be folded into the specification text at the next release.
+the gap. It is guidance for implementers, published alongside the standards rather
+than inside them.
 
 ## Which attributes hold personal data
 

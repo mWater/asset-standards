@@ -1,8 +1,8 @@
 # Changelog
 
 This file records changes to the published standards and to the repository that
-carries them. The two standards version independently. Releases follow semantic
-versioning, and the classes of change are defined in [GOVERNANCE.md](GOVERNANCE.md).
+carries them. The two standards version independently. [GOVERNANCE.md](GOVERNANCE.md)
+says who decides on changes.
 
 ## Repository
 

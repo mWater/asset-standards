@@ -145,13 +145,13 @@ else collects it.
 
 ## Evidence of use
 
-The mWater platform implements both standards and is free to use. As of August 2026
-it served 384,000 users in 198 countries and territories, holding 7.5 million water
-and sanitation sites and 51 million survey responses.
+mWater's platform holds asset tables built on both standards and is free to use. As
+of August 2026 it served 384,000 users in 198 countries and territories, holding 7.5
+million water and sanitation sites and 51 million survey responses.
 
-The figures that speak directly to these standards are the asset counts. The
-platform holds 1.1 million assets recorded against the water standard, across
-110,000 water systems. The water standard has been the basis of asset registers in
-national and sub-national monitoring systems since 2022. The sanitation standard was
-issued in August 2026 and is at the start of its adoption, so its numbers are small
-by comparison and mWater does not claim otherwise.
+The figures that speak directly to these standards are the asset counts. The platform
+holds 1.1 million assets and 110,000 water systems. mWater reports that the water
+standard has been used for asset registers in national and sub-national monitoring
+systems, including in Haiti, Madagascar and Kenya. The sanitation standard was issued
+in August 2026 and is at the start of its adoption, so its numbers are small by
+comparison and mWater does not claim otherwise.

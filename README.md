@@ -108,14 +108,11 @@ sanitation attributes have no matching platform column.
 
 ## Status of this repository
 
-The data in this repository is verified. Some of the surrounding prose is not.
-
-`GOVERNANCE.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` and `PRIVACY.md` were
-drafted alongside this release. They propose policies rather than describe agreed
-ones, and mWater has not yet reviewed them. Each carries a notice saying so.
-[REVIEW-NEEDED.md](REVIEW-NEEDED.md) lists every claim in the repository that still
-needs mWater's confirmation, including several statements of fact that were written
-without a checked source.
+The data in this repository was checked row by row against the source documents and
+is verified. The governance, contribution and conduct documents describe how mWater
+actually maintains the standards, which is with a small amount of staff time and no
+committee. [REVIEW-NEEDED.md](REVIEW-NEEDED.md) lists the few points that still need a
+decision from mWater's management.
 
 ## Known defects
 

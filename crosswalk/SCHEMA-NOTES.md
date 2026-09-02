@@ -10,12 +10,12 @@ https://portal.mwater.co/#/data-dictionary/site-types/sanitation_asset
 
 ## Tools and pagination
 
-- `get_table_columns` — called with `limit: 50` and `offset` incremented by 50 until the
+- `get_table_columns`: called with `limit: 50` and `offset` incremented by 50 until the
   reported `totalColumns` was covered.
   - `entities.water_asset`: offsets 0,50,…,600 (13 pages; last page returned 17 rows).
   - `entities.sanitation_asset`: offsets 0,50,…,450 (10 pages; last page returned 41 rows).
   - Raw per-page JSON is preserved under `raw/` (`wa_*.json`, `sa_*.json`).
-- `get_column_details` — called once per `enum`/`enumset` column (262 calls total).
+- `get_column_details`: called once per `enum`/`enumset` column (262 calls total).
   Raw responses condensed to `raw/wa_enums.jsonl` and `raw/sa_enums.jsonl`.
 
 ## Counts retrieved
@@ -26,7 +26,7 @@ https://portal.mwater.co/#/data-dictionary/site-types/sanitation_asset
 | entities.sanitation_asset | 491 | 491 | 119 | 665 |
 
 Both match the expected ~617 / ~491 figures exactly. No enum column type was `enumset`;
-all 262 were plain `enum`. Every enum column was fetched — none skipped, none errored.
+all 262 were plain `enum`. Every enum column was fetched; none skipped, none errored.
 
 ## Columns / sections
 
@@ -58,8 +58,6 @@ all 262 were plain `enum`. Every enum column was fetched — none skipped, none 
 
 ## Files
 
-- `water_asset_columns.csv` / `sanitation_asset_columns.csv` —
-  `column_id,column_name,column_type,section,join_target`
-- `water_asset_enums.csv` / `sanitation_asset_enums.csv` —
-  `column_id,enum_id,enum_name`
-- `raw/` — unmodified per-page column JSON and condensed enum responses.
+- `water_asset_columns.csv` / `sanitation_asset_columns.csv`, `column_id,column_name,column_type,section,join_target`
+- `water_asset_enums.csv` / `sanitation_asset_enums.csv`, `column_id,enum_id,enum_name`
+- `raw/`, unmodified per-page column JSON and condensed enum responses.
